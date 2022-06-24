@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Architecture" href="../architecture.html" />
+    <link rel="next" title="Part 6: Working With OWL" href="tutorial06.html" />
     <link rel="prev" title="Part 4: OboGraphs" href="tutorial04.html" /> 
 </head>
 
@@ -43,17 +43,21 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorial</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="tutorial01.html">Part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html">Part 1: Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial02.html">Part 2: Basic Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial03.html">Part 3: Ubergraph</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial04.html">Part 4: OboGraphs</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Part 5: Graph Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-graphviz">Install Graphviz</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-obographviz">Install OBOGraphViz</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#command-line-usage">Command Line Usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-this-works">How this works</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#programmatic-usage">Programmatic usage</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial06.html">Part 6: Working With OWL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial07.html">Part 7: SQLite files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial08.html">Part 8: Applying Changes to Ontologies</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
@@ -63,9 +67,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datamodels/index.html">Datamodels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts.html">Ontology Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
 </ul>
 
         </div>
@@ -95,19 +101,33 @@
              
   <section id="part-5-graph-visualization">
 <h1>Part 5: Graph Visualization<a class="headerlink" href="#part-5-graph-visualization" title="Permalink to this headline"></a></h1>
+<p>This section of the tutorial requires two dependencies that are outside OAK.</p>
+<ul class="simple">
+<li><p>Graphviz</p></li>
+<li><p>OBOGraphViz</p></li>
+</ul>
+<section id="install-graphviz">
+<h2>Install Graphviz<a class="headerlink" href="#install-graphviz" title="Permalink to this headline"></a></h2>
+<p>Graphviz is an open-source graph visualization software that provides a way to
+represent information about graphs and networks.</p>
+<p>For installation refer to <a class="reference external" href="https://graphviz.org/download/">Graphviz.org/download/</a>.</p>
+</section>
 <section id="install-obographviz">
 <h2>Install OBOGraphViz<a class="headerlink" href="#install-obographviz" title="Permalink to this headline"></a></h2>
+<p>OBOGraphViz is a Javascript package that allows you to visualize OBOGraphs using Graphviz.</p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">npm</span></code> or <code class="docutils literal notranslate"><span class="pre">yarn</span></code> to install the OBOGraphViz package.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="n">obographviz</span>
 </pre></div>
 </div>
 </section>
 <section id="command-line-usage">
 <h2>Command Line Usage<a class="headerlink" href="#command-line-usage" title="Permalink to this headline"></a></h2>
+<p>Using OAK, you can generate graph visualizations directly from the command line as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">runoak</span> <span class="o">-</span><span class="n">i</span> <span class="n">obolibrary</span><span class="p">:</span><span class="n">fbbt</span><span class="o">.</span><span class="n">obo</span> <span class="n">viz</span> <span class="n">FBbt</span><span class="p">:</span><span class="mi">00004751</span> <span class="o">-</span><span class="n">p</span> <span class="n">i</span><span class="p">,</span><span class="n">p</span> <span class="o">-</span><span class="n">o</span> <span class="n">wing</span><span class="o">-</span><span class="n">vein</span><span class="o">.</span><span class="n">png</span>
 </pre></div>
 </div>
-<p>Then open the file wing-vein.png using a tool such as Preview, or in a web browser.</p>
-<p>If you omit the –output option then the png will be written to a temp file and immediately opened:</p>
+<p>Then open the file <code class="docutils literal notranslate"><span class="pre">wing-vein.png</span></code> using a tool such as Preview, or in a web browser.</p>
+<p>If you omit the <code class="docutils literal notranslate"><span class="pre">-o/--output</span></code> option then the png will be written to a temp file and immediately opened:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">runoak</span> <span class="o">-</span><span class="n">i</span> <span class="n">obolibrary</span><span class="p">:</span><span class="n">fbbt</span><span class="o">.</span><span class="n">obo</span> <span class="n">viz</span> <span class="n">FBbt</span><span class="p">:</span><span class="mi">00004751</span> <span class="o">-</span><span class="n">p</span> <span class="n">i</span><span class="p">,</span><span class="n">p</span>
 </pre></div>
 </div>
@@ -133,13 +153,13 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="tutorial04.html" class="btn btn-neutral float-left" title="Part 4: OboGraphs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../architecture.html" class="btn btn-neutral float-right" title="Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tutorial06.html" class="btn btn-neutral float-right" title="Part 6: Working With OWL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Chris Mungall.</p>
+    <p>&#169; Copyright 2022, OAK developers.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

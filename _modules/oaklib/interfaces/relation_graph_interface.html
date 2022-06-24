@@ -47,9 +47,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../datamodels/index.html">Datamodels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notebooks.html">Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../concepts.html">Ontology Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
 </ul>
 
         </div>
@@ -78,11 +80,10 @@
              
   <h1>Source code for oaklib.interfaces.relation_graph_interface</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
 
-<span class="kn">from</span> <span class="nn">oaklib.interfaces.basic_ontology_interface</span> <span class="kn">import</span> <span class="n">BasicOntologyInterface</span><span class="p">,</span> <span class="n">RELATIONSHIP_MAP</span><span class="p">,</span> <span class="n">RELATIONSHIP</span>
-<span class="kn">from</span> <span class="nn">oaklib.types</span> <span class="kn">import</span> <span class="n">CURIE</span><span class="p">,</span> <span class="n">LABEL</span><span class="p">,</span> <span class="n">URI</span><span class="p">,</span> <span class="n">PRED_CURIE</span>
-<span class="kn">from</span> <span class="nn">oaklib.utilities.graph.relationship_walker</span> <span class="kn">import</span> <span class="n">walk_up</span>
+<span class="kn">from</span> <span class="nn">oaklib.interfaces.basic_ontology_interface</span> <span class="kn">import</span> <span class="n">BasicOntologyInterface</span>
+<span class="kn">from</span> <span class="nn">oaklib.types</span> <span class="kn">import</span> <span class="n">CURIE</span><span class="p">,</span> <span class="n">PRED_CURIE</span>
 
 
 <div class="viewcode-block" id="RelationGraphInterface"><a class="viewcode-back" href="../../../interfaces/relation-graph.html#oaklib.interfaces.relation_graph_interface.RelationGraphInterface">[docs]</a><span class="k">class</span> <span class="nc">RelationGraphInterface</span><span class="p">(</span><span class="n">BasicOntologyInterface</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
@@ -91,12 +92,15 @@
 
 <span class="sd">    .. note ::</span>
 
-<span class="sd">        that the operations provided here are similar to the graph-walking operations provided in :class:`.OboGraphInterface`.</span>
-<span class="sd">        The main difference is that a RG provides a more restricted and formally correct set of entailments</span>
+<span class="sd">        that the operations provided here are similar to the graph-walking</span>
+<span class="sd">        operations provided in :class:`.OboGraphInterface`.</span>
+<span class="sd">        The main difference is that a RG provides a more restricted</span>
+<span class="sd">        and formally correct set of entailments.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="RelationGraphInterface.entailed_outgoing_relationships_by_curie"><a class="viewcode-back" href="../../../interfaces/relation-graph.html#oaklib.interfaces.relation_graph_interface.RelationGraphInterface.entailed_outgoing_relationships_by_curie">[docs]</a>    <span class="k">def</span> <span class="nf">entailed_outgoing_relationships_by_curie</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curie</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span>
-                                                 <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">,</span> <span class="n">CURIE</span><span class="p">]]:</span>
+<div class="viewcode-block" id="RelationGraphInterface.entailed_outgoing_relationships_by_curie"><a class="viewcode-back" href="../../../interfaces/relation-graph.html#oaklib.interfaces.relation_graph_interface.RelationGraphInterface.entailed_outgoing_relationships_by_curie">[docs]</a>    <span class="k">def</span> <span class="nf">entailed_outgoing_relationships_by_curie</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">curie</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span> <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">,</span> <span class="n">CURIE</span><span class="p">]]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The return relationship map is keyed by relationship type, where the values</span>
 <span class="sd">        are the &#39;parents&#39; or fillers</span>
@@ -112,8 +116,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="RelationGraphInterface.entailed_incoming_relationships_by_curie"><a class="viewcode-back" href="../../../interfaces/relation-graph.html#oaklib.interfaces.relation_graph_interface.RelationGraphInterface.entailed_incoming_relationships_by_curie">[docs]</a>    <span class="k">def</span> <span class="nf">entailed_incoming_relationships_by_curie</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curie</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span>
-                                                 <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">,</span> <span class="n">CURIE</span><span class="p">]]:</span>
+<div class="viewcode-block" id="RelationGraphInterface.entailed_incoming_relationships_by_curie"><a class="viewcode-back" href="../../../interfaces/relation-graph.html#oaklib.interfaces.relation_graph_interface.RelationGraphInterface.entailed_incoming_relationships_by_curie">[docs]</a>    <span class="k">def</span> <span class="nf">entailed_incoming_relationships_by_curie</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">curie</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span> <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">,</span> <span class="n">CURIE</span><span class="p">]]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The return relationship map is keyed by relationship type, where the values</span>
 <span class="sd">        are the &#39;parents&#39; or fillers</span>
@@ -138,11 +143,6 @@
 <span class="sd">        :return:</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div></div>
-
-
-
-
-
 </pre></div>
 
            </div>
@@ -152,7 +152,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Chris Mungall.</p>
+    <p>&#169; Copyright 2022, OAK developers.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -49,9 +49,11 @@
 <li class="toctree-l1"><a class="reference internal" href="selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datamodels/index.html">Datamodels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="concepts.html">Ontology Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 </ul>
 
         </div>
@@ -83,13 +85,20 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#basic-python-example">Basic Python Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#basic-command-line-example">Basic Command Line Example</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="intro/index.html">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro/tutorial01.html">Part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/tutorial01.html">Part 1: Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro/tutorial02.html">Part 2: Basic Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro/tutorial03.html">Part 3: Ubergraph</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro/tutorial04.html">Part 4: OboGraphs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro/tutorial05.html">Part 5: Graph Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/tutorial06.html">Part 6: Working With OWL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/tutorial07.html">Part 7: SQLite files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/tutorial08.html">Part 8: Applying Changes to Ontologies</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a><ul>
@@ -115,7 +124,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="implementations/index.html">Implementations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="implementations/obofiles.html">Pronto / OBO Files Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementations/pronto.html">Pronto / OBO Files Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/sqldb.html">SQL Database Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/ols.html">Ontology Lookup Service (OLS) Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/bioportal.html">Bioportal Endpoint</a></li>
@@ -123,7 +132,6 @@
 <li class="toctree-l2"><a class="reference internal" href="implementations/ubergraph.html">Ubergraph Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/ontobee.html">Ontobee Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/ols.html">Ontology Lookup Service (OLS) Endpoint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="implementations/bioportal.html">Bioportal Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/aggregator.html">Aggregator Implementation</a></li>
 </ul>
 </li>
@@ -141,17 +149,17 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="datamodels/index.html">Datamodels</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/ontology-metadata/index.html">Ontology-Metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/search/index.html">search-datamodel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/obograph/index.html">obographs_datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/ontology-metadata/index.html">Ontology Metadata Ontology Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/search/index.html">search datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/obograph/index.html">Obographs Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/sssom/index.html">SSSOM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/funowl/index.html">FunOwl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/summary-statistics/index.html">summary-statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/validation/index.html">validaton-results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/lexical-index/index.html">lexical-index</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/mapping-rules/index.html">mapping-rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/text-annotator/index.html">text-annotator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datamodels/cross-ontology-diff/index.html">cross-ontology-diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/summary-statistics/index.html">Summary Statistics Datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/validation/index.html">Validation Results Datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/lexical-index/index.html">Lexical Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/mapping-rules/index.html">Mapping Rules Datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/text-annotator/index.html">Text Annotator Datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/cross-ontology-diff/index.html">Cross-Ontology Diff</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a><ul>
@@ -161,6 +169,11 @@
 <li class="toctree-l2"><a class="reference internal" href="src/oaklib.utilities.lexical.lexical_indexer.html">oaklib.utilities.lexical.lexical_indexer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="src/oaklib.utilities.subsets.slimmer_utils.html">oaklib.utilities.subsets.slimmer_utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="src/oaklib.utilities.apikey_manager.html">oaklib.utilities.apikey_manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howtos/index.html">How-To Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howtos/validate-an-obo-ontology.html">How to Validate an OBO ontology using Obo Metadata Ontology schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howtos/write-a-plugin.html">How to write a plugin</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Notebooks</a></li>
@@ -179,6 +192,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i">How do I…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-is">What is…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#using-oak-with">Using OAK with…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#command-line">Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -187,7 +208,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="interfaces/search.html#search"><span class="std std-ref">Search Interface</span></a></p></li>
+<li><p><a class="reference internal" href="intro/tutorial01.html#search"><span class="std std-ref">Search</span></a></p></li>
 </ul>
 </section>
 
@@ -201,7 +222,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Chris Mungall.</p>
+    <p>&#169; Copyright 2022, OAK developers.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

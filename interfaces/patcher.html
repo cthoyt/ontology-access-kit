@@ -63,9 +63,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datamodels/index.html">Datamodels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts.html">Ontology Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
 </ul>
 
         </div>
@@ -98,7 +100,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>this interface is still highly incomplete. In future it will allow
-any operation from KGCL to be applied</p>
+any operation from <a class="reference internal" href="../glossary.html#term-KGCL"><span class="xref std std-term">KGCL</span></a> to be applied</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="oaklib.interfaces.patcher_interface.PatcherInterface">
@@ -107,7 +109,7 @@ any operation from KGCL to be applied</p>
 <p>See <a class="reference external" href="https://github.com/cmungall/knowledge-graph-change-language">KGCL</a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="oaklib.interfaces.patcher_interface.PatcherInterface.apply_patch">
-<span class="sig-name descname"><span class="pre">apply_patch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/oaklib/interfaces/patcher_interface.html#PatcherInterface.apply_patch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.interfaces.patcher_interface.PatcherInterface.apply_patch" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">apply_patch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">kgcl_schema.datamodel.kgcl.Change</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/oaklib/interfaces/patcher_interface.html#PatcherInterface.apply_patch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.interfaces.patcher_interface.PatcherInterface.apply_patch" title="Permalink to this definition"></a></dt>
 <dd><p>Applies a change description</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -133,6 +135,17 @@ any operation from KGCL to be applied</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="oaklib.interfaces.patcher_interface.PatcherInterface.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/oaklib/interfaces/patcher_interface.html#PatcherInterface.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.interfaces.patcher_interface.PatcherInterface.save" title="Permalink to this definition"></a></dt>
+<dd><p>Saves current state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -148,7 +161,7 @@ any operation from KGCL to be applied</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Chris Mungall.</p>
+    <p>&#169; Copyright 2022, OAK developers.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

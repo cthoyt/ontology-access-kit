@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Ontology Lookup Service (OLS) Endpoint" href="ols.html" />
-    <link rel="prev" title="Pronto / OBO Files Implementation" href="obofiles.html" /> 
+    <link rel="prev" title="Pronto / OBO Files Implementation" href="pronto.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,7 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Implementations</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="obofiles.html">Pronto / OBO Files Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pronto.html">Pronto / OBO Files Implementation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">SQL Database Implementation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#iniialization">Iniialization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
@@ -59,7 +59,6 @@
 <li class="toctree-l2"><a class="reference internal" href="ubergraph.html">Ubergraph Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ontobee.html">Ontobee Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ols.html">Ontology Lookup Service (OLS) Endpoint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bioportal.html">Bioportal Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="aggregator.html">Aggregator Implementation</a></li>
 </ul>
 </li>
@@ -67,9 +66,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datamodels/index.html">Datamodels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts.html">Ontology Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
 </ul>
 
         </div>
@@ -98,7 +99,7 @@
            <div itemprop="articleBody">
              
   <section id="sql-database-implementation">
-<h1>SQL Database Implementation<a class="headerlink" href="#sql-database-implementation" title="Permalink to this headline"></a></h1>
+<span id="sql-implementation"></span><h1>SQL Database Implementation<a class="headerlink" href="#sql-database-implementation" title="Permalink to this headline"></a></h1>
 <p>This wraps either a local or remote SQL Database</p>
 <p>The schema is assumed to follow:</p>
 <ul class="simple">
@@ -116,7 +117,7 @@ sqlite as a sub-scheme.</p>
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="oaklib.implementations.sqldb.sql_implementation.SqlImplementation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oaklib.implementations.sqldb.sql_implementation.</span></span><span class="sig-name descname"><span class="pre">SqlImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">oaklib.resource.OntologyResource</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_connection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_ontology_metadata_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">linkml_runtime.utils.schemaview.SchemaView</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/oaklib/implementations/sqldb/sql_implementation.html#SqlImplementation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.implementations.sqldb.sql_implementation.SqlImplementation" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oaklib.implementations.sqldb.sql_implementation.</span></span><span class="sig-name descname"><span class="pre">SqlImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">oaklib.resource.OntologyResource</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_connection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_ontology_metadata_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">linkml_runtime.utils.schemaview.SchemaView</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_prefix_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_information_content_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/oaklib/implementations/sqldb/sql_implementation.html#SqlImplementation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.implementations.sqldb.sql_implementation.SqlImplementation" title="Permalink to this definition"></a></dt>
 <dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">OntologyInterface</span></code> implementation that wraps a SQL Relational Database</p>
 <p>This could be a local file (accessed via SQL Lite) or a local/remote server (e.g PostgreSQL)</p>
 <p>The schema is assumed to follow the <a class="reference external" href="https://github.com/incatools/semantic-sql">semantic-sql</a> schema</p>
@@ -154,14 +155,14 @@ craft a custom complex query this can provide a useful way to do this.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="obofiles.html" class="btn btn-neutral float-left" title="Pronto / OBO Files Implementation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pronto.html" class="btn btn-neutral float-left" title="Pronto / OBO Files Implementation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="ols.html" class="btn btn-neutral float-right" title="Ontology Lookup Service (OLS) Endpoint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Chris Mungall.</p>
+    <p>&#169; Copyright 2022, OAK developers.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

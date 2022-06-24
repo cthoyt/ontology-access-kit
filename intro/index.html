@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Part 1" href="tutorial01.html" />
+    <link rel="next" title="Part 1: Getting Started" href="tutorial01.html" />
     <link rel="prev" title="Introduction" href="../introduction.html" /> 
 </head>
 
@@ -43,11 +43,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial01.html">Part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html">Part 1: Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial02.html">Part 2: Basic Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial03.html">Part 3: Ubergraph</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial04.html">Part 4: OboGraphs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial05.html">Part 5: Graph Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial06.html">Part 6: Working With OWL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial07.html">Part 7: SQLite files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial08.html">Part 8: Applying Changes to Ontologies</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
@@ -57,9 +60,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datamodels/index.html">Datamodels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts.html">Ontology Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
 </ul>
 
         </div>
@@ -95,13 +100,39 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial01.html">Part 1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#query-the-obo-library">Query the OBO Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#working-with-local-files">Working with local files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#fetching-ancestors">Fetching ancestors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#using-other-backends">Using other backends</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#using-bioportal">Using BioPortal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial01.html">Part 1: Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#install-from-pypi">Install from PyPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#run-the-oak-command">Run the OAK command</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#basics">Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#query-the-obo-library">Query the OBO Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#search">Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#working-with-local-files">Working with local files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#introduction-to-graphs-and-trees">Introduction to graphs and trees</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#fetching-ancestors">Fetching ancestors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#predicate-abbreviations">Predicate Abbreviations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#ancestor-statistics">Ancestor Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#oak-trees">Oak Trees</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#advanced-search">Advanced Search</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#using-search-terms-as-parameters">Using search terms as parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#chaining-commands">Chaining Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial01.html#using-other-backends">Using other backends</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#using-ubergraph">Using Ubergraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#using-ontobee">Using Ontobee</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#using-bioportal">Using BioPortal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#using-ols">Using OLS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial01.html#using-sqlite">Using SQLIte</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial01.html#next-steps">Next steps</a></li>
 </ul>
 </li>
@@ -115,13 +146,42 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorial04.html">Part 4: OboGraphs</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial04.html#obographs">OboGraphs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial04.html#obograph-interface">OboGraph Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial04.html#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial04.html#code-examples">Code examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial05.html">Part 5: Graph Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial05.html#install-graphviz">Install Graphviz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial05.html#install-obographviz">Install OBOGraphViz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial05.html#command-line-usage">Command Line Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial05.html#how-this-works">How this works</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial05.html#programmatic-usage">Programmatic usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial06.html">Part 6: Working With OWL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial06.html#owl-datamodel">OWL Datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial06.html#owlinterface">OwlInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial06.html#robot-plugin">ROBOT Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial07.html">Part 7: SQLite files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial07.html#download-a-sqlite-file">Download a SQLite file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial07.html#building-your-own-sqlite-files">Building your own SQLite files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorial07.html#with-docker">With docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial07.html#without-docker">Without docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial07.html#other-rdbmss">Other RDBMSs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial07.html#python-orm">Python ORM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial08.html">Part 8: Applying Changes to Ontologies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial08.html#about-kgcl">About KGCL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial08.html#command-line">Command Line</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorial08.html#example-sqlite3">Example: Sqlite3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial08.html#example-obo-files">Example: OBO Files</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -133,13 +193,13 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="tutorial01.html" class="btn btn-neutral float-right" title="Part 1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tutorial01.html" class="btn btn-neutral float-right" title="Part 1: Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Chris Mungall.</p>
+    <p>&#169; Copyright 2022, OAK developers.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
