@@ -91,7 +91,7 @@ Name: Ontology-Metadata
 | [excluded_subClassOf](excluded_subClassOf.md) | None |
 | [excluded_synonym](excluded_synonym.md) | None |
 | [external_ontology](external_ontology.md) | None |
-| [has_alternative_id](has_alternative_id.md) | None |
+| [has_alternative_id](has_alternative_id.md) | Relates a live term to a deprecated ID that was merged in |
 | [has_axiom_label](has_axiom_label.md) | None |
 | [has_broad_synonym](has_broad_synonym.md) | None |
 | [has_curation_status](has_curation_status.md) | None |
@@ -185,10 +185,10 @@ Name: Ontology-Metadata
 
 | Subset | Description |
 | --- | --- |
-| allotrope permitted profile | None |
-| allotrope required profile | None |
-| go permitted profile | None |
-| go recommended profile | None |
-| go required profile | None |
-| obi permitted profile | None |
-| obi required profile | None |
+| [AllotropePermittedProfile](AllotropePermittedProfile.md) | None |
+| [AllotropeRequiredProfile](AllotropeRequiredProfile.md) | None |
+| [GoPermittedProfile](GoPermittedProfile.md) | None |
+| [GoRecommendedProfile](GoRecommendedProfile.md) | None |
+| [GoRequiredProfile](GoRequiredProfile.md) | None |
+| [ObiPermittedProfile](ObiPermittedProfile.md) | None |
+| [ObiRequiredProfile](ObiRequiredProfile.md) | None |
