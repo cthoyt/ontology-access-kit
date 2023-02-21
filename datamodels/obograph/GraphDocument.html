@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: GraphDocument</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: GraphDocument</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/obograph/GraphDocument.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,12 +83,14 @@
              
   <section id="class-graphdocument">
 <h1>Class: GraphDocument<a class="headerlink" href="#class-graphdocument" title="Permalink to this headline"></a></h1>
+<p><em>A graph document is a collection of graphs together with a set of prefixes that apply across all of them</em></p>
 <p>URI: <a class="reference external" href="https://github.com/geneontology/obographs/GraphDocument">og:GraphDocument</a></p>
 <div class="mermaid">
              classDiagram
     class GraphDocument
       GraphDocument : graphs
       GraphDocument : meta
+      GraphDocument : prefixes
       
         </div><!-- no inheritance hierarchy -->
 <section id="slots">
@@ -96,22 +100,33 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="meta.html"><span class="doc std std-doc">meta</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Meta.html"><span class="doc std std-doc">Meta</span></a></p></td>
-<td><p></p></td>
+<td><p>A collection of metadata about either an ontology (graph), an entity, or an a…</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="graphs.html"><span class="doc std std-doc">graphs</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Graph.html"><span class="doc std std-doc">Graph</span></a></p></td>
-<td><p></p></td>
+<td><p>A list of all graphs (ontologies) in an ontology document</p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prefixes.html"><span class="doc std std-doc">prefixes</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="PrefixDeclaration.html"><span class="doc std std-doc">PrefixDeclaration</span></a></p></td>
+<td><p>maps prefixes to namespaces</p></td>
+<td><p>direct</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="usages">
-<h2>Usages<a class="headerlink" href="#usages" title="Permalink to this headline"></a></h2>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>A graph document frequently has a single graph but a multi-graph document can be used to represent multiple ontologies in an import closure in a single file.</p></li>
+</ul>
 </section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permalink to this headline"></a></h2>
@@ -132,27 +147,33 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘og:GraphDocument’]</p></td>
+<td><p>og:GraphDocument</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘og:GraphDocument’]</p></td>
+<td><p>og:GraphDocument</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
 <details>
 ```yaml
 name: GraphDocument
+description: A graph document is a collection of graphs together with a set of prefixes
+  that apply across all of them
+comments:
+- A graph document frequently has a single graph but a multi-graph document can be
+  used to represent multiple ontologies in an import closure in a single file.
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 slots:
 - meta
 - graphs
+- prefixes
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
 
 ### Induced
@@ -160,12 +181,21 @@ slots:
 &lt;details&gt;
 ```yaml
 name: GraphDocument
+description: A graph document is a collection of graphs together with a set of prefixes
+  that apply across all of them
+comments:
+- A graph document frequently has a single graph but a multi-graph document can be
+  used to represent multiple ontologies in an import closure in a single file.
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 attributes:
   meta:
     name: meta
+    description: A collection of metadata about either an ontology (graph), an entity,
+      or an axiom
     from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - annotations
     rank: 1000
     alias: meta
     owner: GraphDocument
@@ -173,11 +203,13 @@ attributes:
     - GraphDocument
     - Graph
     - Node
+    - Edge
     - PropertyValue
     - Axiom
     range: Meta
   graphs:
     name: graphs
+    description: A list of all graphs (ontologies) in an ontology document.
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
     multivalued: true
@@ -188,6 +220,19 @@ attributes:
     range: Graph
     inlined: true
     inlined_as_list: true
+  prefixes:
+    name: prefixes
+    description: maps prefixes to namespaces
+    from_schema: https://github.com/geneontology/obographs
+    rank: 1000
+    slot_uri: sh:declare
+    multivalued: true
+    alias: prefixes
+    owner: GraphDocument
+    domain_of:
+    - GraphDocument
+    range: PrefixDeclaration
+    inlined: true
 
 </pre></div>
 </div>

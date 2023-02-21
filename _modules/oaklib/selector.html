@@ -40,12 +40,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -67,9 +69,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Module code</a> &raquo;</li>
-      <li>oaklib.selector</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">oaklib.selector</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -88,6 +90,10 @@
 <span class="kn">from</span> <span class="nn">oaklib</span> <span class="kn">import</span> <span class="n">datamodels</span> <span class="k">as</span> <span class="n">datamodels_package</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations</span> <span class="kn">import</span> <span class="n">GildaImplementation</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.funowl.funowl_implementation</span> <span class="kn">import</span> <span class="n">FunOwlImplementation</span>
+<span class="kn">from</span> <span class="nn">oaklib.implementations.kgx.kgx_implementation</span> <span class="kn">import</span> <span class="n">KGXImplementation</span>
+<span class="kn">from</span> <span class="nn">oaklib.implementations.obograph.obograph_implementation</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">OboGraphImplementation</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.ols.ols_implementation</span> <span class="kn">import</span> <span class="n">OlsImplementation</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.ontobee.ontobee_implementation</span> <span class="kn">import</span> <span class="n">OntobeeImplementation</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.ontoportal.agroportal_implementation</span> <span class="kn">import</span> <span class="p">(</span>
@@ -107,9 +113,16 @@
     <span class="n">SimpleOboImplementation</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.sparql.lov_implementation</span> <span class="kn">import</span> <span class="n">LovImplementation</span>
+<span class="kn">from</span> <span class="nn">oaklib.implementations.sparql.oak_metamodel_implementation</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">OakMetaModelImplementation</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.sparql.sparql_implementation</span> <span class="kn">import</span> <span class="n">SparqlImplementation</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.sqldb.sql_implementation</span> <span class="kn">import</span> <span class="n">SqlImplementation</span>
+<span class="kn">from</span> <span class="nn">oaklib.implementations.translator.translator_implementation</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">TranslatorImplementation</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.ubergraph</span> <span class="kn">import</span> <span class="n">UbergraphImplementation</span>
+<span class="kn">from</span> <span class="nn">oaklib.implementations.uniprot.uniprot_implementation</span> <span class="kn">import</span> <span class="n">UniprotImplementation</span>
 <span class="kn">from</span> <span class="nn">oaklib.implementations.wikidata.wikidata_implementation</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">WikidataImplementation</span><span class="p">,</span>
 <span class="p">)</span>
@@ -118,16 +131,21 @@
 
 <span class="n">RDF_SUFFIX_TO_FORMAT</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;ttl&quot;</span><span class="p">:</span> <span class="s2">&quot;turtle&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nt&quot;</span><span class="p">:</span> <span class="s2">&quot;ntriples&quot;</span><span class="p">,</span>
     <span class="s2">&quot;rdf&quot;</span><span class="p">:</span> <span class="s2">&quot;turtle&quot;</span><span class="p">,</span>
     <span class="s2">&quot;jsonld&quot;</span><span class="p">:</span> <span class="s2">&quot;json-ld&quot;</span><span class="p">,</span>
     <span class="s2">&quot;json-ld&quot;</span><span class="p">:</span> <span class="s2">&quot;json-ld&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;xml&quot;</span><span class="p">:</span> <span class="s2">&quot;xml&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;n3&quot;</span><span class="p">:</span> <span class="s2">&quot;n3&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="c1"># Deprecated?</span>
 <span class="n">SCHEME_DICT</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;sqlite&quot;</span><span class="p">:</span> <span class="n">SqlImplementation</span><span class="p">,</span>
+    <span class="s2">&quot;kgx&quot;</span><span class="p">:</span> <span class="n">KGXImplementation</span><span class="p">,</span>
     <span class="s2">&quot;ubergraph&quot;</span><span class="p">:</span> <span class="n">UbergraphImplementation</span><span class="p">,</span>
     <span class="s2">&quot;ontobee&quot;</span><span class="p">:</span> <span class="n">OntobeeImplementation</span><span class="p">,</span>
+    <span class="s2">&quot;uniprot&quot;</span><span class="p">:</span> <span class="n">UniprotImplementation</span><span class="p">,</span>
     <span class="s2">&quot;lov&quot;</span><span class="p">:</span> <span class="n">LovImplementation</span><span class="p">,</span>
     <span class="s2">&quot;sparql&quot;</span><span class="p">:</span> <span class="n">SparqlImplementation</span><span class="p">,</span>
     <span class="s2">&quot;rdflib&quot;</span><span class="p">:</span> <span class="n">SparqlImplementation</span><span class="p">,</span>
@@ -140,16 +158,19 @@
     <span class="s2">&quot;funowl&quot;</span><span class="p">:</span> <span class="n">FunOwlImplementation</span><span class="p">,</span>
     <span class="s2">&quot;pronto&quot;</span><span class="p">:</span> <span class="n">ProntoImplementation</span><span class="p">,</span>
     <span class="s2">&quot;simpleobo&quot;</span><span class="p">:</span> <span class="n">SimpleOboImplementation</span><span class="p">,</span>
+    <span class="s2">&quot;obograph&quot;</span><span class="p">:</span> <span class="n">OboGraphImplementation</span><span class="p">,</span>
     <span class="s2">&quot;obolibrary&quot;</span><span class="p">:</span> <span class="n">ProntoImplementation</span><span class="p">,</span>
     <span class="s2">&quot;prontolib&quot;</span><span class="p">:</span> <span class="n">ProntoImplementation</span><span class="p">,</span>
     <span class="s2">&quot;gilda&quot;</span><span class="p">:</span> <span class="n">GildaImplementation</span><span class="p">,</span>
+    <span class="s2">&quot;translator&quot;</span><span class="p">:</span> <span class="n">TranslatorImplementation</span><span class="p">,</span>
+    <span class="s2">&quot;oak&quot;</span><span class="p">:</span> <span class="n">OakMetaModelImplementation</span><span class="p">,</span>
 <span class="p">}</span>
 
 
 <div class="viewcode-block" id="get_implementation_from_shorthand"><a class="viewcode-back" href="../../selectors.html#oaklib.selector.get_implementation_from_shorthand">[docs]</a><span class="k">def</span> <span class="nf">get_implementation_from_shorthand</span><span class="p">(</span>
     <span class="n">descriptor</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BasicOntologyInterface</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    See :ref:`get_resource_from_shorthand`</span>
 
 <span class="sd">    Example:</span>
@@ -173,15 +194,15 @@
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Web requests not implemented yet&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="c1"># return SCHEME_DICT[scheme]</span>
-        <span class="kn">from</span> <span class="nn">oaklib.implementations</span> <span class="kn">import</span> <span class="n">implementation_resolver</span>
+        <span class="kn">from</span> <span class="nn">oaklib.implementations</span> <span class="kn">import</span> <span class="n">get_implementation_resolver</span>
 
-        <span class="k">return</span> <span class="n">implementation_resolver</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">scheme</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">get_implementation_resolver</span><span class="p">()</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">scheme</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">get_resource_imp_class_from_suffix_descriptor</span><span class="p">(</span>
     <span class="n">suffix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">resource</span><span class="p">:</span> <span class="n">OntologyResource</span><span class="p">,</span> <span class="n">descriptor</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">oaklib.implementations</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="kn">from</span> <span class="nn">oaklib.implementations</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># SimpleOboImplementation,</span>
         <span class="n">ProntoImplementation</span><span class="p">,</span>
         <span class="n">SparqlImplementation</span><span class="p">,</span>
         <span class="n">SqlImplementation</span><span class="p">,</span>
@@ -201,6 +222,8 @@
         <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Using rdflib rdf/xml parser; this behavior may change in future&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;ofn&quot;</span><span class="p">:</span>
         <span class="n">impl_class</span> <span class="o">=</span> <span class="n">FunOwlImplementation</span>
+    <span class="c1"># elif suffix == &quot;obo&quot;:</span>
+    <span class="c1">#     impl_class = SimpleOboImplementation</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">resource</span><span class="o">.</span><span class="n">local</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="n">impl_class</span> <span class="o">=</span> <span class="n">ProntoImplementation</span>
@@ -211,7 +234,7 @@
 <div class="viewcode-block" id="get_resource_from_shorthand"><a class="viewcode-back" href="../../selectors.html#oaklib.selector.get_resource_from_shorthand">[docs]</a><span class="k">def</span> <span class="nf">get_resource_from_shorthand</span><span class="p">(</span>
     <span class="n">descriptor</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">import_depth</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OntologyResource</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Maps from a shorthand descriptor to an OntologyResource.</span>
 
 <span class="sd">    :param descriptor:</span>
@@ -244,7 +267,9 @@
             <span class="n">descriptor</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="n">dm_path</span><span class="p">)</span><span class="o">/</span><span class="n">descriptor</span><span class="si">}</span><span class="s2">.owl.ttl&quot;</span>
             <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Introspecting datamodel from </span><span class="si">{</span><span class="n">descriptor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">resource</span><span class="o">.</span><span class="n">slug</span> <span class="o">=</span> <span class="n">descriptor</span>
-        <span class="k">if</span> <span class="s2">&quot;:&quot;</span> <span class="ow">in</span> <span class="n">descriptor</span><span class="p">:</span>
+
+        <span class="c1"># Prevent the driveletter from being interpreted as scheme on Windows.</span>
+        <span class="k">if</span> <span class="s2">&quot;:&quot;</span> <span class="ow">in</span> <span class="n">descriptor</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">descriptor</span><span class="p">):</span>
             <span class="n">toks</span> <span class="o">=</span> <span class="n">descriptor</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
             <span class="n">scheme</span> <span class="o">=</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">resource</span><span class="o">.</span><span class="n">scheme</span> <span class="o">=</span> <span class="n">scheme</span>
@@ -261,7 +286,7 @@
                 <span class="n">resource</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">rest</span>
                 <span class="n">resource</span><span class="o">.</span><span class="n">slug</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="k">elif</span> <span class="n">impl_class</span> <span class="o">==</span> <span class="n">ProntoImplementation</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">resource</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.obo&quot;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">resource</span><span class="o">.</span><span class="n">slug</span> <span class="ow">and</span> <span class="n">resource</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.obo&quot;</span><span class="p">):</span>
                     <span class="n">resource</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s2">&quot;obo&quot;</span>
                 <span class="k">if</span> <span class="n">scheme</span> <span class="o">==</span> <span class="s2">&quot;prontolib&quot;</span><span class="p">:</span>
                     <span class="n">resource</span><span class="o">.</span><span class="n">local</span> <span class="o">=</span> <span class="kc">False</span>

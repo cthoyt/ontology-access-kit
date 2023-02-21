@@ -2,16 +2,13 @@
 
 
 
-* __NOTE__: this is a mixin class intended to be used in combination with other classes, and not used directly
-
-
-URI: [omoschema:HasUserInformation](http://purl.obolibrary.org/obo/schema/HasUserInformation)
-
+URI: [omoschema:HasUserInformation](http://purl.obolibrary.org/obo/omo/schema/HasUserInformation)
 
 
 
 ```{mermaid}
  classDiagram
+    class HasUserInformation
       AnnotationPropertyMixin <|-- HasUserInformation
       
       HasUserInformation : comment
@@ -24,6 +21,17 @@ URI: [omoschema:HasUserInformation](http://purl.obolibrary.org/obo/schema/HasUse
       HasUserInformation : seeAlso
       
 
+      HasUserInformation <|-- Term
+      
+      HasUserInformation : comment
+      HasUserInformation : curator_note
+      HasUserInformation : depicted_by
+      HasUserInformation : example_of_usage
+      HasUserInformation : has_curation_status
+      HasUserInformation : image
+      HasUserInformation : page
+      HasUserInformation : seeAlso
+      
 ```
 
 
@@ -38,19 +46,29 @@ URI: [omoschema:HasUserInformation](http://purl.obolibrary.org/obo/schema/HasUse
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [comment](comment.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [seeAlso](seeAlso.md) | 0..* <br/> [Thing](Thing.md)  |   |
-| [image](image.md) | 0..1 <br/> [Thing](Thing.md)  |   |
-| [example_of_usage](example_of_usage.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [curator_note](curator_note.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [has_curation_status](has_curation_status.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [depicted_by](depicted_by.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [page](page.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [comment](comment.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [seeAlso](seeAlso.md) | 0..* <br/> [Thing](Thing.md) |  | direct |
+| [image](image.md) | 0..1 <br/> [Thing](Thing.md) |  | direct |
+| [example_of_usage](example_of_usage.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [curator_note](curator_note.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [has_curation_status](has_curation_status.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [depicted_by](depicted_by.md) | 0..* <br/> [Image](Image.md) |  | direct |
+| [page](page.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
 
 
-## Usages
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
+| [Term](Term.md) | A NamedThing that includes classes, properties, but not ontologies |
+
+
+
+
+
 
 
 
@@ -71,17 +89,18 @@ URI: [omoschema:HasUserInformation](http://purl.obolibrary.org/obo/schema/HasUse
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['omoschema:HasUserInformation'] |
-| native | ['omoschema:HasUserInformation'] |
+| self | omoschema:HasUserInformation |
+| native | omoschema:HasUserInformation |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -208,7 +227,7 @@ attributes:
     owner: HasUserInformation
     domain_of:
     - HasUserInformation
-    range: string
+    range: Image
   page:
     name: page
     from_schema: http://purl.obolibrary.org/obo/omo/schema

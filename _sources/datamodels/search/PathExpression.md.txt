@@ -4,9 +4,7 @@ _A path query_
 
 
 
-
 URI: [search:PathExpression](https://w3id.org/linkml/search_datamodel/PathExpression)
-
 
 
 
@@ -27,14 +25,17 @@ URI: [search:PathExpression](https://w3id.org/linkml/search_datamodel/PathExpres
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [traversal](traversal.md) | 0..1 <br/> [GraphFunction](GraphFunction.md)  |   |
-| [graph_predicates](graph_predicates.md) | 0..* <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
-| [search_term](search_term.md) | 0..1 <br/> [SearchBaseConfiguration](SearchBaseConfiguration.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [traversal](traversal.md) | 0..1 <br/> [GraphFunction](GraphFunction.md) |  | direct |
+| [graph_predicates](graph_predicates.md) | 0..* <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
+| [search_term](search_term.md) | 0..1 <br/> [SearchBaseConfiguration](SearchBaseConfiguration.md) |  | direct |
 
 
-## Usages
+
+
+
+
 
 
 
@@ -55,17 +56,18 @@ URI: [search:PathExpression](https://w3id.org/linkml/search_datamodel/PathExpres
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['search:PathExpression'] |
-| native | ['search:PathExpression'] |
+| self | search:PathExpression |
+| native | search:PathExpression |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

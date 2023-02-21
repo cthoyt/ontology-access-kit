@@ -6,14 +6,13 @@ _A report object that is a holder to multiple report results_
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-
 URI: [vm:Report](https://w3id.org/linkml/validation-model/Report)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class Report
       Report <|-- ValidationReport
       Report <|-- RepairReport
       
@@ -34,12 +33,15 @@ URI: [vm:Report](https://w3id.org/linkml/validation-model/Report)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [results](results.md) | 0..* <br/> [Result](Result.md)  | collection of results  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [results](results.md) | 0..* <br/> [Result](Result.md) | collection of results | direct |
 
 
-## Usages
+
+
+
+
 
 
 
@@ -60,17 +62,18 @@ URI: [vm:Report](https://w3id.org/linkml/validation-model/Report)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['vm:Report'] |
-| native | ['vm:Report'] |
+| self | vm:Report |
+| native | vm:Report |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

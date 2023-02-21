@@ -20,7 +20,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Utilities" href="../../utilities.html" />
+    <link rel="next" title="OAK Association Data Model" href="../association/index.html" />
     <link rel="prev" title="Text Annotator Datamodel" href="../text-annotator/index.html" /> 
 </head>
 
@@ -43,6 +43,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
@@ -54,8 +55,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../obograph/index.html">Obographs Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sssom/index.html">SSSOM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../funowl/index.html">FunOwl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kgcl/index.html">KGCL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../similarity/index.html">Semantic Similarity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../summary-statistics/index.html">Summary Statistics Datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../taxon-constraints/index.html">Taxon Constraints Reporting Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../validation/index.html">Validation Results Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lexical-index/index.html">Lexical Index</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../mapping-rules/index.html">Mapping Rules Datamodel</a></li>
@@ -68,8 +71,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#subsets">Subsets</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../association/index.html">OAK Association Data Model</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -91,9 +96,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Datamodels</a> &raquo;</li>
-      <li>Cross-Ontology Diff</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Datamodels</a></li>
+      <li class="breadcrumb-item active">Cross-Ontology Diff</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/cross-ontology-diff/index.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -121,7 +126,7 @@ Name: cross-ontology-diff</p>
 <td><p>A relational diff expresses the difference between an edge in one ontology, a…</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="StructureDiffResultSet.html"><span class="doc std std-doc">StructureDiffResultSet</span></a></p></td>
-<td><p>A collection of relational diff results results</p></td>
+<td><p>A collection of relational diff results</p></td>
 </tr>
 </tbody>
 </table>
@@ -139,10 +144,10 @@ Name: cross-ontology-diff</p>
 <td><p>Each match (or lack of match) is placed into exactly one category</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="is_functional.html"><span class="doc std std-doc">is_functional</span></a></p></td>
-<td><p></p></td>
+<td><p>Maps to exactly one thing</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="label.html"><span class="doc std std-doc">label</span></a></p></td>
-<td><p></p></td>
+<td><p>human readable label</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="left_object_id.html"><span class="doc std std-doc">left_object_id</span></a></p></td>
 <td><p>The object (parent) of the source/left edge</p></td>
@@ -160,10 +165,10 @@ Name: cross-ontology-diff</p>
 <td><p>The name of the predicate of the source/left edge</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="left_side.html"><span class="doc std std-doc">left_side</span></a></p></td>
-<td><p></p></td>
+<td><p>The first ontology is arbitrarily designated the left side</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="left_source.html"><span class="doc std std-doc">left_source</span></a></p></td>
-<td><p></p></td>
+<td><p>Ontology source for left entities</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="left_subject_id.html"><span class="doc std std-doc">left_subject_id</span></a></p></td>
 <td><p>The subject (child) of the source/left edge</p></td>
@@ -175,7 +180,7 @@ Name: cross-ontology-diff</p>
 <td><p>The name of the subject (child) of the source/left edge</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="object.html"><span class="doc std std-doc">object</span></a></p></td>
-<td><p></p></td>
+<td><p>The object node on left or right side</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="object_mapping_cardinality.html"><span class="doc std std-doc">object_mapping_cardinality</span></a></p></td>
 <td><p>The mapping cardinality of the object pair</p></td>
@@ -184,7 +189,7 @@ Name: cross-ontology-diff</p>
 <td><p>The mapping predicate that holds between left_object_id and right_object_id</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="predicate.html"><span class="doc std std-doc">predicate</span></a></p></td>
-<td><p></p></td>
+<td><p>The relationship type between subject and object on left or right side</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="results.html"><span class="doc std std-doc">results</span></a></p></td>
 <td><p>all differences between a pair of ontologies</p></td>
@@ -205,10 +210,10 @@ Name: cross-ontology-diff</p>
 <td><p>The names corresponding to the right_predicate_ids</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="right_side.html"><span class="doc std std-doc">right_side</span></a></p></td>
-<td><p></p></td>
+<td><p>The second ontology is arbitrarily designated the right side</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="right_source.html"><span class="doc std std-doc">right_source</span></a></p></td>
-<td><p></p></td>
+<td><p>Ontology source for right entities</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="right_subject_id.html"><span class="doc std std-doc">right_subject_id</span></a></p></td>
 <td><p>The subject (child) of the matched/right edge, if matchable</p></td>
@@ -217,10 +222,10 @@ Name: cross-ontology-diff</p>
 <td><p>The name of the subject (child) of the matched/right edge, if matchable</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="side.html"><span class="doc std std-doc">side</span></a></p></td>
-<td><p></p></td>
+<td><p>left or right side</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="subject.html"><span class="doc std std-doc">subject</span></a></p></td>
-<td><p></p></td>
+<td><p>The child node on left or right side</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="subject_mapping_cardinality.html"><span class="doc std std-doc">subject_mapping_cardinality</span></a></p></td>
 <td><p>The mapping cardinality of the subject pair</p></td>
@@ -261,41 +266,47 @@ Name: cross-ontology-diff</p>
 <tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></p></td>
 <td><p>A binary (true or false) value</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
+<td><p>a compact URI</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></p></td>
 <td><p>a date (year, month and day) in an idealized calendar</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://w3id.org/linkml/DateOrDatetime">linkml:DateOrDatetime</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="https://w3id.org/linkml/DateOrDatetime">linkml:DateOrDatetime</a></p></td>
 <td><p>Either a date or a datetime</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></p></td>
 <td><p>The combination of a date and time</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></p></td>
 <td><p>A real number with arbitrary precision that conforms to the xsd:decimal speci…</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a></p></td>
 <td><p>A real number that conforms to the xsd:double specification</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="EntityReference.html"><span class="doc std std-doc">EntityReference</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="EntityReference.html"><span class="doc std std-doc">EntityReference</span></a></p></td>
 <td><p>A reference to a mapped entity</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a></p></td>
 <td><p>A real number that conforms to the xsd:float specification</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
 <td><p>An integer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Label.html"><span class="doc std std-doc">Label</span></a></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Label.html"><span class="doc std std-doc">Label</span></a></p></td>
+<td><p>A string that is used as a human-readable label</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p>Prefix part of CURIE</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="xref myst">shex:nonLiteral</span></p></td>
+<tr class="row-even"><td><p><span class="xref myst">shex:nonLiteral</span></p></td>
 <td><p>A URI, CURIE or BNODE that represents a node in a model</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="xref myst">shex:iri</span></p></td>
+<tr class="row-odd"><td><p><span class="xref myst">shex:iri</span></p></td>
 <td><p>A URI or CURIE that represents an object in the model</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="Source.html"><span class="doc std std-doc">Source</span></a></p></td>
+<td><p>The name of an ontology that acts as a source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p>A character string</p></td>
@@ -329,7 +340,7 @@ Name: cross-ontology-diff</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../text-annotator/index.html" class="btn btn-neutral float-left" title="Text Annotator Datamodel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../utilities.html" class="btn btn-neutral float-right" title="Utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../association/index.html" class="btn btn-neutral float-right" title="OAK Association Data Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

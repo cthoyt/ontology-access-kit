@@ -4,9 +4,7 @@ _An individual mapping rule, if preconditions match the postconditions are appli
 
 
 
-
 URI: [mrules:MappingRule](https://w3id.org/linkml/mapping_rules_datamodel/MappingRule)
-
 
 
 
@@ -17,6 +15,7 @@ URI: [mrules:MappingRule](https://w3id.org/linkml/mapping_rules_datamodel/Mappin
       MappingRule : oneway
       MappingRule : postconditions
       MappingRule : preconditions
+      MappingRule : synonymizer
       
 ```
 
@@ -28,20 +27,26 @@ URI: [mrules:MappingRule](https://w3id.org/linkml/mapping_rules_datamodel/Mappin
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [description](description.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [oneway](oneway.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  | if true then subject and object can be switched and predicate inverted  |
-| [preconditions](preconditions.md) | 0..1 <br/> [Precondition](Precondition.md)  | all of the criteria that must be true before a rule is fired  |
-| [postconditions](postconditions.md) | 0..1 <br/> [Postcondition](Postcondition.md)  | conditions that apply if preconditions match  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [description](description.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [oneway](oneway.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | if true then subject and object can be switched and predicate inverted | direct |
+| [preconditions](preconditions.md) | 0..1 <br/> [Precondition](Precondition.md) | all of the criteria that must be true before a rule is fired | direct |
+| [postconditions](postconditions.md) | 0..1 <br/> [Postcondition](Postcondition.md) | conditions that apply if preconditions match | direct |
+| [synonymizer](synonymizer.md) | 0..1 <br/> [Synonymizer](Synonymizer.md) | Normalizing rules to labels | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [MappingRuleCollection](MappingRuleCollection.md) | [rules](rules.md) | range | MappingRule |
+| [MappingRuleCollection](MappingRuleCollection.md) | [rules](rules.md) | range | [MappingRule](MappingRule.md) |
+
+
+
 
 
 
@@ -62,17 +67,18 @@ URI: [mrules:MappingRule](https://w3id.org/linkml/mapping_rules_datamodel/Mappin
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['mrules:MappingRule'] |
-| native | ['mrules:MappingRule'] |
+| self | mrules:MappingRule |
+| native | mrules:MappingRule |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -110,6 +116,12 @@ attributes:
     from_schema: https://w3id.org/linkml/mapping_rules_datamodel
     rank: 1000
     range: Postcondition
+  synonymizer:
+    name: synonymizer
+    description: Normalizing rules to labels.
+    from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+    rank: 1000
+    range: Synonymizer
 
 ```
 </details>
@@ -165,6 +177,16 @@ attributes:
     domain_of:
     - MappingRule
     range: Postcondition
+  synonymizer:
+    name: synonymizer
+    description: Normalizing rules to labels.
+    from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+    rank: 1000
+    alias: synonymizer
+    owner: MappingRule
+    domain_of:
+    - MappingRule
+    range: Synonymizer
 
 ```
 </details>

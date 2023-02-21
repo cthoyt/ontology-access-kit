@@ -43,6 +43,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../implementations/index.html">Implementations</a></li>
@@ -54,15 +55,19 @@
 <li class="toctree-l2"><a class="reference internal" href="obograph/index.html">Obographs Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sssom/index.html">SSSOM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="funowl/index.html">FunOwl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kgcl/index.html">KGCL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="similarity/index.html">Semantic Similarity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="summary-statistics/index.html">Summary Statistics Datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taxon-constraints/index.html">Taxon Constraints Reporting Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="validation/index.html">Validation Results Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lexical-index/index.html">Lexical Index</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mapping-rules/index.html">Mapping Rules Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="text-annotator/index.html">Text Annotator Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cross-ontology-diff/index.html">Cross-Ontology Diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="association/index.html">OAK Association Data Model</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Notebooks</a></li>
@@ -84,8 +89,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Datamodels</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Datamodels</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/datamodels/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -138,6 +143,7 @@ not need this.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sssom/index.html">SSSOM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="funowl/index.html">FunOwl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kgcl/index.html">KGCL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="similarity/index.html">Semantic Similarity</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="similarity/index.html#classes">Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="similarity/index.html#slots">Slots</a></li>
@@ -152,6 +158,14 @@ not need this.</p>
 <li class="toctree-l2"><a class="reference internal" href="summary-statistics/index.html#enumerations">Enumerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="summary-statistics/index.html#types">Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="summary-statistics/index.html#subsets">Subsets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="taxon-constraints/index.html">Taxon Constraints Reporting Datamodel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="taxon-constraints/index.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taxon-constraints/index.html#slots">Slots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taxon-constraints/index.html#enumerations">Enumerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taxon-constraints/index.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taxon-constraints/index.html#subsets">Subsets</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="validation/index.html">Validation Results Datamodel</a><ul>
@@ -192,6 +206,14 @@ not need this.</p>
 <li class="toctree-l2"><a class="reference internal" href="cross-ontology-diff/index.html#enumerations">Enumerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cross-ontology-diff/index.html#types">Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cross-ontology-diff/index.html#subsets">Subsets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="association/index.html">OAK Association Data Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="association/index.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="association/index.html#slots">Slots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="association/index.html#enumerations">Enumerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="association/index.html#types">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="association/index.html#subsets">Subsets</a></li>
 </ul>
 </li>
 </ul>

@@ -4,14 +4,13 @@ _An individual text annotation_
 
 
 
-
 URI: [oa:Annotation](http://www.w3.org/ns/oa#Annotation)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class TextAnnotation
       HasSpan <|-- TextAnnotation
       
       TextAnnotation : confidence
@@ -20,6 +19,7 @@ URI: [oa:Annotation](http://www.w3.org/ns/oa#Annotation)
       TextAnnotation : match_string
       TextAnnotation : match_type
       TextAnnotation : matches_whole_text
+      TextAnnotation : object_aliases
       TextAnnotation : object_id
       TextAnnotation : object_label
       TextAnnotation : object_source
@@ -30,7 +30,6 @@ URI: [oa:Annotation](http://www.w3.org/ns/oa#Annotation)
       TextAnnotation : subject_start
       TextAnnotation : subject_text_id
       
-
 ```
 
 
@@ -38,37 +37,43 @@ URI: [oa:Annotation](http://www.w3.org/ns/oa#Annotation)
 
 
 ## Inheritance
-* **TextAnnotation** [ HasSpan]
+* **TextAnnotation** [ [HasSpan](HasSpan.md)]
 
 
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [predicate_id](predicate_id.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [object_id](object_id.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [object_label](object_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [object_source](object_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [confidence](confidence.md) | 0..1 <br/> [xsd:float](http://www.w3.org/2001/XMLSchema#float)  |   |
-| [match_string](match_string.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [is_longest_match](is_longest_match.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  |   |
-| [matches_whole_text](matches_whole_text.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  |   |
-| [match_type](match_type.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [subject_start](subject_start.md) | 0..1 <br/> [Position](Position.md)  |   |
-| [subject_end](subject_end.md) | 0..1 <br/> [Position](Position.md)  |   |
-| [subject_label](subject_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | The portion of the subject text that is matched, ranging from subject_start t...  |
-| [subject_source](subject_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [subject_text_id](subject_text_id.md) | 0..1 <br/> [TextualElement](TextualElement.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [predicate_id](predicate_id.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [object_id](object_id.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [object_label](object_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [object_source](object_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [confidence](confidence.md) | 0..1 <br/> [xsd:float](http://www.w3.org/2001/XMLSchema#float) |  | direct |
+| [match_string](match_string.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [is_longest_match](is_longest_match.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
+| [matches_whole_text](matches_whole_text.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [match_type](match_type.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [object_aliases](object_aliases.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [subject_start](subject_start.md) | 0..1 <br/> [Position](Position.md) |  | [HasSpan](HasSpan.md) |
+| [subject_end](subject_end.md) | 0..1 <br/> [Position](Position.md) |  | [HasSpan](HasSpan.md) |
+| [subject_label](subject_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | The portion of the subject text that is matched, ranging from subject_start t... | [HasSpan](HasSpan.md) |
+| [subject_source](subject_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | [HasSpan](HasSpan.md) |
+| [subject_text_id](subject_text_id.md) | 0..1 <br/> [TextualElement](TextualElement.md) |  | [HasSpan](HasSpan.md) |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [TextAnnotationResultSet](TextAnnotationResultSet.md) | [annotations](annotations.md) | range | TextAnnotation |
+| [TextAnnotationResultSet](TextAnnotationResultSet.md) | [annotations](annotations.md) | range | [TextAnnotation](TextAnnotation.md) |
+
+
+
 
 
 
@@ -89,17 +94,18 @@ URI: [oa:Annotation](http://www.w3.org/ns/oa#Annotation)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['oa:Annotation'] |
-| native | ['ann:TextAnnotation'] |
+| self | oa:Annotation |
+| native | ann:TextAnnotation |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -166,6 +172,11 @@ attributes:
     name: info
     from_schema: https://w3id.org/linkml/text_annotator
     rank: 1000
+  object_aliases:
+    name: object_aliases
+    from_schema: https://w3id.org/linkml/text_annotator
+    rank: 1000
+    multivalued: true
 class_uri: oa:Annotation
 
 ```
@@ -278,6 +289,16 @@ attributes:
     from_schema: https://w3id.org/linkml/text_annotator
     rank: 1000
     alias: info
+    owner: TextAnnotation
+    domain_of:
+    - TextAnnotation
+    range: string
+  object_aliases:
+    name: object_aliases
+    from_schema: https://w3id.org/linkml/text_annotator
+    rank: 1000
+    multivalued: true
+    alias: object_aliases
     owner: TextAnnotation
     domain_of:
     - TextAnnotation

@@ -2,20 +2,37 @@
 _The name of the subject (child) of the matched/right edge, if matchable_
 
 
-URI: [https://w3id.org/linkml/text_annotator/right_subject_label](https://w3id.org/linkml/text_annotator/right_subject_label)
+URI: [ann:right_subject_label](https://w3id.org/linkml/text_annotator/right_subject_label)
 
 
 
 
 ## Inheritance
 
-* **right_subject_label** [ right_side subject label]
+* **right_subject_label** [ [right_side](right_side.md) [subject](subject.md) [label](label.md)]
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description |
+| --- | --- |
+[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a...
+
+
+
 
 
 
 ## Properties
 
- * Range: [Label](Label.md)
+* Range: [Label](Label.md)
+
+
+
+
 
 
 
@@ -34,3 +51,24 @@ URI: [https://w3id.org/linkml/text_annotator/right_subject_label](https://w3id.o
 
 
 
+
+## LinkML Source
+
+<details>
+```yaml
+name: right_subject_label
+description: The name of the subject (child) of the matched/right edge, if matchable
+from_schema: https://w3id.org/linkml/cross_ontology_diff
+rank: 1000
+mixins:
+- right_side
+- subject
+- label
+alias: right_subject_label
+owner: RelationalDiff
+domain_of:
+- RelationalDiff
+range: Label
+
+```
+</details>

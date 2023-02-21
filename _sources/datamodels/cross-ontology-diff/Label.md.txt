@@ -1,8 +1,10 @@
-# Label
+# Type: Label
 
-None
 
-URI: http://www.w3.org/2001/XMLSchema#string
+_A string that is used as a human-readable label_
+
+
+URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
 * [base](https://w3id.org/linkml/base): str
 
@@ -10,6 +12,9 @@ URI: http://www.w3.org/2001/XMLSchema#string
 
 
 * [typeof](https://w3id.org/linkml/typeof): string
+
+
+
 
 
 

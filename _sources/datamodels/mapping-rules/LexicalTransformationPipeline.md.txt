@@ -4,20 +4,18 @@ _A collection of atomic lexical transformations that are applied in serial fashi
 
 
 
-
 URI: [li:LexicalTransformationPipeline](https://w3id.org/linkml/lexical_index/LexicalTransformationPipeline)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class LexicalTransformationPipeline
       Activity <|-- LexicalTransformationPipeline
       
       LexicalTransformationPipeline : name
       LexicalTransformationPipeline : transformations
       
-
 ```
 
 
@@ -32,19 +30,24 @@ URI: [li:LexicalTransformationPipeline](https://w3id.org/linkml/lexical_index/Le
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [name](name.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [transformations](transformations.md) | 0..* <br/> [LexicalTransformation](LexicalTransformation.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [name](name.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [transformations](transformations.md) | 0..* <br/> [LexicalTransformation](LexicalTransformation.md) |  | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LexicalIndex](LexicalIndex.md) | [pipelines](pipelines.md) | range | LexicalTransformationPipeline |
-| [RelationshipToTerm](RelationshipToTerm.md) | [pipeline](pipeline.md) | range | LexicalTransformationPipeline |
+| [LexicalIndex](LexicalIndex.md) | [pipelines](pipelines.md) | range | [LexicalTransformationPipeline](LexicalTransformationPipeline.md) |
+| [RelationshipToTerm](RelationshipToTerm.md) | [pipeline](pipeline.md) | range | [LexicalTransformationPipeline](LexicalTransformationPipeline.md) |
+
+
+
 
 
 
@@ -65,17 +68,18 @@ URI: [li:LexicalTransformationPipeline](https://w3id.org/linkml/lexical_index/Le
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['li:LexicalTransformationPipeline'] |
-| native | ['li:LexicalTransformationPipeline'] |
+| self | li:LexicalTransformationPipeline |
+| native | li:LexicalTransformationPipeline |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

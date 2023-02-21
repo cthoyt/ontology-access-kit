@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: SynonymPropertyValue</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: SynonymPropertyValue</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/obograph/SynonymPropertyValue.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,20 +83,20 @@
              
   <section id="class-synonympropertyvalue">
 <h1>Class: SynonymPropertyValue<a class="headerlink" href="#class-synonympropertyvalue" title="Permalink to this headline"></a></h1>
+<p><em>A property value that represents an assertion about a synonym of an entity</em></p>
 <p>URI: <a class="reference external" href="https://github.com/geneontology/obographs/SynonymPropertyValue">og:SynonymPropertyValue</a></p>
 <div class="mermaid">
              classDiagram
+    class SynonymPropertyValue
       PropertyValue &lt;|-- SynonymPropertyValue
       
       SynonymPropertyValue : isExact
       SynonymPropertyValue : meta
       SynonymPropertyValue : pred
-      SynonymPropertyValue : scope
       SynonymPropertyValue : synonymType
       SynonymPropertyValue : val
       SynonymPropertyValue : xrefs
       
-
         </div><section id="inheritance">
 <h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline"></a></h2>
 <ul class="simple">
@@ -112,36 +114,39 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="synonymType.html"><span class="doc std std-doc">synonymType</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="SynonymTypeIdentifierString.html"><span class="doc std std-doc">SynonymTypeIdentifierString</span></a></p></td>
+<td><p>This standard follows oboInOwl in allowing an open ended list of synonym type…</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="isExact.html"><span class="doc std std-doc">isExact</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></p></td>
 <td><p></p></td>
+<td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="scope.html"><span class="doc std std-doc">scope</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference internal" href="ScopesEnum.html"><span class="doc std std-doc">ScopesEnum</span></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pred.html"><span class="doc std std-doc">pred</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pred.html"><span class="doc std std-doc">pred</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>the predicate of an edge</p></td>
+<td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="val.html"><span class="doc std std-doc">val</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="val.html"><span class="doc std std-doc">val</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>The textual string representing the synonym</p></td>
+<td><p><a class="reference internal" href="PropertyValue.html"><span class="doc std std-doc">PropertyValue</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="xrefs.html"><span class="doc std std-doc">xrefs</span></a></p></td>
-<td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="xrefs.html"><span class="doc std std-doc">xrefs</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="XrefString.html"><span class="doc std std-doc">XrefString</span></a></p></td>
+<td><p>A list of cross references to other entities represented in other ontologies,…</p></td>
+<td><p><a class="reference internal" href="PropertyValue.html"><span class="doc std std-doc">PropertyValue</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="meta.html"><span class="doc std std-doc">meta</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="meta.html"><span class="doc std std-doc">meta</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Meta.html"><span class="doc std std-doc">Meta</span></a></p></td>
-<td><p></p></td>
+<td><p>A collection of metadata about either an ontology (graph), an entity, or an a…</p></td>
+<td><p><a class="reference internal" href="PropertyValue.html"><span class="doc std std-doc">PropertyValue</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -160,7 +165,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="Meta.html"><span class="doc std std-doc">Meta</span></a></p></td>
 <td><p><a class="reference internal" href="synonyms.html"><span class="doc std std-doc">synonyms</span></a></p></td>
 <td><p>range</p></td>
-<td><p>SynonymPropertyValue</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc std std-doc">SynonymPropertyValue</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -184,29 +189,48 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘og:SynonymPropertyValue’]</p></td>
+<td><p>og:SynonymPropertyValue</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘og:SynonymPropertyValue’]</p></td>
+<td><p>og:SynonymPropertyValue</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
 <details>
 ```yaml
 name: SynonymPropertyValue
+description: A property value that represents an assertion about a synonym of an entity
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 is_a: PropertyValue
 slots:
 - synonymType
 - isExact
-- scope
+- pred
+slot_usage:
+  pred:
+    name: pred
+    domain_of:
+    - Edge
+    - SynonymPropertyValue
+    - PropertyValue
+    - Edge
+    - SynonymPropertyValue
+    - PropertyValue
+    range: ScopeEnum
+  val:
+    name: val
+    description: The textual string representing the synonym.
+    domain_of:
+    - PropertyValue
+    - PropertyValue
+    role: synonym text
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
 
 ### Induced
@@ -214,21 +238,43 @@ slots:
 &lt;details&gt;
 ```yaml
 name: SynonymPropertyValue
+description: A property value that represents an assertion about a synonym of an entity
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 is_a: PropertyValue
+slot_usage:
+  pred:
+    name: pred
+    domain_of:
+    - Edge
+    - SynonymPropertyValue
+    - PropertyValue
+    - Edge
+    - SynonymPropertyValue
+    - PropertyValue
+    range: ScopeEnum
+  val:
+    name: val
+    description: The textual string representing the synonym.
+    domain_of:
+    - PropertyValue
+    - PropertyValue
+    role: synonym text
 attributes:
   synonymType:
     name: synonymType
+    description: This standard follows oboInOwl in allowing an open ended list of
+      synonym types
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
     alias: synonymType
     owner: SynonymPropertyValue
     domain_of:
     - SynonymPropertyValue
-    range: string
+    range: SynonymTypeIdentifierString
   isExact:
     name: isExact
+    deprecated: use synonymType instead
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
     alias: isExact
@@ -236,37 +282,43 @@ attributes:
     domain_of:
     - SynonymPropertyValue
     range: boolean
-  scope:
-    name: scope
-    from_schema: https://github.com/geneontology/obographs
-    rank: 1000
-    alias: scope
-    owner: SynonymPropertyValue
-    domain_of:
-    - SynonymPropertyValue
-    range: scopes_enum
   pred:
     name: pred
+    description: the predicate of an edge
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
+    slot_uri: rdf:predicate
     alias: pred
     owner: SynonymPropertyValue
     domain_of:
     - Edge
+    - SynonymPropertyValue
     - PropertyValue
-    range: string
+    - Edge
+    - SynonymPropertyValue
+    - PropertyValue
+    range: ScopeEnum
   val:
     name: val
+    description: The textual string representing the synonym.
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
+    slot_uri: rdf:object
     alias: val
     owner: SynonymPropertyValue
     domain_of:
     - PropertyValue
+    - PropertyValue
+    role: synonym text
     range: string
   xrefs:
     name: xrefs
+    description: A list of cross references to other entities represented in other
+      ontologies, vocabularies, databases, or websites. The semantics of xrefs are
+      intentionally weak, and most closely align with rdfs:seeAlso
     from_schema: https://github.com/geneontology/obographs
+    close_mappings:
+    - rdfs:seeAlso
     rank: 1000
     multivalued: true
     alias: xrefs
@@ -274,10 +326,14 @@ attributes:
     domain_of:
     - Meta
     - PropertyValue
-    range: string
+    range: XrefString
   meta:
     name: meta
+    description: A collection of metadata about either an ontology (graph), an entity,
+      or an axiom
     from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - annotations
     rank: 1000
     alias: meta
     owner: SynonymPropertyValue
@@ -285,6 +341,7 @@ attributes:
     - GraphDocument
     - Graph
     - Node
+    - Edge
     - PropertyValue
     - Axiom
     range: Meta

@@ -43,12 +43,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../converters/index.html">Converters</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../utilities.html">Utilities</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="oaklib.utilities.obograph_utils.html">oaklib.utilities.obograph_utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="oaklib.utilities.graph.relationship_walker.html">oaklib.utilities.graph.relationship_walker</a></li>
@@ -79,9 +81,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../utilities.html">Utilities</a> &raquo;</li>
-      <li>oaklib.utilities.table_filler</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../utilities.html">Utilities</a></li>
+      <li class="breadcrumb-item active">oaklib.utilities.table_filler</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/src/oaklib.utilities.table_filler.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -106,8 +108,8 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_table</span></code>(input_file[, delimiter])</p></td>
 <td><p>Parses a file into rows, replacing empty lines with None values</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_table</span></code>(rows, output_file[, delimiter, ...])</p></td>
-<td><p>Writes a list of rows to a file, replacing None values with empty strings</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_table</span></code>(rows, output_file[, comments, ...])</p></td>
+<td><p>Writes a list of rows to a file, replacing None values with empty strings.</p></td>
 </tr>
 </tbody>
 </table>

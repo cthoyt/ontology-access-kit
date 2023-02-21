@@ -1,9 +1,19 @@
 # search datamodel
 
-A datamodel for representing a search configuration and results. This is intended to provide a unified layer over both (a) how searches are *parameterized* (b) the structure of search *results*. The scope is any kind of service that provides search over *named entities*, including ontology concepts. It is not intended to cover generic search results, e.g. google search, although parts could be generalized for this purpose.
+A datamodel for representing a search configuration and results.
+
+This is intended to provide a unified layer over both:
+
+- (a) how searches are *parameterized*
+- (b) the structure of search *results*.
+
+The scope is any kind of service that provides search over *named entities*, including ontology concepts. It is not intended to cover generic
+search results, e.g. google search, although parts could be generalized for this purpose.
 
 URI: https://w3id.org/linkml/search_datamodel
 Name: search-datamodel
+
+
 
 ## Classes
 
@@ -26,6 +36,7 @@ Name: search-datamodel
 | [categories](categories.md) | categories that should be matched |
 | [configuration](configuration.md) |  |
 | [cursor](cursor.md) | when the number of search results exceed the limit this can be used to iterat... |
+| [force_case_insensitive](force_case_insensitive.md) | force case insensitive matching |
 | [graph_predicates](graph_predicates.md) |  |
 | [include_obsoletes_in_results](include_obsoletes_in_results.md) |  |
 | [is_complete](is_complete.md) |  |
@@ -66,6 +77,7 @@ Name: search-datamodel
 | Type | Description |
 | --- | --- |
 | [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | A binary (true or false) value |
+| [xsd:string](http://www.w3.org/2001/XMLSchema#string) | a compact URI |
 | [xsd:date](http://www.w3.org/2001/XMLSchema#date) | a date (year, month and day) in an idealized calendar |
 | [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime) | Either a date or a datetime |
 | [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | The combination of a date and time |

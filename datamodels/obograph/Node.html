@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: Node</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: Node</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/obograph/Node.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,7 +83,8 @@
              
   <section id="class-node">
 <h1>Class: Node<a class="headerlink" href="#class-node" title="Permalink to this headline"></a></h1>
-<p>URI: <a class="reference external" href="https://github.com/geneontology/obographs/Node">og:Node</a></p>
+<p><em>A node is a class, property, or other entity in an ontology</em></p>
+<p>URI: <a class="reference external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource">rdf:Resource</a></p>
 <div class="mermaid">
              classDiagram
     class Node
@@ -98,24 +101,29 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="doc std std-doc">id</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>1..1 <br/> <a class="reference internal" href="OboIdentifierString.html"><span class="doc std std-doc">OboIdentifierString</span></a></p></td>
+<td><p>The identifier of the entity</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="lbl.html"><span class="doc std std-doc">lbl</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>the human-readable label of a node</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="type.html"><span class="doc std std-doc">type</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="meta.html"><span class="doc std std-doc">meta</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Meta.html"><span class="doc std std-doc">Meta</span></a></p></td>
-<td><p></p></td>
+<td><p>A collection of metadata about either an ontology (graph), an entity, or an a…</p></td>
+<td><p>direct</p></td>
 </tr>
 </tbody>
 </table>
@@ -134,7 +142,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="Graph.html"><span class="doc std std-doc">Graph</span></a></p></td>
 <td><p><a class="reference internal" href="nodes.html"><span class="doc std std-doc">nodes</span></a></p></td>
 <td><p>range</p></td>
-<td><p>Node</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc std std-doc">Node</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -158,22 +166,23 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘og:Node’]</p></td>
+<td><p>rdf:Resource</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘og:Node’]</p></td>
+<td><p>og:Node</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
 <details>
 ```yaml
 name: Node
+description: A node is a class, property, or other entity in an ontology
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 slots:
@@ -181,6 +190,7 @@ slots:
 - lbl
 - type
 - meta
+class_uri: rdf:Resource
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
 
 ### Induced
@@ -188,12 +198,16 @@ slots:
 &lt;details&gt;
 ```yaml
 name: Node
+description: A node is a class, property, or other entity in an ontology
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 attributes:
   id:
     name: id
+    description: The identifier of the entity
     from_schema: https://github.com/geneontology/obographs
+    see_also:
+    - https://owlcollab.github.io/oboformat/doc/obo-syntax.html#2.5
     rank: 1000
     identifier: true
     alias: id
@@ -201,11 +215,19 @@ attributes:
     domain_of:
     - Graph
     - Node
-    range: string
+    range: OboIdentifierString
   lbl:
     name: lbl
+    description: the human-readable label of a node
+    comments:
+    - the name &quot;lbl&quot; exists for legacy purposes, this should be considered identical
+      to label in rdfs
     from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - label
+    - name
     rank: 1000
+    slot_uri: rdfs:label
     alias: lbl
     owner: Node
     domain_of:
@@ -223,7 +245,11 @@ attributes:
     range: string
   meta:
     name: meta
+    description: A collection of metadata about either an ontology (graph), an entity,
+      or an axiom
     from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - annotations
     rank: 1000
     alias: meta
     owner: Node
@@ -231,9 +257,11 @@ attributes:
     - GraphDocument
     - Graph
     - Node
+    - Edge
     - PropertyValue
     - Axiom
     range: Meta
+class_uri: rdf:Resource
 
 </pre></div>
 </div>

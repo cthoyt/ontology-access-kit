@@ -4,9 +4,7 @@ _A pattern to be matched against an individual SSSOM mapping_
 
 
 
-
 URI: [mrules:Precondition](https://w3id.org/linkml/mapping_rules_datamodel/Precondition)
-
 
 
 
@@ -30,22 +28,27 @@ URI: [mrules:Precondition](https://w3id.org/linkml/mapping_rules_datamodel/Preco
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [subject_source_one_of](subject_source_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [object_source_one_of](object_source_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [mapping_source_one_of](mapping_source_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [subject_match_field_one_of](subject_match_field_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [object_match_field_one_of](object_match_field_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [transformations_included_in](transformations_included_in.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [subject_source_one_of](subject_source_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [object_source_one_of](object_source_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [mapping_source_one_of](mapping_source_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [subject_match_field_one_of](subject_match_field_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [object_match_field_one_of](object_match_field_one_of.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [transformations_included_in](transformations_included_in.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [MappingRule](MappingRule.md) | [preconditions](preconditions.md) | range | Precondition |
+| [MappingRule](MappingRule.md) | [preconditions](preconditions.md) | range | [Precondition](Precondition.md) |
+
+
+
 
 
 
@@ -66,17 +69,18 @@ URI: [mrules:Precondition](https://w3id.org/linkml/mapping_rules_datamodel/Preco
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['mrules:Precondition'] |
-| native | ['mrules:Precondition'] |
+| self | mrules:Precondition |
+| native | mrules:Precondition |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

@@ -4,11 +4,7 @@ _Auto-classifies anything that is not obsolete_
 
 
 
-* __NOTE__: this is a mixin class intended to be used in combination with other classes, and not used directly
-
-
-URI: [omoschema:NotObsoleteAspect](http://purl.obolibrary.org/obo/schema/NotObsoleteAspect)
-
+URI: [omoschema:NotObsoleteAspect](http://purl.obolibrary.org/obo/omo/schema/NotObsoleteAspect)
 
 
 
@@ -26,24 +22,38 @@ URI: [omoschema:NotObsoleteAspect](http://purl.obolibrary.org/obo/schema/NotObso
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+
+
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [HasLifeCycle](HasLifeCycle.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
-| [Term](Term.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
-| [Class](Class.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
-| [Property](Property.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
-| [AnnotationProperty](AnnotationProperty.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
-| [ObjectProperty](ObjectProperty.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
-| [TransitiveProperty](TransitiveProperty.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
-| [NamedIndividual](NamedIndividual.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
-| [Subset](Subset.md) | [has_alternative_id](has_alternative_id.md) | domain | NotObsoleteAspect |
+| [HasLifeCycle](HasLifeCycle.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [Term](Term.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [Class](Class.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [Property](Property.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [AnnotationProperty](AnnotationProperty.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [ObjectProperty](ObjectProperty.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [TransitiveProperty](TransitiveProperty.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [NamedIndividual](NamedIndividual.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [HomoSapiens](HomoSapiens.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [Agent](Agent.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [Image](Image.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+| [Subset](Subset.md) | [has_alternative_id](has_alternative_id.md) | domain | [NotObsoleteAspect](NotObsoleteAspect.md) |
+
+
+
 
 
 
@@ -64,21 +74,18 @@ URI: [omoschema:NotObsoleteAspect](http://purl.obolibrary.org/obo/schema/NotObso
 
 
 
-
-
-## Rules
-
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['omoschema:NotObsoleteAspect'] |
-| native | ['omoschema:NotObsoleteAspect'] |
+| self | omoschema:NotObsoleteAspect |
+| native | omoschema:NotObsoleteAspect |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

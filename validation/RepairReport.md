@@ -4,19 +4,17 @@ _A report that consists of repair operation results_
 
 
 
-
 URI: [vm:RepairReport](https://w3id.org/linkml/validation-model/RepairReport)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class RepairReport
       Report <|-- RepairReport
       
       RepairReport : results
       
-
 ```
 
 
@@ -31,12 +29,15 @@ URI: [vm:RepairReport](https://w3id.org/linkml/validation-model/RepairReport)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [results](results.md) | 0..* <br/> [RepairOperation](RepairOperation.md)  | collection of results  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [results](results.md) | 0..* <br/> [RepairOperation](RepairOperation.md) | collection of results | [Report](Report.md) |
 
 
-## Usages
+
+
+
+
 
 
 
@@ -57,17 +58,18 @@ URI: [vm:RepairReport](https://w3id.org/linkml/validation-model/RepairReport)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['vm:RepairReport'] |
-| native | ['vm:RepairReport'] |
+| self | vm:RepairReport |
+| native | vm:RepairReport |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

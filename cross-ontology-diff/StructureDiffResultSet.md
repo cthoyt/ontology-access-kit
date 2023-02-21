@@ -1,12 +1,10 @@
 # Class: StructureDiffResultSet
-_A collection of relational diff results results_
-
+_A collection of relational diff results_
 
 
 
 
 URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/StructureDiffResultSet)
-
 
 
 
@@ -27,14 +25,17 @@ URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/Structu
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [results](results.md) | 0..* <br/> [RelationalDiff](RelationalDiff.md)  | all differences between a pair of ontologies  |
-| [left_source](left_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [right_source](right_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [results](results.md) | 0..* <br/> [RelationalDiff](RelationalDiff.md) | all differences between a pair of ontologies | direct |
+| [left_source](left_source.md) | 0..1 <br/> [Source](Source.md) | Ontology source for left entities | direct |
+| [right_source](right_source.md) | 0..1 <br/> [Source](Source.md) | Ontology source for right entities | direct |
 
 
-## Usages
+
+
+
+
 
 
 
@@ -55,17 +56,18 @@ URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/Structu
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['ann:StructureDiffResultSet'] |
-| native | ['ann:StructureDiffResultSet'] |
+| self | ann:StructureDiffResultSet |
+| native | ann:StructureDiffResultSet |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -74,7 +76,7 @@ URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/Structu
 <details>
 ```yaml
 name: StructureDiffResultSet
-description: A collection of relational diff results results
+description: A collection of relational diff results
 from_schema: https://w3id.org/linkml/cross_ontology_diff
 rank: 1000
 attributes:
@@ -88,12 +90,16 @@ attributes:
     inlined: true
   left_source:
     name: left_source
+    description: Ontology source for left entities
     from_schema: https://w3id.org/linkml/cross_ontology_diff
     rank: 1000
+    range: Source
   right_source:
     name: right_source
+    description: Ontology source for right entities
     from_schema: https://w3id.org/linkml/cross_ontology_diff
     rank: 1000
+    range: Source
 
 ```
 </details>
@@ -103,7 +109,7 @@ attributes:
 <details>
 ```yaml
 name: StructureDiffResultSet
-description: A collection of relational diff results results
+description: A collection of relational diff results
 from_schema: https://w3id.org/linkml/cross_ontology_diff
 rank: 1000
 attributes:
@@ -121,22 +127,24 @@ attributes:
     inlined: true
   left_source:
     name: left_source
+    description: Ontology source for left entities
     from_schema: https://w3id.org/linkml/cross_ontology_diff
     rank: 1000
     alias: left_source
     owner: StructureDiffResultSet
     domain_of:
     - StructureDiffResultSet
-    range: string
+    range: Source
   right_source:
     name: right_source
+    description: Ontology source for right entities
     from_schema: https://w3id.org/linkml/cross_ontology_diff
     rank: 1000
     alias: right_source
     owner: StructureDiffResultSet
     domain_of:
     - StructureDiffResultSet
-    range: string
+    range: Source
 
 ```
 </details>

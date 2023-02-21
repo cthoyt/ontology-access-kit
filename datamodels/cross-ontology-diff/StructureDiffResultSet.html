@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: StructureDiffResultSet</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: StructureDiffResultSet</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/cross-ontology-diff/StructureDiffResultSet.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,7 +83,7 @@
              
   <section id="class-structurediffresultset">
 <h1>Class: StructureDiffResultSet<a class="headerlink" href="#class-structurediffresultset" title="Permalink to this headline"></a></h1>
-<p><em>A collection of relational diff results results</em></p>
+<p><em>A collection of relational diff results</em></p>
 <p>URI: <a class="reference external" href="https://w3id.org/linkml/text_annotator/StructureDiffResultSet">ann:StructureDiffResultSet</a></p>
 <div class="mermaid">
              classDiagram
@@ -98,26 +100,27 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="results.html"><span class="doc std std-doc">results</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="RelationalDiff.html"><span class="doc std std-doc">RelationalDiff</span></a></p></td>
 <td><p>all differences between a pair of ontologies</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="left_source.html"><span class="doc std std-doc">left_source</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Source.html"><span class="doc std std-doc">Source</span></a></p></td>
+<td><p>Ontology source for left entities</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="right_source.html"><span class="doc std std-doc">right_source</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Source.html"><span class="doc std std-doc">Source</span></a></p></td>
+<td><p>Ontology source for right entities</p></td>
+<td><p>direct</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="usages">
-<h2>Usages<a class="headerlink" href="#usages" title="Permalink to this headline"></a></h2>
 </section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permalink to this headline"></a></h2>
@@ -138,23 +141,23 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘ann:StructureDiffResultSet’]</p></td>
+<td><p>ann:StructureDiffResultSet</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘ann:StructureDiffResultSet’]</p></td>
+<td><p>ann:StructureDiffResultSet</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
 <details>
 ```yaml
 name: StructureDiffResultSet
-description: A collection of relational diff results results
+description: A collection of relational diff results
 from_schema: https://w3id.org/linkml/cross_ontology_diff
 rank: 1000
 attributes:
@@ -168,12 +171,16 @@ attributes:
     inlined: true
   left_source:
     name: left_source
+    description: Ontology source for left entities
     from_schema: https://w3id.org/linkml/cross_ontology_diff
     rank: 1000
+    range: Source
   right_source:
     name: right_source
+    description: Ontology source for right entities
     from_schema: https://w3id.org/linkml/cross_ontology_diff
     rank: 1000
+    range: Source
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
 
 ### Induced
@@ -181,7 +188,7 @@ attributes:
 &lt;details&gt;
 ```yaml
 name: StructureDiffResultSet
-description: A collection of relational diff results results
+description: A collection of relational diff results
 from_schema: https://w3id.org/linkml/cross_ontology_diff
 rank: 1000
 attributes:
@@ -199,22 +206,24 @@ attributes:
     inlined: true
   left_source:
     name: left_source
+    description: Ontology source for left entities
     from_schema: https://w3id.org/linkml/cross_ontology_diff
     rank: 1000
     alias: left_source
     owner: StructureDiffResultSet
     domain_of:
     - StructureDiffResultSet
-    range: string
+    range: Source
   right_source:
     name: right_source
+    description: Ontology source for right entities
     from_schema: https://w3id.org/linkml/cross_ontology_diff
     rank: 1000
     alias: right_source
     owner: StructureDiffResultSet
     domain_of:
     - StructureDiffResultSet
-    range: string
+    range: Source
 
 </pre></div>
 </div>

@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: Term</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: Term</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/ontology-metadata/Term.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -85,9 +87,10 @@
 <ul class="simple">
 <li><p><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</p></li>
 </ul>
-<p>URI: <a class="reference external" href="http://purl.obolibrary.org/obo/schema/Term">omoschema:Term</a></p>
+<p>URI: <a class="reference external" href="http://purl.obolibrary.org/obo/omo/schema/Term">omoschema:Term</a></p>
 <div class="mermaid">
              classDiagram
+    class Term
       HasSynonyms &lt;|-- Term
       HasLifeCycle &lt;|-- Term
       HasProvenance &lt;|-- Term
@@ -151,6 +154,63 @@
       Term : type
       
 
+      Term &lt;|-- Class
+      Term &lt;|-- Property
+      Term &lt;|-- NamedIndividual
+      
+      Term : alternative_term
+      Term : broadMatch
+      Term : category
+      Term : closeMatch
+      Term : comment
+      Term : conformsTo
+      Term : consider
+      Term : contributor
+      Term : created
+      Term : created_by
+      Term : creation_date
+      Term : creator
+      Term : curator_note
+      Term : database_cross_reference
+      Term : date
+      Term : definition
+      Term : definition_source
+      Term : depicted_by
+      Term : deprecated
+      Term : editor_note
+      Term : editor_preferred_term
+      Term : exactMatch
+      Term : example_of_usage
+      Term : excluded_from_QC_check
+      Term : excluded_subClassOf
+      Term : excluded_synonym
+      Term : has_alternative_id
+      Term : has_broad_synonym
+      Term : has_curation_status
+      Term : has_exact_synonym
+      Term : has_narrow_synonym
+      Term : has_obo_namespace
+      Term : has_obsolescence_reason
+      Term : has_related_synonym
+      Term : id
+      Term : IEDB_alternative_term
+      Term : image
+      Term : imported_from
+      Term : in_subset
+      Term : ISA_alternative_term
+      Term : isDefinedBy
+      Term : label
+      Term : narrowMatch
+      Term : OBO_foundry_unique_label
+      Term : ontology_term_requester
+      Term : page
+      Term : seeAlso
+      Term : should_conform_to
+      Term : term_editor
+      Term : term_replaced_by
+      Term : term_tracker_item
+      Term : type
+      
         </div><section id="inheritance">
 <h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline"></a></h2>
 <ul class="simple">
@@ -158,9 +218,9 @@
 <ul>
 <li><p><a class="reference internal" href="NamedObject.html"><span class="doc std std-doc">NamedObject</span></a></p>
 <ul>
-<li><p><strong>Term</strong> [ HasSynonyms HasLifeCycle HasProvenance HasMappings HasCategory HasUserInformation HasMinimalMetadata]</p>
+<li><p><strong>Term</strong> [ <a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a> <a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a> <a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a> <a class="reference internal" href="HasMappings.html"><span class="doc std std-doc">HasMappings</span></a> <a class="reference internal" href="HasCategory.html"><span class="doc std std-doc">HasCategory</span></a> <a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a> <a class="reference internal" href="HasMinimalMetadata.html"><span class="doc std std-doc">HasMinimalMetadata</span></a>]</p>
 <ul>
-<li><p><a class="reference internal" href="Class.html"><span class="doc std std-doc">Class</span></a> [ ClassExpression]</p></li>
+<li><p><a class="reference internal" href="Class.html"><span class="doc std std-doc">Class</span></a> [ <a class="reference internal" href="ClassExpression.html"><span class="doc std std-doc">ClassExpression</span></a>]</p></li>
 <li><p><a class="reference internal" href="Property.html"><span class="doc std std-doc">Property</span></a></p></li>
 <li><p><a class="reference internal" href="NamedIndividual.html"><span class="doc std std-doc">NamedIndividual</span></a></p></li>
 </ul>
@@ -178,222 +238,278 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="has_exact_synonym.html"><span class="doc std std-doc">has_exact_synonym</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="LabelType.html"><span class="doc std std-doc">LabelType</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="has_narrow_synonym.html"><span class="doc std std-doc">has_narrow_synonym</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="LabelType.html"><span class="doc std std-doc">LabelType</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="has_broad_synonym.html"><span class="doc std std-doc">has_broad_synonym</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="LabelType.html"><span class="doc std std-doc">LabelType</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="has_related_synonym.html"><span class="doc std std-doc">has_related_synonym</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="LabelType.html"><span class="doc std std-doc">LabelType</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="alternative_term.html"><span class="doc std std-doc">alternative_term</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ISA_alternative_term.html"><span class="doc std std-doc">ISA_alternative_term</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="IEDB_alternative_term.html"><span class="doc std std-doc">IEDB_alternative_term</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="editor_preferred_term.html"><span class="doc std std-doc">editor_preferred_term</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="OBO_foundry_unique_label.html"><span class="doc std std-doc">OBO_foundry_unique_label</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasSynonyms.html"><span class="doc std std-doc">HasSynonyms</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="deprecated.html"><span class="doc std std-doc">deprecated</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="has_obsolescence_reason.html"><span class="doc std std-doc">has_obsolescence_reason</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="term_replaced_by.html"><span class="doc std std-doc">term_replaced_by</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Any.html"><span class="doc std std-doc">Any</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="consider.html"><span class="doc std std-doc">consider</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Any.html"><span class="doc std std-doc">Any</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="has_alternative_id.html"><span class="doc std std-doc">has_alternative_id</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></p></td>
 <td><p>Relates a live term to a deprecated ID that was merged in</p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="excluded_from_QC_check.html"><span class="doc std std-doc">excluded_from_QC_check</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="excluded_subClassOf.html"><span class="doc std std-doc">excluded_subClassOf</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Class.html"><span class="doc std std-doc">Class</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="excluded_synonym.html"><span class="doc std std-doc">excluded_synonym</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="should_conform_to.html"><span class="doc std std-doc">should_conform_to</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasLifeCycle.html"><span class="doc std std-doc">HasLifeCycle</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="created_by.html"><span class="doc std std-doc">created_by</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="creation_date.html"><span class="doc std std-doc">creation_date</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="contributor.html"><span class="doc std std-doc">contributor</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="Agent.html"><span class="doc std std-doc">Agent</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="creator.html"><span class="doc std std-doc">creator</span></a></p></td>
-<td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="Agent.html"><span class="doc std std-doc">Agent</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="created.html"><span class="doc std std-doc">created</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p>when the term came into being</p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="date.html"><span class="doc std std-doc">date</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p>when the term was updated</p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="isDefinedBy.html"><span class="doc std std-doc">isDefinedBy</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Ontology.html"><span class="doc std std-doc">Ontology</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="editor_note.html"><span class="doc std std-doc">editor_note</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="NarrativeText.html"><span class="doc std std-doc">NarrativeText</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="term_editor.html"><span class="doc std std-doc">term_editor</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="definition_source.html"><span class="doc std std-doc">definition_source</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ontology_term_requester.html"><span class="doc std std-doc">ontology_term_requester</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="imported_from.html"><span class="doc std std-doc">imported_from</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="NamedIndividual.html"><span class="doc std std-doc">NamedIndividual</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="term_tracker_item.html"><span class="doc std std-doc">term_tracker_item</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasProvenance.html"><span class="doc std std-doc">HasProvenance</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="broadMatch.html"><span class="doc std std-doc">broadMatch</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasMappings.html"><span class="doc std std-doc">HasMappings</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="closeMatch.html"><span class="doc std std-doc">closeMatch</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasMappings.html"><span class="doc std std-doc">HasMappings</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="exactMatch.html"><span class="doc std std-doc">exactMatch</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasMappings.html"><span class="doc std std-doc">HasMappings</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="narrowMatch.html"><span class="doc std std-doc">narrowMatch</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasMappings.html"><span class="doc std std-doc">HasMappings</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="database_cross_reference.html"><span class="doc std std-doc">database_cross_reference</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="CURIELiteral.html"><span class="doc std std-doc">CURIELiteral</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasMappings.html"><span class="doc std std-doc">HasMappings</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="has_obo_namespace.html"><span class="doc std std-doc">has_obo_namespace</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasCategory.html"><span class="doc std std-doc">HasCategory</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="category.html"><span class="doc std std-doc">category</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasCategory.html"><span class="doc std std-doc">HasCategory</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="in_subset.html"><span class="doc std std-doc">in_subset</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Subset.html"><span class="doc std std-doc">Subset</span></a></p></td>
 <td><p>Maps an ontology element to a subset it belongs to</p></td>
+<td><p><a class="reference internal" href="HasCategory.html"><span class="doc std std-doc">HasCategory</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="conformsTo.html"><span class="doc std std-doc">conformsTo</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasCategory.html"><span class="doc std std-doc">HasCategory</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="comment.html"><span class="doc std std-doc">comment</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="seeAlso.html"><span class="doc std std-doc">seeAlso</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="image.html"><span class="doc std std-doc">image</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="example_of_usage.html"><span class="doc std std-doc">example_of_usage</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="curator_note.html"><span class="doc std std-doc">curator_note</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="has_curation_status.html"><span class="doc std std-doc">has_curation_status</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="depicted_by.html"><span class="doc std std-doc">depicted_by</span></a></p></td>
-<td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="Image.html"><span class="doc std std-doc">Image</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="page.html"><span class="doc std std-doc">page</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasUserInformation.html"><span class="doc std std-doc">HasUserInformation</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="label.html"><span class="doc std std-doc">label</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="LabelType.html"><span class="doc std std-doc">LabelType</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasMinimalMetadata.html"><span class="doc std std-doc">HasMinimalMetadata</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="definition.html"><span class="doc std std-doc">definition</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="NarrativeText.html"><span class="doc std std-doc">NarrativeText</span></a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="HasMinimalMetadata.html"><span class="doc std std-doc">HasMinimalMetadata</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="doc std std-doc">id</span></a></p></td>
 <td><p>1..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></p></td>
 <td><p>this maps to the URI in RDF</p></td>
+<td><p><a class="reference internal" href="NamedObject.html"><span class="doc std std-doc">NamedObject</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="type.html"><span class="doc std std-doc">type</span></a></p></td>
 <td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></p></td>
 <td><p></p></td>
+<td><p><a class="reference internal" href="Thing.html"><span class="doc std std-doc">Thing</span></a></p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="usages">
-<h2>Usages<a class="headerlink" href="#usages" title="Permalink to this headline"></a></h2>
+<section id="aliases">
+<h2>Aliases<a class="headerlink" href="#aliases" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>term</p></li>
+</ul>
 </section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permalink to this headline"></a></h2>
@@ -414,16 +530,16 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘omoschema:Term’]</p></td>
+<td><p>omoschema:Term</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘omoschema:Term’]</p></td>
+<td><p>omoschema:Term</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
@@ -765,7 +881,11 @@ attributes:
     owner: Term
     domain_of:
     - HasProvenance
-    range: Thing
+    range: Agent
+    structured_pattern:
+      syntax: &#39;{orcid_regex}&#39;
+      interpolated: true
+      partial_match: false
   creator:
     name: creator
     from_schema: http://purl.obolibrary.org/obo/omo/schema
@@ -780,7 +900,11 @@ attributes:
     domain_of:
     - HasProvenance
     - Ontology
-    range: string
+    range: Agent
+    structured_pattern:
+      syntax: &#39;{orcid_regex}&#39;
+      interpolated: true
+      partial_match: false
   created:
     name: created
     description: when the term came into being
@@ -1100,7 +1224,7 @@ attributes:
     owner: Term
     domain_of:
     - HasUserInformation
-    range: string
+    range: Image
   page:
     name: page
     from_schema: http://purl.obolibrary.org/obo/omo/schema

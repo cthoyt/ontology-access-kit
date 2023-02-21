@@ -2,9 +2,7 @@
 
 
 
-
 URI: [search:ComplexQuery](https://w3id.org/linkml/search_datamodel/ComplexQuery)
-
 
 
 
@@ -27,23 +25,28 @@ URI: [search:ComplexQuery](https://w3id.org/linkml/search_datamodel/ComplexQuery
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [all_of](all_of.md) | 0..* <br/> [ComplexQuery](ComplexQuery.md)  |   |
-| [any_of](any_of.md) | 0..* <br/> [ComplexQuery](ComplexQuery.md)  |   |
-| [none_of](none_of.md) | 0..* <br/> [ComplexQuery](ComplexQuery.md)  |   |
-| [path_to](path_to.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [atom](atom.md) | 0..1 <br/> [SearchBaseConfiguration](SearchBaseConfiguration.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [all_of](all_of.md) | 0..* <br/> [ComplexQuery](ComplexQuery.md) |  | direct |
+| [any_of](any_of.md) | 0..* <br/> [ComplexQuery](ComplexQuery.md) |  | direct |
+| [none_of](none_of.md) | 0..* <br/> [ComplexQuery](ComplexQuery.md) |  | direct |
+| [path_to](path_to.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [atom](atom.md) | 0..1 <br/> [SearchBaseConfiguration](SearchBaseConfiguration.md) |  | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [ComplexQuery](ComplexQuery.md) | [all_of](all_of.md) | range | ComplexQuery |
-| [ComplexQuery](ComplexQuery.md) | [any_of](any_of.md) | range | ComplexQuery |
-| [ComplexQuery](ComplexQuery.md) | [none_of](none_of.md) | range | ComplexQuery |
+| [ComplexQuery](ComplexQuery.md) | [all_of](all_of.md) | range | [ComplexQuery](ComplexQuery.md) |
+| [ComplexQuery](ComplexQuery.md) | [any_of](any_of.md) | range | [ComplexQuery](ComplexQuery.md) |
+| [ComplexQuery](ComplexQuery.md) | [none_of](none_of.md) | range | [ComplexQuery](ComplexQuery.md) |
+
+
+
 
 
 
@@ -64,17 +67,18 @@ URI: [search:ComplexQuery](https://w3id.org/linkml/search_datamodel/ComplexQuery
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['search:ComplexQuery'] |
-| native | ['search:ComplexQuery'] |
+| self | search:ComplexQuery |
+| native | search:ComplexQuery |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

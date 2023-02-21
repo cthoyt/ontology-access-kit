@@ -43,6 +43,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="implementations/index.html">Implementations</a></li>
@@ -53,21 +54,25 @@
 <li class="toctree-l3"><a class="reference internal" href="#predicates">Predicates</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#command-line-docs">Command Line Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#runoak">runoak</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-aliases">aliases</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-ancestors">ancestors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-annotate">annotate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-apply">apply</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-apply-obsolete">apply-obsolete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-associations">associations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-axioms">axioms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#runoak-check-definitions">check-definitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-cache-clear">cache-clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-cache-ls">cache-ls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-definitions">definitions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-descendants">descendants</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-diff">diff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-diff-associations">diff-associations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-diff-terms">diff-terms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-diff-via-mappings">diff-via-mappings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-dump">dump</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-enrichment">enrichment</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-eval-taxon-constraints">eval-taxon-constraints</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-expand-subsets">expand-subsets</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-extract-triples">extract-triples</a></li>
@@ -85,6 +90,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#runoak-ontology-metadata">ontology-metadata</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-ontology-versions">ontology-versions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-paths">paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-prefixes">prefixes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-relationships">relationships</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-roots">roots</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-search">search</a></li>
@@ -93,7 +99,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#runoak-similarity">similarity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-similarity-pair">similarity-pair</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-singletons">singletons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-statistics">statistics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-subsets">subsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-synonymize">synonymize</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-taxon-constraints">taxon-constraints</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-term-categories">term-categories</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-term-metadata">term-metadata</a></li>
@@ -102,6 +110,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#runoak-termset-similarity">termset-similarity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-tree">tree</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-validate">validate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#runoak-validate-definitions">validate-definitions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-validate-multiple">validate-multiple</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#runoak-viz">viz</a></li>
 </ul>
@@ -112,6 +121,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Notebooks</a></li>
@@ -133,8 +143,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Command Line</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Command Line</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/cli.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -146,14 +156,6 @@
              
   <section id="command-line">
 <h1>Command Line<a class="headerlink" href="#command-line" title="Permalink to this headline"></a></h1>
-<p>Preamble
-—</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>currently things are set up such that there is a single main command <code class="code docutils literal notranslate"><span class="pre">runoak</span></code>, which has
-a growing number of subcommands. In the future we may decide to split the subcommands
-into other commands.</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>we follow the <a class="reference external" href="https://clig.dev/">CLIG</a> guidelines as far as possible</p>
@@ -165,7 +167,21 @@ into other commands.</p>
 <p>if you are running this as an internal OAK developer you need to precede the command with <code class="code docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">shell</span></code></p>
 </div>
 <p>The general structure is:</p>
-<p>The value for <code class="code docutils literal notranslate"><span class="pre">--input</span></code> (which can be shorted to <code class="code docutils literal notranslate"><span class="pre">-i</span></code>) is specified in the <a class="reference internal" href="selectors.html#selectors"><span class="std std-ref">Ontology Implementation Selectors</span></a> documentation</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>--input<span class="w"> </span>HANDLE<span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>COMMAND<span class="w"> </span>ARGS<span class="w"> </span>AND<span class="w"> </span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p>The value for <code class="code docutils literal notranslate"><span class="pre">--input</span></code> (which can be shorted to <code class="code docutils literal notranslate"><span class="pre">-i</span></code>) is specified in the <a class="reference internal" href="selectors.html#selectors"><span class="std std-ref">Ontology Implementation Selectors</span></a> documentation.</p>
+<p>Examples:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>--input<span class="w"> </span>ubergraph:<span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>COMMAND<span class="w"> </span>ARGS<span class="w"> </span>AND<span class="w"> </span>OPTIONS<span class="o">]</span>
+runoak<span class="w"> </span>--input<span class="w"> </span>fbbt.obo<span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>COMMAND<span class="w"> </span>ARGS<span class="w"> </span>AND<span class="w"> </span>OPTIONS<span class="o">]</span>
+runoak<span class="w"> </span>--input<span class="w"> </span>cl.db<span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>COMMAND<span class="w"> </span>ARGS<span class="w"> </span>AND<span class="w"> </span>OPTIONS<span class="o">]</span>
+runoak<span class="w"> </span>--input<span class="w"> </span>sqlite:obo:cl<span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>COMMAND<span class="w"> </span>ARGS<span class="w"> </span>AND<span class="w"> </span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p>It can be useful to create aliases for individual ontologies. For example, to create an alias for the Uberon ontology:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">uberon</span><span class="o">=</span><span class="s1">&#39;runoak -i obo:sqlite:uberon&#39;</span>
+</pre></div>
+</div>
 <p>You can specify further implementations with <code class="code docutils literal notranslate"><span class="pre">-a</span></code> which will create an <span class="xref std std-ref">aggregator</span> implementation that wraps
 multiple implementations. For example, you can multiplex queries over different endpoints.</p>
 </section>
@@ -185,8 +201,15 @@ multiple implementations. For example, you can multiplex queries over different 
 </div></blockquote>
 </li>
 </ul>
-<p>Search terms are <em>expanded</em> to matching CURIEs, and then fed into the command</p>
-<p>Be warned that use of search terms can make some commands “explode”</p>
+<p>Search terms are <em>expanded</em> to matching CURIEs, and then fed into the command.</p>
+<p>For example, (assuming the alias above) the following command will look up two terms using their labels:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uberon<span class="w"> </span>info<span class="w"> </span>hand<span class="w"> </span>foot
+</pre></div>
+</div>
+<p>This is equivalent to:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uberon<span class="w"> </span>info<span class="w"> </span>UBERON:0002398<span class="w"> </span>UBERON:0002397
+</pre></div>
+</div>
 </section>
 <section id="predicates">
 <h3>Predicates<a class="headerlink" href="#predicates" title="Permalink to this headline"></a></h3>
@@ -199,11 +222,20 @@ the command line interface understands shortcuts for these:</p>
 <li><p><code class="code docutils literal notranslate"><span class="pre">i</span></code>: is-a (i.e rdfs:subClassOf between two named classes)</p></li>
 <li><p><code class="code docutils literal notranslate"><span class="pre">p</span></code>: part-of</p></li>
 </ul>
-<p>However, this library is not restricted to biological ontologies, and in future we may allow customizable shortcuts.</p>
+<p>For example, to draw the subgraph of terms starting from “hand” and “foot”
+and tracing upwards through is_a and part_of relationships:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uberon<span class="w"> </span>viz<span class="w"> </span>-p<span class="w"> </span>i,p<span class="w"> </span>hand<span class="w"> </span>foot
+</pre></div>
+</div>
 </section>
 </section>
-<section id="command-line-docs">
-<h2>Command Line Docs<a class="headerlink" href="#command-line-docs" title="Permalink to this headline"></a></h2>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline"></a></h2>
+<p>The following section is autogenerated from the inline docs.
+You should get the same results by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>COMMAND<span class="w"> </span>--help
+</pre></div>
+</div>
 <section id="runoak">
 <h3>runoak<a class="headerlink" href="#runoak" title="Permalink to this headline"></a></h3>
 <p>Run the oaklib Command Line.</p>
@@ -218,7 +250,7 @@ the command line interface understands shortcuts for these:</p>
 <div><p>runoak viz -h</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak <span class="o">[</span>OPTIONS<span class="o">]</span> COMMAND <span class="o">[</span>ARGS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -233,6 +265,17 @@ the command line interface understands shortcuts for these:</p>
 <dd></dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-stacktrace">
+<span id="cmdoption-runoak-no-stacktrace"></span><span class="sig-name descname"><span class="pre">--stacktrace</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-stacktrace</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-stacktrace" title="Permalink to this definition"></a></dt>
+<dd><p>If set then show full stacktrace on error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-save-as">
 <span class="sig-name descname"><span class="pre">--save-as</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;save_as&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-save-as" title="Permalink to this definition"></a></dt>
 <dd><p>For commands that mutate the ontology, this specifies where changes are saved to</p>
@@ -245,9 +288,39 @@ the command line interface understands shortcuts for these:</p>
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-named-prefix-map">
+<span class="sig-name descname"><span class="pre">--named-prefix-map</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;named_prefix_map&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-named-prefix-map" title="Permalink to this definition"></a></dt>
+<dd><p>the name of a prefix map, e.g. obo, prefixcc</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-prefix">
+<span class="sig-name descname"><span class="pre">--prefix</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;prefix&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-prefix" title="Permalink to this definition"></a></dt>
+<dd><p>prefix=expansion pair</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-metamodel-mappings">
+<span class="sig-name descname"><span class="pre">--metamodel-mappings</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;metamodel_mappings&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-metamodel-mappings" title="Permalink to this definition"></a></dt>
+<dd><p>overrides for metamodel properties such as rdfs:label</p>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-import-depth">
 <span class="sig-name descname"><span class="pre">--import-depth</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;import_depth&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-import-depth" title="Permalink to this definition"></a></dt>
-<dd><p>Maximum depth in the import tree to traverse</p>
+<dd><p>Maximum depth in the import tree to traverse. Currently this is only used by the pronto adapter</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-g">
+<span id="cmdoption-runoak-associations"></span><span class="sig-name descname"><span class="pre">-g</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--associations</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;associations&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-g" title="Permalink to this definition"></a></dt>
+<dd><p>Location of ontology associations</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-G">
+<span id="cmdoption-runoak-associations-type"></span><span class="sig-name descname"><span class="pre">-G</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--associations-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;associations_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-G" title="Permalink to this definition"></a></dt>
+<dd><p>Syntax of associations input</p>
 </dd></dl>
 
 <dl class="std option">
@@ -289,19 +362,25 @@ oboInOwl, etc)</p>
 richer data if present in the ontology, including synonym categories/types, synonym provenance</p>
 <p>In future, this may become the default</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak aliases <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>aliases<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-aliases-obo-model">
 <span id="cmdoption-runoak-aliases-no-obo-model"></span><span class="sig-name descname"><span class="pre">--obo-model</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-obo-model</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-aliases-obo-model" title="Permalink to this definition"></a></dt>
-<dd><p>If true, assume the OBO synonym datamodel</p>
+<dd><p>If true, assume the OBO synonym datamodel, including provenancem synonym types</p>
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-runoak-aliases-o">
-<span id="cmdoption-runoak-aliases-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-aliases-o" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object std" id="cmdoption-runoak-aliases-O">
+<span id="cmdoption-runoak-aliases-o"></span><span id="cmdoption-runoak-aliases-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-aliases-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-aliases-0">
+<span id="cmdoption-runoak-aliases-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-aliases-0" title="Permalink to this definition"></a></dt>
 <dd><p>Output file, e.g. obo file</p>
 </dd></dl>
 
@@ -346,7 +425,7 @@ For exampple, constrained to is-a and part-of:</p>
 <div><p><a class="reference external" href="https://incatools.github.io/ontology-access-kit/interfaces/obograph.html">https://incatools.github.io/ontology-access-kit/interfaces/obograph.html</a></p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak ancestors <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>ancestors<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -391,20 +470,47 @@ For exampple, constrained to is-a and part-of:</p>
 <h4>annotate<a class="headerlink" href="#runoak-annotate" title="Permalink to this headline"></a></h4>
 <blockquote>
 <div><p>Annotate a piece of text using a Named Entity Recognition annotation</p>
-<dl class="simple">
-<dt>Example:</dt><dd><p>runoak -i bioportal: annotate “enlarged nucleus in T-cells from peripheral blood”</p>
-</dd>
-</dl>
-<p>Currently BioPortal is the only implementation. Volunteers sought to implement for OLS.</p>
-<p>See the ontorunner framework for plugins for SciSpacy and OGER</p>
-<p>For more on text annotation, see:</p>
+<p>Example:</p>
 <blockquote>
-<div><ul class="simple">
-<li><p>&lt;<a class="reference external" href="https://incatools.github.io/ontology-access-kit/interfaces/text-annotator.html">https://incatools.github.io/ontology-access-kit/interfaces/text-annotator.html</a>&gt;_</p></li>
-</ul>
+<div><p>runoak -i bioportal: annotate “enlarged nucleus in T-cells from peripheral blood”</p>
+</div></blockquote>
+<p>Currently most implementations do not yet support annotation.</p>
+<p>See the ontorunner framework for plugins for SciSpacy and OGER - these will
+later become plugins.</p>
+<p>If gilda is installed as an extra, it can be used,
+but <code class="docutils literal notranslate"><span class="pre">--matches-whole-text</span></code> (<code class="docutils literal notranslate"><span class="pre">-W</span></code>) must be specified,
+as gilda only performs grounding.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i gilda: annotate -W BRCA2</p>
+</div></blockquote>
+<p>Programmatic usage:</p>
+<blockquote>
+<div><p>This command is a wrapper onto the annotate_text method,
+this is provided as part of the <em>TextAnnotator</em> interface:</p>
+<p><a class="reference external" href="https://incatools.github.io/ontology-access-kit/interfaces/text-annotator">https://incatools.github.io/ontology-access-kit/interfaces/text-annotator</a></p>
+</div></blockquote>
+<p>Aliases can be listed in the output by setting the flag
+–include-aliases to <cite>true</cite> (default: false).</p>
+<p>Example (using the plugin oakx-spacy):</p>
+<blockquote>
+<div><p>runoak -i spacy:sqlite:obo:bero annotate Myeloid derived suppressor cells. –include-aliases</p>
+</div></blockquote>
+<p>will yield:</p>
+<blockquote>
+<div><p>confidence: 0.8
+object_aliases:
+- Myeloid-Derived Suppressor Cells
+- MDSCs
+- mdscs
+- myeloid-derived suppressor cells
+object_id: obo:MESH_D000072737
+object_label: Myeloid-Derived Suppressor Cells
+subject_end: 30
+subject_start: 0</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak annotate <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>WORDS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>annotate<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>WORDS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -420,9 +526,38 @@ For exampple, constrained to is-a and part-of:</p>
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-annotate-include-aliases">
+<span id="cmdoption-runoak-annotate-no-include-aliases"></span><span class="sig-name descname"><span class="pre">--include-aliases</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-include-aliases</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-annotate-include-aliases" title="Permalink to this definition"></a></dt>
+<dd><p>Include alias maps in output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-annotate-text-file">
 <span class="sig-name descname"><span class="pre">--text-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;text_file&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-annotate-text-file" title="Permalink to this definition"></a></dt>
 <dd><p>Text file to annotate. Each newline separated entry is a distinct text.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-annotate-L">
+<span id="cmdoption-runoak-annotate-l"></span><span id="cmdoption-runoak-annotate-lexical-index-file"></span><span class="sig-name descname"><span class="pre">-L</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--lexical-index-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;lexical_index_file&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-annotate-L" title="Permalink to this definition"></a></dt>
+<dd><p>path to lexical index. This is recreated each time unless –no-recreate is passed</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-annotate-m">
+<span id="cmdoption-runoak-annotate-model"></span><span class="sig-name descname"><span class="pre">-m</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--model</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;model&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-annotate-m" title="Permalink to this definition"></a></dt>
+<dd><p>Name of trained model to use for annotation, e.g. ‘en_ner_craft_md’.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-annotate-x">
+<span id="cmdoption-runoak-annotate-exclude-tokens"></span><span class="sig-name descname"><span class="pre">-x</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--exclude-tokens</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;exclude_tokens&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-annotate-x" title="Permalink to this definition"></a></dt>
+<dd><p>Text file or list of tokens to filter from input prior to annotation.        If passed as text file, each newline separated entry is a distinct text.</p>
 </dd></dl>
 
 <dl class="std option">
@@ -469,7 +604,7 @@ For exampple, constrained to is-a and part-of:</p>
 <li><p>only a subset of KGCL commands are supported by each backend</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak apply <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>COMMANDS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>apply<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>COMMANDS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -479,9 +614,72 @@ For exampple, constrained to is-a and part-of:</p>
 <dd></dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-apply-changes-output">
+<span class="sig-name descname"><span class="pre">--changes-output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;changes_output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-apply-changes-output" title="Permalink to this definition"></a></dt>
+<dd><p>output file for KGCL changes</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-apply-changes-input">
+<span class="sig-name descname"><span class="pre">--changes-input</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;changes_input&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-apply-changes-input" title="Permalink to this definition"></a></dt>
+<dd><p>Path to an input changes file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-apply-changes-format">
+<span class="sig-name descname"><span class="pre">--changes-format</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;changes_format&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-apply-changes-format" title="Permalink to this definition"></a></dt>
+<dd><p>Format of the changes file (json or kgcl)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-apply-dry-run">
+<span id="cmdoption-runoak-apply-no-dry-run"></span><span class="sig-name descname"><span class="pre">--dry-run</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-dry-run</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-apply-dry-run" title="Permalink to this definition"></a></dt>
+<dd><p>if true, only perform the parse of KCGL and do not apply</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-apply-expand">
+<span id="cmdoption-runoak-apply-no-expand"></span><span class="sig-name descname"><span class="pre">--expand</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-expand</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-apply-expand" title="Permalink to this definition"></a></dt>
+<dd><p>if true, expand complex changes to atomic changes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-apply-ignore-invalid-changes">
+<span id="cmdoption-runoak-apply-no-ignore-invalid-changes"></span><span class="sig-name descname"><span class="pre">--ignore-invalid-changes</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-ignore-invalid-changes</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-apply-ignore-invalid-changes" title="Permalink to this definition"></a></dt>
+<dd><p>if true, ignore invalid changes, e.g. obsoletions of dependent entities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-apply-contributor">
+<span class="sig-name descname"><span class="pre">--contributor</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;contributor&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-apply-contributor" title="Permalink to this definition"></a></dt>
+<dd><p>CURIE for the person contributing the patch</p>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-apply-O">
 <span id="cmdoption-runoak-apply-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-apply-O" title="Permalink to this definition"></a></dt>
 <dd><p>Desired output type</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-apply-overwrite">
+<span id="cmdoption-runoak-apply-no-overwrite"></span><span class="sig-name descname"><span class="pre">--overwrite</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-overwrite</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-apply-overwrite" title="Permalink to this definition"></a></dt>
+<dd><p>If set, any changes applied will be saved back to the input file/source</p>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
@@ -511,7 +709,7 @@ obsolete them all:</p>
 </div></blockquote>
 <p>This command is partially redundant with the more general “apply” command</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak apply-obsolete <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>apply-obsolete<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -534,6 +732,108 @@ obsolete them all:</p>
 </dd></dl>
 
 </section>
+<section id="runoak-associations">
+<h4>associations<a class="headerlink" href="#runoak-associations" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p>Lookup associations from or to entities.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:hp -g test.hpoa -G hpoa associations</p>
+</div></blockquote>
+<p>The above will show all associations</p>
+<p>To query using an ontology term, including is-a closure, specify one or more
+terms or term queries, plus the closure predicate(s), e.g.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:hp -g test.hpoa -G hpoa associations -p i HP:0001392</p>
+</div></blockquote>
+<p>This shows all annotations either to “Abnormality of the liver” (HP:0001392), or
+to is-a descendants</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>associations<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-o">
+<span id="cmdoption-runoak-associations-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-associations-o" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-p">
+<span id="cmdoption-runoak-associations-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-associations-p" title="Permalink to this definition"></a></dt>
+<dd><p>A comma-separated list of predicates</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-autolabel">
+<span id="cmdoption-runoak-associations-no-autolabel"></span><span class="sig-name descname"><span class="pre">--autolabel</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-autolabel</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-associations-autolabel" title="Permalink to this definition"></a></dt>
+<dd><p>If set, results will automatically have labels assigned</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-O">
+<span id="cmdoption-runoak-associations-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-associations-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-0">
+<span id="cmdoption-runoak-associations-1"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-associations-0" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-if-absent">
+<span class="sig-name descname"><span class="pre">--if-absent</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;if_absent&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-associations-if-absent" title="Permalink to this definition"></a></dt>
+<dd><p>determines behavior when the value is not present or is empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>absent-only | present-only</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-S">
+<span id="cmdoption-runoak-associations-s"></span><span id="cmdoption-runoak-associations-set-value"></span><span class="sig-name descname"><span class="pre">-S</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--set-value</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;set_value&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-associations-S" title="Permalink to this definition"></a></dt>
+<dd><p>the value to set for all terms for the given property.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-association-predicates">
+<span class="sig-name descname"><span class="pre">--association-predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;association_predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-associations-association-predicates" title="Permalink to this definition"></a></dt>
+<dd><p>A comma-separated list of predicates for the association relation</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-Q">
+<span id="cmdoption-runoak-associations-q"></span><span id="cmdoption-runoak-associations-terms-role"></span><span class="sig-name descname"><span class="pre">-Q</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--terms-role</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;terms_role&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-associations-Q" title="Permalink to this definition"></a></dt>
+<dd><p>How to interpret query terms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+<dt class="field-even">Options</dt>
+<dd class="field-even"><p>subject | object | both</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-associations-arg-TERMS">
+<span id="cmdoption-runoak-associations-arg-terms"></span><span class="sig-name descname"><span class="pre">TERMS</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-associations-arg-TERMS" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument(s)</p>
+</dd></dl>
+
+</section>
 <section id="runoak-axioms">
 <h4>axioms<a class="headerlink" href="#runoak-axioms" title="Permalink to this headline"></a></h4>
 <blockquote>
@@ -550,7 +850,7 @@ obsolete them all:</p>
 </div></blockquote>
 <p>Note this currently only works with the funowl adapter, on functional syntax files</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak axioms <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>axioms<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -592,22 +892,36 @@ obsolete them all:</p>
 </dd></dl>
 
 </section>
-<section id="runoak-check-definitions">
-<h4>check-definitions<a class="headerlink" href="#runoak-check-definitions" title="Permalink to this headline"></a></h4>
+<section id="runoak-cache-clear">
+<h4>cache-clear<a class="headerlink" href="#runoak-cache-clear" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Check definitions</p>
-<p>REDUNDANT WITH VALIDATE - may be obsoleted</p>
+<div><p>Clear the contents of the pystow oaklib cache.</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak check-definitions <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>cache-clear<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-runoak-check-definitions-o">
-<span id="cmdoption-runoak-check-definitions-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-check-definitions-o" title="Permalink to this definition"></a></dt>
-<dd><p>Output file, e.g. obo file</p>
+<dt class="sig sig-object std" id="cmdoption-runoak-cache-clear-days-old">
+<span class="sig-name descname"><span class="pre">--days-old</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;days_old&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-cache-clear-days-old" title="Permalink to this definition"></a></dt>
+<dd><p>Clear anything more than this number of days old</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>100</p>
+</dd>
+</dl>
 </dd></dl>
 
+</section>
+<section id="runoak-cache-ls">
+<h4>cache-ls<a class="headerlink" href="#runoak-cache-ls" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p>List the contents of the pystow oaklib cache.</p>
+<p>TODO: this currently only works on unix-based systems.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>cache-ls<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
 </section>
 <section id="runoak-definitions">
 <h4>definitions<a class="headerlink" href="#runoak-definitions" title="Permalink to this headline"></a></h4>
@@ -622,8 +936,12 @@ obsolete them all:</p>
 <blockquote>
 <div><p>runoak -i sqlite:obo:envo definitions .all</p>
 </div></blockquote>
+<p>You can also include definition metadata, such as provenance and source:</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:cl definitions –additional-metadata neuron</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak definitions <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>definitions<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -645,7 +963,7 @@ obsolete them all:</p>
 <dd><p>Desired output type</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options</dt>
-<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | csv | nl</p>
+<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | fhirjson | csv | nl</p>
 </dd>
 </dl>
 </dd></dl>
@@ -662,9 +980,31 @@ obsolete them all:</p>
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-definitions-additional-metadata">
+<span id="cmdoption-runoak-definitions-no-additional-metadata"></span><span class="sig-name descname"><span class="pre">--additional-metadata</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-additional-metadata</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-definitions-additional-metadata" title="Permalink to this definition"></a></dt>
+<dd><p>if true then fetch additional metadata about statements stored as OWL reification</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-definitions-S">
 <span id="cmdoption-runoak-definitions-s"></span><span id="cmdoption-runoak-definitions-set-value"></span><span class="sig-name descname"><span class="pre">-S</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--set-value</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;set_value&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-definitions-S" title="Permalink to this definition"></a></dt>
 <dd><p>the value to set for all terms for the given property.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-definitions-autolabel">
+<span id="cmdoption-runoak-definitions-no-autolabel"></span><span class="sig-name descname"><span class="pre">--autolabel</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-autolabel</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-definitions-autolabel" title="Permalink to this definition"></a></dt>
+<dd><p>If set, results will automatically have labels assigned</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
@@ -696,7 +1036,7 @@ predicates are not specified</p>
 <div><p><a class="reference external" href="https://incatools.github.io/ontology-access-kit/interfaces/obograph.html">https://incatools.github.io/ontology-access-kit/interfaces/obograph.html</a></p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak descendants <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>descendants<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -735,19 +1075,45 @@ predicates are not specified</p>
 <section id="runoak-diff">
 <h4>diff<a class="headerlink" href="#runoak-diff" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Diff between two ontologies</p>
-<p>The –simple option will compare the lists of terms in each ontology. This is currently
-implemented for most endpoints.</p>
-<p>If –simple is not set, then this will do a complete diff, and return the diff as KGCL
-change commands.</p>
-<p>Current limitations</p>
-<ul class="simple">
-<li><p>complete diffs can only be done using local RDF files</p></li>
-<li><p>Parsing using rdflib can be slow</p></li>
-<li><p>Currently the return format is ONLY the KGCL change DSL. In future YAML, JSON, RDF will be an option</p></li>
-</ul>
+<div><p>Compute difference between two ontologies.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i foo.obo diff -X bar.obo -o diff.yaml</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak diff <span class="o">[</span>OPTIONS<span class="o">]</span>
+<p>This will produce a list of Changes that are required to go from the main input ontology (–input)
+to the other ontology (–other-ontology, or -X).</p>
+<p>The output follows the KGCL data model.
+See <a class="reference external" href="https://incatools.github.io/ontology-access-kit/datamodels/kgcl/index.html">https://incatools.github.io/ontology-access-kit/datamodels/kgcl/index.html</a></p>
+<p>You can use –output-type to control the output format.</p>
+<p>KGCL controlled natural language:</p>
+<blockquote>
+<div><p>runoak -i foo.obo diff -X bar.obo -o diff.txt –output-type kgcl</p>
+</div></blockquote>
+<p>KGCL JSON:</p>
+<blockquote>
+<div><p>runoak -i foo.obo diff -X bar.obo -o diff.json –output-type json</p>
+</div></blockquote>
+<p>YAML (default):</p>
+<blockquote>
+<div><p>runoak -i foo.obo diff -X bar.obo -o diff.yaml –output-type yaml</p>
+</div></blockquote>
+<p>The –statistics option can be used to generate summary statistics for the changes.
+These are grouped according to the –group-by-property option. For example,
+the GO uses the oio:hasOBONamespace property to partition classes into 3 categories.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i go.obo diff -X go-new.obo -o diff.yaml –statistics –group-by-property oio:hasOBONamespace</p>
+</div></blockquote>
+<p>This will produce a YAML dictionary, with outer keys being the values of the oio:hasOBONamespace property,
+and inner keys being the change types.</p>
+<p>If –group-by-property is not specified, or there is no value for this property, then the outer key
+will be “__RESIDUAL__”</p>
+<p>For summary statistics, you can also specify –output-type csv, to get a tabular out</p>
+<p>Limitations:</p>
+<p>This does not do a diff over every axiom in each ontology. For a complete OWL diff, you should
+use ROBOT.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>diff<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -769,6 +1135,56 @@ change commands.</p>
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-statistics">
+<span id="cmdoption-runoak-diff-no-statistics"></span><span class="sig-name descname"><span class="pre">--statistics</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-statistics</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-diff-statistics" title="Permalink to this definition"></a></dt>
+<dd><p>show summary statistics only</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-group-by-property">
+<span class="sig-name descname"><span class="pre">--group-by-property</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;group_by_property&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-group-by-property" title="Permalink to this definition"></a></dt>
+<dd><p>group summaries by a metadata property, e.g. rdfs:isDefinedBy</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-group-by-obo-namespace">
+<span id="cmdoption-runoak-diff-no-group-by-obo-namespace"></span><span class="sig-name descname"><span class="pre">--group-by-obo-namespace</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-group-by-obo-namespace</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-diff-group-by-obo-namespace" title="Permalink to this definition"></a></dt>
+<dd><p>shortcut for –group-by-property oio:hasOBONamespace (note this is distinct from the ID namespace)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-group-by-defined-by">
+<span id="cmdoption-runoak-diff-no-group-by-defined-by"></span><span class="sig-name descname"><span class="pre">--group-by-defined-by</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-group-by-defined-by</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-diff-group-by-defined-by" title="Permalink to this definition"></a></dt>
+<dd><p>shortcut for –group-by-property rdfs:isDefinedBy. This may be inferred from prefix if not set explicitly</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-group-by-prefix">
+<span id="cmdoption-runoak-diff-no-group-by-prefix"></span><span class="sig-name descname"><span class="pre">--group-by-prefix</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-group-by-prefix</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-diff-group-by-prefix" title="Permalink to this definition"></a></dt>
+<dd><p>shortcut for –group-by-property sh:prefix. Groups by the prefix of the CURIE</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-diff-o">
 <span id="cmdoption-runoak-diff-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-o" title="Permalink to this definition"></a></dt>
 <dd><p>Output file, e.g. obo file</p>
@@ -781,13 +1197,71 @@ change commands.</p>
 </dd></dl>
 
 </section>
+<section id="runoak-diff-associations">
+<h4>diff-associations<a class="headerlink" href="#runoak-diff-associations" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p>Diffs two association sources. EXPERIMENTAL.</p>
+<p>This functionality may move out of core</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>diff-associations<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-associations-o">
+<span id="cmdoption-runoak-diff-associations-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-associations-o" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-associations-p">
+<span id="cmdoption-runoak-diff-associations-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-associations-p" title="Permalink to this definition"></a></dt>
+<dd><p>A comma-separated list of predicates</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-associations-autolabel">
+<span id="cmdoption-runoak-diff-associations-no-autolabel"></span><span class="sig-name descname"><span class="pre">--autolabel</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-autolabel</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-diff-associations-autolabel" title="Permalink to this definition"></a></dt>
+<dd><p>If set, results will automatically have labels assigned</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-associations-O">
+<span id="cmdoption-runoak-diff-associations-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-associations-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-associations-0">
+<span id="cmdoption-runoak-diff-associations-1"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-associations-0" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-associations-g">
+<span id="cmdoption-runoak-diff-associations-associations"></span><span class="sig-name descname"><span class="pre">-g</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--associations</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;associations&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-associations-g" title="Permalink to this definition"></a></dt>
+<dd><p>associations</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-associations-X">
+<span id="cmdoption-runoak-diff-associations-x"></span><span id="cmdoption-runoak-diff-associations-other-associations"></span><span class="sig-name descname"><span class="pre">-X</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--other-associations</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;other_associations&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-associations-X" title="Permalink to this definition"></a></dt>
+<dd><p>other associations</p>
+</dd></dl>
+
+</section>
 <section id="runoak-diff-terms">
 <h4>diff-terms<a class="headerlink" href="#runoak-diff-terms" title="Permalink to this headline"></a></h4>
 <blockquote>
 <div><p>Compares a pair of terms in two ontologies</p>
 <p>EXPERIMENTAL</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak diff-terms <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>diff-terms<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -819,25 +1293,25 @@ change commands.</p>
 command will perform a structural comparison of all mapped pairs of terms</p>
 <p>Example:</p>
 <blockquote>
-<div><p>runoak -i sqlite:obo:uberon –other-input sqlite:obo:zfa  –source UBERON –source ZFA -O csv</p>
+<div><p>runoak -i sqlite:obo:uberon diff-via-mappings –other-input sqlite:obo:zfa  –source UBERON –source ZFA -O csv</p>
 </div></blockquote>
 <p>Note the above command does not have any mapping file specified; the mappings that are distributed within
 each ontology is used (in this case, Uberon contains mappings to ZFA)</p>
 <p>If the mappings are provided externally:</p>
 <blockquote>
-<div><p>runoak -i ont1.obo –other-input ont2.obo –mapping-input mappings.sssom.tsv</p>
+<div><p>runoak -i ont1.obo diff-via-mappings –other-input ont2.obo –mapping-input mappings.sssom.tsv</p>
 </div></blockquote>
 <p>(in the above example, –source is not passed, so all mappings are tested)</p>
 <p>If there are no existing mappings, you can use the lexmatch command to generate them:</p>
 <blockquote>
-<div><p>runoak -i ont1.obo -a ont2.obo lexmatch -o mappings.sssom.stv
-runoak -i ont1.obo –other-input ont2.obo –mapping-input mappings.sssom.tsv</p>
+<div><p>runoak -i ont1.obo diff-via-mappings -a ont2.obo lexmatch -o mappings.sssom.tsv</p>
+<p>runoak -i ont1.obo diff-via-mappings –other-input ont2.obo –mapping-input mappings.sssom.tsv</p>
 </div></blockquote>
 <p>The output from this command follows the cross-ontology-diff data model
 (<a class="reference external" href="https://incatools.github.io/ontology-access-kit/datamodels/cross-ontology-diff/index.html">https://incatools.github.io/ontology-access-kit/datamodels/cross-ontology-diff/index.html</a>)</p>
 <p>This can be serialized in YAML or TSV form</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak diff-via-mappings <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>diff-via-mappings<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -910,6 +1384,17 @@ runoak -i ont1.obo –other-input ont2.obo –mapping-input mappings.sssom.tsv</
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-diff-via-mappings-bidirectional">
+<span id="cmdoption-runoak-diff-via-mappings-no-bidirectional"></span><span class="sig-name descname"><span class="pre">--bidirectional</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-bidirectional</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-diff-via-mappings-bidirectional" title="Permalink to this definition"></a></dt>
+<dd><p>Show diff from both left and right perspectives</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-diff-via-mappings-p">
 <span id="cmdoption-runoak-diff-via-mappings-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-diff-via-mappings-p" title="Permalink to this definition"></a></dt>
 <dd><p>A comma-separated list of predicates</p>
@@ -938,7 +1423,7 @@ runoak -i ont1.obo –other-input ont2.obo –mapping-input mappings.sssom.tsv</
 <section id="runoak-dump">
 <h4>dump<a class="headerlink" href="#runoak-dump" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Exports (dumps) the entire contents of an ontology</p>
+<div><p>Exports (dumps) the entire contents of an ontology.</p>
 <p>Example:</p>
 <blockquote>
 <div><p>runoak -i pato.obo dump -o pato.json -O json</p>
@@ -948,10 +1433,14 @@ runoak -i ont1.obo –other-input ont2.obo –mapping-input mappings.sssom.tsv</
 <div><p>runoak -i pato.owl dump -o pato.ttl -O turtle</p>
 </div></blockquote>
 <p>Currently each implementation only supports a subset of formats.</p>
+<p>Some dumpers accept additional options. For example, dumping
+to fhirjson accepts –include-all-predicates, which changes
+the default behavior from only exporting IS_A to all mappable
+predicates.</p>
 <p>The dump command is also blocked for remote endpoints such as Ubergraph,
-to avoid killer queries</p>
+to avoid killer queries.</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak dump <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>dump<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -959,6 +1448,17 @@ to avoid killer queries</p>
 <dt class="sig sig-object std" id="cmdoption-runoak-dump-o">
 <span id="cmdoption-runoak-dump-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-dump-o" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-dump-include-all-predicates">
+<span id="cmdoption-runoak-dump-no-include-all-predicates"></span><span class="sig-name descname"><span class="pre">--include-all-predicates</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-include-all-predicates</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-dump-include-all-predicates" title="Permalink to this definition"></a></dt>
+<dd><p>For formats that export only IS_A by default, this will include all possible predicates</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-dump-O">
@@ -970,6 +1470,104 @@ to avoid killer queries</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-dump-arg-TERMS">
 <span id="cmdoption-runoak-dump-arg-terms"></span><span class="sig-name descname"><span class="pre">TERMS</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-dump-arg-TERMS" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument(s)</p>
+</dd></dl>
+
+</section>
+<section id="runoak-enrichment">
+<h4>enrichment<a class="headerlink" href="#runoak-enrichment" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p>Run class enrichment analysis.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>enrichment<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-o">
+<span id="cmdoption-runoak-enrichment-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-o" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-p">
+<span id="cmdoption-runoak-enrichment-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-p" title="Permalink to this definition"></a></dt>
+<dd><p>A comma-separated list of predicates</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-autolabel">
+<span id="cmdoption-runoak-enrichment-no-autolabel"></span><span class="sig-name descname"><span class="pre">--autolabel</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-autolabel</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-enrichment-autolabel" title="Permalink to this definition"></a></dt>
+<dd><p>If set, results will automatically have labels assigned</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-O">
+<span id="cmdoption-runoak-enrichment-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-0">
+<span id="cmdoption-runoak-enrichment-1"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-0" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-if-absent">
+<span class="sig-name descname"><span class="pre">--if-absent</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;if_absent&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-if-absent" title="Permalink to this definition"></a></dt>
+<dd><p>determines behavior when the value is not present or is empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>absent-only | present-only</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-S">
+<span id="cmdoption-runoak-enrichment-s"></span><span id="cmdoption-runoak-enrichment-set-value"></span><span class="sig-name descname"><span class="pre">-S</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--set-value</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;set_value&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-S" title="Permalink to this definition"></a></dt>
+<dd><p>the value to set for all terms for the given property.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-cutoff">
+<span class="sig-name descname"><span class="pre">--cutoff</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;cutoff&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-cutoff" title="Permalink to this definition"></a></dt>
+<dd><p>The cutoff for the p-value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>0.05</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-2">
+<span id="cmdoption-runoak-enrichment-sample-file"></span><span class="sig-name descname"><span class="pre">-S</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--sample-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;sample_file&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-2" title="Permalink to this definition"></a></dt>
+<dd><p>file containing input list of entity IDs (e.g. gene IDs)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-B">
+<span id="cmdoption-runoak-enrichment-b"></span><span id="cmdoption-runoak-enrichment-background-file"></span><span class="sig-name descname"><span class="pre">-B</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--background-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;background_file&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-B" title="Permalink to this definition"></a></dt>
+<dd><p>file containing background list of entity IDs (e.g. gene IDs)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-association-predicates">
+<span class="sig-name descname"><span class="pre">--association-predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;association_predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-enrichment-association-predicates" title="Permalink to this definition"></a></dt>
+<dd><p>A comma-separated list of predicates for the association relation</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-enrichment-arg-TERMS">
+<span id="cmdoption-runoak-enrichment-arg-terms"></span><span class="sig-name descname"><span class="pre">TERMS</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-enrichment-arg-TERMS" title="Permalink to this definition"></a></dt>
 <dd><p>Optional argument(s)</p>
 </dd></dl>
 
@@ -996,7 +1594,7 @@ This should follow the format used in <a class="reference external" href="https:
 <div><p>runoak  -i db/go.db eval-taxon-constraints -p i,p -E tests/input/go-evo-gains-losses.csv</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak eval-taxon-constraints <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>CONSTRAINTS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>eval-taxon-constraints<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>CONSTRAINTS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1035,7 +1633,7 @@ This should follow the format used in <a class="reference external" href="https:
 <div><p>runoak -i db/pato.db expand-subsets attribute_slim value_slim</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak expand-subsets <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>SUBSETS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>expand-subsets<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>SUBSETS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1071,7 +1669,7 @@ to have performance issues with the query</p>
 <div><p>runoak -v -i ubergraph: extract-triples <a class="reference external" href="GO:0005635">GO:0005635</a> CL:0000099 -o test.ttl -O ttl</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak extract-triples <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>extract-triples<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1129,15 +1727,13 @@ headers for a table of ontology elements (see later for configuration when you d
 <div><p>runoak -i cl.owl.ttl fill-table –missing-value-token NO_DATA my-table.tsv</p>
 </div></blockquote>
 <p>Currently the following columns are recognized:</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>id – the unique identifier of the element</p></li>
 <li><p>label – the rdfs:label of the element</p></li>
 <li><p>definition – the definition of the element</p></li>
 <li><p>mappings – mappings for the element</p></li>
 <li><p>ancestors – ancestors for the element (this can be parameterized)</p></li>
 </ul>
-</div></blockquote>
 <p>The metadata inference procedure will also work for when you have denormalized TSV files
 with columns such as “foo_id” and “foo_name”. This will be recognized as an implicit normalized
 label relation between id and name of a foo element.</p>
@@ -1186,7 +1782,7 @@ for now please file an issue on github with any questions</p>
 <li><p>TODO: use most optimized method for whichever backend</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak fill-table <span class="o">[</span>OPTIONS<span class="o">]</span> TABLE_FILE
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>fill-table<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>TABLE_FILE
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1220,6 +1816,17 @@ for now please file an issue on github with any questions</p>
 <dl class="field-list simple">
 <dt class="field-odd">Default</dt>
 <dd class="field-odd"><p></p></dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-fill-table-comment">
+<span class="sig-name descname"><span class="pre">--comment</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;comment&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-fill-table-comment" title="Permalink to this definition"></a></dt>
+<dd><p>Comment indicator at the beginning of a row.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>#</p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1292,7 +1899,7 @@ as queries that can be combined using boolean logic</p>
 <div><p>runoak -i sqlite:obo:stato info .desc//p=i ‘statistical hypothesis test’</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak info <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>info<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1342,7 +1949,7 @@ as queries that can be combined using boolean logic</p>
 <div><p>runoak -i cl.owl labels .all –if-absent exclude</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak labels <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>labels<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1364,7 +1971,7 @@ as queries that can be combined using boolean logic</p>
 <dd><p>Desired output type</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options</dt>
-<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | csv | nl</p>
+<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | fhirjson | csv | nl</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1410,7 +2017,7 @@ Note that the default is to return the roots of the relation graph over <em>all<
 oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.leafs</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak leafs <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>leafs<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1441,18 +2048,31 @@ oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.leafs</p></li>
 <section id="runoak-lexmatch">
 <h4>lexmatch<a class="headerlink" href="#runoak-lexmatch" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Performs lexical matching between pairs of terms in one more more ontologies</p>
+<div><p>Performs lexical matching between pairs of terms in one more more ontologies.</p>
 <p>Examples:</p>
 <blockquote>
 <div><p>runoak -i foo.obo lexmatch -o foo.sssom.tsv</p>
 </div></blockquote>
 <p>In this example, the input ontology file is assumed to contain all pairs of terms to be mapped.</p>
-<p>It is more common to map between all pairs of terms in two ontology files. To avoid a merge
-preprocessing step:</p>
+<p>It is more common to map between all pairs of terms in two ontology files. In this case,
+you can merge the ontologies using a tool like ROBOT; or,  to avoid a merge
+preprocessing step, use the –addl (-a) option to specify a second ontology file.</p>
 <blockquote>
-<div><p>runoak -i foo.obo -a bar.obo lexmatch -o foo.sssom.tsv</p>
+<div><p>runoak -i foo.obo –add bar.obo lexmatch -o foo.sssom.tsv</p>
 </div></blockquote>
-<p>lexmatch implements a simple algorithm:</p>
+<p>By default, this command will compare all terms in all ontologies. You can use the OAK
+term query syntax to pass in the set of all terms to be compared.</p>
+<p>For example, to compare all terms in union of FOO and BAR namespaces:</p>
+<blockquote>
+<div><p>runoak -i foo.obo –add bar.obo lexmatch -o foo.sssom.tsv i^FOO: i^BAR:</p>
+</div></blockquote>
+<p>All members of the set are compared (including FOO to FOO matches and BAR to BAR
+matches), omitting trivial reciprocal matches.</p>
+<p>Use an “&#64;” separator between two queries to feed in two explicit sets:</p>
+<blockquote>
+<div><p>runoak -i foo.obo –add bar.obo lexmatch -o foo.sssom.tsv i^FOO: &#64; i^BAR:</p>
+</div></blockquote>
+<p>ALGORITHM: lexmatch implements a simple algorithm:</p>
 <ul class="simple">
 <li><p>create a lexical index, keyed by normalized strings of labels, synonyms</p></li>
 <li><p>report all pairs of entities that have the same key</p></li>
@@ -1463,7 +2083,7 @@ preprocessing step:</p>
 </div></blockquote>
 <p>Note: if you run the above command a second time it will be faster as the index
 will be reused.</p>
-<p>Using custom rules:</p>
+<p>RULES: Using custom rules:</p>
 <blockquote>
 <div><p>runoak  -i foo.obo lexmatch -R match_rules.yaml -L foo.index.yaml -o foo.sssom.tsv</p>
 </div></blockquote>
@@ -1473,16 +2093,10 @@ will be reused.</p>
 </ul>
 <p>module-oaklib.utilities.lexical.lexical_indexer</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak lexmatch <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>lexmatch<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-runoak-lexmatch-L">
-<span id="cmdoption-runoak-lexmatch-l"></span><span id="cmdoption-runoak-lexmatch-lexical-index-file"></span><span class="sig-name descname"><span class="pre">-L</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--lexical-index-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;lexical_index_file&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-lexmatch-L" title="Permalink to this definition"></a></dt>
-<dd><p>path to lexical index. This is recreated each time unless –no-recreate is passed</p>
-</dd></dl>
-
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-lexmatch-R">
 <span id="cmdoption-runoak-lexmatch-r"></span><span id="cmdoption-runoak-lexmatch-rules-file"></span><span class="sig-name descname"><span class="pre">-R</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--rules-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;rules_file&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-lexmatch-R" title="Permalink to this definition"></a></dt>
@@ -1501,9 +2115,26 @@ will be reused.</p>
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-lexmatch-L">
+<span id="cmdoption-runoak-lexmatch-l"></span><span id="cmdoption-runoak-lexmatch-lexical-index-file"></span><span class="sig-name descname"><span class="pre">-L</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--lexical-index-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;lexical_index_file&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-lexmatch-L" title="Permalink to this definition"></a></dt>
+<dd><p>path to lexical index. This is recreated each time unless –no-recreate is passed</p>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-lexmatch-recreate">
 <span id="cmdoption-runoak-lexmatch-no-recreate"></span><span class="sig-name descname"><span class="pre">--recreate</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-recreate</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-lexmatch-recreate" title="Permalink to this definition"></a></dt>
 <dd><p>if true and lexical index is specified, always recreate, otherwise load from index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-lexmatch-ensure-strict-prefixes">
+<span id="cmdoption-runoak-lexmatch-no-ensure-strict-prefixes"></span><span class="sig-name descname"><span class="pre">--ensure-strict-prefixes</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-ensure-strict-prefixes</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-lexmatch-ensure-strict-prefixes" title="Permalink to this definition"></a></dt>
+<dd><p>Clean prefix map and mappings before generating an output.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Default</dt>
 <dd class="field-odd"><p>True</p>
@@ -1517,21 +2148,41 @@ will be reused.</p>
 <dd><p>Output file, e.g. obo file</p>
 </dd></dl>
 
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-lexmatch-arg-TERMS">
+<span id="cmdoption-runoak-lexmatch-arg-terms"></span><span class="sig-name descname"><span class="pre">TERMS</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-lexmatch-arg-TERMS" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument(s)</p>
+</dd></dl>
+
 </section>
 <section id="runoak-lint">
 <h4>lint<a class="headerlink" href="#runoak-lint" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Lints an ontology, applying changes in place</p>
+<div><p>Lints an ontology, applying changes in place.</p>
 <p>The current implementation is highly incomplete, and only handles
 linting of syntactic patterns (chains of whitespace, trailing whitespace)
-in labels and definitions</p>
-<p>Implementations</p>
-<ul class="simple">
-<li><p>owl, in functional syntax</p></li>
-<li><p>obo</p></li>
-</ul>
+in labels and definitions.</p>
+<p>The output is a list of changes, in a KCGL-compliant syntax.</p>
+<p>By default, changes will be applied</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i my.obo lint</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak lint <span class="o">[</span>OPTIONS<span class="o">]</span>
+<p>This can be executed in dry-run mode, in which case changes are not applied:</p>
+<blockquote>
+<div><p>runoak -i my.obo lint –dry-run</p>
+</div></blockquote>
+<p>One common workflow is to emit the changes to a KCGL file which is manually checked,
+then applied as a separate step.</p>
+<p>Example workflow:</p>
+<blockquote>
+<div><p>runoak -i my.obo lint –dry-run -o changes.kgcl
+# examine and edit changes.kgcl
+runoak -i my.obo apply –changes-input changes.kgcl</p>
+</div></blockquote>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>lint<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1562,27 +2213,76 @@ in labels and definitions</p>
 <section id="runoak-logical-definitions">
 <h4>logical-definitions<a class="headerlink" href="#runoak-logical-definitions" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Show all logical definitions for a term or terms</p>
+<div><p>Show all logical definitions for a term or terms.</p>
+<p>To show all logical definitions in an ontology, pass the “.all” query term</p>
+<p>Example; first create an alias:</p>
+<blockquote>
+<div><p>alias pato=”runoak -i obo:sqlite:pato”</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak logical-definitions <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<p>Then run the query:</p>
+<blockquote>
+<div><p>pato logical-definitions .all</p>
+</div></blockquote>
+<p>By default, “.all” will query all axioms for all terms including merged terms;
+to restrict to only the current terms, use an ID query:</p>
+<blockquote>
+<div><p>pato logical-definitions i^PATO</p>
+</div></blockquote>
+<p>You can also restrict to branches:</p>
+<blockquote>
+<div><p>pato logical-definitions .desc//p=i “physical object quality”</p>
+</div></blockquote>
+<p>By default, the output is a subset of OboGraph datamodel rendered as YAML, e.g.</p>
+<blockquote>
+<div><dl>
+<dt>definedClassId: PATO:0045071</dt><dd><p>genusIds:
+- PATO:0001439
+restrictions:
+- fillerId: PATO:0000461</p>
+<blockquote>
+<div><p>propertyId: RO:0015010</p>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p>You can also specify CSV to generate a flattened form of this.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>pato logical-definitions .all –output-type csv</p>
+</div></blockquote>
+<p>You can optionally choose to “unmelt” or flatten this, such that:</p>
+<ul class="simple">
+<li><p>Each property/predicate is a column</p></li>
+<li><p>For repeated properties, columns of the form prop_1, prop_2, … are generated</p></li>
+</ul>
+<p>Example:</p>
+<blockquote>
+<div><p>pato logical-definitions .all  –unmelt –output-type csv</p>
+</div></blockquote>
+<p>Limitations:</p>
+<p>Currently this only works for definitions that follow a basic genus-differentia pattern,
+which is what is currently represented in the OboGraph datamodel.</p>
+<p>Consider using the “axioms” command for inspection of complex nested OWL axioms.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>logical-definitions<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-runoak-logical-definitions-p">
-<span id="cmdoption-runoak-logical-definitions-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-logical-definitions-p" title="Permalink to this definition"></a></dt>
-<dd><p>A comma-separated list of predicates</p>
+<dt class="sig sig-object std" id="cmdoption-runoak-logical-definitions-unmelt">
+<span id="cmdoption-runoak-logical-definitions-no-unmelt"></span><span class="sig-name descname"><span class="pre">--unmelt</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-unmelt</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-logical-definitions-unmelt" title="Permalink to this definition"></a></dt>
+<dd><p>Flatten to a wide table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-runoak-logical-definitions-direction">
-<span class="sig-name descname"><span class="pre">--direction</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;direction&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-logical-definitions-direction" title="Permalink to this definition"></a></dt>
-<dd><p>direction of traversal over edges, which up is subject to object, down is object to subject.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Options</dt>
-<dd class="field-odd"><p>up | down | both</p>
-</dd>
-</dl>
+<dt class="sig sig-object std" id="cmdoption-runoak-logical-definitions-p">
+<span id="cmdoption-runoak-logical-definitions-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-logical-definitions-p" title="Permalink to this definition"></a></dt>
+<dd><p>A comma-separated list of predicates</p>
 </dd></dl>
 
 <dl class="std option">
@@ -1655,7 +2355,7 @@ that if the label is not in the source ontology, then no label will be retrieved
 <div><p>runoak -i sqlite:obo:foodon mappings -O sssom –maps-to-source SUBSET_SIREN</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak mappings <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>mappings<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1713,7 +2413,7 @@ source and the target</p>
 </ul>
 <p>oaklib.interfaces.patcher_interface.PatcherInterface.migrate_curies</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak migrate-curies <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>CURIE_PAIRS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>migrate-curies<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>CURIE_PAIRS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1751,24 +2451,60 @@ source and the target</p>
 <section id="runoak-obsoletes">
 <h4>obsoletes<a class="headerlink" href="#runoak-obsoletes" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Shows all obsolete nodes</p>
-<dl class="simple">
-<dt>Example:</dt><dd><p>runoak -i obolibrary:go.obo obsoletes</p>
-</dd>
-</dl>
-<p>TODO: this command should be parameterizable</p>
+<div><p>Shows all obsolete entities.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i obolibrary:go.obo obsoletes</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak obsoletes <span class="o">[</span>OPTIONS<span class="o">]</span>
+<p>To exclude <em>merged terms</em>, use the <code class="docutils literal notranslate"><span class="pre">--no-include-merged</span></code> flag</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i obolibrary:go.obo obsoletes –no-include-merged</p>
+</div></blockquote>
+<p>To show migration relationships, use the <code class="docutils literal notranslate"><span class="pre">--show-migration-relationships</span></code> flag</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i obolibrary:go.obo obsoletes –show-migration-relationships</p>
+</div></blockquote>
+<p>You can also specify terms to show obsoletes for:</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i obolibrary:go.obo obsoletes –show-migration-relationships GO:0000187 GO:0000188</p>
+</div></blockquote>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>obsoletes<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-obsoletes-include-merged">
+<span id="cmdoption-runoak-obsoletes-no-include-merged"></span><span class="sig-name descname"><span class="pre">--include-merged</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-include-merged</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-obsoletes-include-merged" title="Permalink to this definition"></a></dt>
+<dd><p>Include merged terms in output</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-obsoletes-show-migration-relationships">
+<span id="cmdoption-runoak-obsoletes-no-show-migration-relationships"></span><span class="sig-name descname"><span class="pre">--show-migration-relationships</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-show-migration-relationships</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-obsoletes-show-migration-relationships" title="Permalink to this definition"></a></dt>
+<dd><p>Show migration relationships (e.g. replaced_by, consider)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-obsoletes-O">
 <span id="cmdoption-runoak-obsoletes-o"></span><span id="cmdoption-runoak-obsoletes-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-obsoletes-O" title="Permalink to this definition"></a></dt>
 <dd><p>Desired output type</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options</dt>
-<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | csv | nl</p>
+<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | fhirjson | csv | nl</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1777,6 +2513,13 @@ source and the target</p>
 <dt class="sig sig-object std" id="cmdoption-runoak-obsoletes-0">
 <span id="cmdoption-runoak-obsoletes-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-obsoletes-0" title="Permalink to this definition"></a></dt>
 <dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-obsoletes-arg-TERMS">
+<span id="cmdoption-runoak-obsoletes-arg-terms"></span><span class="sig-name descname"><span class="pre">TERMS</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-obsoletes-arg-TERMS" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument(s)</p>
 </dd></dl>
 
 </section>
@@ -1792,7 +2535,7 @@ a single line, with the name of the input ontology</p>
 </div></blockquote>
 <p>In future this command will be expanded to allow showing more metadata about each ontology</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak ontologies <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>ontologies<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1826,7 +2569,7 @@ a single line, with the name of the input ontology</p>
 <p>The output data model is not yet standardized – this may change in future</p>
 </div>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak ontology-metadata <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>ONTOLOGIES<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>ontology-metadata<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>ONTOLOGIES<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1875,7 +2618,7 @@ a single line, with the name of the input ontology</p>
 <div><p>runoak -i bioportal ontology-versions –all</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak ontology-versions <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>ONTOLOGIES<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>ontology-versions<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>ONTOLOGIES<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -1923,11 +2666,20 @@ a single line, with the name of the input ontology</p>
 <div><p>runoak -i sqlite:obo:go paths  -p i,p ‘nuclear membrane’ ‘thylakoid’ –target cytoplasm ‘thylakoid membrane’</p>
 </div></blockquote>
 <p>This shows all shortest paths between 4 combinations of starts and ends</p>
+<p>You can also use “&#64;” to separate start node list and end node list. Like most OAK commands,
+you can pass either explicit terms, or term queries. For example, if you have two files of IDs,
+then you can do this:</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:go paths  -p i,p .idfile START_NODES.txt &#64; .idfile END_NODES.txt</p>
+</div></blockquote>
+<p>You can also pass in weights for each predicate, used when calculating shortest paths.</p>
 <p>Example:</p>
 <blockquote>
 <div><p>runoak -i sqlite:obo:go paths  -p i,p ‘nuclear membrane’ –target cytoplasm                 –predicate-weights “{i: 0.0001, p: 999}”</p>
 </div></blockquote>
 <p>This shows all shortest paths after weighting relations</p>
+<p>(Note: you can use the same shorthands as in the <cite>–predicates</cite> option)</p>
+<p>This command can be combined with others to visualize the paths.</p>
 <p>Example:</p>
 <blockquote>
 <div><p>alias go=”runoak -i sqlite:obo:go”
@@ -1936,7 +2688,7 @@ go paths  -p i,p ‘nuclear membrane’ –target cytoplasm –flat | go viz –
 <p>This visualizes the path by first exporting the path as a flat list, then passing the
 results to viz, using the fill-gaps option</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak paths <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>paths<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2000,6 +2752,86 @@ results to viz, using the fill-gaps option</p>
 </dd></dl>
 
 </section>
+<section id="runoak-prefixes">
+<h4>prefixes<a class="headerlink" href="#runoak-prefixes" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p>Shows prefix declarations.</p>
+<p>All standard prefixes:</p>
+<blockquote>
+<div><p>runoak prefixes</p>
+</div></blockquote>
+<p>Specific prefixes:</p>
+<blockquote>
+<div><p>runoak prefixes GO CL oio skos</p>
+</div></blockquote>
+<p>By default, prefix maps are exported as simple pairwise TSVs.</p>
+<p>Prefixes can also be exported in different formats, such as YAML and JSON, where they are
+simple dictionaries:</p>
+<p>In yaml:</p>
+<blockquote>
+<div><p>runoak prefixes –O yaml</p>
+</div></blockquote>
+<p>In turtle:</p>
+<blockquote>
+<div><p>runoak prefixes –O rdf</p>
+</div></blockquote>
+<p>For RDF exports, the prefix declaration should appear in BOTH prefix declarations, AND also as
+instances of SHACL PrefixDeclarations, e.g.</p>
+<blockquote>
+<div><p>&#64;prefix CL: &lt;<a class="reference external" href="http://purl.obolibrary.org/obo/">http://purl.obolibrary.org/obo/</a><a href="#id5"><span class="problematic" id="id6">CL_</span></a>&gt; .
+…
+[] a sh:PrefixDeclaration ;</p>
+<blockquote>
+<div><p>sh:namespace CL: ;
+sh:prefix “CL” .</p>
+</div></blockquote>
+</div></blockquote>
+<p>The default prefixmap is always used, unless options are passed specifying additional
+prefix maps.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak –named-prefix-map prefixcc prefixes</p>
+</div></blockquote>
+<p>If an ontology is loaded, then –used-only can be used to restrict to
+prefixes for entities in that ontology</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:cl prefixes –used-only</p>
+</div></blockquote>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>prefixes<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-prefixes-o">
+<span id="cmdoption-runoak-prefixes-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-prefixes-o" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-prefixes-used-only">
+<span id="cmdoption-runoak-prefixes-no-used-only"></span><span class="sig-name descname"><span class="pre">--used-only</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-used-only</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-prefixes-used-only" title="Permalink to this definition"></a></dt>
+<dd><p>If True, show only prefixes used in ontology</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-prefixes-O">
+<span id="cmdoption-runoak-prefixes-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-prefixes-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-prefixes-arg-TERMS">
+<span id="cmdoption-runoak-prefixes-arg-terms"></span><span class="sig-name descname"><span class="pre">TERMS</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-prefixes-arg-TERMS" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument(s)</p>
+</dd></dl>
+
+</section>
 <section id="runoak-relationships">
 <h4>relationships<a class="headerlink" href="#runoak-relationships" title="Permalink to this headline"></a></h4>
 <blockquote>
@@ -2031,7 +2863,7 @@ results to viz, using the fill-gaps option</p>
 <div><p>runoak -i uberon.db relationships -p RO:0002178 .desc//p=i “artery” .and .desc//p=i,p “limb”</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak relationships <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>relationships<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2151,7 +2983,7 @@ and parameterizing</p>
 oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.roots</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak roots <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>roots<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2165,6 +2997,29 @@ oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.roots</p></li>
 <dt class="sig sig-object std" id="cmdoption-runoak-roots-p">
 <span id="cmdoption-runoak-roots-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-roots-p" title="Permalink to this definition"></a></dt>
 <dd><p>A comma-separated list of predicates</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-roots-P">
+<span id="cmdoption-runoak-roots-has-prefix"></span><span class="sig-name descname"><span class="pre">-P</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--has-prefix</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;has_prefix&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-roots-P" title="Permalink to this definition"></a></dt>
+<dd><p>filter based on a prefix, e.g. OBI</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-roots-O">
+<span id="cmdoption-runoak-roots-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-roots-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-roots-A">
+<span id="cmdoption-runoak-roots-a"></span><span id="cmdoption-runoak-roots-annotated-roots"></span><span id="cmdoption-runoak-roots-no-annotated-roots"></span><span id="cmdoption-runoak-roots-no-A"></span><span id="cmdoption-runoak-roots-no-a"></span><span class="sig-name descname"><span class="pre">-A</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--annotated-roots</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-annotated-roots</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-A</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-roots-A" title="Permalink to this definition"></a></dt>
+<dd><p>If true, use annotated roots, if present</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -2199,7 +3054,7 @@ ranked by relevance. There may be many results, the results are streamed, do ctr
 <p>The behavior of search is not yet fully unified across endpoints</p>
 </div>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak search <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>search<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2209,7 +3064,7 @@ ranked by relevance. There may be many results, the results are streamed, do ctr
 <dd><p>Desired output type</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options</dt>
-<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | csv | nl</p>
+<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | fhirjson | csv | nl</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2238,7 +3093,7 @@ ranked by relevance. There may be many results, the results are streamed, do ctr
 </dl>
 <p>This is stored in an OS-dependent path</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak set-apikey <span class="o">[</span>OPTIONS<span class="o">]</span> KEYVAL
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>set-apikey<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>KEYVAL
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2267,7 +3122,7 @@ ranked by relevance. There may be many results, the results are streamed, do ctr
 <p>Note that siblings is by default over ALL relationship types, so we recommend
 always being explicit and passing a predicate using -p (–predicates)</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak siblings <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>siblings<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2289,7 +3144,7 @@ always being explicit and passing a predicate using -p (–predicates)</p>
 <dd><p>Desired output type</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options</dt>
-<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | csv | nl</p>
+<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | fhirjson | csv | nl</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2314,36 +3169,36 @@ always being explicit and passing a predicate using -p (–predicates)</p>
 </ul>
 <p>Example:</p>
 <blockquote>
-<div><p>runoak -i hp.db all-similarity -p i –set1-file HPO-TERMS1 –set2-file HPO-TERMS2 -O csv</p>
+<div><p>runoak -i hp.db similarity -p i –set1-file HPO-TERMS1 –set2-file HPO-TERMS2 -O csv</p>
 </div></blockquote>
 <p>This will compare every term in TERMS1 vs TERMS2</p>
 <p>Alternatively standard OAK term queries can be used, with “&#64;” separating the two lists</p>
 <p>Example:</p>
 <blockquote>
-<div><p>runoak -i hp.db all-similarity -p i TERM_1 TERM_2 … TERM_N &#64; TERM_N+1 … TERM_M</p>
+<div><p>runoak -i hp.db similarity -p i TERM_1 TERM_2 … TERM_N &#64; TERM_N+1 … TERM_M</p>
 </div></blockquote>
 <p>The .all term syntax can be used to select all terms in an ontology</p>
 <p>Example:</p>
 <blockquote>
-<div><p>runoak -i ma.db all-similarity -p i,p .all &#64; .all</p>
+<div><p>runoak -i ma.db similarity -p i,p .all &#64; .all</p>
 </div></blockquote>
 <p>This can be mixed with other term selectors; for example to calculate the similarity of “neuron”
 vs all terms in CL:</p>
 <blockquote>
-<div><p>runoak -i cl.db all-similarity -p i,p .all &#64; neuron</p>
+<div><p>runoak -i cl.db similarity -p i,p .all &#64; neuron</p>
 </div></blockquote>
 <p>An example pipeline to do all by all over all phenotypes in HPO:</p>
 <p>Explicit:</p>
 <blockquote>
 <div><p>runoak -i hp.db descendants -p i HP:0000118 &gt; HPO
-runoak -i hp.db all-similarity -p i –set1-file HPO –set2-file HPO -O csv -o RESULTS.tsv</p>
+runoak -i hp.db similarity -p i –set1-file HPO –set2-file HPO -O csv -o RESULTS.tsv</p>
 </div></blockquote>
 <p>The same thing can be done more compactly with term queries:</p>
 <blockquote>
-<div><p>runoak -i hp.db all-similarity -p i .desc//p=i HP:0000118 &#64; .desc//p=i HP:0000118</p>
+<div><p>runoak -i hp.db similarity -p i .desc//p=i HP:0000118 &#64; .desc//p=i HP:0000118</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak similarity <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>similarity<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2427,23 +3282,23 @@ runoak -i hp.db all-similarity -p i –set1-file HPO –set2-file HPO -O csv -o 
 <p>Note: We recommend always specifying explicit predicate lists</p>
 <p>Example:</p>
 <blockquote>
-<div><p>runoak -i ubergraph: similarity -p i,p CL:0000540 CL:0000000</p>
+<div><p>runoak -i ubergraph: similarity-pair -p i,p CL:0000540 CL:0000000</p>
 </div></blockquote>
 <p>You can omit predicates if you like but be warned this may yield
 hard to interpret results.</p>
 <p>E.g.</p>
 <blockquote>
-<div><p>runoak -i ubergraph: similarity CL:0000540 GO:0001750</p>
+<div><p>runoak -i ubergraph: similarity-pair CL:0000540 GO:0001750</p>
 </div></blockquote>
 <p>yields “fully formed stage” (i.e these are both found in the adult) as
 the MRCA</p>
 <p>For phenotype ontologies, UPHENO relationship types connect phenotype terms to anatomy, etc:</p>
 <blockquote>
-<div><p>runoak -i ubergraph: similarity MP:0010922 HP:0010616  -p i,p,UPHENO:0000001</p>
+<div><p>runoak -i ubergraph: similarity-pair MP:0010922 HP:0010616  -p i,p,UPHENO:0000001</p>
 </div></blockquote>
 <p>Background: <a class="reference external" href="https://incatools.github.io/ontology-access-kit/interfaces/semantic-similarity.html">https://incatools.github.io/ontology-access-kit/interfaces/semantic-similarity.html</a></p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak similarity-pair <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>similarity-pair<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2457,6 +3312,23 @@ the MRCA</p>
 <dt class="sig sig-object std" id="cmdoption-runoak-similarity-pair-o">
 <span id="cmdoption-runoak-similarity-pair-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-similarity-pair-o" title="Permalink to this definition"></a></dt>
 <dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-similarity-pair-O">
+<span id="cmdoption-runoak-similarity-pair-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-similarity-pair-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-similarity-pair-autolabel">
+<span id="cmdoption-runoak-similarity-pair-no-autolabel"></span><span class="sig-name descname"><span class="pre">--autolabel</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-autolabel</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-similarity-pair-autolabel" title="Permalink to this definition"></a></dt>
+<dd><p>If set, results will automatically have labels assigned</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
@@ -2484,7 +3356,7 @@ Note that the default is to return the singletons of the relation graph over <em
 oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.singletons</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak singletons <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>singletons<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2512,6 +3384,141 @@ oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.singletons</p>
 </dd></dl>
 
 </section>
+<section id="runoak-statistics">
+<h4>statistics<a class="headerlink" href="#runoak-statistics" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p>Shows all descriptive/summary statistics</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:pr statistics</p>
+</div></blockquote>
+<p>By default, this will show combined summary statistics for all terms</p>
+<p>You can also break down the statistics in two ways:</p>
+<ul class="simple">
+<li><p>by a collection of branch roots</p></li>
+<li><p>by a metadata property (e.g. oio:hasOBONamespace, rdfs:isDefinedBy)</p></li>
+<li><p>by prefix (e.g. GO, PR, CL, OBI)</p></li>
+</ul>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:pr statistics -p oio:hasOBONamespace</p>
+</div></blockquote>
+<p>Note: the oio:hasOBONamespace is <em>not</em> the same as the ID prefix, it is
+a field that is used by a subset of ontologies to partition classes into
+broad groupings, similar to subsets. Its use is non-standard, yet a lot
+of ontologies use this as the main partitioning mechanism.</p>
+<p>A note on bundled ontologies:</p>
+<p>The standard release many OBO ontologies “bundles” parts of other ontologies
+(formally, the release product includes a merged imports closure of import
+modules). This can complicate generation of statistics. A naive count of
+all classes in the main OBI release will include not only “native” OBI classes,
+but also classes from other ontologies that are bundled in the release.</p>
+<p>For bundled ontologies, we recommend some kind of partitioning, such as via
+defined roots, or via the CURIE prefix, using the <code class="docutils literal notranslate"><span class="pre">--group-by-prefix</span></code> option.</p>
+<p>Ouput formats:</p>
+<p>The recommended output types for this command are yaml, json, or csv.
+The default output type is yaml, following the SummaryStatistics data model.
+This is naturally nested, as the statistics includes faceted groupings
+(e.g. edge counts are broken down by predicate). When specifying a flat
+format like csv, this is flattened into a single table, with dynamic
+column names.</p>
+<p>Change statistics:</p>
+<p>You can optionally combine the ontology statistics with a change
+summary relative to another ontology, using the <code class="docutils literal notranslate"><span class="pre">--compare-with</span></code>
+option.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i v2.obo statistics –group-by-obo-namespace –compare-with v1.obo</p>
+</div></blockquote>
+<p>This will also include change stats broken down by KGCL change types. If
+a group-by option is specified, these will be grouped accordingly.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>statistics<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>BRANCHES<span class="o">]</span>...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-O">
+<span id="cmdoption-runoak-statistics-o"></span><span id="cmdoption-runoak-statistics-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-statistics-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options</dt>
+<dd class="field-odd"><p>obo | obojson | ofn | rdf | json | yaml | fhirjson | csv | nl</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-group-by-property">
+<span class="sig-name descname"><span class="pre">--group-by-property</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;group_by_property&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-statistics-group-by-property" title="Permalink to this definition"></a></dt>
+<dd><p>group summaries by a metadata property, e.g. rdfs:isDefinedBy</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-group-by-obo-namespace">
+<span id="cmdoption-runoak-statistics-no-group-by-obo-namespace"></span><span class="sig-name descname"><span class="pre">--group-by-obo-namespace</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-group-by-obo-namespace</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-statistics-group-by-obo-namespace" title="Permalink to this definition"></a></dt>
+<dd><p>shortcut for –group-by-property oio:hasOBONamespace (note this is distinct from the ID namespace)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-group-by-prefix">
+<span id="cmdoption-runoak-statistics-no-group-by-prefix"></span><span class="sig-name descname"><span class="pre">--group-by-prefix</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-group-by-prefix</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-statistics-group-by-prefix" title="Permalink to this definition"></a></dt>
+<dd><p>shortcut for –group-by-property sh:prefix. Groups by the prefix of the CURIE</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-group-by-defined-by">
+<span id="cmdoption-runoak-statistics-no-group-by-defined-by"></span><span class="sig-name descname"><span class="pre">--group-by-defined-by</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-group-by-defined-by</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-statistics-group-by-defined-by" title="Permalink to this definition"></a></dt>
+<dd><p>shortcut for –group-by-property rdfs:isDefinedBy. This may be inferred from prefix if not set explicitly</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-include-residuals">
+<span id="cmdoption-runoak-statistics-no-include-residuals"></span><span class="sig-name descname"><span class="pre">--include-residuals</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-include-residuals</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-statistics-include-residuals" title="Permalink to this definition"></a></dt>
+<dd><p>If true include an OTHER category for terms that do not have the property</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-X">
+<span id="cmdoption-runoak-statistics-x"></span><span id="cmdoption-runoak-statistics-compare-with"></span><span class="sig-name descname"><span class="pre">-X</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--compare-with</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;compare_with&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-statistics-X" title="Permalink to this definition"></a></dt>
+<dd><p>Compare with another ontology</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-P">
+<span id="cmdoption-runoak-statistics-p"></span><span id="cmdoption-runoak-statistics-has-prefix"></span><span class="sig-name descname"><span class="pre">-P</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--has-prefix</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;has_prefix&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-statistics-P" title="Permalink to this definition"></a></dt>
+<dd><p>filter based on a prefix, e.g. OBI</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-0">
+<span id="cmdoption-runoak-statistics-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-statistics-0" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-statistics-arg-BRANCHES">
+<span id="cmdoption-runoak-statistics-arg-branches"></span><span class="sig-name descname"><span class="pre">BRANCHES</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-statistics-arg-BRANCHES" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument(s)</p>
+</dd></dl>
+
+</section>
 <section id="runoak-subsets">
 <h4>subsets<a class="headerlink" href="#runoak-subsets" title="Permalink to this headline"></a></h4>
 <blockquote>
@@ -2536,7 +3543,7 @@ terms (directly) in goslim_generic in GO:</p>
 <div><p>term-subsets command, which shows relationships of terms to subsets</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak subsets <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>subsets<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2547,11 +3554,65 @@ terms (directly) in goslim_generic in GO:</p>
 </dd></dl>
 
 </section>
+<section id="runoak-synonymize">
+<h4>synonymize<a class="headerlink" href="#runoak-synonymize" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p>Apply synonymizer rule from the rules file to generate KGCL syntax
+see <a class="reference external" href="https://github.com/INCATools/kgcl">https://github.com/INCATools/kgcl</a>.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><p>runoak -i foo.obo synonymize -R foo_rules.yaml –patch patch.kgcl –apply-patch</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>synonymize<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-synonymize-R">
+<span id="cmdoption-runoak-synonymize-r"></span><span id="cmdoption-runoak-synonymize-rules-file"></span><span class="sig-name descname"><span class="pre">-R</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--rules-file</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;rules_file&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-synonymize-R" title="Permalink to this definition"></a></dt>
+<dd><p>path to rules file. Conforms to rules_datamodel.        e.g. <a class="reference external" href="https://github.com/INCATools/ontology-access-kit/blob/main/tests/input/matcher_rules.yaml">https://github.com/INCATools/ontology-access-kit/blob/main/tests/input/matcher_rules.yaml</a></p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-synonymize-apply-patch">
+<span id="cmdoption-runoak-synonymize-no-apply-patch"></span><span class="sig-name descname"><span class="pre">--apply-patch</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-apply-patch</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-synonymize-apply-patch" title="Permalink to this definition"></a></dt>
+<dd><p>Apply KGCL syntax generated based on the synonymizer rules file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-synonymize-patch">
+<span class="sig-name descname"><span class="pre">--patch</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;patch&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-synonymize-patch" title="Permalink to this definition"></a></dt>
+<dd><p>Output patch file containing KGCL commands.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-synonymize-o">
+<span id="cmdoption-runoak-synonymize-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-synonymize-o" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-synonymize-arg-TERMS">
+<span id="cmdoption-runoak-synonymize-arg-terms"></span><span class="sig-name descname"><span class="pre">TERMS</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-synonymize-arg-TERMS" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument(s)</p>
+</dd></dl>
+
+</section>
 <section id="runoak-taxon-constraints">
 <h4>taxon-constraints<a class="headerlink" href="#runoak-taxon-constraints" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Compute all taxon constraints for a term or terms</p>
-<p>Note that this <em>computes</em> the taxon constraints rather than doing a lookup</p>
+<div><p>Compute all taxon constraints for a term or terms.</p>
+<p>This will apply rules using the inferred ancestors of subject terms, as well as inferred
+ancestors/descendants of taxon terms.</p>
+<p>The input ontology MUST include both the taxon constraint relationships AND the relevant portion
+of NCBI Taxonomy</p>
 <p>Example:</p>
 <blockquote>
 <div><p>runoak -i db/go.db taxon-constraints <a class="reference external" href="GO:0034357">GO:0034357</a> –include-redundant -p i,p</p>
@@ -2565,7 +3626,7 @@ terms (directly) in goslim_generic in GO:</p>
 <li><p><a class="reference external" href="https://incatools.github.io/ontology-access-kit/src/oaklib.utilities.taxon.taxon_constraints_utils">https://incatools.github.io/ontology-access-kit/src/oaklib.utilities.taxon.taxon_constraints_utils</a></p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak taxon-constraints <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>taxon-constraints<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2617,7 +3678,7 @@ terms (directly) in goslim_generic in GO:</p>
 <div><p>List categories for a term or set of terms</p>
 <p>TODO</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak term-categories <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>term-categories<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2650,9 +3711,20 @@ terms (directly) in goslim_generic in GO:</p>
 <section id="runoak-term-metadata">
 <h4>term-metadata<a class="headerlink" href="#runoak-term-metadata" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Shows term metadata</p>
+<div><p>Shows term metadata.</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:uberon term-metadata lung heart</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak term-metadata <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<p>You can filter the results for only selected predicates:</p>
+<blockquote>
+<div><p>runoak -i sqlite:obo:uberon term-metadata lung heart -p id,oio:hasDbXref</p>
+</div></blockquote>
+<p>The default output is YAML documents, where each YAML document is a term, with
+keys representing selected predicates. Values are always lists of atoms, even
+when there is typically one value (e.g. rdfs:label)</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>term-metadata<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2669,9 +3741,15 @@ terms (directly) in goslim_generic in GO:</p>
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-runoak-term-metadata-reification">
-<span id="cmdoption-runoak-term-metadata-no-reification"></span><span class="sig-name descname"><span class="pre">--reification</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-reification</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-term-metadata-reification" title="Permalink to this definition"></a></dt>
-<dd><p>if true then fetch axiom triples with annotations</p>
+<dt class="sig sig-object std" id="cmdoption-runoak-term-metadata-p">
+<span id="cmdoption-runoak-term-metadata-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-term-metadata-p" title="Permalink to this definition"></a></dt>
+<dd><p>A comma-separated list of predicates</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-term-metadata-additional-metadata">
+<span id="cmdoption-runoak-term-metadata-no-additional-metadata"></span><span class="sig-name descname"><span class="pre">--additional-metadata</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-additional-metadata</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-term-metadata-additional-metadata" title="Permalink to this definition"></a></dt>
+<dd><p>if true then fetch additional metadata about statements stored as OWL reification</p>
 <dl class="field-list simple">
 <dt class="field-odd">Default</dt>
 <dd class="field-odd"><p>False</p>
@@ -2692,7 +3770,7 @@ terms (directly) in goslim_generic in GO:</p>
 <blockquote>
 <div><p>List subsets for a term or set of terms</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak term-subsets <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>term-subsets<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2742,7 +3820,7 @@ terms (directly) in goslim_generic in GO:</p>
 <div><p>runoak -i sqlite:obo:omo terms –owl-type owl:AnnotationProperty</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak terms <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>terms<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2780,7 +3858,7 @@ terms (directly) in goslim_generic in GO:</p>
 <div><p>runoak -i go.db termset-similarity -p i,p nucleus membrane &#64; “nuclear membrane” vacuole -p i,p</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak termset-similarity <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>termset-similarity<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2879,7 +3957,7 @@ the most informative intermediate classes:</p>
 <p>Note that ‘volcano’ is the root, even though it is 2 hops from one of the terms, it can be connected
 to at least one of the seeds (highlighted with asterisks) by a path of length 1.</p>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak tree <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>tree<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2935,6 +4013,18 @@ to at least one of the seeds (highlighted with asterisks) by a path of length 1.
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-tree-skip">
+<span class="sig-name descname"><span class="pre">--skip</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;skip&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-tree-skip" title="Permalink to this definition"></a></dt>
+<dd><p>Exclude paths that contain this node</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-tree-root">
+<span class="sig-name descname"><span class="pre">--root</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;root&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-tree-root" title="Permalink to this definition"></a></dt>
+<dd><p>Use this node or nodes as roots</p>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-tree-p">
 <span id="cmdoption-runoak-tree-predicates"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--predicates</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;predicates&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-tree-p" title="Permalink to this definition"></a></dt>
 <dd><p>A comma-separated list of predicates</p>
@@ -2969,12 +4059,20 @@ to at least one of the seeds (highlighted with asterisks) by a path of length 1.
 <blockquote>
 <div><p>runoak  -i db/ecto.db validate -o results.tsv</p>
 </div></blockquote>
+<p>The default validation performed is structural (conformance to the ontology_metadata schema)</p>
+<p>There is experimental support for additional ontology rules, which includes heuristic methods
+such as aligning text and logical definitions. These are off by default.</p>
+<p>To run these, pass –no-skip-ontology-rules</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak -i db/uberon.db validate –skip-structural-validation –no-skip-ontology-rules</p>
+</div></blockquote>
 <p>For more information, see the OAK how-to guide:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://incatools.github.io/ontology-access-kit/howtos/validate-an-obo-ontology.html">https://incatools.github.io/ontology-access-kit/howtos/validate-an-obo-ontology.html</a></p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak validate <span class="o">[</span>OPTIONS<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>validate<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -2990,9 +4088,118 @@ to at least one of the seeds (highlighted with asterisks) by a path of length 1.
 </dd></dl>
 
 <dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-validate-skip-structural-validation">
+<span id="cmdoption-runoak-validate-no-skip-structural-validation"></span><span class="sig-name descname"><span class="pre">--skip-structural-validation</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-skip-structural-validation</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-validate-skip-structural-validation" title="Permalink to this definition"></a></dt>
+<dd><p>If true, main structural validation checks are skipped</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-validate-skip-ontology-rules">
+<span id="cmdoption-runoak-validate-no-skip-ontology-rules"></span><span class="sig-name descname"><span class="pre">--skip-ontology-rules</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-skip-ontology-rules</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-validate-skip-ontology-rules" title="Permalink to this definition"></a></dt>
+<dd><p>If true, ontology rules are skipped</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-validate-R">
+<span id="cmdoption-runoak-validate-r"></span><span id="cmdoption-runoak-validate-rule"></span><span class="sig-name descname"><span class="pre">-R</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--rule</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;rule&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-validate-R" title="Permalink to this definition"></a></dt>
+<dd><p>A rule to run. Can be specified multiple times. If not specified, all rules are run.</p>
+</dd></dl>
+
+<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-runoak-validate-o">
 <span id="cmdoption-runoak-validate-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-validate-o" title="Permalink to this definition"></a></dt>
 <dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-validate-O">
+<span id="cmdoption-runoak-validate-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-validate-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+</section>
+<section id="runoak-validate-definitions">
+<h4>validate-definitions<a class="headerlink" href="#runoak-validate-definitions" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p>Checks presence and structure of text definitions.</p>
+<p>To run:</p>
+<blockquote>
+<div><p>runoak validate-definitions -i db/uberon.db -o results.tsv</p>
+</div></blockquote>
+<p>By default this will apply basic text mining of text definitions to check
+against machine actionable OBO text definition guideline rules.
+This can result in an initial lag - to skip this, and ONLY perform
+checks for presence of definitions, use –skip-text-annotation:</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak validate-definitions -i db/uberon.db –skip-text-annotation</p>
+</div></blockquote>
+<p>Like most OAK commands, this accepts lists of terms or term queries
+as arguments. You can pass in a CURIE list to selectively validate
+individual classes</p>
+<p>Example:</p>
+<blockquote>
+<div><p>runoak validate-definitions -i db/cl.db CL:0002053</p>
+</div></blockquote>
+<p>Only on CL identifiers:</p>
+<blockquote>
+<div><p>runoak validate-definitions -i db/cl.db i^CL:</p>
+</div></blockquote>
+<p>Only on neuron hierarchy:</p>
+<blockquote>
+<div><p>runoak validate-definitions -i db/cl.db .desc//p=i neuron</p>
+</div></blockquote>
+<p>Output format:</p>
+<p>This command emits objects conforming to the OAK validation datamodel.
+See <a class="reference external" href="https://incatools.github.io/ontology-access-kit/datamodels">https://incatools.github.io/ontology-access-kit/datamodels</a> for more
+on OAK datamodels.</p>
+<p>The default serialization of the datamodel is CSV.</p>
+<p>Notes:</p>
+<p>This command is largely redundant with the validate command, but is useful for
+targeted validation focused solely on definitions</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>validate-definitions<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-validate-definitions-skip-text-annotation">
+<span id="cmdoption-runoak-validate-definitions-no-skip-text-annotation"></span><span class="sig-name descname"><span class="pre">--skip-text-annotation</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-skip-text-annotation</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-validate-definitions-skip-text-annotation" title="Permalink to this definition"></a></dt>
+<dd><p>If true, do not parse text annotations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-validate-definitions-O">
+<span id="cmdoption-runoak-validate-definitions-o"></span><span id="cmdoption-runoak-validate-definitions-output-type"></span><span class="sig-name descname"><span class="pre">-O</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output-type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_type&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-validate-definitions-O" title="Permalink to this definition"></a></dt>
+<dd><p>Desired output type</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-validate-definitions-0">
+<span id="cmdoption-runoak-validate-definitions-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-runoak-validate-definitions-0" title="Permalink to this definition"></a></dt>
+<dd><p>Output file, e.g. obo file</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-runoak-validate-definitions-arg-TERMS">
+<span id="cmdoption-runoak-validate-definitions-arg-terms"></span><span class="sig-name descname"><span class="pre">TERMS</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-runoak-validate-definitions-arg-TERMS" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument(s)</p>
 </dd></dl>
 
 </section>
@@ -3006,7 +4213,7 @@ to at least one of the seeds (highlighted with asterisks) by a path of length 1.
 <li><p><a class="reference external" href="https://incatools.github.io/ontology-access-kit/howtos/validate-an-obo-ontology.html">https://incatools.github.io/ontology-access-kit/howtos/validate-an-obo-ontology.html</a></p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak validate-multiple <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>DBS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>validate-multiple<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>DBS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>
@@ -3044,9 +4251,9 @@ to at least one of the seeds (highlighted with asterisks) by a path of length 1.
 <section id="runoak-viz">
 <h4>viz<a class="headerlink" href="#runoak-viz" title="Permalink to this headline"></a></h4>
 <blockquote>
-<div><p>Visualizing an ancestor graph using obographviz</p>
+<div><p>Visualize an ancestor graph using <strong>obographviz</strong></p>
 <p>For general background on what is meant by a graph in OAK,
-see <a class="reference external" href="https://incatools.github.io/ontology-access-kit/interfaces/obograph.html">https://incatools.github.io/ontology-access-kit/interfaces/obograph.html</a></p>
+see <a class="reference external" href="https://incatools.github.io/ontology-access-kit/interfaces/obograph">https://incatools.github.io/ontology-access-kit/interfaces/obograph</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This requires that <a class="reference external" href="https://github.com/INCATools/obographviz">obographviz</a> is installed.</p>
@@ -3082,7 +4289,7 @@ to a distance of 2:</p>
 <div><p>runoak -i sqlite:cl.db viz ‘T cell’ -p i,d –max-hops 2</p>
 </div></blockquote>
 </div></blockquote>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak viz <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>TERMS<span class="o">]</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>runoak<span class="w"> </span>viz<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>TERMS<span class="o">]</span>...
 </pre></div>
 </div>
 <p class="rubric">Options</p>

@@ -1,8 +1,8 @@
-# SearchTerm
+# Type: SearchTerm
 
-None
 
-URI: http://www.w3.org/2001/XMLSchema#string
+
+URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
 * [base](https://w3id.org/linkml/base): str
 
@@ -10,6 +10,9 @@ URI: http://www.w3.org/2001/XMLSchema#string
 
 
 * [typeof](https://w3id.org/linkml/typeof): string
+
+
+
 
 
 

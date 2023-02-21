@@ -4,9 +4,7 @@ _A relationship of an ontology element to a lexical term_
 
 
 
-
 URI: [li:RelationshipToTerm](https://w3id.org/linkml/lexical_index/RelationshipToTerm)
-
 
 
 
@@ -18,6 +16,7 @@ URI: [li:RelationshipToTerm](https://w3id.org/linkml/lexical_index/RelationshipT
       RelationshipToTerm : pipeline
       RelationshipToTerm : predicate
       RelationshipToTerm : source
+      RelationshipToTerm : synonymized
       
 ```
 
@@ -29,21 +28,27 @@ URI: [li:RelationshipToTerm](https://w3id.org/linkml/lexical_index/RelationshipT
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [predicate](predicate.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
-| [element](element.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
-| [element_term](element_term.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | the original term used in the element  |
-| [source](source.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
-| [pipeline](pipeline.md) | 0..* <br/> [LexicalTransformationPipeline](LexicalTransformationPipeline.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [predicate](predicate.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
+| [element](element.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
+| [element_term](element_term.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the original term used in the element | direct |
+| [source](source.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
+| [pipeline](pipeline.md) | 0..* <br/> [LexicalTransformationPipeline](LexicalTransformationPipeline.md) |  | direct |
+| [synonymized](synonymized.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LexicalGrouping](LexicalGrouping.md) | [relationships](relationships.md) | range | RelationshipToTerm |
+| [LexicalGrouping](LexicalGrouping.md) | [relationships](relationships.md) | range | [RelationshipToTerm](RelationshipToTerm.md) |
+
+
+
 
 
 
@@ -64,17 +69,18 @@ URI: [li:RelationshipToTerm](https://w3id.org/linkml/lexical_index/RelationshipT
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['li:RelationshipToTerm'] |
-| native | ['li:RelationshipToTerm'] |
+| self | li:RelationshipToTerm |
+| native | li:RelationshipToTerm |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -113,6 +119,11 @@ attributes:
     rank: 1000
     multivalued: true
     range: LexicalTransformationPipeline
+  synonymized:
+    name: synonymized
+    from_schema: https://w3id.org/linkml/lexical_index
+    rank: 1000
+    range: boolean
 
 ```
 </details>
@@ -173,6 +184,15 @@ attributes:
     domain_of:
     - RelationshipToTerm
     range: LexicalTransformationPipeline
+  synonymized:
+    name: synonymized
+    from_schema: https://w3id.org/linkml/lexical_index
+    rank: 1000
+    alias: synonymized
+    owner: RelationshipToTerm
+    domain_of:
+    - RelationshipToTerm
+    range: boolean
 
 ```
 </details>

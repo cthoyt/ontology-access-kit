@@ -4,9 +4,7 @@ _Configuration parameters for execution of validation repairs_
 
 
 
-
 URI: [vm:RepairConfiguration](https://w3id.org/linkml/validation-model/RepairConfiguration)
-
 
 
 
@@ -26,13 +24,16 @@ URI: [vm:RepairConfiguration](https://w3id.org/linkml/validation-model/RepairCon
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [validation_configuration](validation_configuration.md) | 0..1 <br/> [ValidationConfiguration](ValidationConfiguration.md)  | repair configurations include validation configurations  |
-| [dry_run](dry_run.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [validation_configuration](validation_configuration.md) | 0..1 <br/> [ValidationConfiguration](ValidationConfiguration.md) | repair configurations include validation configurations | direct |
+| [dry_run](dry_run.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
 
 
-## Usages
+
+
+
+
 
 
 
@@ -53,17 +54,18 @@ URI: [vm:RepairConfiguration](https://w3id.org/linkml/validation-model/RepairCon
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['vm:RepairConfiguration'] |
-| native | ['vm:RepairConfiguration'] |
+| self | vm:RepairConfiguration |
+| native | vm:RepairConfiguration |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

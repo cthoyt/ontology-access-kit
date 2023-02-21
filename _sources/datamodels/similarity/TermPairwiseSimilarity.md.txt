@@ -4,14 +4,13 @@ _A simple pairwise similarity between two atomic concepts/terms_
 
 
 
-
 URI: [sim:TermPairwiseSimilarity](https://w3id.org/linkml/similarity/TermPairwiseSimilarity)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class TermPairwiseSimilarity
       PairwiseSimilarity <|-- TermPairwiseSimilarity
       
       TermPairwiseSimilarity : ancestor_id
@@ -30,7 +29,6 @@ URI: [sim:TermPairwiseSimilarity](https://w3id.org/linkml/similarity/TermPairwis
       TermPairwiseSimilarity : subject_label
       TermPairwiseSimilarity : subject_source
       
-
 ```
 
 
@@ -45,31 +43,36 @@ URI: [sim:TermPairwiseSimilarity](https://w3id.org/linkml/similarity/TermPairwis
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [subject_id](subject_id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The first of the two entities being compared  |
-| [subject_label](subject_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | the label or name for the first entity  |
-| [subject_source](subject_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | the source for the first entity  |
-| [object_id](object_id.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The second of the two entities being compared  |
-| [object_label](object_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | the label or name for the second entity  |
-| [object_source](object_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | the source for the second entity  |
-| [ancestor_id](ancestor_id.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | the most recent common ancestor of the two compared entities  |
-| [ancestor_label](ancestor_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | the name or label of the ancestor concept  |
-| [ancestor_source](ancestor_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [object_information_content](object_information_content.md) | 0..1 <br/> [NegativeLogValue](NegativeLogValue.md)  | The IC of the object  |
-| [subject_information_content](subject_information_content.md) | 0..1 <br/> [NegativeLogValue](NegativeLogValue.md)  | The IC of the subject  |
-| [ancestor_information_content](ancestor_information_content.md) | 0..1 <br/> [NegativeLogValue](NegativeLogValue.md)  | The IC of the object  |
-| [jaccard_similarity](jaccard_similarity.md) | 0..1 <br/> [ZeroToOne](ZeroToOne.md)  | The number of concepts in the intersection divided by the number in the union  |
-| [dice_similarity](dice_similarity.md) | 0..1 <br/> [ZeroToOne](ZeroToOne.md)  |   |
-| [phenodigm_score](phenodigm_score.md) | 0..1 <br/> [NonNegativeFloat](NonNegativeFloat.md)  | the geometric mean of the jaccard similarity and the information content  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [subject_id](subject_id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | The first of the two entities being compared | direct |
+| [subject_label](subject_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the label or name for the first entity | direct |
+| [subject_source](subject_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the source for the first entity | direct |
+| [object_id](object_id.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | The second of the two entities being compared | direct |
+| [object_label](object_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the label or name for the second entity | direct |
+| [object_source](object_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the source for the second entity | direct |
+| [ancestor_id](ancestor_id.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | the most recent common ancestor of the two compared entities | direct |
+| [ancestor_label](ancestor_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the name or label of the ancestor concept | direct |
+| [ancestor_source](ancestor_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [object_information_content](object_information_content.md) | 0..1 <br/> [NegativeLogValue](NegativeLogValue.md) | The IC of the object | direct |
+| [subject_information_content](subject_information_content.md) | 0..1 <br/> [NegativeLogValue](NegativeLogValue.md) | The IC of the subject | direct |
+| [ancestor_information_content](ancestor_information_content.md) | 0..1 <br/> [NegativeLogValue](NegativeLogValue.md) | The IC of the object | direct |
+| [jaccard_similarity](jaccard_similarity.md) | 0..1 <br/> [ZeroToOne](ZeroToOne.md) | The number of concepts in the intersection divided by the number in the union | direct |
+| [dice_similarity](dice_similarity.md) | 0..1 <br/> [ZeroToOne](ZeroToOne.md) |  | direct |
+| [phenodigm_score](phenodigm_score.md) | 0..1 <br/> [NonNegativeFloat](NonNegativeFloat.md) | the geometric mean of the jaccard similarity and the information content | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [BestMatch](BestMatch.md) | [similarity](similarity.md) | range | TermPairwiseSimilarity |
+| [BestMatch](BestMatch.md) | [similarity](similarity.md) | range | [TermPairwiseSimilarity](TermPairwiseSimilarity.md) |
+
+
+
 
 
 
@@ -90,17 +93,18 @@ URI: [sim:TermPairwiseSimilarity](https://w3id.org/linkml/similarity/TermPairwis
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['sim:TermPairwiseSimilarity'] |
-| native | ['sim:TermPairwiseSimilarity'] |
+| self | sim:TermPairwiseSimilarity |
+| native | sim:TermPairwiseSimilarity |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

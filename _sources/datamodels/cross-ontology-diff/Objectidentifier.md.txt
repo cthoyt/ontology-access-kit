@@ -1,14 +1,19 @@
-# Objectidentifier
+# Type: Objectidentifier
 
-A URI or CURIE that represents an object in the model.
 
-URI: shex:iri
+_A URI or CURIE that represents an object in the model._
+
+
+URI: [shex:iri](shex:iri)
 
 * [base](https://w3id.org/linkml/base): ElementIdentifier
 
 * [uri](https://w3id.org/linkml/uri): shex:iri
 
 * [repr](https://w3id.org/linkml/repr): str
+
+
+
 
 
 

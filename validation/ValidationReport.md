@@ -4,19 +4,17 @@ _A report that consists of validation results_
 
 
 
-
 URI: [sh:ValidationReport](http://www.w3.org/ns/shacl#ValidationReport)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class ValidationReport
       Report <|-- ValidationReport
       
       ValidationReport : results
       
-
 ```
 
 
@@ -31,12 +29,15 @@ URI: [sh:ValidationReport](http://www.w3.org/ns/shacl#ValidationReport)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [results](results.md) | 0..* <br/> [ValidationResult](ValidationResult.md)  | collection of results  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [results](results.md) | 0..* <br/> [ValidationResult](ValidationResult.md) | collection of results | [Report](Report.md) |
 
 
-## Usages
+
+
+
+
 
 
 
@@ -61,17 +62,18 @@ URI: [sh:ValidationReport](http://www.w3.org/ns/shacl#ValidationReport)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['sh:ValidationReport'] |
-| native | ['vm:ValidationReport'] |
+| self | sh:ValidationReport |
+| native | vm:ValidationReport |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

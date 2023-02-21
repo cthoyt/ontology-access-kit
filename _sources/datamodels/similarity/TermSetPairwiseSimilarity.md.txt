@@ -4,14 +4,13 @@ _A simple pairwise similarity between two sets of concepts/terms_
 
 
 
-
 URI: [sim:TermSetPairwiseSimilarity](https://w3id.org/linkml/similarity/TermSetPairwiseSimilarity)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class TermSetPairwiseSimilarity
       PairwiseSimilarity <|-- TermSetPairwiseSimilarity
       
       TermSetPairwiseSimilarity : average_score
@@ -22,7 +21,6 @@ URI: [sim:TermSetPairwiseSimilarity](https://w3id.org/linkml/similarity/TermSetP
       TermSetPairwiseSimilarity : subject_best_matches
       TermSetPairwiseSimilarity : subject_termset
       
-
 ```
 
 
@@ -37,18 +35,21 @@ URI: [sim:TermSetPairwiseSimilarity](https://w3id.org/linkml/similarity/TermSetP
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [subject_termset](subject_termset.md) | 0..* <br/> [TermInfo](TermInfo.md)  |   |
-| [object_termset](object_termset.md) | 0..* <br/> [TermInfo](TermInfo.md)  |   |
-| [subject_best_matches](subject_best_matches.md) | 0..* <br/> [BestMatch](BestMatch.md)  |   |
-| [object_best_matches](object_best_matches.md) | 0..* <br/> [BestMatch](BestMatch.md)  |   |
-| [average_score](average_score.md) | 0..1 <br/> [xsd:float](http://www.w3.org/2001/XMLSchema#float)  |   |
-| [best_score](best_score.md) | 0..1 <br/> [xsd:float](http://www.w3.org/2001/XMLSchema#float)  |   |
-| [metric](metric.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [subject_termset](subject_termset.md) | 0..* <br/> [TermInfo](TermInfo.md) |  | direct |
+| [object_termset](object_termset.md) | 0..* <br/> [TermInfo](TermInfo.md) |  | direct |
+| [subject_best_matches](subject_best_matches.md) | 0..* <br/> [BestMatch](BestMatch.md) |  | direct |
+| [object_best_matches](object_best_matches.md) | 0..* <br/> [BestMatch](BestMatch.md) |  | direct |
+| [average_score](average_score.md) | 1..1 <br/> [xsd:float](http://www.w3.org/2001/XMLSchema#float) |  | direct |
+| [best_score](best_score.md) | 1..1 <br/> [xsd:float](http://www.w3.org/2001/XMLSchema#float) |  | direct |
+| [metric](metric.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
 
 
-## Usages
+
+
+
+
 
 
 
@@ -69,17 +70,18 @@ URI: [sim:TermSetPairwiseSimilarity](https://w3id.org/linkml/similarity/TermSetP
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['sim:TermSetPairwiseSimilarity'] |
-| native | ['sim:TermSetPairwiseSimilarity'] |
+| self | sim:TermSetPairwiseSimilarity |
+| native | sim:TermSetPairwiseSimilarity |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -167,6 +169,7 @@ attributes:
     domain_of:
     - TermSetPairwiseSimilarity
     range: float
+    required: true
   best_score:
     name: best_score
     from_schema: https://w3id.org/linkml/similarity
@@ -176,6 +179,7 @@ attributes:
     domain_of:
     - TermSetPairwiseSimilarity
     range: float
+    required: true
   metric:
     name: metric
     from_schema: https://w3id.org/linkml/similarity

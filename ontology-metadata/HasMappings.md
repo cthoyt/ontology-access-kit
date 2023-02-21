@@ -2,16 +2,13 @@
 
 
 
-* __NOTE__: this is a mixin class intended to be used in combination with other classes, and not used directly
-
-
-URI: [omoschema:HasMappings](http://purl.obolibrary.org/obo/schema/HasMappings)
-
+URI: [omoschema:HasMappings](http://purl.obolibrary.org/obo/omo/schema/HasMappings)
 
 
 
 ```{mermaid}
  classDiagram
+    class HasMappings
       AnnotationPropertyMixin <|-- HasMappings
       
       HasMappings : broadMatch
@@ -21,6 +18,14 @@ URI: [omoschema:HasMappings](http://purl.obolibrary.org/obo/schema/HasMappings)
       HasMappings : narrowMatch
       
 
+      HasMappings <|-- Term
+      
+      HasMappings : broadMatch
+      HasMappings : closeMatch
+      HasMappings : database_cross_reference
+      HasMappings : exactMatch
+      HasMappings : narrowMatch
+      
 ```
 
 
@@ -35,16 +40,26 @@ URI: [omoschema:HasMappings](http://purl.obolibrary.org/obo/schema/HasMappings)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [broadMatch](broadMatch.md) | 0..* <br/> [Thing](Thing.md)  |   |
-| [closeMatch](closeMatch.md) | 0..* <br/> [Thing](Thing.md)  |   |
-| [exactMatch](exactMatch.md) | 0..* <br/> [Thing](Thing.md)  |   |
-| [narrowMatch](narrowMatch.md) | 0..* <br/> [Thing](Thing.md)  |   |
-| [database_cross_reference](database_cross_reference.md) | 0..* <br/> [CURIELiteral](CURIELiteral.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [broadMatch](broadMatch.md) | 0..* <br/> [Thing](Thing.md) |  | direct |
+| [closeMatch](closeMatch.md) | 0..* <br/> [Thing](Thing.md) |  | direct |
+| [exactMatch](exactMatch.md) | 0..* <br/> [Thing](Thing.md) |  | direct |
+| [narrowMatch](narrowMatch.md) | 0..* <br/> [Thing](Thing.md) |  | direct |
+| [database_cross_reference](database_cross_reference.md) | 0..* <br/> [CURIELiteral](CURIELiteral.md) |  | direct |
 
 
-## Usages
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
+| [Term](Term.md) | A NamedThing that includes classes, properties, but not ontologies |
+
+
+
+
+
 
 
 
@@ -65,17 +80,18 @@ URI: [omoschema:HasMappings](http://purl.obolibrary.org/obo/schema/HasMappings)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['omoschema:HasMappings'] |
-| native | ['omoschema:HasMappings'] |
+| self | omoschema:HasMappings |
+| native | omoschema:HasMappings |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

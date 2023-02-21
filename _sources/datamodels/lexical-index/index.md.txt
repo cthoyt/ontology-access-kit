@@ -5,6 +5,8 @@ A datamodel for representing a lexical index of an ontology. A lexical index is 
 URI: https://w3id.org/linkml/lexical_index
 Name: lexical-index
 
+
+
 ## Classes
 
 | Class | Description |
@@ -31,6 +33,7 @@ Name: lexical-index
 | [predicate](predicate.md) |  |
 | [relationships](relationships.md) | All ontology elements grouped and their relationship to the normalized term |
 | [source](source.md) |  |
+| [synonymized](synonymized.md) |  |
 | [term](term.md) | A normalized term that groups ontology elements |
 | [transformations](transformations.md) |  |
 | [type](type.md) | The type of transformation |
@@ -48,6 +51,7 @@ Name: lexical-index
 | Type | Description |
 | --- | --- |
 | [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | A binary (true or false) value |
+| [xsd:string](http://www.w3.org/2001/XMLSchema#string) | a compact URI |
 | [xsd:date](http://www.w3.org/2001/XMLSchema#date) | a date (year, month and day) in an idealized calendar |
 | [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime) | Either a date or a datetime |
 | [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | The combination of a date and time |

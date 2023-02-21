@@ -2,16 +2,13 @@
 
 
 
-* __NOTE__: this is a mixin class intended to be used in combination with other classes, and not used directly
-
-
 URI: [ann:HasSpan](https://w3id.org/linkml/text_annotator/HasSpan)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class HasSpan
       HasSpan <|-- TextAnnotation
       
       HasSpan : subject_end
@@ -30,16 +27,26 @@ URI: [ann:HasSpan](https://w3id.org/linkml/text_annotator/HasSpan)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [subject_start](subject_start.md) | 0..1 <br/> [Position](Position.md)  |   |
-| [subject_end](subject_end.md) | 0..1 <br/> [Position](Position.md)  |   |
-| [subject_label](subject_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | The portion of the subject text that is matched, ranging from subject_start t...  |
-| [subject_source](subject_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [subject_text_id](subject_text_id.md) | 0..1 <br/> [TextualElement](TextualElement.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [subject_start](subject_start.md) | 0..1 <br/> [Position](Position.md) |  | direct |
+| [subject_end](subject_end.md) | 0..1 <br/> [Position](Position.md) |  | direct |
+| [subject_label](subject_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | The portion of the subject text that is matched, ranging from subject_start t... | direct |
+| [subject_source](subject_source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [subject_text_id](subject_text_id.md) | 0..1 <br/> [TextualElement](TextualElement.md) |  | direct |
 
 
-## Usages
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
+| [TextAnnotation](TextAnnotation.md) | An individual text annotation |
+
+
+
+
+
 
 
 
@@ -60,17 +67,18 @@ URI: [ann:HasSpan](https://w3id.org/linkml/text_annotator/HasSpan)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['ann:HasSpan'] |
-| native | ['ann:HasSpan'] |
+| self | ann:HasSpan |
+| native | ann:HasSpan |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

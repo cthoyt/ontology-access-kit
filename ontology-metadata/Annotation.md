@@ -1,10 +1,10 @@
 # Class: Annotation
+_A reified property-object pair_
 
 
 
 
-URI: [omoschema:Annotation](http://purl.obolibrary.org/obo/schema/Annotation)
-
+URI: [omoschema:Annotation](http://purl.obolibrary.org/obo/omo/schema/Annotation)
 
 
 
@@ -24,18 +24,23 @@ URI: [omoschema:Annotation](http://purl.obolibrary.org/obo/schema/Annotation)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [predicate](predicate.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [object](object.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [predicate](predicate.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [object](object.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Axiom](Axiom.md) | [annotations](annotations.md) | range | Annotation |
+| [Axiom](Axiom.md) | [annotations](annotations.md) | range | [Annotation](Annotation.md) |
+
+
+
 
 
 
@@ -56,17 +61,18 @@ URI: [omoschema:Annotation](http://purl.obolibrary.org/obo/schema/Annotation)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['omoschema:Annotation'] |
-| native | ['omoschema:Annotation'] |
+| self | omoschema:Annotation |
+| native | omoschema:Annotation |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -75,18 +81,17 @@ URI: [omoschema:Annotation](http://purl.obolibrary.org/obo/schema/Annotation)
 <details>
 ```yaml
 name: Annotation
+description: A reified property-object pair
 from_schema: http://purl.obolibrary.org/obo/omo/schema
 rank: 1000
 attributes:
   predicate:
     name: predicate
     from_schema: http://purl.obolibrary.org/obo/omo/schema
-    rank: 1000
     relational_role: PREDICATE
   object:
     name: object
     from_schema: http://purl.obolibrary.org/obo/omo/schema
-    rank: 1000
     relational_role: OBJECT
 represents_relationship: true
 
@@ -98,13 +103,13 @@ represents_relationship: true
 <details>
 ```yaml
 name: Annotation
+description: A reified property-object pair
 from_schema: http://purl.obolibrary.org/obo/omo/schema
 rank: 1000
 attributes:
   predicate:
     name: predicate
     from_schema: http://purl.obolibrary.org/obo/omo/schema
-    rank: 1000
     alias: predicate
     owner: Annotation
     domain_of:
@@ -114,7 +119,6 @@ attributes:
   object:
     name: object
     from_schema: http://purl.obolibrary.org/obo/omo/schema
-    rank: 1000
     alias: object
     owner: Annotation
     domain_of:

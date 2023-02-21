@@ -1,14 +1,19 @@
-# Nodeidentifier
+# Type: Nodeidentifier
 
-A URI, CURIE or BNODE that represents a node in a model.
 
-URI: shex:nonLiteral
+_A URI, CURIE or BNODE that represents a node in a model._
+
+
+URI: [shex:nonLiteral](shex:nonLiteral)
 
 * [base](https://w3id.org/linkml/base): NodeIdentifier
 
 * [uri](https://w3id.org/linkml/uri): shex:nonLiteral
 
 * [repr](https://w3id.org/linkml/repr): str
+
+
+
 
 
 

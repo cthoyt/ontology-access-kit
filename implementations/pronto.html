@@ -43,6 +43,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Implementations</a><ul class="current">
@@ -54,6 +55,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="sqldb.html">SQL Database Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ols.html">Ontology Lookup Service (OLS) Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_obo.html">Simple OBO Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="obograph.html">OBO Graph Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bioportal.html">Bioportal Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sparql.html">Sparql Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ubergraph.html">Ubergraph Endpoint</a></li>
@@ -66,6 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Notebooks</a></li>
@@ -87,9 +91,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Implementations</a> &raquo;</li>
-      <li>Pronto / OBO Files Implementation</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Implementations</a></li>
+      <li class="breadcrumb-item active">Pronto / OBO Files Implementation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/implementations/pronto.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -119,7 +123,7 @@ used for RDF/XML files but this is not guaranteed in future.</p>
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="oaklib.implementations.pronto.pronto_implementation.ProntoImplementation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oaklib.implementations.pronto.pronto_implementation.</span></span><span class="sig-name descname"><span class="pre">ProntoImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">oaklib.resource.OntologyResource</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wrapped_ontology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pronto.ontology.Ontology</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_relationship_index_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/oaklib/implementations/pronto/pronto_implementation.html#ProntoImplementation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.implementations.pronto.pronto_implementation.ProntoImplementation" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oaklib.implementations.pronto.pronto_implementation.</span></span><span class="sig-name descname"><span class="pre">ProntoImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource:</span> <span class="pre">typing.Optional[oaklib.resource.OntologyResource]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multilingual:</span> <span class="pre">typing.Optional[bool]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preferred_language:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autosave:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_owl_top_and_bottom:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ontology_metamodel_mapper:</span> <span class="pre">typing.Optional[oaklib.mappers.ontology_metadata_mapper.OntologyMetadataMapper]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_converter:</span> <span class="pre">typing.Optional[curies.api.Converter]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_relax_axioms:</span> <span class="pre">typing.Optional[bool]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wrapped_ontology:</span> <span class="pre">typing.Optional[pronto.ontology.Ontology]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_relationship_index_cache:</span> <span class="pre">typing.Optional[typing.Dict[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typing.List[typing.Tuple[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str]]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_alt_id_to_replacement_map:</span> <span class="pre">typing.Optional[typing.Dict[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typing.List[str]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/oaklib/implementations/pronto/pronto_implementation.html#ProntoImplementation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.implementations.pronto.pronto_implementation.ProntoImplementation" title="Permalink to this definition"></a></dt>
 <dd><p>Pronto wraps local-file based ontologies in the following formats:</p>
 <ul class="simple">
 <li><p>obo</p></li>
@@ -128,22 +132,34 @@ used for RDF/XML files but this is not guaranteed in future.</p>
 </ul>
 <p>To load a local file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">resource</span> <span class="o">=</span> <span class="n">OntologyResource</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="s1">&#39;go.obo&#39;</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="n">local</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">oi</span> <span class="o">=</span> <span class="n">ProntoImplementation</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oi</span> <span class="o">=</span> <span class="n">ProntoImplementation</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To load from the OBO library:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">resource</span> <span class="o">=</span> <span class="n">OntologyResource</span><span class="p">(</span><span class="n">local</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">slug</span><span class="o">=</span><span class="s1">&#39;go.obo&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">oi</span> <span class="o">=</span> <span class="n">ProntoImplementation</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oi</span> <span class="o">=</span> <span class="n">ProntoImplementation</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Currently this implementation implements most of the BaseOntologyInterface</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rels</span> <span class="o">=</span> <span class="n">oi</span><span class="o">.</span><span class="n">outgoing_relationships</span><span class="p">(</span><span class="s1">&#39;GO:0005773&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">rel</span><span class="p">,</span> <span class="n">parents</span> <span class="ow">in</span> <span class="n">rels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  </span><span class="si">{</span><span class="n">rel</span><span class="si">}</span><span class="s1"> ! </span><span class="si">{</span><span class="n">oi</span><span class="o">.</span><span class="n">get_label_by_curie</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    </span><span class="si">{</span><span class="n">parent</span><span class="si">}</span><span class="s1"> ! </span><span class="si">{</span><span class="n">oi</span><span class="o">.</span><span class="n">get_label_by_curie</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rels</span> <span class="o">=</span> <span class="n">oi</span><span class="o">.</span><span class="n">outgoing_relationships</span><span class="p">(</span><span class="s1">&#39;GO:0005773&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">rel</span><span class="p">,</span> <span class="n">parents</span> <span class="ow">in</span> <span class="n">rels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  </span><span class="si">{</span><span class="n">rel</span><span class="si">}</span><span class="s1"> ! </span><span class="si">{</span><span class="n">oi</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>       <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>           <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    </span><span class="si">{</span><span class="n">parent</span><span class="si">}</span><span class="s1"> ! </span><span class="si">{</span><span class="n">oi</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>pronto uses the fastobo library for loading ontologies. This follows a strict
+interpretation of obo format, and some ontologies may fail to load.
+In these cases, consider an alternative implementation</p>
+</div>
+<p>Alternatives:</p>
+<ul class="simple">
+<li><p>use the <span class="xref std std-ref">simple_obo_implementation</span></p></li>
+<li><p>convert to an OWL representation using ROBOT</p></li>
+<li><p>convert to a JSON representation using ROBOT and use <span class="xref std std-ref">obograph_implementation</span></p></li>
+</ul>
 </dd></dl>
 
 </section>

@@ -2,16 +2,13 @@
 
 
 
-* __NOTE__: this is a mixin class intended to be used in combination with other classes, and not used directly
-
-
-URI: [omoschema:ClassExpression](http://purl.obolibrary.org/obo/schema/ClassExpression)
-
+URI: [omoschema:ClassExpression](http://purl.obolibrary.org/obo/omo/schema/ClassExpression)
 
 
 
 ```{mermaid}
  classDiagram
+    class ClassExpression
       Expression <|-- ClassExpression
       
       ClassExpression : cardinality
@@ -24,6 +21,18 @@ URI: [omoschema:ClassExpression](http://purl.obolibrary.org/obo/schema/ClassExpr
       ClassExpression : unionOf
       
 
+      ClassExpression <|-- Class
+      ClassExpression <|-- Restriction
+      
+      ClassExpression : cardinality
+      ClassExpression : complementOf
+      ClassExpression : disjointWith
+      ClassExpression : equivalentClass
+      ClassExpression : intersectionOf
+      ClassExpression : oneOf
+      ClassExpression : subClassOf
+      ClassExpression : unionOf
+      
 ```
 
 
@@ -38,34 +47,47 @@ URI: [omoschema:ClassExpression](http://purl.obolibrary.org/obo/schema/ClassExpr
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [disjointWith](disjointWith.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [equivalentClass](equivalentClass.md) | 0..* <br/> [ClassExpression](ClassExpression.md)  |   |
-| [intersectionOf](intersectionOf.md) | 0..1 <br/> [ClassExpression](ClassExpression.md)  |   |
-| [subClassOf](subClassOf.md) | 0..* <br/> [ClassExpression](ClassExpression.md)  |   |
-| [cardinality](cardinality.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [complementOf](complementOf.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [oneOf](oneOf.md) | 0..1 <br/> [ClassExpression](ClassExpression.md)  |   |
-| [unionOf](unionOf.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [disjointWith](disjointWith.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [equivalentClass](equivalentClass.md) | 0..* <br/> [ClassExpression](ClassExpression.md) |  | direct |
+| [intersectionOf](intersectionOf.md) | 0..1 <br/> [ClassExpression](ClassExpression.md) |  | direct |
+| [subClassOf](subClassOf.md) | 0..* <br/> [ClassExpression](ClassExpression.md) |  | direct |
+| [cardinality](cardinality.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [complementOf](complementOf.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [oneOf](oneOf.md) | 0..1 <br/> [ClassExpression](ClassExpression.md) |  | direct |
+| [unionOf](unionOf.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+
+
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
+| [Class](Class.md) |  |
+| [Restriction](Restriction.md) |  |
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Class](Class.md) | [equivalentClass](equivalentClass.md) | range | ClassExpression |
-| [Class](Class.md) | [intersectionOf](intersectionOf.md) | range | ClassExpression |
-| [Class](Class.md) | [oneOf](oneOf.md) | range | ClassExpression |
-| [Restriction](Restriction.md) | [equivalentClass](equivalentClass.md) | range | ClassExpression |
-| [Restriction](Restriction.md) | [intersectionOf](intersectionOf.md) | range | ClassExpression |
-| [Restriction](Restriction.md) | [subClassOf](subClassOf.md) | range | ClassExpression |
-| [Restriction](Restriction.md) | [oneOf](oneOf.md) | range | ClassExpression |
-| [ClassExpression](ClassExpression.md) | [equivalentClass](equivalentClass.md) | range | ClassExpression |
-| [ClassExpression](ClassExpression.md) | [intersectionOf](intersectionOf.md) | range | ClassExpression |
-| [ClassExpression](ClassExpression.md) | [subClassOf](subClassOf.md) | range | ClassExpression |
-| [ClassExpression](ClassExpression.md) | [oneOf](oneOf.md) | range | ClassExpression |
+| [Class](Class.md) | [equivalentClass](equivalentClass.md) | range | [ClassExpression](ClassExpression.md) |
+| [Class](Class.md) | [intersectionOf](intersectionOf.md) | range | [ClassExpression](ClassExpression.md) |
+| [Class](Class.md) | [oneOf](oneOf.md) | range | [ClassExpression](ClassExpression.md) |
+| [Restriction](Restriction.md) | [equivalentClass](equivalentClass.md) | range | [ClassExpression](ClassExpression.md) |
+| [Restriction](Restriction.md) | [intersectionOf](intersectionOf.md) | range | [ClassExpression](ClassExpression.md) |
+| [Restriction](Restriction.md) | [subClassOf](subClassOf.md) | range | [ClassExpression](ClassExpression.md) |
+| [Restriction](Restriction.md) | [oneOf](oneOf.md) | range | [ClassExpression](ClassExpression.md) |
+| [ClassExpression](ClassExpression.md) | [equivalentClass](equivalentClass.md) | range | [ClassExpression](ClassExpression.md) |
+| [ClassExpression](ClassExpression.md) | [intersectionOf](intersectionOf.md) | range | [ClassExpression](ClassExpression.md) |
+| [ClassExpression](ClassExpression.md) | [subClassOf](subClassOf.md) | range | [ClassExpression](ClassExpression.md) |
+| [ClassExpression](ClassExpression.md) | [oneOf](oneOf.md) | range | [ClassExpression](ClassExpression.md) |
+
+
+
 
 
 
@@ -86,17 +108,18 @@ URI: [omoschema:ClassExpression](http://purl.obolibrary.org/obo/schema/ClassExpr
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['omoschema:ClassExpression'] |
-| native | ['omoschema:ClassExpression'] |
+| self | omoschema:ClassExpression |
+| native | omoschema:ClassExpression |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

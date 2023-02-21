@@ -4,9 +4,7 @@ _A user-specified configuration that determines how a particular search operatio
 
 
 
-
 URI: [search:SearchBaseConfiguration](https://w3id.org/linkml/search_datamodel/SearchBaseConfiguration)
-
 
 
 
@@ -15,6 +13,7 @@ URI: [search:SearchBaseConfiguration](https://w3id.org/linkml/search_datamodel/S
     class SearchBaseConfiguration
       SearchBaseConfiguration : categories
       SearchBaseConfiguration : cursor
+      SearchBaseConfiguration : force_case_insensitive
       SearchBaseConfiguration : include_obsoletes_in_results
       SearchBaseConfiguration : is_complete
       SearchBaseConfiguration : is_fuzzy
@@ -34,28 +33,34 @@ URI: [search:SearchBaseConfiguration](https://w3id.org/linkml/search_datamodel/S
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [search_terms](search_terms.md) | 0..* <br/> [SearchTerm](SearchTerm.md)  | An individual search term  |
-| [syntax](syntax.md) | 0..1 <br/> [SearchTermSyntax](SearchTermSyntax.md)  | Determines how the search term is interpreted  |
-| [properties](properties.md) | 0..* <br/> [SearchProperty](SearchProperty.md)  | determines which properties are searched over  |
-| [limit](limit.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)  | the maximum number of search results to be returned in one batch  |
-| [cursor](cursor.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)  | when the number of search results exceed the limit this can be used to iterat...  |
-| [is_partial](is_partial.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  | allows matches where the search term is a subset of the full span  |
-| [is_complete](is_complete.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  |   |
-| [include_obsoletes_in_results](include_obsoletes_in_results.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  |   |
-| [is_fuzzy](is_fuzzy.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  |   |
-| [categories](categories.md) | 0..* <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | categories that should be matched  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [search_terms](search_terms.md) | 0..* <br/> [SearchTerm](SearchTerm.md) | An individual search term | direct |
+| [syntax](syntax.md) | 0..1 <br/> [SearchTermSyntax](SearchTermSyntax.md) | Determines how the search term is interpreted | direct |
+| [properties](properties.md) | 0..* <br/> [SearchProperty](SearchProperty.md) | determines which properties are searched over | direct |
+| [limit](limit.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | the maximum number of search results to be returned in one batch | direct |
+| [cursor](cursor.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [is_partial](is_partial.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | allows matches where the search term is a subset of the full span | direct |
+| [is_complete](is_complete.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
+| [include_obsoletes_in_results](include_obsoletes_in_results.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
+| [is_fuzzy](is_fuzzy.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
+| [categories](categories.md) | 0..* <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | categories that should be matched | direct |
+| [force_case_insensitive](force_case_insensitive.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | force case insensitive matching | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [ComplexQuery](ComplexQuery.md) | [atom](atom.md) | range | SearchBaseConfiguration |
-| [PathExpression](PathExpression.md) | [search_term](search_term.md) | range | SearchBaseConfiguration |
-| [SearchResultSet](SearchResultSet.md) | [configuration](configuration.md) | range | SearchBaseConfiguration |
+| [ComplexQuery](ComplexQuery.md) | [atom](atom.md) | range | [SearchBaseConfiguration](SearchBaseConfiguration.md) |
+| [PathExpression](PathExpression.md) | [search_term](search_term.md) | range | [SearchBaseConfiguration](SearchBaseConfiguration.md) |
+| [SearchResultSet](SearchResultSet.md) | [configuration](configuration.md) | range | [SearchBaseConfiguration](SearchBaseConfiguration.md) |
+
+
+
 
 
 
@@ -80,17 +85,18 @@ URI: [search:SearchBaseConfiguration](https://w3id.org/linkml/search_datamodel/S
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['search:SearchBaseConfiguration'] |
-| native | ['search:SearchBaseConfiguration'] |
+| self | search:SearchBaseConfiguration |
+| native | search:SearchBaseConfiguration |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -174,6 +180,12 @@ attributes:
     rank: 1000
     multivalued: true
     range: uriorcurie
+  force_case_insensitive:
+    name: force_case_insensitive
+    description: force case insensitive matching
+    from_schema: https://w3id.org/linkml/search_datamodel
+    rank: 1000
+    range: boolean
 
 ```
 </details>
@@ -299,6 +311,16 @@ attributes:
     domain_of:
     - SearchBaseConfiguration
     range: uriorcurie
+  force_case_insensitive:
+    name: force_case_insensitive
+    description: force case insensitive matching
+    from_schema: https://w3id.org/linkml/search_datamodel
+    rank: 1000
+    alias: force_case_insensitive
+    owner: SearchBaseConfiguration
+    domain_of:
+    - SearchBaseConfiguration
+    range: boolean
 
 ```
 </details>

@@ -4,14 +4,13 @@ _The result of performing an individual repair_
 
 
 
-
 URI: [vm:RepairOperation](https://w3id.org/linkml/validation-model/RepairOperation)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class RepairOperation
       Result <|-- RepairOperation
       
       RepairOperation : info
@@ -19,7 +18,6 @@ URI: [vm:RepairOperation](https://w3id.org/linkml/validation-model/RepairOperati
       RepairOperation : repairs
       RepairOperation : successful
       
-
 ```
 
 
@@ -34,20 +32,25 @@ URI: [vm:RepairOperation](https://w3id.org/linkml/validation-model/RepairOperati
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [repairs](repairs.md) | 0..1 <br/> [ValidationResult](ValidationResult.md)  |   |
-| [modified](modified.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  |   |
-| [successful](successful.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)  |   |
-| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [repairs](repairs.md) | 0..1 <br/> [ValidationResult](ValidationResult.md) |  | direct |
+| [modified](modified.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
+| [successful](successful.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
+| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | additional information about the issue | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [RepairReport](RepairReport.md) | [results](results.md) | range | RepairOperation |
+| [RepairReport](RepairReport.md) | [results](results.md) | range | [RepairOperation](RepairOperation.md) |
+
+
+
 
 
 
@@ -72,17 +75,18 @@ URI: [vm:RepairOperation](https://w3id.org/linkml/validation-model/RepairOperati
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['vm:RepairOperation'] |
-| native | ['vm:RepairOperation'] |
+| self | vm:RepairOperation |
+| native | vm:RepairOperation |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

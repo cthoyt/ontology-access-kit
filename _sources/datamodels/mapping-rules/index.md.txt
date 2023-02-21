@@ -5,6 +5,8 @@ A datamodel for specifying lexical mapping rules. NOTE -- this may move to anoth
 URI: https://w3id.org/linkml/mapping_rules_datamodel
 Name: mapping-rules
 
+
+
 ## Classes
 
 | Class | Description |
@@ -19,6 +21,7 @@ Name: mapping-rules
 | [Postcondition](Postcondition.md) |  |
 | [Precondition](Precondition.md) | A pattern to be matched against an individual SSSOM mapping |
 | [RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term |
+| [Synonymizer](Synonymizer.md) |  |
 
 
 ## Slots
@@ -30,6 +33,8 @@ Name: mapping-rules
 | [element_term](element_term.md) | the original term used in the element |
 | [groupings](groupings.md) | all groupings |
 | [mapping_source_one_of](mapping_source_one_of.md) |  |
+| [match](match.md) | Reg-ex rule to match substrings in labels |
+| [match_scope](match_scope.md) | Scope of the reg-ex rule |
 | [minimum_confidence](minimum_confidence.md) |  |
 | [name](name.md) |  |
 | [object_match_field_one_of](object_match_field_one_of.md) |  |
@@ -42,12 +47,17 @@ Name: mapping-rules
 | [preconditions](preconditions.md) | all of the criteria that must be true before a rule is fired |
 | [predicate](predicate.md) |  |
 | [predicate_id](predicate_id.md) |  |
+| [qualifier](qualifier.md) | Type of match for the new synonym generated |
 | [relationships](relationships.md) | All ontology elements grouped and their relationship to the normalized term |
+| [replacement](replacement.md) | Reg-ex rule to replace substrings in labels |
 | [rules](rules.md) | all rules |
 | [source](source.md) |  |
 | [subject_match_field_one_of](subject_match_field_one_of.md) |  |
 | [subject_source_one_of](subject_source_one_of.md) |  |
+| [synonymized](synonymized.md) |  |
+| [synonymizer](synonymizer.md) | Normalizing rules to labels |
 | [term](term.md) | A normalized term that groups ontology elements |
+| [the_rule](the_rule.md) | Description of the rule |
 | [transformations](transformations.md) |  |
 | [transformations_included_in](transformations_included_in.md) |  |
 | [type](type.md) | The type of transformation |
@@ -66,6 +76,7 @@ Name: mapping-rules
 | Type | Description |
 | --- | --- |
 | [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | A binary (true or false) value |
+| [xsd:string](http://www.w3.org/2001/XMLSchema#string) | a compact URI |
 | [xsd:date](http://www.w3.org/2001/XMLSchema#date) | a date (year, month and day) in an idealized calendar |
 | [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime) | Either a date or a datetime |
 | [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | The combination of a date and time |

@@ -42,12 +42,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Notebooks</a></li>
@@ -69,8 +71,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Ontology Access Kit (OAK) Documentation</li>
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Ontology Access Kit (OAK) Documentation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -101,6 +103,15 @@
 <li class="toctree-l2"><a class="reference internal" href="intro/tutorial08.html">Part 8: Applying Changes to Ontologies</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="guide/index.html">The OAK Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/basics.html">OAK Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/curies-and-uris.html">Identifying entities: CURIEs and URIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/primary-labels.html">Primary Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/aliases.html">Aliases and Synonyms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/mappings.html">Mappings and Cross-References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide/obsoletion.html">Obsoletion</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#ontology-interfaces">Ontology Interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#implementations">Implementations</a></li>
@@ -121,12 +132,15 @@
 <li class="toctree-l2"><a class="reference internal" href="interfaces/summary-statistics.html">Summary Statistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interfaces/patcher.html">Patcher Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interfaces/semantic-similarity.html">Semantic Similarity Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces/class-enrichment.html">Semantic Similarity Interface</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="implementations/index.html">Implementations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="implementations/pronto.html">Pronto / OBO Files Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/sqldb.html">SQL Database Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/ols.html">Ontology Lookup Service (OLS) Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementations/simple_obo.html">Simple OBO Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementations/obograph.html">OBO Graph Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/bioportal.html">Bioportal Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/sparql.html">Sparql Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementations/ubergraph.html">Ubergraph Endpoint</a></li>
@@ -139,7 +153,7 @@
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="cli.html#general-guidelines">General Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html#common-patterns">Common Patterns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cli.html#command-line-docs">Command Line Docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#commands">Commands</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="selectors.html">Ontology Implementation Selectors</a><ul>
@@ -155,13 +169,21 @@
 <li class="toctree-l2"><a class="reference internal" href="datamodels/obograph/index.html">Obographs Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/sssom/index.html">SSSOM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/funowl/index.html">FunOwl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/kgcl/index.html">KGCL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/similarity/index.html">Semantic Similarity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/summary-statistics/index.html">Summary Statistics Datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/taxon-constraints/index.html">Taxon Constraints Reporting Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/validation/index.html">Validation Results Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/lexical-index/index.html">Lexical Index</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/mapping-rules/index.html">Mapping Rules Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/text-annotator/index.html">Text Annotator Datamodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datamodels/cross-ontology-diff/index.html">Cross-Ontology Diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datamodels/association/index.html">OAK Association Data Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="converters/index.html">Converters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="converters/index.html#command-line-usage">Command Line Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="converters/index.html#converting-from-obo-graphs">Converting from Obo Graphs</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a><ul>

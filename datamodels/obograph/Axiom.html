@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: Axiom</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: Axiom</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/obograph/Axiom.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,12 +83,15 @@
              
   <section id="class-axiom">
 <h1>Class: Axiom<a class="headerlink" href="#class-axiom" title="Permalink to this headline"></a></h1>
+<p>_A generic grouping for any OWL axiom that is not captured by existing constructs in this standard.
+_</p>
 <ul class="simple">
 <li><p><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</p></li>
 </ul>
-<p>URI: <a class="reference external" href="https://github.com/geneontology/obographs/Axiom">og:Axiom</a></p>
+<p>URI: <a class="reference external" href="http://www.w3.org/2002/07/owl#Axiom">owl:Axiom</a></p>
 <div class="mermaid">
              classDiagram
+    class Axiom
       Axiom &lt;|-- DomainRangeAxiom
       Axiom &lt;|-- EquivalentNodesSet
       Axiom &lt;|-- LogicalDefinitionAxiom
@@ -114,18 +119,17 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="meta.html"><span class="doc std std-doc">meta</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Meta.html"><span class="doc std std-doc">Meta</span></a></p></td>
-<td><p></p></td>
+<td><p>A collection of metadata about either an ontology (graph), an entity, or an a…</p></td>
+<td><p>direct</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="usages">
-<h2>Usages<a class="headerlink" href="#usages" title="Permalink to this headline"></a></h2>
 </section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permalink to this headline"></a></h2>
@@ -146,27 +150,33 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘og:Axiom’]</p></td>
+<td><p>owl:Axiom</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘og:Axiom’]</p></td>
+<td><p>og:Axiom</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
 <details>
 ```yaml
 name: Axiom
+description: 'A generic grouping for any OWL axiom that is not captured by existing
+  constructs in this standard.
+<p>‘
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 abstract: true
-slots:
-- meta
+slots:</p>
+<ul class="simple">
+<li><p>meta
+class_uri: owl:Axiom</p></li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
 
 ### Induced
@@ -174,13 +184,21 @@ slots:
 &lt;details&gt;
 ```yaml
 name: Axiom
+description: &#39;A generic grouping for any OWL axiom that is not captured by existing
+  constructs in this standard.
+
+  &#39;
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 abstract: true
 attributes:
   meta:
     name: meta
+    description: A collection of metadata about either an ontology (graph), an entity,
+      or an axiom
     from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - annotations
     rank: 1000
     alias: meta
     owner: Axiom
@@ -188,9 +206,11 @@ attributes:
     - GraphDocument
     - Graph
     - Node
+    - Edge
     - PropertyValue
     - Axiom
     range: Meta
+class_uri: owl:Axiom
 
 </pre></div>
 </div>

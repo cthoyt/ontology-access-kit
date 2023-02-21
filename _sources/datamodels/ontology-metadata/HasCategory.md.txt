@@ -2,16 +2,13 @@
 
 
 
-* __NOTE__: this is a mixin class intended to be used in combination with other classes, and not used directly
-
-
-URI: [omoschema:HasCategory](http://purl.obolibrary.org/obo/schema/HasCategory)
-
+URI: [omoschema:HasCategory](http://purl.obolibrary.org/obo/omo/schema/HasCategory)
 
 
 
 ```{mermaid}
  classDiagram
+    class HasCategory
       AnnotationPropertyMixin <|-- HasCategory
       
       HasCategory : category
@@ -20,6 +17,13 @@ URI: [omoschema:HasCategory](http://purl.obolibrary.org/obo/schema/HasCategory)
       HasCategory : in_subset
       
 
+      HasCategory <|-- Term
+      
+      HasCategory : category
+      HasCategory : conformsTo
+      HasCategory : has_obo_namespace
+      HasCategory : in_subset
+      
 ```
 
 
@@ -34,15 +38,25 @@ URI: [omoschema:HasCategory](http://purl.obolibrary.org/obo/schema/HasCategory)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [has_obo_namespace](has_obo_namespace.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [category](category.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [in_subset](in_subset.md) | 0..* <br/> [Subset](Subset.md)  | Maps an ontology element to a subset it belongs to  |
-| [conformsTo](conformsTo.md) | 0..* <br/> [Thing](Thing.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [has_obo_namespace](has_obo_namespace.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [category](category.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [in_subset](in_subset.md) | 0..* <br/> [Subset](Subset.md) | Maps an ontology element to a subset it belongs to | direct |
+| [conformsTo](conformsTo.md) | 0..* <br/> [Thing](Thing.md) |  | direct |
 
 
-## Usages
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
+| [Term](Term.md) | A NamedThing that includes classes, properties, but not ontologies |
+
+
+
+
+
 
 
 
@@ -63,17 +77,18 @@ URI: [omoschema:HasCategory](http://purl.obolibrary.org/obo/schema/HasCategory)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['omoschema:HasCategory'] |
-| native | ['omoschema:HasCategory'] |
+| self | omoschema:HasCategory |
+| native | omoschema:HasCategory |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

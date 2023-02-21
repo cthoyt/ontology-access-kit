@@ -4,14 +4,13 @@ _An individual result arising from validation of a data instance using a particu
 
 
 
-
 URI: [sh:ValidationResult](http://www.w3.org/ns/shacl#ValidationResult)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class ValidationResult
       Result <|-- ValidationResult
       
       ValidationResult : info
@@ -25,6 +24,18 @@ URI: [sh:ValidationResult](http://www.w3.org/ns/shacl#ValidationResult)
       ValidationResult : type
       
 
+      ValidationResult <|-- ExternalReferenceValidationResult
+      
+      ValidationResult : info
+      ValidationResult : instantiates
+      ValidationResult : object
+      ValidationResult : object_str
+      ValidationResult : predicate
+      ValidationResult : severity
+      ValidationResult : source
+      ValidationResult : subject
+      ValidationResult : type
+      
 ```
 
 
@@ -40,26 +51,31 @@ URI: [sh:ValidationResult](http://www.w3.org/ns/shacl#ValidationResult)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [type](type.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The type of validation result  |
-| [severity](severity.md) | 0..1 <br/> [SeverityOptions](SeverityOptions.md)  | the severity of the issue  |
-| [subject](subject.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The instance which the result is about  |
-| [instantiates](instantiates.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The type of the subject  |
-| [predicate](predicate.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The predicate or property of the subject which the result is about  |
-| [object](object.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
-| [object_str](object_str.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [source](source.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
-| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | additional information about the issue  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [type](type.md) | 1..1 <br/> [ConstraintComponent](ConstraintComponent.md) | The type of validation result | direct |
+| [severity](severity.md) | 0..1 <br/> [SeverityOptions](SeverityOptions.md) | the severity of the issue | direct |
+| [subject](subject.md) | 1..1 <br/> [Node](Node.md) | The instance which the result is about | direct |
+| [instantiates](instantiates.md) | 0..1 <br/> [Node](Node.md) | The type of the subject | direct |
+| [predicate](predicate.md) | 0..1 <br/> [Node](Node.md) | The predicate or property of the subject which the result is about | direct |
+| [object](object.md) | 0..1 <br/> [Node](Node.md) |  | direct |
+| [object_str](object_str.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [source](source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | additional information about the issue | direct |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [ValidationReport](ValidationReport.md) | [results](results.md) | range | ValidationResult |
-| [RepairOperation](RepairOperation.md) | [repairs](repairs.md) | range | ValidationResult |
+| [ValidationReport](ValidationReport.md) | [results](results.md) | range | [ValidationResult](ValidationResult.md) |
+| [RepairOperation](RepairOperation.md) | [repairs](repairs.md) | range | [ValidationResult](ValidationResult.md) |
+
+
+
 
 
 
@@ -80,17 +96,18 @@ URI: [sh:ValidationResult](http://www.w3.org/ns/shacl#ValidationResult)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['sh:ValidationResult'] |
-| native | ['vm:ValidationResult'] |
+| self | sh:ValidationResult |
+| native | vm:ValidationResult |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -143,7 +160,7 @@ attributes:
     domain_of:
     - TypeSeverityKeyValue
     - ValidationResult
-    range: uriorcurie
+    range: ConstraintComponent
     required: true
   severity:
     name: severity
@@ -167,7 +184,7 @@ attributes:
     owner: ValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: Node
     required: true
   instantiates:
     name: instantiates
@@ -180,7 +197,7 @@ attributes:
     owner: ValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: Node
   predicate:
     name: predicate
     description: The predicate or property of the subject which the result is about
@@ -192,7 +209,7 @@ attributes:
     owner: ValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: Node
   object:
     name: object
     from_schema: https://w3id.org/linkml/validation_results
@@ -202,7 +219,7 @@ attributes:
     owner: ValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: Node
   object_str:
     name: object_str
     from_schema: https://w3id.org/linkml/validation_results
@@ -220,7 +237,7 @@ attributes:
     owner: ValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: string
   info:
     name: info
     description: additional information about the issue

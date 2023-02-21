@@ -40,12 +40,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notebooks.html">Notebooks</a></li>
@@ -67,9 +69,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">Module code</a> &raquo;</li>
-      <li>oaklib.datamodels.search</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">oaklib.datamodels.search</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -89,14 +91,18 @@
     <span class="n">SearchProperty</span><span class="p">,</span>
     <span class="n">SearchTermSyntax</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="kn">from</span> <span class="nn">oaklib.datamodels.vocabulary</span> <span class="kn">import</span> <span class="n">LABEL_PREDICATE</span><span class="p">,</span> <span class="n">SYNONYM_PREDICATES</span>
+<span class="kn">from</span> <span class="nn">oaklib.datamodels.vocabulary</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">IDENTIFIER_PREDICATE</span><span class="p">,</span>
+    <span class="n">LABEL_PREDICATE</span><span class="p">,</span>
+    <span class="n">SYNONYM_PREDICATES</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span> <span class="nn">oaklib.types</span> <span class="kn">import</span> <span class="n">PRED_CURIE</span>
 
 <span class="n">DEFAULT_SEARCH_PROPERTIES</span> <span class="o">=</span> <span class="p">[</span><span class="n">SearchProperty</span><span class="o">.</span><span class="n">LABEL</span><span class="p">,</span> <span class="n">SearchProperty</span><span class="o">.</span><span class="n">ALIAS</span><span class="p">]</span>
 
 
 <div class="viewcode-block" id="create_search_configuration"><a class="viewcode-back" href="../../../search-syntax.html#oaklib.interfaces.search_interface.create_search_configuration">[docs]</a><span class="k">def</span> <span class="nf">create_search_configuration</span><span class="p">(</span><span class="n">term</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;SearchConfiguration&quot;</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generates a search configuration based on search syntax</span>
 
 <span class="sd">    term is either a plaintext search term, or a search term prefixed by</span>
@@ -136,6 +142,8 @@
                 <span class="n">props</span> <span class="o">=</span> <span class="p">[</span><span class="n">SearchProperty</span><span class="o">.</span><span class="n">LABEL</span><span class="p">]</span>
             <span class="k">elif</span> <span class="n">prop</span> <span class="o">==</span> <span class="s2">&quot;i&quot;</span><span class="p">:</span>
                 <span class="n">props</span> <span class="o">=</span> <span class="p">[</span><span class="n">SearchProperty</span><span class="o">.</span><span class="n">IDENTIFIER</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">prop</span> <span class="o">==</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span>
+                <span class="n">props</span> <span class="o">=</span> <span class="p">[</span><span class="n">SearchProperty</span><span class="o">.</span><span class="n">MAPPED_IDENTIFIER</span><span class="p">]</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown property code: </span><span class="si">{</span><span class="n">prop</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">cfg</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="p">[</span><span class="n">SearchProperty</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">props</span><span class="p">]</span>
@@ -149,6 +157,8 @@
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">props</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="n">SearchProperty</span><span class="p">(</span><span class="n">SearchProperty</span><span class="o">.</span><span class="n">LABEL</span><span class="p">):</span>
             <span class="n">preds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LABEL_PREDICATE</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">p</span> <span class="o">==</span> <span class="n">SearchProperty</span><span class="p">(</span><span class="n">SearchProperty</span><span class="o">.</span><span class="n">IDENTIFIER</span><span class="p">):</span>
+            <span class="n">preds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">IDENTIFIER_PREDICATE</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">p</span> <span class="o">==</span> <span class="n">SearchProperty</span><span class="p">(</span><span class="n">SearchProperty</span><span class="o">.</span><span class="n">ALIAS</span><span class="p">):</span>
             <span class="n">preds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">SYNONYM_PREDICATES</span> <span class="o">+</span> <span class="p">[</span><span class="n">LABEL_PREDICATE</span><span class="p">])</span>
         <span class="k">elif</span> <span class="n">p</span> <span class="o">==</span> <span class="n">SearchProperty</span><span class="p">(</span><span class="n">SearchProperty</span><span class="o">.</span><span class="n">ANYTHING</span><span class="p">):</span>
@@ -160,7 +170,7 @@
 
 <div class="viewcode-block" id="SearchConfiguration"><a class="viewcode-back" href="../../../search-syntax.html#oaklib.interfaces.search_interface.SearchConfiguration">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">SearchConfiguration</span><span class="p">(</span><span class="n">SearchBaseConfiguration</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Parameters for altering behavior of search</span>
 
 <span class="sd">    .. note ::</span>

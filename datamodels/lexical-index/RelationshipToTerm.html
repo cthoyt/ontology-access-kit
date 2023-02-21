@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: RelationshipToTerm</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: RelationshipToTerm</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/lexical-index/RelationshipToTerm.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -91,6 +93,7 @@
       RelationshipToTerm : pipeline
       RelationshipToTerm : predicate
       RelationshipToTerm : source
+      RelationshipToTerm : synonymized
       
         </div><!-- no inheritance hierarchy -->
 <section id="slots">
@@ -100,28 +103,39 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="predicate.html"><span class="doc std std-doc">predicate</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></p></td>
 <td><p></p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="element.html"><span class="doc std std-doc">element</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></p></td>
 <td><p></p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="element_term.html"><span class="doc std std-doc">element_term</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
 <td><p>the original term used in the element</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="source.html"><span class="doc std std-doc">source</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></p></td>
 <td><p></p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pipeline.html"><span class="doc std std-doc">pipeline</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="LexicalTransformationPipeline.html"><span class="doc std std-doc">LexicalTransformationPipeline</span></a></p></td>
 <td><p></p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="synonymized.html"><span class="doc std std-doc">synonymized</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></p></td>
+<td><p></p></td>
+<td><p>direct</p></td>
 </tr>
 </tbody>
 </table>
@@ -140,7 +154,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="LexicalGrouping.html"><span class="doc std std-doc">LexicalGrouping</span></a></p></td>
 <td><p><a class="reference internal" href="relationships.html"><span class="doc std std-doc">relationships</span></a></p></td>
 <td><p>range</p></td>
-<td><p>RelationshipToTerm</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc std std-doc">RelationshipToTerm</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -164,16 +178,16 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘li:RelationshipToTerm’]</p></td>
+<td><p>li:RelationshipToTerm</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘li:RelationshipToTerm’]</p></td>
+<td><p>li:RelationshipToTerm</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
@@ -210,6 +224,11 @@ attributes:
     rank: 1000
     multivalued: true
     range: LexicalTransformationPipeline
+  synonymized:
+    name: synonymized
+    from_schema: https://w3id.org/linkml/lexical_index
+    rank: 1000
+    range: boolean
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
 
 ### Induced
@@ -268,6 +287,15 @@ attributes:
     domain_of:
     - RelationshipToTerm
     range: LexicalTransformationPipeline
+  synonymized:
+    name: synonymized
+    from_schema: https://w3id.org/linkml/lexical_index
+    rank: 1000
+    alias: synonymized
+    owner: RelationshipToTerm
+    domain_of:
+    - RelationshipToTerm
+    range: boolean
 
 </pre></div>
 </div>

@@ -1,15 +1,32 @@
 # Slot: match_source
 
-URI: [https://w3id.org/linkml/similarity/match_source](https://w3id.org/linkml/similarity/match_source)
+URI: [sim:match_source](https://w3id.org/linkml/similarity/match_source)
 
 
 
 <!-- no inheritance hierarchy -->
 
 
+
+
+## Applicable Classes
+
+| Name | Description |
+| --- | --- |
+[BestMatch](BestMatch.md) | 
+
+
+
+
+
+
 ## Properties
 
- * Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+
+
+
+
 
 
 
@@ -32,3 +49,22 @@ URI: [https://w3id.org/linkml/similarity/match_source](https://w3id.org/linkml/s
 
 
 
+
+## LinkML Source
+
+<details>
+```yaml
+name: match_source
+comments:
+- note that the match_source is either the subject or the object
+from_schema: https://w3id.org/linkml/similarity
+rank: 1000
+identifier: true
+alias: match_source
+owner: BestMatch
+domain_of:
+- BestMatch
+range: string
+
+```
+</details>

@@ -1,4 +1,10 @@
-# GoRecommendedProfile
+# Subset: GoRecommendedProfile
+
+URI: [GoRecommendedProfile](GoRecommendedProfile)
+
+
+
+
 
 ## Identifier and Mapping Information
 

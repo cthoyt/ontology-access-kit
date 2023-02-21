@@ -4,22 +4,24 @@ _Absolute minimum metadata model_
 
 
 
-* __NOTE__: this is a mixin class intended to be used in combination with other classes, and not used directly
-
-
-URI: [omoschema:HasMinimalMetadata](http://purl.obolibrary.org/obo/schema/HasMinimalMetadata)
-
+URI: [omoschema:HasMinimalMetadata](http://purl.obolibrary.org/obo/omo/schema/HasMinimalMetadata)
 
 
 
 ```{mermaid}
  classDiagram
+    class HasMinimalMetadata
       AnnotationPropertyMixin <|-- HasMinimalMetadata
       
       HasMinimalMetadata : definition
       HasMinimalMetadata : label
       
 
+      HasMinimalMetadata <|-- Term
+      
+      HasMinimalMetadata : definition
+      HasMinimalMetadata : label
+      
 ```
 
 
@@ -34,13 +36,23 @@ URI: [omoschema:HasMinimalMetadata](http://purl.obolibrary.org/obo/schema/HasMin
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [label](label.md) | 0..1 <br/> [LabelType](LabelType.md)  |   |
-| [definition](definition.md) | 0..* <br/> [NarrativeText](NarrativeText.md)  |   |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [label](label.md) | 0..1 <br/> [LabelType](LabelType.md) |  | direct |
+| [definition](definition.md) | 0..* <br/> [NarrativeText](NarrativeText.md) |  | direct |
 
 
-## Usages
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
+| [Term](Term.md) | A NamedThing that includes classes, properties, but not ontologies |
+
+
+
+
+
 
 
 
@@ -61,17 +73,18 @@ URI: [omoschema:HasMinimalMetadata](http://purl.obolibrary.org/obo/schema/HasMin
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['omoschema:HasMinimalMetadata'] |
-| native | ['omoschema:HasMinimalMetadata'] |
+| self | omoschema:HasMinimalMetadata |
+| native | omoschema:HasMinimalMetadata |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 

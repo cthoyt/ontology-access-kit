@@ -4,14 +4,13 @@ _A validation result where the check is to determine if a link to an external re
 
 
 
-
 URI: [vm:ExternalReferenceValidationResult](https://w3id.org/linkml/validation-model/ExternalReferenceValidationResult)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class ExternalReferenceValidationResult
       ValidationResult <|-- ExternalReferenceValidationResult
       
       ExternalReferenceValidationResult : http_response_code
@@ -28,7 +27,6 @@ URI: [vm:ExternalReferenceValidationResult](https://w3id.org/linkml/validation-m
       ExternalReferenceValidationResult : type
       ExternalReferenceValidationResult : url
       
-
 ```
 
 
@@ -44,24 +42,27 @@ URI: [vm:ExternalReferenceValidationResult](https://w3id.org/linkml/validation-m
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
-| [url](url.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [time_checked](time_checked.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [number_of_attempts](number_of_attempts.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)  |   |
-| [http_response_code](http_response_code.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)  |   |
-| [type](type.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The type of validation result  |
-| [severity](severity.md) | 0..1 <br/> [SeverityOptions](SeverityOptions.md)  | the severity of the issue  |
-| [subject](subject.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The instance which the result is about  |
-| [instantiates](instantiates.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The type of the subject  |
-| [predicate](predicate.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  | The predicate or property of the subject which the result is about  |
-| [object](object.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
-| [object_str](object_str.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  |   |
-| [source](source.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)  |   |
-| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string)  | additional information about the issue  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [url](url.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [time_checked](time_checked.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [number_of_attempts](number_of_attempts.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) |  | direct |
+| [http_response_code](http_response_code.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) |  | direct |
+| [type](type.md) | 1..1 <br/> [ConstraintComponent](ConstraintComponent.md) | The type of validation result | [ValidationResult](ValidationResult.md) |
+| [severity](severity.md) | 0..1 <br/> [SeverityOptions](SeverityOptions.md) | the severity of the issue | [ValidationResult](ValidationResult.md) |
+| [subject](subject.md) | 1..1 <br/> [Node](Node.md) | The instance which the result is about | [ValidationResult](ValidationResult.md) |
+| [instantiates](instantiates.md) | 0..1 <br/> [Node](Node.md) | The type of the subject | [ValidationResult](ValidationResult.md) |
+| [predicate](predicate.md) | 0..1 <br/> [Node](Node.md) | The predicate or property of the subject which the result is about | [ValidationResult](ValidationResult.md) |
+| [object](object.md) | 0..1 <br/> [Node](Node.md) |  | [ValidationResult](ValidationResult.md) |
+| [object_str](object_str.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | [ValidationResult](ValidationResult.md) |
+| [source](source.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | [ValidationResult](ValidationResult.md) |
+| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | additional information about the issue | [ValidationResult](ValidationResult.md) |
 
 
-## Usages
+
+
+
+
 
 
 
@@ -82,17 +83,18 @@ URI: [vm:ExternalReferenceValidationResult](https://w3id.org/linkml/validation-m
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['vm:ExternalReferenceValidationResult'] |
-| native | ['vm:ExternalReferenceValidationResult'] |
+| self | vm:ExternalReferenceValidationResult |
+| native | vm:ExternalReferenceValidationResult |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
@@ -189,7 +191,7 @@ attributes:
     domain_of:
     - TypeSeverityKeyValue
     - ValidationResult
-    range: uriorcurie
+    range: ConstraintComponent
     required: true
   severity:
     name: severity
@@ -213,7 +215,7 @@ attributes:
     owner: ExternalReferenceValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: Node
     required: true
   instantiates:
     name: instantiates
@@ -226,7 +228,7 @@ attributes:
     owner: ExternalReferenceValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: Node
   predicate:
     name: predicate
     description: The predicate or property of the subject which the result is about
@@ -238,7 +240,7 @@ attributes:
     owner: ExternalReferenceValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: Node
   object:
     name: object
     from_schema: https://w3id.org/linkml/validation_results
@@ -248,7 +250,7 @@ attributes:
     owner: ExternalReferenceValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: Node
   object_str:
     name: object_str
     from_schema: https://w3id.org/linkml/validation_results
@@ -266,7 +268,7 @@ attributes:
     owner: ExternalReferenceValidationResult
     domain_of:
     - ValidationResult
-    range: uriorcurie
+    range: string
   info:
     name: info
     description: additional information about the issue

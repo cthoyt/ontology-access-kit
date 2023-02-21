@@ -1,15 +1,34 @@
 # Slot: similarity
 
-URI: [https://w3id.org/linkml/similarity/similarity](https://w3id.org/linkml/similarity/similarity)
+URI: [sim:similarity](https://w3id.org/linkml/similarity/similarity)
 
 
 
 <!-- no inheritance hierarchy -->
 
 
+
+
+## Applicable Classes
+
+| Name | Description |
+| --- | --- |
+[BestMatch](BestMatch.md) | 
+
+
+
+
+
+
 ## Properties
 
- * Range: [TermPairwiseSimilarity](TermPairwiseSimilarity.md)
+* Range: [TermPairwiseSimilarity](TermPairwiseSimilarity.md)
+* Required: True
+
+
+
+
+
 
 
 
@@ -28,3 +47,20 @@ URI: [https://w3id.org/linkml/similarity/similarity](https://w3id.org/linkml/sim
 
 
 
+
+## LinkML Source
+
+<details>
+```yaml
+name: similarity
+from_schema: https://w3id.org/linkml/similarity
+rank: 1000
+alias: similarity
+owner: BestMatch
+domain_of:
+- BestMatch
+range: TermPairwiseSimilarity
+required: true
+
+```
+</details>

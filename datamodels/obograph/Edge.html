@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: Edge</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: Edge</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/obograph/Edge.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,10 +83,12 @@
              
   <section id="class-edge">
 <h1>Class: Edge<a class="headerlink" href="#class-edge" title="Permalink to this headline"></a></h1>
+<p><em>An edge is a typed relationship between two nodes</em></p>
 <p>URI: <a class="reference external" href="https://github.com/geneontology/obographs/Edge">og:Edge</a></p>
 <div class="mermaid">
              classDiagram
     class Edge
+      Edge : meta
       Edge : obj
       Edge : pred
       Edge : sub
@@ -97,20 +101,29 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="sub.html"><span class="doc std std-doc">sub</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>the subject of an edge</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pred.html"><span class="doc std std-doc">pred</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>the predicate of an edge</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="obj.html"><span class="doc std std-doc">obj</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>the object of an edge</p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="meta.html"><span class="doc std std-doc">meta</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Meta.html"><span class="doc std std-doc">Meta</span></a></p></td>
+<td><p>A collection of metadata about either an ontology (graph), an entity, or an a…</p></td>
+<td><p>direct</p></td>
 </tr>
 </tbody>
 </table>
@@ -129,7 +142,17 @@
 <tr class="row-even"><td><p><a class="reference internal" href="Graph.html"><span class="doc std std-doc">Graph</span></a></p></td>
 <td><p><a class="reference internal" href="edges.html"><span class="doc std std-doc">edges</span></a></p></td>
 <td><p>range</p></td>
-<td><p>Edge</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc std std-doc">Edge</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Graph.html"><span class="doc std std-doc">Graph</span></a></p></td>
+<td><p><a class="reference internal" href="allValuesFromEdges.html"><span class="doc std std-doc">allValuesFromEdges</span></a></p></td>
+<td><p>range</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc std std-doc">Edge</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="DomainRangeAxiom.html"><span class="doc std std-doc">DomainRangeAxiom</span></a></p></td>
+<td><p><a class="reference internal" href="allValuesFromEdges.html"><span class="doc std std-doc">allValuesFromEdges</span></a></p></td>
+<td><p>range</p></td>
+<td><p><a class="reference internal" href="#"><span class="doc std std-doc">Edge</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -153,28 +176,30 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘og:Edge’]</p></td>
+<td><p>og:Edge</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘og:Edge’]</p></td>
+<td><p>og:Edge</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
 <details>
 ```yaml
 name: Edge
+description: An edge is a typed relationship between two nodes
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 slots:
 - sub
 - pred
 - obj
+- meta
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
 
 ### Induced
@@ -182,13 +207,16 @@ slots:
 &lt;details&gt;
 ```yaml
 name: Edge
+description: An edge is a typed relationship between two nodes
 from_schema: https://github.com/geneontology/obographs
 rank: 1000
 attributes:
   sub:
     name: sub
+    description: the subject of an edge
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
+    slot_uri: rdf:subject
     alias: sub
     owner: Edge
     domain_of:
@@ -196,23 +224,46 @@ attributes:
     range: string
   pred:
     name: pred
+    description: the predicate of an edge
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
+    slot_uri: rdf:predicate
     alias: pred
     owner: Edge
     domain_of:
     - Edge
+    - SynonymPropertyValue
     - PropertyValue
     range: string
   obj:
     name: obj
+    description: the object of an edge
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
+    slot_uri: rdf:object
     alias: obj
     owner: Edge
     domain_of:
     - Edge
     range: string
+  meta:
+    name: meta
+    description: A collection of metadata about either an ontology (graph), an entity,
+      or an axiom
+    from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - annotations
+    rank: 1000
+    alias: meta
+    owner: Edge
+    domain_of:
+    - GraphDocument
+    - Graph
+    - Node
+    - Edge
+    - PropertyValue
+    - Axiom
+    range: Meta
 
 </pre></div>
 </div>

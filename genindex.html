@@ -40,12 +40,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Notebooks</a></li>
@@ -67,8 +69,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Index</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Index</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -138,6 +140,15 @@
 </li>
       </ul></li>
       <li>
+    --additional-metadata
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-definitions-additional-metadata">runoak-definitions command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-term-metadata-additional-metadata">runoak-term-metadata command line option</a>
+</li>
+      </ul></li>
+      <li>
     --all
 
       <ul>
@@ -156,10 +167,57 @@
 </li>
       </ul></li>
       <li>
+    --annotated-roots
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-roots-A">runoak-roots command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --apply-patch
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-apply-patch">runoak-synonymize command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --association-predicates
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-association-predicates">runoak-associations command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-association-predicates">runoak-enrichment command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --associations
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-g">runoak command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-g">runoak-diff-associations command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --associations-type
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-G">runoak command line option</a>
+</li>
+      </ul></li>
+      <li>
     --autolabel
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-autolabel">runoak-associations command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-definitions-autolabel">runoak-definitions command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-autolabel">runoak-diff-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-autolabel">runoak-diff-via-mappings command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-autolabel">runoak-enrichment command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-autolabel">runoak-logical-definitions command line option</a>
 </li>
@@ -170,6 +228,8 @@
         <li><a href="cli.html#cmdoption-runoak-relationships-autolabel">runoak-relationships command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-similarity-autolabel">runoak-similarity command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-similarity-pair-autolabel">runoak-similarity-pair command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-termset-similarity-autolabel">runoak-termset-similarity command line option</a>
 </li>
@@ -189,10 +249,59 @@
 </li>
       </ul></li>
       <li>
+    --background-file
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-B">runoak-enrichment command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --bidirectional
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-bidirectional">runoak-diff-via-mappings command line option</a>
+</li>
+      </ul></li>
+      <li>
     --category-system
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-term-categories-category-system">runoak-term-categories command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --changes-format
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-changes-format">runoak-apply command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --changes-input
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-changes-input">runoak-apply command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --changes-output
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-changes-output">runoak-apply command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --comment
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-fill-table-comment">runoak-fill-table command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --compare-with
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-statistics-X">runoak-statistics command line option</a>
 </li>
       </ul></li>
       <li>
@@ -205,12 +314,28 @@
 </li>
       </ul></li>
       <li>
+    --contributor
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-contributor">runoak-apply command line option</a>
+</li>
+      </ul></li>
+      <li>
     --cutoff
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-cutoff">runoak-enrichment command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-validate-cutoff">runoak-validate command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-validate-multiple-cutoff">runoak-validate-multiple command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --days-old
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-cache-clear-days-old">runoak-cache-clear command line option</a>
 </li>
       </ul></li>
       <li>
@@ -224,8 +349,6 @@
     --direction
 
       <ul>
-        <li><a href="cli.html#cmdoption-runoak-logical-definitions-direction">runoak-logical-definitions command line option</a>
-</li>
         <li><a href="cli.html#cmdoption-runoak-relationships-direction">runoak-relationships command line option</a>
 </li>
       </ul></li>
@@ -255,6 +378,8 @@
     --dry-run
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-dry-run">runoak-apply command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-lint-dry-run">runoak-lint command line option</a>
 </li>
       </ul></li>
@@ -266,10 +391,31 @@
 </li>
       </ul></li>
       <li>
+    --ensure-strict-prefixes
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-lexmatch-ensure-strict-prefixes">runoak-lexmatch command line option</a>
+</li>
+      </ul></li>
+      <li>
     --evolution-file
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-eval-taxon-constraints-E">runoak-eval-taxon-constraints command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --exclude-tokens
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-x">runoak-annotate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --expand
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-expand">runoak-apply command line option</a>
 </li>
       </ul></li>
       <li>
@@ -307,6 +453,51 @@
 </li>
       </ul></li>
       <li>
+    --group-by-defined-by
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-defined-by">runoak-diff command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-defined-by">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --group-by-obo-namespace
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-obo-namespace">runoak-diff command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-obo-namespace">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --group-by-prefix
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-prefix">runoak-diff command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-prefix">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --group-by-property
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-property">runoak-diff command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-property">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --has-prefix
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-roots-P">runoak-roots command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-P">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
     --ic-minimum
 
       <ul>
@@ -317,13 +508,24 @@
     --if-absent
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-if-absent">runoak-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-definitions-if-absent">runoak-definitions command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-if-absent">runoak-enrichment command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-labels-if-absent">runoak-labels command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-if-absent">runoak-logical-definitions command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-relationships-if-absent">runoak-relationships command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --ignore-invalid-changes
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-ignore-invalid-changes">runoak-apply command line option</a>
 </li>
       </ul></li>
       <li>
@@ -341,6 +543,20 @@
 </li>
       </ul></li>
       <li>
+    --include-aliases
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-include-aliases">runoak-annotate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --include-all-predicates
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-dump-include-all-predicates">runoak-dump command line option</a>
+</li>
+      </ul></li>
+      <li>
     --include-entailed
 
       <ul>
@@ -355,10 +571,24 @@
 </li>
       </ul></li>
       <li>
+    --include-merged
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-include-merged">runoak-obsoletes command line option</a>
+</li>
+      </ul></li>
+      <li>
     --include-redundant
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-include-redundant">runoak-taxon-constraints command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --include-residuals
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-statistics-include-residuals">runoak-statistics command line option</a>
 </li>
       </ul></li>
       <li>
@@ -400,6 +630,8 @@
     --lexical-index-file
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-L">runoak-annotate command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-L">runoak-lexmatch command line option</a>
 </li>
       </ul></li>
@@ -448,6 +680,13 @@
 </li>
       </ul></li>
       <li>
+    --metamodel-mappings
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-metamodel-mappings">runoak command line option</a>
+</li>
+      </ul></li>
+      <li>
     --missing-value-token
 
       <ul>
@@ -455,9 +694,25 @@
 </li>
       </ul></li>
       <li>
+    --model
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-m">runoak-annotate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --named-prefix-map
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-named-prefix-map">runoak command line option</a>
+</li>
+      </ul></li>
+      <li>
     --no-A
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-roots-A">runoak-roots command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-A">runoak-taxon-constraints command line option</a>
 </li>
       </ul></li>
@@ -475,6 +730,15 @@
         <li><a href="cli.html#cmdoption-runoak-tree-add-mrcas">runoak-tree command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-viz-add-mrcas">runoak-viz command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-additional-metadata
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-definitions-additional-metadata">runoak-definitions command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-term-metadata-additional-metadata">runoak-term-metadata command line option</a>
 </li>
       </ul></li>
       <li>
@@ -496,10 +760,32 @@
 </li>
       </ul></li>
       <li>
+    --no-annotated-roots
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-roots-A">runoak-roots command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-apply-patch
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-apply-patch">runoak-synonymize command line option</a>
+</li>
+      </ul></li>
+      <li>
     --no-autolabel
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-autolabel">runoak-associations command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-definitions-autolabel">runoak-definitions command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-autolabel">runoak-diff-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-autolabel">runoak-diff-via-mappings command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-autolabel">runoak-enrichment command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-autolabel">runoak-logical-definitions command line option</a>
 </li>
@@ -511,6 +797,8 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-similarity-autolabel">runoak-similarity command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-similarity-pair-autolabel">runoak-similarity-pair command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-termset-similarity-autolabel">runoak-termset-similarity command line option</a>
 </li>
       </ul></li>
@@ -519,6 +807,13 @@
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-autosave">runoak command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-bidirectional
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-bidirectional">runoak-diff-via-mappings command line option</a>
 </li>
       </ul></li>
       <li>
@@ -534,7 +829,23 @@
     --no-dry-run
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-dry-run">runoak-apply command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-lint-dry-run">runoak-lint command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-ensure-strict-prefixes
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-lexmatch-ensure-strict-prefixes">runoak-lexmatch command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-expand
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-expand">runoak-apply command line option</a>
 </li>
       </ul></li>
       <li>
@@ -572,10 +883,58 @@
 </li>
       </ul></li>
       <li>
+    --no-group-by-defined-by
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-defined-by">runoak-diff command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-defined-by">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-group-by-obo-namespace
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-obo-namespace">runoak-diff command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-obo-namespace">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-group-by-prefix
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-prefix">runoak-diff command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-prefix">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-ignore-invalid-changes
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-ignore-invalid-changes">runoak-apply command line option</a>
+</li>
+      </ul></li>
+      <li>
     --no-include-abox
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-relationships-include-abox">runoak-relationships command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-include-aliases
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-include-aliases">runoak-annotate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-include-all-predicates
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-dump-include-all-predicates">runoak-dump command line option</a>
 </li>
       </ul></li>
       <li>
@@ -593,10 +952,24 @@
 </li>
       </ul></li>
       <li>
+    --no-include-merged
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-include-merged">runoak-obsoletes command line option</a>
+</li>
+      </ul></li>
+      <li>
     --no-include-redundant
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-include-redundant">runoak-taxon-constraints command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-include-residuals
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-statistics-include-residuals">runoak-statistics command line option</a>
 </li>
       </ul></li>
       <li>
@@ -635,17 +1008,17 @@
 </li>
       </ul></li>
       <li>
+    --no-overwrite
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-overwrite">runoak-apply command line option</a>
+</li>
+      </ul></li>
+      <li>
     --no-recreate
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-recreate">runoak-lexmatch command line option</a>
-</li>
-      </ul></li>
-      <li>
-    --no-reification
-
-      <ul>
-        <li><a href="cli.html#cmdoption-runoak-term-metadata-reification">runoak-term-metadata command line option</a>
 </li>
       </ul></li>
       <li>
@@ -656,6 +1029,13 @@
 </li>
       </ul></li>
       <li>
+    --no-show-migration-relationships
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-show-migration-relationships">runoak-obsoletes command line option</a>
+</li>
+      </ul></li>
+      <li>
     --no-simple
 
       <ul>
@@ -663,10 +1043,54 @@
 </li>
       </ul></li>
       <li>
+    --no-skip-ontology-rules
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-validate-skip-ontology-rules">runoak-validate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-skip-structural-validation
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-validate-skip-structural-validation">runoak-validate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-skip-text-annotation
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-skip-text-annotation">runoak-validate-definitions command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-stacktrace
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-stacktrace">runoak command line option</a>
+</li>
+      </ul></li>
+      <li>
     --no-statistics
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-ancestors-statistics">runoak-ancestors command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-statistics">runoak-diff command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-unmelt
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-logical-definitions-unmelt">runoak-logical-definitions command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --no-used-only
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-used-only">runoak-prefixes command line option</a>
 </li>
       </ul></li>
       <li>
@@ -688,6 +1112,13 @@
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-aliases-obo-model">runoak-aliases command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --other-associations
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-X">runoak-diff-associations command line option</a>
 </li>
       </ul></li>
       <li>
@@ -717,7 +1148,7 @@
     --output
 
       <ul>
-        <li><a href="cli.html#cmdoption-runoak-aliases-o">runoak-aliases command line option</a>
+        <li><a href="cli.html#cmdoption-runoak-aliases-0">runoak-aliases command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-ancestors-0">runoak-ancestors command line option</a>
 </li>
@@ -727,9 +1158,9 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-apply-obsolete-o">runoak-apply-obsolete command line option</a>
 </li>
-        <li><a href="cli.html#cmdoption-runoak-axioms-o">runoak-axioms command line option</a>
+        <li><a href="cli.html#cmdoption-runoak-associations-0">runoak-associations command line option</a>, <a href="cli.html#cmdoption-runoak-associations-o">[1]</a>
 </li>
-        <li><a href="cli.html#cmdoption-runoak-check-definitions-o">runoak-check-definitions command line option</a>
+        <li><a href="cli.html#cmdoption-runoak-axioms-o">runoak-axioms command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-definitions-o">runoak-definitions command line option</a>
 </li>
@@ -737,11 +1168,15 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-o">runoak-diff command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-0">runoak-diff-associations command line option</a>, <a href="cli.html#cmdoption-runoak-diff-associations-o">[1]</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-terms-o">runoak-diff-terms command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-o">runoak-diff-via-mappings command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-dump-o">runoak-dump command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-0">runoak-enrichment command line option</a>, <a href="cli.html#cmdoption-runoak-enrichment-o">[1]</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-eval-taxon-constraints-o">runoak-eval-taxon-constraints command line option</a>
 </li>
@@ -777,6 +1212,8 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-paths-0">runoak-paths command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-o">runoak-prefixes command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-relationships-0">runoak-relationships command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-roots-o">runoak-roots command line option</a>
@@ -791,7 +1228,11 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-singletons-o">runoak-singletons command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-0">runoak-statistics command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-subsets-o">runoak-subsets command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-o">runoak-synonymize command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-o">runoak-taxon-constraints command line option</a>
 </li>
@@ -809,15 +1250,21 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-validate-o">runoak-validate command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-0">runoak-validate-definitions command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-validate-multiple-o">runoak-validate-multiple command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-viz-0">runoak-viz command line option</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     --output-type
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-aliases-O">runoak-aliases command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-ancestors-O">runoak-ancestors command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-annotate-O">runoak-annotate command line option</a>
@@ -825,6 +1272,8 @@
         <li><a href="cli.html#cmdoption-runoak-apply-O">runoak-apply command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-apply-obsolete-O">runoak-apply-obsolete command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-O">runoak-associations command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-axioms-O">runoak-axioms command line option</a>
 </li>
@@ -834,9 +1283,13 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-O">runoak-diff command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-O">runoak-diff-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-O">runoak-diff-via-mappings command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-dump-O">runoak-dump command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-O">runoak-enrichment command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-extract-triples-O">runoak-extract-triples command line option</a>
 </li>
@@ -858,13 +1311,21 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-paths-O">runoak-paths command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-O">runoak-prefixes command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-relationships-O">runoak-relationships command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-roots-O">runoak-roots command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-search-O">runoak-search command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-siblings-O">runoak-siblings command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-similarity-O">runoak-similarity command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-similarity-pair-O">runoak-similarity-pair command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-O">runoak-statistics command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-term-categories-O">runoak-term-categories command line option</a>
 </li>
@@ -876,16 +1337,32 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-tree-O">runoak-tree command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-validate-O">runoak-validate command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-O">runoak-validate-definitions command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-viz-O">runoak-viz command line option</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    --overwrite
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-overwrite">runoak-apply command line option</a>
+</li>
+      </ul></li>
       <li>
     --owl-type
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-terms-owl-type">runoak-terms command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --patch
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-patch">runoak-synonymize command line option</a>
 </li>
       </ul></li>
       <li>
@@ -901,9 +1378,15 @@
       <ul>
         <li><a href="cli.html#cmdoption-runoak-ancestors-p">runoak-ancestors command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-associations-p">runoak-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-descendants-p">runoak-descendants command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-p">runoak-diff-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-p">runoak-diff-via-mappings command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-p">runoak-enrichment command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-eval-taxon-constraints-p">runoak-eval-taxon-constraints command line option</a>
 </li>
@@ -931,11 +1414,20 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-p">runoak-taxon-constraints command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-term-metadata-p">runoak-term-metadata command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-termset-similarity-p">runoak-termset-similarity command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-tree-p">runoak-tree command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-viz-p">runoak-viz command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --prefix
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-prefix">runoak command line option</a>
 </li>
       </ul></li>
       <li>
@@ -957,13 +1449,6 @@
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-axioms-references">runoak-axioms command line option</a>
-</li>
-      </ul></li>
-      <li>
-    --reification
-
-      <ul>
-        <li><a href="cli.html#cmdoption-runoak-term-metadata-reification">runoak-term-metadata command line option</a>
 </li>
       </ul></li>
       <li>
@@ -995,10 +1480,33 @@
 </li>
       </ul></li>
       <li>
+    --root
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-tree-root">runoak-tree command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --rule
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-validate-R">runoak-validate command line option</a>
+</li>
+      </ul></li>
+      <li>
     --rules-file
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-R">runoak-lexmatch command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-R">runoak-synonymize command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --sample-file
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-2">runoak-enrichment command line option</a>
 </li>
       </ul></li>
       <li>
@@ -1021,7 +1529,11 @@
     --set-value
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-S">runoak-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-definitions-S">runoak-definitions command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-S">runoak-enrichment command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-labels-S">runoak-labels command line option</a>
 </li>
@@ -1045,10 +1557,45 @@
 </li>
       </ul></li>
       <li>
+    --show-migration-relationships
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-show-migration-relationships">runoak-obsoletes command line option</a>
+</li>
+      </ul></li>
+      <li>
     --simple
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-diff-simple">runoak-diff command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --skip
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-tree-skip">runoak-tree command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --skip-ontology-rules
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-validate-skip-ontology-rules">runoak-validate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --skip-structural-validation
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-validate-skip-structural-validation">runoak-validate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --skip-text-annotation
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-skip-text-annotation">runoak-validate-definitions command line option</a>
 </li>
       </ul></li>
       <li>
@@ -1059,10 +1606,19 @@
 </li>
       </ul></li>
       <li>
+    --stacktrace
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-stacktrace">runoak command line option</a>
+</li>
+      </ul></li>
+      <li>
     --statistics
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-ancestors-statistics">runoak-ancestors command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-statistics">runoak-diff command line option</a>
 </li>
       </ul></li>
       <li>
@@ -1082,10 +1638,31 @@
 </li>
       </ul></li>
       <li>
+    --terms-role
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-Q">runoak-associations command line option</a>
+</li>
+      </ul></li>
+      <li>
     --text-file
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-annotate-text-file">runoak-annotate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --unmelt
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-logical-definitions-unmelt">runoak-logical-definitions command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --used-only
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-used-only">runoak-prefixes command line option</a>
 </li>
       </ul></li>
       <li>
@@ -1106,6 +1683,8 @@
     -A
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-roots-A">runoak-roots command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-A">runoak-taxon-constraints command line option</a>
 </li>
       </ul></li>
@@ -1114,6 +1693,13 @@
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-a">runoak command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -B
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-B">runoak-enrichment command line option</a>
 </li>
       </ul></li>
       <li>
@@ -1153,6 +1739,22 @@
 </li>
       </ul></li>
       <li>
+    -G
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-G">runoak command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -g
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-g">runoak command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-g">runoak-diff-associations command line option</a>
+</li>
+      </ul></li>
+      <li>
     -I
 
       <ul>
@@ -1170,13 +1772,24 @@
     -L
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-L">runoak-annotate command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-L">runoak-lexmatch command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -m
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-m">runoak-annotate command line option</a>
 </li>
       </ul></li>
       <li>
     -O
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-aliases-O">runoak-aliases command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-ancestors-O">runoak-ancestors command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-annotate-O">runoak-annotate command line option</a>
@@ -1184,6 +1797,8 @@
         <li><a href="cli.html#cmdoption-runoak-apply-O">runoak-apply command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-apply-obsolete-O">runoak-apply-obsolete command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-O">runoak-associations command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-axioms-O">runoak-axioms command line option</a>
 </li>
@@ -1193,9 +1808,13 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-O">runoak-diff command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-O">runoak-diff-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-O">runoak-diff-via-mappings command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-dump-O">runoak-dump command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-O">runoak-enrichment command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-extract-triples-O">runoak-extract-triples command line option</a>
 </li>
@@ -1217,13 +1836,21 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-paths-O">runoak-paths command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-O">runoak-prefixes command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-relationships-O">runoak-relationships command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-roots-O">runoak-roots command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-search-O">runoak-search command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-siblings-O">runoak-siblings command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-similarity-O">runoak-similarity command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-similarity-pair-O">runoak-similarity-pair command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-O">runoak-statistics command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-term-categories-O">runoak-term-categories command line option</a>
 </li>
@@ -1235,6 +1862,10 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-tree-O">runoak-tree command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-validate-O">runoak-validate command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-O">runoak-validate-definitions command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-viz-O">runoak-viz command line option</a>
 </li>
       </ul></li>
@@ -1242,7 +1873,7 @@
     -o
 
       <ul>
-        <li><a href="cli.html#cmdoption-runoak-aliases-o">runoak-aliases command line option</a>
+        <li><a href="cli.html#cmdoption-runoak-aliases-0">runoak-aliases command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-ancestors-0">runoak-ancestors command line option</a>
 </li>
@@ -1252,9 +1883,9 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-apply-obsolete-o">runoak-apply-obsolete command line option</a>
 </li>
-        <li><a href="cli.html#cmdoption-runoak-axioms-o">runoak-axioms command line option</a>
+        <li><a href="cli.html#cmdoption-runoak-associations-0">runoak-associations command line option</a>, <a href="cli.html#cmdoption-runoak-associations-o">[1]</a>
 </li>
-        <li><a href="cli.html#cmdoption-runoak-check-definitions-o">runoak-check-definitions command line option</a>
+        <li><a href="cli.html#cmdoption-runoak-axioms-o">runoak-axioms command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-definitions-o">runoak-definitions command line option</a>
 </li>
@@ -1262,11 +1893,15 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-o">runoak-diff command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-0">runoak-diff-associations command line option</a>, <a href="cli.html#cmdoption-runoak-diff-associations-o">[1]</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-terms-o">runoak-diff-terms command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-o">runoak-diff-via-mappings command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-dump-o">runoak-dump command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-0">runoak-enrichment command line option</a>, <a href="cli.html#cmdoption-runoak-enrichment-o">[1]</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-eval-taxon-constraints-o">runoak-eval-taxon-constraints command line option</a>
 </li>
@@ -1302,6 +1937,8 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-paths-0">runoak-paths command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-o">runoak-prefixes command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-relationships-0">runoak-relationships command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-roots-o">runoak-roots command line option</a>
@@ -1316,7 +1953,11 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-singletons-o">runoak-singletons command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-0">runoak-statistics command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-subsets-o">runoak-subsets command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-o">runoak-synonymize command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-o">runoak-taxon-constraints command line option</a>
 </li>
@@ -1334,9 +1975,20 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-validate-o">runoak-validate command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-0">runoak-validate-definitions command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-validate-multiple-o">runoak-validate-multiple command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-viz-0">runoak-viz command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -P
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-roots-P">runoak-roots command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-P">runoak-statistics command line option</a>
 </li>
       </ul></li>
       <li>
@@ -1345,9 +1997,15 @@
       <ul>
         <li><a href="cli.html#cmdoption-runoak-ancestors-p">runoak-ancestors command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-associations-p">runoak-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-descendants-p">runoak-descendants command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-p">runoak-diff-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-p">runoak-diff-via-mappings command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-p">runoak-enrichment command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-eval-taxon-constraints-p">runoak-eval-taxon-constraints command line option</a>
 </li>
@@ -1375,11 +2033,20 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-p">runoak-taxon-constraints command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-term-metadata-p">runoak-term-metadata command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-termset-similarity-p">runoak-termset-similarity command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-tree-p">runoak-tree command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-viz-p">runoak-viz command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -Q
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-Q">runoak-associations command line option</a>
 </li>
       </ul></li>
       <li>
@@ -1395,14 +2062,22 @@
       <ul>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-R">runoak-lexmatch command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-R">runoak-synonymize command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-R">runoak-validate command line option</a>
+</li>
       </ul></li>
       <li>
     -S
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-S">runoak-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-definitions-S">runoak-definitions command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-S">runoak-diff-via-mappings command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-2">runoak-enrichment command line option</a>, <a href="cli.html#cmdoption-runoak-enrichment-S">[1]</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-labels-S">runoak-labels command line option</a>
 </li>
@@ -1442,7 +2117,18 @@
       <ul>
         <li><a href="cli.html#cmdoption-runoak-diff-X">runoak-diff command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-X">runoak-diff-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-X">runoak-diff-via-mappings command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-X">runoak-statistics command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -x
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-x">runoak-annotate command line option</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1451,7 +2137,11 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="interfaces/association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.add_associations">add_associations() (oaklib.interfaces.association_provider_interface.AssociationProviderInterface method)</a>
+</li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.add_metadata">add_metadata() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.add_missing_property_values">add_missing_property_values() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li><a href="implementations/aggregator.html#oaklib.implementations.aggregator.aggregator_implementation.AggregatorImplementation">AggregatorImplementation (class in oaklib.implementations.aggregator.aggregator_implementation)</a>
 </li>
@@ -1471,13 +2161,15 @@
 </li>
       <li><a href="interfaces/mapping-provider.html#oaklib.interfaces.mapping_provider_interface.MappingProviderInterface.all_sssom_mappings">all_sssom_mappings() (oaklib.interfaces.mapping_provider_interface.MappingProviderInterface method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.all_subset_curies">all_subset_curies() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.ancestor_graph">ancestor_graph() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.ancestors">ancestors() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
+</li>
+      <li><a href="interfaces/text-annotator.html#oaklib.interfaces.text_annotator_interface.TextAnnotatorInterface.annotate_file">annotate_file() (oaklib.interfaces.text_annotator_interface.TextAnnotatorInterface method)</a>
 </li>
       <li><a href="interfaces/text-annotator.html#oaklib.interfaces.text_annotator_interface.TextAnnotatorInterface.annotate_text">annotate_text() (oaklib.interfaces.text_annotator_interface.TextAnnotatorInterface method)</a>
 </li>
@@ -1488,6 +2180,18 @@
       <li><a href="interfaces/patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.apply_patch">apply_patch() (oaklib.interfaces.patcher_interface.PatcherInterface method)</a>
 </li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.as_obograph">as_obograph() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
+</li>
+      <li><a href="interfaces/association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.association_subject_counts">association_subject_counts() (oaklib.interfaces.association_provider_interface.AssociationProviderInterface method)</a>
+</li>
+      <li><a href="interfaces/association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface">AssociationProviderInterface (class in oaklib.interfaces.association_provider_interface)</a>
+</li>
+      <li><a href="interfaces/association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.associations">associations() (oaklib.interfaces.association_provider_interface.AssociationProviderInterface method)</a>
+</li>
+      <li><a href="interfaces/patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.auto_add_contributor_using">auto_add_contributor_using (oaklib.interfaces.patcher_interface.PatcherInterface attribute)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.auto_relax_axioms">auto_relax_axioms (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface attribute)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.autosave">autosave (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface attribute)</a>
 </li>
       <li><a href="interfaces/owl.html#oaklib.interfaces.owl_interface.OwlInterface.axiom_is_about">axiom_is_about() (oaklib.interfaces.owl_interface.OwlInterface method)</a>
 </li>
@@ -1501,12 +2205,21 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="interfaces/search.html#oaklib.interfaces.search_interface.SearchInterface.basic_search">basic_search() (oaklib.interfaces.search_interface.SearchInterface method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface">BasicOntologyInterface (class in oaklib.interfaces.basic_ontology_interface)</a>
 </li>
       <li><a href="glossary.html#term-Bioportal"><strong>Bioportal</strong></a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="interfaces/summary-statistics.html#oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface.branch_summary_statistics">branch_summary_statistics() (oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface method)</a>
+</li>
+      <li>
+    BRANCHES
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-statistics-arg-BRANCHES">runoak-statistics command line option</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1515,7 +2228,11 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-Class"><strong>Class</strong></a>
 </li>
+      <li><a href="interfaces/class-enrichment.html#oaklib.interfaces.class_enrichment_calculation_interface.ClassEnrichmentCalculationInterface">ClassEnrichmentCalculationInterface (class in oaklib.interfaces.class_enrichment_calculation_interface)</a>
+</li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.clone">clone() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      <li><a href="converters/obo-graph-to-fhir.html#oaklib.converters.obo_graph_to_fhir_converter.OboGraphToFHIRConverter.code">code() (oaklib.converters.obo_graph_to_fhir_converter.OboGraphToFHIRConverter method)</a>
 </li>
       <li>
     COMMANDS
@@ -1537,6 +2254,12 @@
         <li><a href="cli.html#cmdoption-runoak-eval-taxon-constraints-arg-CONSTRAINTS">runoak-eval-taxon-constraints command line option</a>
 </li>
       </ul></li>
+      <li><a href="converters/data-model-converter.html#oaklib.converters.data_model_converter.DataModelConverter.convert">convert() (oaklib.converters.data_model_converter.DataModelConverter method)</a>
+
+      <ul>
+        <li><a href="converters/obo-graph-to-fhir.html#oaklib.converters.obo_graph_to_fhir_converter.OboGraphToFHIRConverter.convert">(oaklib.converters.obo_graph_to_fhir_converter.OboGraphToFHIRConverter method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.converter">converter (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface property)</a>
@@ -1548,6 +2271,8 @@
       <li><a href="search-syntax.html#oaklib.datamodels.search.create_search_configuration">create_search_configuration() (in module oaklib.datamodels.search)</a>
 </li>
       <li><a href="glossary.html#term-CURIE"><strong>CURIE</strong></a>
+</li>
+      <li><a href="converters/data-model-converter.html#oaklib.converters.data_model_converter.DataModelConverter.curie_converter">curie_converter (oaklib.converters.data_model_converter.DataModelConverter attribute)</a>
 </li>
       <li>
     CURIE_PAIRS
@@ -1570,6 +2295,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-Datamodel"><strong>Datamodel</strong></a>
 </li>
+      <li><a href="converters/data-model-converter.html#oaklib.converters.data_model_converter.DataModelConverter">DataModelConverter (class in oaklib.converters.data_model_converter)</a>
+</li>
       <li>
     DBS
 
@@ -1577,18 +2304,34 @@
         <li><a href="cli.html#cmdoption-runoak-validate-multiple-arg-DBS">runoak-validate-multiple command line option</a>
 </li>
       </ul></li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.defined_by">defined_by() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.defined_bys">defined_bys() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.definition">definition() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.definitions">definitions() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.descendant_count">descendant_count() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
+</li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.descendant_graph">descendant_graph() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
 </li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.descendants">descendants() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
 </li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.disable_transitive_query_cache">disable_transitive_query_cache() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
 </li>
-      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.dump">dump() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+      <li><a href="interfaces/owl.html#oaklib.interfaces.owl_interface.OwlInterface.disjoint_pairs">disjoint_pairs() (oaklib.interfaces.owl_interface.OwlInterface method)</a>
 </li>
+      <li><a href="converters/data-model-converter.html#oaklib.converters.data_model_converter.DataModelConverter.dump">dump() (oaklib.converters.data_model_converter.DataModelConverter method)</a>
+
+      <ul>
+        <li><a href="converters/obo-graph-to-fhir.html#oaklib.converters.obo_graph_to_fhir_converter.OboGraphToFHIRConverter.dump">(oaklib.converters.obo_graph_to_fhir_converter.OboGraphToFHIRConverter method)</a>
+</li>
+        <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.dump">(oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1596,10 +2339,16 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-Edge"><strong>Edge</strong></a>
+
+      <ul>
+        <li><a href="implementations/sqldb.html#semsql.sqla.semsql.Edge">(class in semsql.sqla.semsql)</a>
 </li>
+      </ul></li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.edges">edges() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
 </li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.enable_transitive_query_cache">enable_transitive_query_cache() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
+</li>
+      <li><a href="interfaces/class-enrichment.html#oaklib.interfaces.class_enrichment_calculation_interface.ClassEnrichmentCalculationInterface.enriched_classes">enriched_classes() (oaklib.interfaces.class_enrichment_calculation_interface.ClassEnrichmentCalculationInterface method)</a>
 </li>
       <li><a href="interfaces/relation-graph.html#oaklib.interfaces.relation_graph_interface.RelationGraphInterface.entailed_incoming_relationships">entailed_incoming_relationships() (oaklib.interfaces.relation_graph_interface.RelationGraphInterface method)</a>
 </li>
@@ -1607,9 +2356,13 @@
 </li>
       <li><a href="interfaces/relation-graph.html#oaklib.interfaces.relation_graph_interface.RelationGraphInterface.entailed_relationships_between">entailed_relationships_between() (oaklib.interfaces.relation_graph_interface.RelationGraphInterface method)</a>
 </li>
+      <li><a href="implementations/sqldb.html#semsql.sqla.semsql.EntailedEdge">EntailedEdge (class in semsql.sqla.semsql)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.entities">entities() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.entities">entities() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.entities_metadata_statements">entities_metadata_statements() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.entity_alias_map">entity_alias_map() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
@@ -1618,6 +2371,14 @@
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.entity_metadata_map">entity_metadata_map() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li><a href="interfaces/owl.html#oaklib.interfaces.owl_interface.OwlInterface.equivalence_axioms">equivalence_axioms() (oaklib.interfaces.owl_interface.OwlInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.exclude_owl_top_and_bottom">exclude_owl_top_and_bottom (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface attribute)</a>
+</li>
+      <li><a href="interfaces/patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.expand_change">expand_change() (oaklib.interfaces.patcher_interface.PatcherInterface method)</a>
+</li>
+      <li><a href="interfaces/patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.expand_changes">expand_changes() (oaklib.interfaces.patcher_interface.PatcherInterface method)</a>
+</li>
+      <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.extract_graph">extract_graph() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
 </li>
       <li><a href="interfaces/subsetting.html#oaklib.interfaces.subsetter_interface.SubsetterInterface.extract_subset_ontology">extract_subset_ontology() (oaklib.interfaces.subsetter_interface.SubsetterInterface method)</a>
 </li>
@@ -1633,8 +2394,6 @@
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.get_definition_by_curie">get_definition_by_curie() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
-      <li><a href="interfaces/summary-statistics.html#oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface.get_global_summary_statistics">get_global_summary_statistics() (oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface method)</a>
-</li>
       <li><a href="selectors.html#oaklib.selector.get_implementation_from_shorthand">get_implementation_from_shorthand() (in module oaklib.selector)</a>
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.get_incoming_relationship_map_by_curie">get_incoming_relationship_map_by_curie() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
@@ -1649,13 +2408,9 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="interfaces/summary-statistics.html#oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface.get_metric_description">get_metric_description() (oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface method)</a>
-</li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.get_outgoing_relationship_map_by_curie">get_outgoing_relationship_map_by_curie() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.get_outgoing_relationships">get_outgoing_relationships() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
-</li>
-      <li><a href="interfaces/summary-statistics.html#oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface.get_partitioned_summary_statistics">get_partitioned_summary_statistics() (oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface method)</a>
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.get_prefix_map">get_prefix_map() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
@@ -1668,6 +2423,8 @@
       <li><a href="interfaces/mapping-provider.html#oaklib.interfaces.mapping_provider_interface.MappingProviderInterface.get_transitive_mappings_by_curie">get_transitive_mappings_by_curie() (oaklib.interfaces.mapping_provider_interface.MappingProviderInterface method)</a>
 </li>
       <li><a href="implementations/gilda.html#oaklib.implementations.gilda.GildaImplementation">GildaImplementation (class in oaklib.implementations.gilda)</a>
+</li>
+      <li><a href="interfaces/summary-statistics.html#oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface.global_summary_statistics">global_summary_statistics() (oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface method)</a>
 </li>
       <li><a href="glossary.html#term-Graph"><strong>Graph</strong></a>
 </li>
@@ -1693,11 +2450,15 @@
 </li>
       <li><a href="glossary.html#term-Information-Content"><strong>Information Content</strong></a>
 </li>
+      <li><a href="interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.information_content_scores">information_content_scores() (oaklib.interfaces.semsim_interface.SemanticSimilarityInterface method)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-Interface"><strong>Interface</strong></a>
 </li>
       <li><a href="interfaces/validator.html#oaklib.interfaces.validator_interface.ValidatorInterface.is_coherent">is_coherent() (oaklib.interfaces.validator_interface.ValidatorInterface method)</a>
+</li>
+      <li><a href="interfaces/owl.html#oaklib.interfaces.owl_interface.OwlInterface.is_disjoint">is_disjoint() (oaklib.interfaces.owl_interface.OwlInterface method)</a>
 </li>
       <li><a href="interfaces/owl.html#oaklib.interfaces.owl_interface.OwlInterface.is_satisfiable">is_satisfiable() (oaklib.interfaces.owl_interface.OwlInterface method)</a>
 </li>
@@ -1730,13 +2491,19 @@
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.label">label() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="converters/data-model-converter.html#oaklib.converters.data_model_converter.DataModelConverter.labeler">labeler (oaklib.converters.data_model_converter.DataModelConverter attribute)</a>
+</li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.labels">labels() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.leafs">leafs() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
+      <li><a href="interfaces/text-annotator.html#oaklib.interfaces.text_annotator_interface.TextAnnotatorInterface.lexical_index">lexical_index (oaklib.interfaces.text_annotator_interface.TextAnnotatorInterface attribute)</a>
+</li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.load_graph">load_graph() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
+</li>
+      <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.logical_definitions">logical_definitions() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1747,6 +2514,8 @@
       <li><a href="glossary.html#term-Mapping"><strong>Mapping</strong></a>
 </li>
       <li><a href="interfaces/mapping-provider.html#oaklib.interfaces.mapping_provider_interface.MappingProviderInterface">MappingProviderInterface (class in oaklib.interfaces.mapping_provider_interface)</a>
+</li>
+      <li><a href="interfaces/summary-statistics.html#oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface.metadata_property_summary_statistics">metadata_property_summary_statistics() (oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface method)</a>
 </li>
       <li><a href="interfaces/patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.migrate_curies">migrate_curies() (oaklib.interfaces.patcher_interface.PatcherInterface method)</a>
 </li>
@@ -1778,6 +2547,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.most_recent_common_ancestors">most_recent_common_ancestors() (oaklib.interfaces.semsim_interface.SemanticSimilarityInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.multilingual">multilingual (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface attribute)</a>
 </li>
       <li><a href="interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.multiset_most_recent_common_ancestors">multiset_most_recent_common_ancestors() (oaklib.interfaces.semsim_interface.SemanticSimilarityInterface method)</a>
 </li>
@@ -1875,13 +2646,19 @@
         <li><a href="src/oaklib.utilities.taxon.html#module-oaklib.utilities.taxon">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-OBO-Format"><strong>OBO Format</strong></a>
+</li>
+      <li><a href="implementations/obograph.html#oaklib.implementations.obograph.obograph_implementation.OboGraphImplementation">OboGraphImplementation (class in oaklib.implementations.obograph.obograph_implementation)</a>
 </li>
       <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface">OboGraphInterface (class in oaklib.interfaces.obograph_interface)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="converters/obo-graph-to-fhir.html#oaklib.converters.obo_graph_to_fhir_converter.OboGraphToFHIRConverter">OboGraphToFHIRConverter (class in oaklib.converters.obo_graph_to_fhir_converter)</a>
+</li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.obsoletes">obsoletes() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.obsoletes_migration_relationships">obsoletes_migration_relationships() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li><a href="glossary.html#term-OLS"><strong>OLS</strong></a>
 </li>
@@ -1906,7 +2683,9 @@
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.ontology_curies">ontology_curies() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
-      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.ontology_metadata">ontology_metadata() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.ontology_metadata_map">ontology_metadata_map() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.ontology_metamodel_mapper">ontology_metamodel_mapper (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface attribute)</a>
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.ontology_versions">ontology_versions() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
@@ -1917,6 +2696,10 @@
       <li><a href="glossary.html#term-OWL"><strong>OWL</strong></a>
 </li>
       <li><a href="glossary.html#term-OWL-Annotation"><strong>OWL Annotation</strong></a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.owl_type">owl_type() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.owl_types">owl_types() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li><a href="implementations/owlery.html#oaklib.implementations.owlery.owlery_implementation.OwleryImplementation">OwleryImplementation (class in oaklib.implementations.owlery.owlery_implementation)</a>
 </li>
@@ -1932,10 +2715,14 @@
 </li>
       <li><a href="interfaces/patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface">PatcherInterface (class in oaklib.interfaces.patcher_interface)</a>
 </li>
+      <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.paths">paths() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
+</li>
       <li><a href="glossary.html#term-Predicate"><strong>Predicate</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.preferred_language">preferred_language (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface attribute)</a>
+</li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.prefix_map">prefix_map() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li><a href="glossary.html#term-Pronto"><strong>Pronto</strong></a>
@@ -1970,6 +2757,8 @@
 </li>
       <li><a href="interfaces/validator.html#oaklib.interfaces.validator_interface.ValidatorInterface.repair">repair() (oaklib.interfaces.validator_interface.ValidatorInterface method)</a>
 </li>
+      <li><a href="interfaces/patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.reverse_changes">reverse_changes() (oaklib.interfaces.patcher_interface.PatcherInterface method)</a>
+</li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.roots">roots() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
       <li>
@@ -1977,6 +2766,10 @@
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-a">--add</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-g">--associations</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-G">--associations-type</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-autosave">--autosave</a>
 </li>
@@ -1986,15 +2779,29 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-I">--input-type</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-metamodel-mappings">--metamodel-mappings</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-named-prefix-map">--named-prefix-map</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-autosave">--no-autosave</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-stacktrace">--no-stacktrace</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-prefix">--prefix</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-q">--quiet</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-save-as">--save-as</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-stacktrace">--stacktrace</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-v">--verbose</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-a">-a</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-g">-g</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-G">-G</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-i">-i</a>
 </li>
@@ -2013,9 +2820,13 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-aliases-obo-model">--obo-model</a>
 </li>
-        <li><a href="cli.html#cmdoption-runoak-aliases-o">--output</a>
+        <li><a href="cli.html#cmdoption-runoak-aliases-0">--output</a>
 </li>
-        <li><a href="cli.html#cmdoption-runoak-aliases-o">-o</a>
+        <li><a href="cli.html#cmdoption-runoak-aliases-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-aliases-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-aliases-0">-o</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-aliases-arg-TERMS">TERMS</a>
 </li>
@@ -2047,7 +2858,17 @@
     runoak-annotate command line option
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-annotate-x">--exclude-tokens</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-annotate-include-aliases">--include-aliases</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-annotate-L">--lexical-index-file</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-annotate-W">--matches-whole-text</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-annotate-m">--model</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-annotate-include-aliases">--no-include-aliases</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-annotate-W">--no-matches-whole-text</a>
 </li>
@@ -2059,11 +2880,17 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-annotate-text-file">--text-file</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-annotate-L">-L</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-annotate-m">-m</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-annotate-o">-o</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-annotate-O">-O</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-annotate-W">-W</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-annotate-x">-x</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-annotate-arg-WORDS">WORDS</a>
 </li>
@@ -2072,9 +2899,33 @@
     runoak-apply command line option
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-apply-changes-format">--changes-format</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-changes-input">--changes-input</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-changes-output">--changes-output</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-contributor">--contributor</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-dry-run">--dry-run</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-expand">--expand</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-ignore-invalid-changes">--ignore-invalid-changes</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-dry-run">--no-dry-run</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-expand">--no-expand</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-ignore-invalid-changes">--no-ignore-invalid-changes</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-overwrite">--no-overwrite</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-apply-o">--output</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-apply-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-apply-overwrite">--overwrite</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-apply-o">-o</a>
 </li>
@@ -2099,6 +2950,41 @@
 </li>
       </ul></li>
       <li>
+    runoak-associations command line option
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-associations-association-predicates">--association-predicates</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-autolabel">--autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-if-absent">--if-absent</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-autolabel">--no-autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-0">--output</a>, <a href="cli.html#cmdoption-runoak-associations-o">[1]</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-p">--predicates</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-S">--set-value</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-Q">--terms-role</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-0">-o</a>, <a href="cli.html#cmdoption-runoak-associations-o">[1]</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-p">-p</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-Q">-Q</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-S">-S</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-associations-arg-TERMS">TERMS</a>
+</li>
+      </ul></li>
+      <li>
     runoak-axioms command line option
 
       <ul>
@@ -2120,21 +3006,27 @@
 </li>
       </ul></li>
       <li>
-    runoak-check-definitions command line option
+    runoak-cache-clear command line option
 
       <ul>
-        <li><a href="cli.html#cmdoption-runoak-check-definitions-o">--output</a>
-</li>
-        <li><a href="cli.html#cmdoption-runoak-check-definitions-o">-o</a>
+        <li><a href="cli.html#cmdoption-runoak-cache-clear-days-old">--days-old</a>
 </li>
       </ul></li>
       <li>
     runoak-definitions command line option
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-definitions-additional-metadata">--additional-metadata</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-definitions-autolabel">--autolabel</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-definitions-D">--display</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-definitions-if-absent">--if-absent</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-definitions-additional-metadata">--no-additional-metadata</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-definitions-autolabel">--no-autolabel</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-definitions-o">--output</a>
 </li>
@@ -2180,7 +3072,23 @@
     runoak-diff command line option
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-defined-by">--group-by-defined-by</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-obo-namespace">--group-by-obo-namespace</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-prefix">--group-by-prefix</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-property">--group-by-property</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-defined-by">--no-group-by-defined-by</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-obo-namespace">--no-group-by-obo-namespace</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-group-by-prefix">--no-group-by-prefix</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-simple">--no-simple</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-statistics">--no-statistics</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-X">--other-ontology</a>
 </li>
@@ -2190,11 +3098,42 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-simple">--simple</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-statistics">--statistics</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-o">-o</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-O">-O</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-X">-X</a>
+</li>
+      </ul></li>
+      <li>
+    runoak-diff-associations command line option
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-g">--associations</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-autolabel">--autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-autolabel">--no-autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-X">--other-associations</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-0">--output</a>, <a href="cli.html#cmdoption-runoak-diff-associations-o">[1]</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-p">--predicates</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-g">-g</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-0">-o</a>, <a href="cli.html#cmdoption-runoak-diff-associations-o">[1]</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-p">-p</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-associations-X">-X</a>
 </li>
       </ul></li>
       <li>
@@ -2216,6 +3155,8 @@
       <ul>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-autolabel">--autolabel</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-bidirectional">--bidirectional</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-filter-category-identical">--filter-category-identical</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-include-identity-mappings">--include-identity-mappings</a>
@@ -2225,6 +3166,8 @@
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-mapping-input">--mapping-input</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-autolabel">--no-autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-bidirectional">--no-bidirectional</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-diff-via-mappings-filter-category-identical">--no-filter-category-identical</a>
 </li>
@@ -2261,6 +3204,10 @@
     runoak-dump command line option
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-dump-include-all-predicates">--include-all-predicates</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-dump-include-all-predicates">--no-include-all-predicates</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-dump-o">--output</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-dump-O">--output-type</a>
@@ -2270,6 +3217,45 @@
         <li><a href="cli.html#cmdoption-runoak-dump-O">-O</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-dump-arg-TERMS">TERMS</a>
+</li>
+      </ul></li>
+      <li>
+    runoak-enrichment command line option
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-association-predicates">--association-predicates</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-autolabel">--autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-B">--background-file</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-cutoff">--cutoff</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-if-absent">--if-absent</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-autolabel">--no-autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-0">--output</a>, <a href="cli.html#cmdoption-runoak-enrichment-o">[1]</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-p">--predicates</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-2">--sample-file</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-S">--set-value</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-B">-B</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-0">-o</a>, <a href="cli.html#cmdoption-runoak-enrichment-o">[1]</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-p">-p</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-2">-S</a>, <a href="cli.html#cmdoption-runoak-enrichment-S">[1]</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-arg-TERMS">TERMS</a>
 </li>
       </ul></li>
       <li>
@@ -2330,6 +3316,8 @@
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-fill-table-allow-missing">--allow-missing</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-fill-table-comment">--comment</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-fill-table-delimiter">--delimiter</a>
 </li>
@@ -2417,9 +3405,13 @@
       <ul>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-add-labels">--add-labels</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-lexmatch-ensure-strict-prefixes">--ensure-strict-prefixes</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-L">--lexical-index-file</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-add-labels">--no-add-labels</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-lexmatch-ensure-strict-prefixes">--no-ensure-strict-prefixes</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-recreate">--no-recreate</a>
 </li>
@@ -2434,6 +3426,8 @@
         <li><a href="cli.html#cmdoption-runoak-lexmatch-o">-o</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-lexmatch-R">-R</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-lexmatch-arg-TERMS">TERMS</a>
 </li>
       </ul></li>
       <li>
@@ -2455,17 +3449,19 @@
         <li><a href="cli.html#cmdoption-runoak-lint-O">-O</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     runoak-logical-definitions command line option
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-autolabel">--autolabel</a>
 </li>
-        <li><a href="cli.html#cmdoption-runoak-logical-definitions-direction">--direction</a>
-</li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-if-absent">--if-absent</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-autolabel">--no-autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-logical-definitions-unmelt">--no-unmelt</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-0">--output</a>
 </li>
@@ -2474,6 +3470,8 @@
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-p">--predicates</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-S">--set-value</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-logical-definitions-unmelt">--unmelt</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-O">-O</a>
 </li>
@@ -2486,8 +3484,6 @@
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-arg-TERMS">TERMS</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     runoak-mappings command line option
 
@@ -2532,13 +3528,23 @@
     runoak-obsoletes command line option
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-include-merged">--include-merged</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-include-merged">--no-include-merged</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-show-migration-relationships">--no-show-migration-relationships</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-obsoletes-0">--output</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-obsoletes-O">--output-type</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-show-migration-relationships">--show-migration-relationships</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-obsoletes-O">-O</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-obsoletes-0">-o</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-arg-TERMS">TERMS</a>
 </li>
       </ul></li>
       <li>
@@ -2616,6 +3622,25 @@
 </li>
       </ul></li>
       <li>
+    runoak-prefixes command line option
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-used-only">--no-used-only</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-o">--output</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-used-only">--used-only</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-o">-o</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-arg-TERMS">TERMS</a>
+</li>
+      </ul></li>
+      <li>
     runoak-relationships command line option
 
       <ul>
@@ -2662,13 +3687,29 @@
     runoak-roots command line option
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-roots-A">--annotated-roots</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-roots-P">--has-prefix</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-roots-A">--no-A</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-roots-A">--no-annotated-roots</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-roots-o">--output</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-roots-O">--output-type</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-roots-p">--predicates</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-roots-A">-A</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-roots-o">-o</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-roots-O">-O</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-roots-p">-p</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-roots-P">-P</a>
 </li>
       </ul></li>
       <li>
@@ -2753,11 +3794,19 @@
     runoak-similarity-pair command line option
 
       <ul>
+        <li><a href="cli.html#cmdoption-runoak-similarity-pair-autolabel">--autolabel</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-similarity-pair-autolabel">--no-autolabel</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-similarity-pair-o">--output</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-similarity-pair-O">--output-type</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-similarity-pair-p">--predicates</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-similarity-pair-o">-o</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-similarity-pair-O">-O</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-similarity-pair-p">-p</a>
 </li>
@@ -2782,12 +3831,74 @@
 </li>
       </ul></li>
       <li>
+    runoak-statistics command line option
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-statistics-X">--compare-with</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-defined-by">--group-by-defined-by</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-obo-namespace">--group-by-obo-namespace</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-prefix">--group-by-prefix</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-property">--group-by-property</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-P">--has-prefix</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-include-residuals">--include-residuals</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-defined-by">--no-group-by-defined-by</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-obo-namespace">--no-group-by-obo-namespace</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-group-by-prefix">--no-group-by-prefix</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-include-residuals">--no-include-residuals</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-0">--output</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-0">-o</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-P">-P</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-X">-X</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-statistics-arg-BRANCHES">BRANCHES</a>
+</li>
+      </ul></li>
+      <li>
     runoak-subsets command line option
 
       <ul>
         <li><a href="cli.html#cmdoption-runoak-subsets-o">--output</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-subsets-o">-o</a>
+</li>
+      </ul></li>
+      <li>
+    runoak-synonymize command line option
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-apply-patch">--apply-patch</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-apply-patch">--no-apply-patch</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-o">--output</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-patch">--patch</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-R">--rules-file</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-o">-o</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-R">-R</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-arg-TERMS">TERMS</a>
 </li>
       </ul></li>
       <li>
@@ -2838,17 +3949,21 @@
     runoak-term-metadata command line option
 
       <ul>
-        <li><a href="cli.html#cmdoption-runoak-term-metadata-reification">--no-reification</a>
+        <li><a href="cli.html#cmdoption-runoak-term-metadata-additional-metadata">--additional-metadata</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-term-metadata-additional-metadata">--no-additional-metadata</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-term-metadata-o">--output</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-term-metadata-O">--output-type</a>
 </li>
-        <li><a href="cli.html#cmdoption-runoak-term-metadata-reification">--reification</a>
+        <li><a href="cli.html#cmdoption-runoak-term-metadata-p">--predicates</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-term-metadata-o">-o</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-term-metadata-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-term-metadata-p">-p</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-term-metadata-arg-TERMS">TERMS</a>
 </li>
@@ -2932,6 +4047,10 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-tree-p">--predicates</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-tree-root">--root</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-tree-skip">--skip</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-tree-S">--stylemap</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-tree-C">-C</a>
@@ -2953,9 +4072,44 @@
       <ul>
         <li><a href="cli.html#cmdoption-runoak-validate-cutoff">--cutoff</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-validate-skip-ontology-rules">--no-skip-ontology-rules</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-skip-structural-validation">--no-skip-structural-validation</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-validate-o">--output</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-validate-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-R">--rule</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-skip-ontology-rules">--skip-ontology-rules</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-skip-structural-validation">--skip-structural-validation</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-validate-o">-o</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-R">-R</a>
+</li>
+      </ul></li>
+      <li>
+    runoak-validate-definitions command line option
+
+      <ul>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-skip-text-annotation">--no-skip-text-annotation</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-0">--output</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-O">--output-type</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-skip-text-annotation">--skip-text-annotation</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-O">-O</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-0">-o</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-arg-TERMS">TERMS</a>
 </li>
       </ul></li>
       <li>
@@ -3052,7 +4206,13 @@
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.set_label">set_label() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.set_metamodel_mappings">set_metamodel_mappings() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.simple_mappings">simple_mappings() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.simple_mappings_by_curie">simple_mappings_by_curie() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
+</li>
+      <li><a href="implementations/simple_obo.html#oaklib.implementations.simpleobo.simple_obo_implementation.SimpleOboImplementation">SimpleOboImplementation (class in oaklib.implementations.simpleobo.simple_obo_implementation)</a>
 </li>
       <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.singletons">singletons() (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface method)</a>
 </li>
@@ -3060,17 +4220,21 @@
 </li>
       <li><a href="implementations/sqldb.html#oaklib.implementations.sqldb.sql_implementation.SqlImplementation">SqlImplementation (class in oaklib.implementations.sqldb.sql_implementation)</a>
 </li>
-      <li><a href="glossary.html#term-SSSOM"><strong>SSSOM</strong></a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="glossary.html#term-SSSOM"><strong>SSSOM</strong></a>
+</li>
       <li><a href="interfaces/mapping-provider.html#oaklib.interfaces.mapping_provider_interface.MappingProviderInterface.sssom_mappings">sssom_mappings() (oaklib.interfaces.mapping_provider_interface.MappingProviderInterface method)</a>
 </li>
       <li><a href="interfaces/mapping-provider.html#oaklib.interfaces.mapping_provider_interface.MappingProviderInterface.sssom_mappings_by_source">sssom_mappings_by_source() (oaklib.interfaces.mapping_provider_interface.MappingProviderInterface method)</a>
 </li>
+      <li><a href="implementations/sqldb.html#semsql.sqla.semsql.Statements">Statements (class in semsql.sqla.semsql)</a>
+</li>
+      <li><a href="interfaces/basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.strict">strict (oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface attribute)</a>
+</li>
       <li><a href="interfaces/owl.html#oaklib.interfaces.owl_interface.OwlInterface.subclass_axioms">subclass_axioms() (oaklib.interfaces.owl_interface.OwlInterface method)</a>
 </li>
-      <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.subgraph">subgraph() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
+      <li><a href="interfaces/obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.subgraph_from_traversal">subgraph_from_traversal() (oaklib.interfaces.obograph_interface.OboGraphInterface method)</a>
 </li>
       <li><a href="glossary.html#term-Subset"><strong>Subset</strong></a>
 </li>
@@ -3089,7 +4253,7 @@
 </li>
       <li><a href="interfaces/subsetting.html#oaklib.interfaces.subsetter_interface.SubsetterInterface">SubsetterInterface (class in oaklib.interfaces.subsetter_interface)</a>
 </li>
-      <li><a href="interfaces/summary-statistics.html#oaklib.datamodels.summary_statistics_datamodel.SummaryStatisticCollection">SummaryStatisticCollection (class in oaklib.datamodels.summary_statistics_datamodel)</a>
+      <li><a href="interfaces/summary-statistics.html#oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface.summary_statistic_description">summary_statistic_description() (oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface method)</a>
 </li>
       <li><a href="interfaces/summary-statistics.html#oaklib.interfaces.summary_statistics_interface.SummaryStatisticsInterface">SummaryStatisticsInterface (class in oaklib.interfaces.summary_statistics_interface)</a>
 </li>
@@ -3122,6 +4286,8 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-apply-obsolete-arg-TERMS">runoak-apply-obsolete command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-associations-arg-TERMS">runoak-associations command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-axioms-arg-TERMS">runoak-axioms command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-definitions-arg-TERMS">runoak-definitions command line option</a>
@@ -3134,17 +4300,25 @@
 </li>
         <li><a href="cli.html#cmdoption-runoak-dump-arg-TERMS">runoak-dump command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-enrichment-arg-TERMS">runoak-enrichment command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-extract-triples-arg-TERMS">runoak-extract-triples command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-info-arg-TERMS">runoak-info command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-labels-arg-TERMS">runoak-labels command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-lexmatch-arg-TERMS">runoak-lexmatch command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-logical-definitions-arg-TERMS">runoak-logical-definitions command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-mappings-arg-TERMS">runoak-mappings command line option</a>
 </li>
+        <li><a href="cli.html#cmdoption-runoak-obsoletes-arg-TERMS">runoak-obsoletes command line option</a>
+</li>
         <li><a href="cli.html#cmdoption-runoak-paths-arg-TERMS">runoak-paths command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-prefixes-arg-TERMS">runoak-prefixes command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-relationships-arg-TERMS">runoak-relationships command line option</a>
 </li>
@@ -3155,6 +4329,8 @@
         <li><a href="cli.html#cmdoption-runoak-similarity-arg-TERMS">runoak-similarity command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-similarity-pair-arg-TERMS">runoak-similarity-pair command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-synonymize-arg-TERMS">runoak-synonymize command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-taxon-constraints-arg-TERMS">runoak-taxon-constraints command line option</a>
 </li>
@@ -3167,6 +4343,8 @@
         <li><a href="cli.html#cmdoption-runoak-termset-similarity-arg-TERMS">runoak-termset-similarity command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-tree-arg-TERMS">runoak-tree command line option</a>
+</li>
+        <li><a href="cli.html#cmdoption-runoak-validate-definitions-arg-TERMS">runoak-validate-definitions command line option</a>
 </li>
         <li><a href="cli.html#cmdoption-runoak-viz-arg-TERMS">runoak-viz command line option</a>
 </li>
@@ -3196,6 +4374,8 @@
       <li><a href="glossary.html#term-Ubergraph"><strong>Ubergraph</strong></a>
 </li>
       <li><a href="implementations/ubergraph.html#oaklib.implementations.ubergraph.ubergraph_implementation.UbergraphImplementation">UbergraphImplementation (class in oaklib.implementations.ubergraph.ubergraph_implementation)</a>
+</li>
+      <li><a href="interfaces/patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.undo">undo() (oaklib.interfaces.patcher_interface.PatcherInterface method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>

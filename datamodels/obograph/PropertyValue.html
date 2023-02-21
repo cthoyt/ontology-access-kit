@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Class: PropertyValue</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Class: PropertyValue</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/obograph/PropertyValue.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,12 +83,14 @@
              
   <section id="class-propertyvalue">
 <h1>Class: PropertyValue<a class="headerlink" href="#class-propertyvalue" title="Permalink to this headline"></a></h1>
+<p><em>A generic grouping for the different kinds of key-value associations on object. Minimally, a property value has a predicate and a value. It can also have a list of xrefs indicating provenance, as well as a metadata object.</em></p>
 <ul class="simple">
 <li><p><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</p></li>
 </ul>
 <p>URI: <a class="reference external" href="https://github.com/geneontology/obographs/PropertyValue">og:PropertyValue</a></p>
 <div class="mermaid">
              classDiagram
+    class PropertyValue
       PropertyValue &lt;|-- DefinitionPropertyValue
       PropertyValue &lt;|-- BasicPropertyValue
       PropertyValue &lt;|-- XrefPropertyValue
@@ -117,30 +121,44 @@
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="pred.html"><span class="doc std std-doc">pred</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>the predicate of an edge</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="val.html"><span class="doc std std-doc">val</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>the value of a property</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="xrefs.html"><span class="doc std std-doc">xrefs</span></a></p></td>
-<td><p>0..* <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
-<td><p></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="XrefString.html"><span class="doc std std-doc">XrefString</span></a></p></td>
+<td><p>A list of cross references to other entities represented in other ontologies,…</p></td>
+<td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="meta.html"><span class="doc std std-doc">meta</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="Meta.html"><span class="doc std std-doc">Meta</span></a></p></td>
-<td><p></p></td>
+<td><p>A collection of metadata about either an ontology (graph), an entity, or an a…</p></td>
+<td><p>direct</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="usages">
-<h2>Usages<a class="headerlink" href="#usages" title="Permalink to this headline"></a></h2>
+<section id="aliases">
+<h2>Aliases<a class="headerlink" href="#aliases" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>annotation</p></li>
+</ul>
+</section>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Any PropertyValue can have a meta object, which can itself have basicPropertyValues, meaning that like the OWL annotation model, axiom annotations can be nested to arbitrary levels.</p></li>
+</ul>
 </section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permalink to this headline"></a></h2>
@@ -161,23 +179,32 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>[‘og:PropertyValue’]</p></td>
+<td><p>og:PropertyValue</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>[‘og:PropertyValue’]</p></td>
+<td><p>og:PropertyValue</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="linkml-specification">
-<h2>LinkML Specification<a class="headerlink" href="#linkml-specification" title="Permalink to this headline"></a></h2>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
 <details>
 ```yaml
 name: PropertyValue
+description: A generic grouping for the different kinds of key-value associations
+  on object. Minimally, a property value has a predicate and a value. It can also
+  have a list of xrefs indicating provenance, as well as a metadata object.
+comments:
+- Any PropertyValue can have a meta object, which can itself have basicPropertyValues,
+  meaning that like the OWL annotation model, axiom annotations can be nested to arbitrary
+  levels.
 from_schema: https://github.com/geneontology/obographs
+aliases:
+- annotation
 rank: 1000
 abstract: true
 slots:
@@ -192,24 +219,38 @@ slots:
 &lt;details&gt;
 ```yaml
 name: PropertyValue
+description: A generic grouping for the different kinds of key-value associations
+  on object. Minimally, a property value has a predicate and a value. It can also
+  have a list of xrefs indicating provenance, as well as a metadata object.
+comments:
+- Any PropertyValue can have a meta object, which can itself have basicPropertyValues,
+  meaning that like the OWL annotation model, axiom annotations can be nested to arbitrary
+  levels.
 from_schema: https://github.com/geneontology/obographs
+aliases:
+- annotation
 rank: 1000
 abstract: true
 attributes:
   pred:
     name: pred
+    description: the predicate of an edge
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
+    slot_uri: rdf:predicate
     alias: pred
     owner: PropertyValue
     domain_of:
     - Edge
+    - SynonymPropertyValue
     - PropertyValue
     range: string
   val:
     name: val
+    description: the value of a property
     from_schema: https://github.com/geneontology/obographs
     rank: 1000
+    slot_uri: rdf:object
     alias: val
     owner: PropertyValue
     domain_of:
@@ -217,7 +258,12 @@ attributes:
     range: string
   xrefs:
     name: xrefs
+    description: A list of cross references to other entities represented in other
+      ontologies, vocabularies, databases, or websites. The semantics of xrefs are
+      intentionally weak, and most closely align with rdfs:seeAlso
     from_schema: https://github.com/geneontology/obographs
+    close_mappings:
+    - rdfs:seeAlso
     rank: 1000
     multivalued: true
     alias: xrefs
@@ -225,10 +271,14 @@ attributes:
     domain_of:
     - Meta
     - PropertyValue
-    range: string
+    range: XrefString
   meta:
     name: meta
+    description: A collection of metadata about either an ontology (graph), an entity,
+      or an axiom
     from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - annotations
     rank: 1000
     alias: meta
     owner: PropertyValue
@@ -236,6 +286,7 @@ attributes:
     - GraphDocument
     - Graph
     - Node
+    - Edge
     - PropertyValue
     - Axiom
     range: Meta

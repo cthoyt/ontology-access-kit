@@ -41,12 +41,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
@@ -68,8 +70,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Slot: changeNote</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Slot: changeNote</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/ontology-metadata/changeNote.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,7 +83,7 @@
              
   <section id="slot-changenote">
 <h1>Slot: changeNote<a class="headerlink" href="#slot-changenote" title="Permalink to this headline"></a></h1>
-<p>URI: <a class="reference external" href="http://www.w3.org/2004/02/skos/core#changeNote">http://www.w3.org/2004/02/skos/core#changeNote</a></p>
+<p>URI: <a class="reference external" href="http://www.w3.org/2004/02/skos/core#changeNote">skos:changeNote</a></p>
 <section id="inheritance">
 <h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline"></a></h2>
 <ul class="simple">
@@ -96,6 +98,7 @@
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Range: <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></li>
+<li><p>Multivalued: True</p></li>
 </ul>
 </section>
 <section id="identifier-and-mapping-information">
@@ -106,6 +109,24 @@
 <li><p>from schema: http://purl.obolibrary.org/obo/omo/schema</p></li>
 </ul>
 </section>
+</section>
+<section id="linkml-source">
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
+<details>
+```yaml
+name: changeNote
+in_subset:
+- allotrope permitted profile
+from_schema: http://purl.obolibrary.org/obo/omo/schema
+rank: 1000
+is_a: informative_property
+slot_uri: skos:changeNote
+multivalued: true
+alias: changeNote
+range: string
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 </section>
 </section>
 

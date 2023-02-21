@@ -43,12 +43,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Implementations</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="pronto.html">Pronto / OBO Files Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sqldb.html">SQL Database Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ols.html">Ontology Lookup Service (OLS) Endpoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple_obo.html">Simple OBO Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="obograph.html">OBO Graph Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bioportal.html">Bioportal Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sparql.html">Sparql Endpoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ubergraph.html">Ubergraph Endpoint</a></li>
@@ -65,6 +68,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Notebooks</a></li>
@@ -86,9 +90,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Implementations</a> &raquo;</li>
-      <li>Ontobee Endpoint</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Implementations</a></li>
+      <li class="breadcrumb-item active">Ontobee Endpoint</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/implementations/ontobee.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -114,15 +118,21 @@
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="oaklib.implementations.ontobee.ontobee_implementation.OntobeeImplementation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oaklib.implementations.ontobee.ontobee_implementation.</span></span><span class="sig-name descname"><span class="pre">OntobeeImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource:</span> <span class="pre">oaklib.resource.OntologyResource</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparql_wrapper:</span> <span class="pre">&lt;module</span> <span class="pre">'SPARQLWrapper'</span> <span class="pre">from</span> <span class="pre">'/home/runner/.cache/pypoetry/virtualenvs/oaklib-5bvmowLS-py3.9/lib/python3.9/site-packages/SPARQLWrapper/__init__.py'&gt;</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph:</span> <span class="pre">rdflib.graph.Graph</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multilingual:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preferred_language:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_list_of_named_graphs:</span> <span class="pre">typing.List[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/oaklib/implementations/ontobee/ontobee_implementation.html#OntobeeImplementation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.implementations.ontobee.ontobee_implementation.OntobeeImplementation" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oaklib.implementations.ontobee.ontobee_implementation.</span></span><span class="sig-name descname"><span class="pre">OntobeeImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource:</span> <span class="pre">oaklib.resource.OntologyResource</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multilingual:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preferred_language:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autosave:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_owl_top_and_bottom:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ontology_metamodel_mapper:</span> <span class="pre">typing.Optional[oaklib.mappers.ontology_metadata_mapper.OntologyMetadataMapper]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_converter:</span> <span class="pre">typing.Optional[curies.api.Converter]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_relax_axioms:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparql_wrapper:</span> <span class="pre">&lt;module</span> <span class="pre">'SPARQLWrapper'</span> <span class="pre">from</span> <span class="pre">'/home/runner/.cache/pypoetry/virtualenvs/oaklib-5bvmowLS-py3.9/lib/python3.9/site-packages/SPARQLWrapper/__init__.py'&gt;</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph:</span> <span class="pre">rdflib.graph.Graph</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_list_of_named_graphs:</span> <span class="pre">typing.List[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/oaklib/implementations/ontobee/ontobee_implementation.html#OntobeeImplementation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#oaklib.implementations.ontobee.ontobee_implementation.OntobeeImplementation" title="Permalink to this definition"></a></dt>
 <dd><p>Wraps the Ontobee sparql endpoint</p>
 <p>An OntobeeImplementation can be initialed by:</p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">oi</span> <span class="o">=</span> <span class="n">OntobeeImplementation</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">oi</span> <span class="o">=</span> <span class="n">OntobeeImplementation</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The default ontobee endpoint will be assumed</p>
 </div></blockquote>
+<p>The default ontobee endpoint will be assumed</p>
+<p>Alternatively, use a selector:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">oi</span> <span class="o">=</span> <span class="n">get_implementation_from_shorthand</span><span class="p">(</span><span class="s2">&quot;ontobee:&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">oi</span><span class="o">.</span><span class="n">ancestors</span><span class="p">(</span><span class="s2">&quot;UBERON:0002398&quot;</span><span class="p">,</span> <span class="n">predicates</span><span class="o">=</span><span class="p">[</span><span class="n">IS_A</span><span class="p">]):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="o">...</span>
+</pre></div>
+</div>
 <p>See: <a class="reference external" href="https://www.ontobee.org/">https://www.ontobee.org/</a></p>
 </dd></dl>
 

@@ -40,12 +40,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../intro/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide/index.html">The OAK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../interfaces/index.html">Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../implementations/index.html">Implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cli.html">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../datamodels/index.html">Datamodels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../converters/index.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../howtos/index.html">How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notebooks.html">Notebooks</a></li>
@@ -67,9 +69,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      <li>oaklib.implementations.ontobee.ontobee_implementation</li>
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">oaklib.implementations.ontobee.ontobee_implementation</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -96,16 +98,25 @@
 <span class="k">class</span> <span class="nc">OntobeeImplementation</span><span class="p">(</span>
     <span class="n">AbstractSparqlImplementation</span><span class="p">,</span> <span class="n">SearchInterface</span><span class="p">,</span> <span class="n">MappingProviderInterface</span><span class="p">,</span> <span class="n">OboGraphInterface</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Wraps the Ontobee sparql endpoint</span>
 
 <span class="sd">    An OntobeeImplementation can be initialed by:</span>
 
 <span class="sd">        .. code:: python</span>
 
-<span class="sd">           &gt;&gt;&gt;  oi = OntobeeImplementation.create()</span>
+<span class="sd">           &gt;&gt;&gt;  oi = OntobeeImplementation()</span>
 
-<span class="sd">        The default ontobee endpoint will be assumed</span>
+<span class="sd">    The default ontobee endpoint will be assumed</span>
+
+<span class="sd">    Alternatively, use a selector:</span>
+
+<span class="sd">    .. code :: python</span>
+
+<span class="sd">        &gt;&gt;&gt; oi = get_implementation_from_shorthand(&quot;ontobee:&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; for a in oi.ancestors(&quot;UBERON:0002398&quot;, predicates=[IS_A]):</span>
+<span class="sd">        &gt;&gt;&gt;     ...</span>
+
 
 <span class="sd">    See: `&lt;https://www.ontobee.org/&gt;`_</span>
 <span class="sd">    &quot;&quot;&quot;</span>

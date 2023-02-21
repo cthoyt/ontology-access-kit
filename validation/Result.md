@@ -6,14 +6,13 @@ _Abstract base class for any individual report result_
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-
 URI: [vm:Result](https://w3id.org/linkml/validation-model/Result)
-
 
 
 
 ```{mermaid}
  classDiagram
+    class Result
       Result <|-- ValidationResult
       Result <|-- RepairOperation
       
@@ -33,16 +32,21 @@ URI: [vm:Result](https://w3id.org/linkml/validation-model/Result)
 
 ## Slots
 
-| Name | Cardinality and Range  | Description  |
-| ---  | ---  | --- |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+
+
+
 
 
 ## Usages
 
-
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Report](Report.md) | [results](results.md) | range | Result |
+| [Report](Report.md) | [results](results.md) | range | [Result](Result.md) |
+
+
+
 
 
 
@@ -63,17 +67,18 @@ URI: [vm:Result](https://w3id.org/linkml/validation-model/Result)
 
 
 
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ['vm:Result'] |
-| native | ['vm:Result'] |
+| self | vm:Result |
+| native | vm:Result |
 
 
-## LinkML Specification
+
+
+
+## LinkML Source
 
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 
