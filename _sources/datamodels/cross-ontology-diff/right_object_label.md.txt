@@ -1,8 +1,11 @@
 # Slot: right_object_label
+
+
 _The name of the object (parent) of the matched/right edge, if matchable_
 
 
-URI: [ann:right_object_label](https://w3id.org/linkml/text_annotator/right_object_label)
+
+URI: [xodiff:right_object_label](https://w3id.org/oak/cross-ontology-diff/right_object_label)
 
 
 
@@ -17,9 +20,10 @@ URI: [ann:right_object_label](https://w3id.org/linkml/text_annotator/right_objec
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a... |  no  |
+
 
 
 
@@ -29,8 +33,6 @@ URI: [ann:right_object_label](https://w3id.org/linkml/text_annotator/right_objec
 ## Properties
 
 * Range: [Label](Label.md)
-
-
 
 
 
@@ -47,7 +49,7 @@ URI: [ann:right_object_label](https://w3id.org/linkml/text_annotator/right_objec
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 
@@ -58,7 +60,7 @@ URI: [ann:right_object_label](https://w3id.org/linkml/text_annotator/right_objec
 ```yaml
 name: right_object_label
 description: The name of the object (parent) of the matched/right edge, if matchable
-from_schema: https://w3id.org/linkml/cross_ontology_diff
+from_schema: https://w3id.org/oak/cross-ontology-diff
 rank: 1000
 mixins:
 - right_side

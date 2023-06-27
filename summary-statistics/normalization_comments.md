@@ -1,5 +1,8 @@
 # Slot: normalization_comments
+
+
 _if contributor name normalization was applied, provide details here_
+
 
 
 URI: [summary_statistics:normalization_comments](https://w3id.org/oaklib/summary_statistics.normalization_comments)
@@ -13,9 +16,10 @@ URI: [summary_statistics:normalization_comments](https://w3id.org/oaklib/summary
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[ContributorStatistics](ContributorStatistics.md) | Statistics for a contributor
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[ContributorStatistics](ContributorStatistics.md) | Statistics for a contributor |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [summary_statistics:normalization_comments](https://w3id.org/oaklib/summary
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [summary_statistics:normalization_comments](https://w3id.org/oaklib/summary
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -54,7 +56,7 @@ URI: [summary_statistics:normalization_comments](https://w3id.org/oaklib/summary
 ```yaml
 name: normalization_comments
 description: if contributor name normalization was applied, provide details here
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 alias: normalization_comments
 owner: ContributorStatistics

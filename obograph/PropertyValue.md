@@ -1,12 +1,15 @@
 # Class: PropertyValue
+
+
 _A generic grouping for the different kinds of key-value associations on object. Minimally, a property value has a predicate and a value. It can also have a list of xrefs indicating provenance, as well as a metadata object._
+
 
 
 
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-URI: [og:PropertyValue](https://github.com/geneontology/obographs/PropertyValue)
+URI: [obographs:PropertyValue](https://github.com/geneontology/obographs/PropertyValue)
 
 
 
@@ -18,10 +21,20 @@ URI: [og:PropertyValue](https://github.com/geneontology/obographs/PropertyValue)
       PropertyValue <|-- XrefPropertyValue
       PropertyValue <|-- SynonymPropertyValue
       
+      PropertyValue : lang
+        
       PropertyValue : meta
+        
+          PropertyValue --|> Meta : meta
+        
       PropertyValue : pred
+        
       PropertyValue : val
+        
+      PropertyValue : valType
+        
       PropertyValue : xrefs
+        
       
 ```
 
@@ -42,10 +55,12 @@ URI: [og:PropertyValue](https://github.com/geneontology/obographs/PropertyValue)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [pred](pred.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the predicate of an edge | direct |
-| [val](val.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the value of a property | direct |
+| [pred](pred.md) | 0..1 <br/> [String](String.md) | the predicate of an edge | direct |
+| [val](val.md) | 0..1 <br/> [String](String.md) | the value of a property | direct |
 | [xrefs](xrefs.md) | 0..* <br/> [XrefString](XrefString.md) | A list of cross references to other entities represented in other ontologies,... | direct |
 | [meta](meta.md) | 0..1 <br/> [Meta](Meta.md) | A collection of metadata about either an ontology (graph), an entity, or an a... | direct |
+| [valType](valType.md) | 0..1 <br/> [String](String.md) | the datatype of a property value | direct |
+| [lang](lang.md) | 0..1 <br/> [String](String.md) | the language of a property value | direct |
 
 
 
@@ -85,8 +100,8 @@ URI: [og:PropertyValue](https://github.com/geneontology/obographs/PropertyValue)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | og:PropertyValue |
-| native | og:PropertyValue |
+| self | obographs:PropertyValue |
+| native | obographs:PropertyValue |
 
 
 
@@ -111,13 +126,14 @@ comments:
 from_schema: https://github.com/geneontology/obographs
 aliases:
 - annotation
-rank: 1000
 abstract: true
 slots:
 - pred
 - val
 - xrefs
 - meta
+- valType
+- lang
 
 ```
 </details>
@@ -137,7 +153,6 @@ comments:
 from_schema: https://github.com/geneontology/obographs
 aliases:
 - annotation
-rank: 1000
 abstract: true
 attributes:
   pred:
@@ -152,11 +167,14 @@ attributes:
     - Edge
     - SynonymPropertyValue
     - PropertyValue
+    - SynonymTypeDefinition
     range: string
   val:
     name: val
     description: the value of a property
     from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - value
     rank: 1000
     slot_uri: rdf:object
     alias: val
@@ -170,6 +188,8 @@ attributes:
       ontologies, vocabularies, databases, or websites. The semantics of xrefs are
       intentionally weak, and most closely align with rdfs:seeAlso
     from_schema: https://github.com/geneontology/obographs
+    exact_mappings:
+    - oio:hasDbXref
     close_mappings:
     - rdfs:seeAlso
     rank: 1000
@@ -198,6 +218,29 @@ attributes:
     - PropertyValue
     - Axiom
     range: Meta
+  valType:
+    name: valType
+    description: the datatype of a property value
+    from_schema: https://github.com/geneontology/obographs
+    aliases:
+    - value type
+    - datatype
+    rank: 1000
+    alias: valType
+    owner: PropertyValue
+    domain_of:
+    - PropertyValue
+    range: string
+  lang:
+    name: lang
+    description: the language of a property value
+    from_schema: https://github.com/geneontology/obographs
+    rank: 1000
+    alias: lang
+    owner: PropertyValue
+    domain_of:
+    - PropertyValue
+    range: string
 
 ```
 </details>

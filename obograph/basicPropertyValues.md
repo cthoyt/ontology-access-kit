@@ -1,8 +1,11 @@
 # Slot: basicPropertyValues
+
+
 _A list of open-ended property values that does not correspond to those predefined in this standard, i.e xref, synonyms, definition_
 
 
-URI: [og:basicPropertyValues](https://github.com/geneontology/obographs/basicPropertyValues)
+
+URI: [obographs:basicPropertyValues](https://github.com/geneontology/obographs/basicPropertyValues)
 
 
 
@@ -13,9 +16,10 @@ URI: [og:basicPropertyValues](https://github.com/geneontology/obographs/basicPro
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Meta](Meta.md) | A collection of annotations on an entity or ontology or axiom
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Meta](Meta.md) | A collection of annotations on an entity or ontology or edge or axiom |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [og:basicPropertyValues](https://github.com/geneontology/obographs/basicPro
 ## Properties
 
 * Range: [BasicPropertyValue](BasicPropertyValue.md)
+
 * Multivalued: True
-
-
-
 
 
 

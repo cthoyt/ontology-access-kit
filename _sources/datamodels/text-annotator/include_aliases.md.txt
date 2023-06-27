@@ -11,9 +11,10 @@ URI: [ann:include_aliases](https://w3id.org/linkml/text_annotator/include_aliase
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TextAnnotationConfiguration](TextAnnotationConfiguration.md) | configuration for search
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TextAnnotationConfiguration](TextAnnotationConfiguration.md) | configuration for search |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [ann:include_aliases](https://w3id.org/linkml/text_annotator/include_aliase
 
 ## Properties
 
-* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
-
-
+* Range: [Boolean](Boolean.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [ann:include_aliases](https://w3id.org/linkml/text_annotator/include_aliase
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -51,7 +50,7 @@ URI: [ann:include_aliases](https://w3id.org/linkml/text_annotator/include_aliase
 <details>
 ```yaml
 name: include_aliases
-from_schema: https://w3id.org/linkml/text_annotator
+from_schema: https://w3id.org/oak/text_annotator
 rank: 1000
 alias: include_aliases
 owner: TextAnnotationConfiguration

@@ -1,5 +1,8 @@
 # Class: ContributorRole
+
+
 _A role that a contributor can have_
+
 
 
 
@@ -12,6 +15,7 @@ URI: [sh:ContributorRole](https://w3id.org/shacl/ContributorRole)
  classDiagram
     class ContributorRole
       ContributorRole : id
+        
       
 ```
 
@@ -25,7 +29,7 @@ URI: [sh:ContributorRole](https://w3id.org/shacl/ContributorRole)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | the unique identifier for the role | direct |
 
 
 
@@ -46,7 +50,7 @@ URI: [sh:ContributorRole](https://w3id.org/shacl/ContributorRole)
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -73,15 +77,15 @@ URI: [sh:ContributorRole](https://w3id.org/shacl/ContributorRole)
 ```yaml
 name: ContributorRole
 description: A role that a contributor can have
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   id:
     name: id
     description: the unique identifier for the role
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     identifier: true
     range: uriorcurie
+    required: true
 class_uri: sh:ContributorRole
 
 ```
@@ -93,13 +97,12 @@ class_uri: sh:ContributorRole
 ```yaml
 name: ContributorRole
 description: A role that a contributor can have
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   id:
     name: id
     description: the unique identifier for the role
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     identifier: true
     alias: id
     owner: ContributorRole
@@ -109,6 +112,7 @@ attributes:
     - Agent
     - ContributorRole
     range: uriorcurie
+    required: true
 class_uri: sh:ContributorRole
 
 ```

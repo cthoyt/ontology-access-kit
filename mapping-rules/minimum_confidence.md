@@ -1,6 +1,6 @@
 # Slot: minimum_confidence
 
-URI: [mrules:minimum_confidence](https://w3id.org/linkml/mapping_rules_datamodel/minimum_confidence)
+URI: [mappingrules:minimum_confidence](https://w3id.org/oak/mapping-rules-datamodel/minimum_confidence)
 
 
 
@@ -11,9 +11,10 @@ URI: [mrules:minimum_confidence](https://w3id.org/linkml/mapping_rules_datamodel
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[MappingRuleCollection](MappingRuleCollection.md) | A collection of mapping rules
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[MappingRuleCollection](MappingRuleCollection.md) | A collection of mapping rules |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [mrules:minimum_confidence](https://w3id.org/linkml/mapping_rules_datamodel
 
 ## Properties
 
-* Range: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
-
-
+* Range: [Float](Float.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [mrules:minimum_confidence](https://w3id.org/linkml/mapping_rules_datamodel
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -51,7 +50,7 @@ URI: [mrules:minimum_confidence](https://w3id.org/linkml/mapping_rules_datamodel
 <details>
 ```yaml
 name: minimum_confidence
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: minimum_confidence
 owner: MappingRuleCollection

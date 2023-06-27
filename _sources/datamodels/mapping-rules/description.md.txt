@@ -1,6 +1,6 @@
 # Slot: description
 
-URI: [mrules:description](https://w3id.org/linkml/mapping_rules_datamodel/description)
+URI: [mappingrules:description](https://w3id.org/oak/mapping-rules-datamodel/description)
 
 
 
@@ -11,9 +11,10 @@ URI: [mrules:description](https://w3id.org/linkml/mapping_rules_datamodel/descri
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[MappingRule](MappingRule.md) | An individual mapping rule, if preconditions match the postconditions are app...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[MappingRule](MappingRule.md) | An individual mapping rule, if preconditions match the postconditions are app... |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [mrules:description](https://w3id.org/linkml/mapping_rules_datamodel/descri
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [mrules:description](https://w3id.org/linkml/mapping_rules_datamodel/descri
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -51,7 +50,7 @@ URI: [mrules:description](https://w3id.org/linkml/mapping_rules_datamodel/descri
 <details>
 ```yaml
 name: description
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: description
 owner: MappingRule

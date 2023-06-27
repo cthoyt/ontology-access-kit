@@ -1,5 +1,8 @@
 # Slot: non_deprecated_object_property_count
+
+
 _Number of non-deprecated (non-obsoleted) object properties in the ontology or subset_
+
 
 
 URI: [summary_statistics:non_deprecated_object_property_count](https://w3id.org/oaklib/summary_statistics.non_deprecated_object_property_count)
@@ -18,9 +21,10 @@ URI: [summary_statistics:non_deprecated_object_property_count](https://w3id.org/
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object |  no  |
+
 
 
 
@@ -29,9 +33,7 @@ URI: [summary_statistics:non_deprecated_object_property_count](https://w3id.org/
 
 ## Properties
 
-* Range: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
-
-
+* Range: [Integer](Integer.md)
 
 
 
@@ -54,7 +56,7 @@ URI: [summary_statistics:non_deprecated_object_property_count](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -70,7 +72,7 @@ annotations:
     value: ObjectProperty, NotDeprecated
 description: Number of non-deprecated (non-obsoleted) object properties in the ontology
   or subset
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 is_a: count_statistic
 alias: non_deprecated_object_property_count

@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Class: UngroupedStatistics &mdash; oaklib  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
         <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -27,11 +31,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> oaklib
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            oaklib
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -42,19 +50,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">The OAK Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../interfaces/index.html">Interfaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../implementations/index.html">Implementations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../packages/index.html">OAK Library Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli.html">Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Datamodels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../converters/index.html">Converters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howtos/index.html">How-To Guides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../concepts.html">Ontology Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Jupyter Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
 </ul>
 
         </div>
@@ -70,7 +72,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Class: UngroupedStatistics</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/datamodels/summary-statistics/UngroupedStatistics.md.txt" rel="nofollow"> View page source</a>
@@ -82,7 +84,7 @@
            <div itemprop="articleBody">
              
   <section id="class-ungroupedstatistics">
-<h1>Class: UngroupedStatistics<a class="headerlink" href="#class-ungroupedstatistics" title="Permalink to this headline"></a></h1>
+<h1>Class: UngroupedStatistics<a class="headerlink" href="#class-ungroupedstatistics" title="Permalink to this heading"></a></h1>
 <p><em>A summary statistics report object</em></p>
 <p>URI: <a class="reference external" href="https://w3id.org/oaklib/summary_statistics.UngroupedStatistics">summary_statistics:UngroupedStatistics</a></p>
 <div class="mermaid">
@@ -91,53 +93,124 @@
       SummaryStatisticsReport &lt;|-- UngroupedStatistics
       
       UngroupedStatistics : agents
+        
+          UngroupedStatistics --|&gt; Agent : agents
+        
       UngroupedStatistics : annotation_property_count
+        
       UngroupedStatistics : anonymous_class_expression_count
+        
       UngroupedStatistics : anonymous_individual_count
+        
       UngroupedStatistics : change_summary
+        
+          UngroupedStatistics --|&gt; ChangeTypeStatistic : change_summary
+        
       UngroupedStatistics : class_count
+        
       UngroupedStatistics : class_count_by_category
+        
+          UngroupedStatistics --|&gt; FacetedCount : class_count_by_category
+        
       UngroupedStatistics : class_count_by_subset
+        
+          UngroupedStatistics --|&gt; FacetedCount : class_count_by_subset
+        
       UngroupedStatistics : class_count_with_text_definitions
+        
       UngroupedStatistics : class_count_without_text_definitions
+        
       UngroupedStatistics : compared_with
+        
+          UngroupedStatistics --|&gt; Ontology : compared_with
+        
       UngroupedStatistics : contributor_summary
+        
+          UngroupedStatistics --|&gt; ContributorStatistics : contributor_summary
+        
       UngroupedStatistics : datatype_property_count
+        
       UngroupedStatistics : deprecated_class_count
+        
       UngroupedStatistics : deprecated_object_property_count
+        
       UngroupedStatistics : description_logic_profile
+        
       UngroupedStatistics : distinct_synonym_count
+        
       UngroupedStatistics : edge_count_by_predicate
+        
+          UngroupedStatistics --|&gt; FacetedCount : edge_count_by_predicate
+        
       UngroupedStatistics : entailed_edge_count_by_predicate
+        
+          UngroupedStatistics --|&gt; FacetedCount : entailed_edge_count_by_predicate
+        
       UngroupedStatistics : equivalent_classes_axiom_count
+        
       UngroupedStatistics : id
+        
       UngroupedStatistics : individual_count
+        
       UngroupedStatistics : mapping_count
+        
       UngroupedStatistics : mapping_statement_count_by_object_source
+        
+          UngroupedStatistics --|&gt; FacetedCount : mapping_statement_count_by_object_source
+        
       UngroupedStatistics : mapping_statement_count_by_predicate
+        
+          UngroupedStatistics --|&gt; FacetedCount : mapping_statement_count_by_predicate
+        
       UngroupedStatistics : mapping_statement_count_subject_by_object_source
+        
+          UngroupedStatistics --|&gt; FacetedCount : mapping_statement_count_subject_by_object_source
+        
       UngroupedStatistics : merged_class_count
+        
       UngroupedStatistics : named_individual_count
+        
       UngroupedStatistics : non_deprecated_class_count
+        
       UngroupedStatistics : non_deprecated_object_property_count
+        
       UngroupedStatistics : object_property_count
+        
       UngroupedStatistics : ontologies
+        
+          UngroupedStatistics --|&gt; Ontology : ontologies
+        
       UngroupedStatistics : ontology_count
+        
       UngroupedStatistics : owl_axiom_count
+        
       UngroupedStatistics : property_count
+        
       UngroupedStatistics : rdf_triple_count
+        
       UngroupedStatistics : subclass_of_axiom_count
+        
       UngroupedStatistics : subset_count
+        
       UngroupedStatistics : synonym_statement_count
+        
       UngroupedStatistics : synonym_statement_count_by_predicate
+        
+          UngroupedStatistics --|&gt; FacetedCount : synonym_statement_count_by_predicate
+        
       UngroupedStatistics : unsatisfiable_class_count
+        
       UngroupedStatistics : untyped_entity_count
+        
       UngroupedStatistics : was_generated_by
+        
+          UngroupedStatistics --|&gt; SummaryStatisticsCalculationActivity : was_generated_by
+        
       
         </div><section id="inheritance">
-<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline"></a></h2>
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="doc std std-doc">SummaryStatisticsReport</span></a></p>
+<li><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="std std-doc">SummaryStatisticsReport</span></a></p>
 <ul>
 <li><p><strong>UngroupedStatistics</strong></p></li>
 </ul>
@@ -145,8 +218,8 @@
 </ul>
 </section>
 <section id="slots">
-<h2>Slots<a class="headerlink" href="#slots" title="Permalink to this headline"></a></h2>
-<table class="colwidths-auto docutils align-default">
+<h2>Slots<a class="headerlink" href="#slots" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Cardinality and Range</p></th>
@@ -155,227 +228,227 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="class_count.html"><span class="doc std std-doc">class_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_count.html"><span class="std std-doc">class_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of classes in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="anonymous_class_expression_count.html"><span class="doc std std-doc">anonymous_class_expression_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="anonymous_class_expression_count.html"><span class="std std-doc">anonymous_class_expression_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of anonymous class expressions in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="unsatisfiable_class_count.html"><span class="doc std std-doc">unsatisfiable_class_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="unsatisfiable_class_count.html"><span class="std std-doc">unsatisfiable_class_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of unsatisfiable classes in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="deprecated_class_count.html"><span class="doc std std-doc">deprecated_class_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="deprecated_class_count.html"><span class="std std-doc">deprecated_class_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of deprecated (obsoleted) classes in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="non_deprecated_class_count.html"><span class="doc std std-doc">non_deprecated_class_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="non_deprecated_class_count.html"><span class="std std-doc">non_deprecated_class_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of non-deprecated (non-obsoleted) classes in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="merged_class_count.html"><span class="doc std std-doc">merged_class_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="merged_class_count.html"><span class="std std-doc">merged_class_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of merged classes (obsoletions with merge reason) in the ontology or s…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_count_with_text_definitions.html"><span class="doc std std-doc">class_count_with_text_definitions</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_count_with_text_definitions.html"><span class="std std-doc">class_count_with_text_definitions</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of classes with text definitions in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_count_without_text_definitions.html"><span class="doc std std-doc">class_count_without_text_definitions</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_count_without_text_definitions.html"><span class="std std-doc">class_count_without_text_definitions</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of classes without text definitions in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="property_count.html"><span class="doc std std-doc">property_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="property_count.html"><span class="std std-doc">property_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of properties in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="object_property_count.html"><span class="doc std std-doc">object_property_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="object_property_count.html"><span class="std std-doc">object_property_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of object properties (relations) in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="deprecated_object_property_count.html"><span class="doc std std-doc">deprecated_object_property_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="deprecated_object_property_count.html"><span class="std std-doc">deprecated_object_property_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of deprecated (obsoleted) object properties in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="non_deprecated_object_property_count.html"><span class="doc std std-doc">non_deprecated_object_property_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="non_deprecated_object_property_count.html"><span class="std std-doc">non_deprecated_object_property_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of non-deprecated (non-obsoleted) object properties in the ontology or…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="datatype_property_count.html"><span class="doc std std-doc">datatype_property_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="datatype_property_count.html"><span class="std std-doc">datatype_property_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of datatype properties in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="annotation_property_count.html"><span class="doc std std-doc">annotation_property_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="annotation_property_count.html"><span class="std std-doc">annotation_property_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of annotation properties (metadata properties) in the ontology or subs…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="individual_count.html"><span class="doc std std-doc">individual_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="individual_count.html"><span class="std std-doc">individual_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of individuals (named and anonymous) in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="named_individual_count.html"><span class="doc std std-doc">named_individual_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="named_individual_count.html"><span class="std std-doc">named_individual_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of named individuals in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="anonymous_individual_count.html"><span class="doc std std-doc">anonymous_individual_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="anonymous_individual_count.html"><span class="std std-doc">anonymous_individual_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of anonymous individuals in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="untyped_entity_count.html"><span class="doc std std-doc">untyped_entity_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="untyped_entity_count.html"><span class="std std-doc">untyped_entity_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of entities whose type could not be determined in the ontology or subs…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subset_count.html"><span class="doc std std-doc">subset_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="subset_count.html"><span class="std std-doc">subset_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of distinct subsets (slims, value sets) in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="description_logic_profile.html"><span class="doc std std-doc">description_logic_profile</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="description_logic_profile.html"><span class="std std-doc">description_logic_profile</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>Description logic profile (e</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="owl_axiom_count.html"><span class="doc std std-doc">owl_axiom_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="owl_axiom_count.html"><span class="std std-doc">owl_axiom_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of OWL axioms in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="rdf_triple_count.html"><span class="doc std std-doc">rdf_triple_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="rdf_triple_count.html"><span class="std std-doc">rdf_triple_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of RDF triples in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="subclass_of_axiom_count.html"><span class="doc std std-doc">subclass_of_axiom_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="subclass_of_axiom_count.html"><span class="std std-doc">subclass_of_axiom_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of subclass axioms in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="equivalent_classes_axiom_count.html"><span class="doc std std-doc">equivalent_classes_axiom_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="equivalent_classes_axiom_count.html"><span class="std std-doc">equivalent_classes_axiom_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of equivalent classes axioms in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="edge_count_by_predicate.html"><span class="doc std std-doc">edge_count_by_predicate</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="doc std std-doc">FacetedCount</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="edge_count_by_predicate.html"><span class="std std-doc">edge_count_by_predicate</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="std std-doc">FacetedCount</span></a></p></td>
 <td><p>Number of edges grouped by predicate in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="entailed_edge_count_by_predicate.html"><span class="doc std std-doc">entailed_edge_count_by_predicate</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="doc std std-doc">FacetedCount</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="entailed_edge_count_by_predicate.html"><span class="std std-doc">entailed_edge_count_by_predicate</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="std std-doc">FacetedCount</span></a></p></td>
 <td><p>Number of entailed (includes indirect) edges grouped by predicate in the onto…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="distinct_synonym_count.html"><span class="doc std std-doc">distinct_synonym_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="distinct_synonym_count.html"><span class="std std-doc">distinct_synonym_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of distinct synonym strings in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="synonym_statement_count.html"><span class="doc std std-doc">synonym_statement_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="synonym_statement_count.html"><span class="std std-doc">synonym_statement_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of synonym statements (assertions) in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="synonym_statement_count_by_predicate.html"><span class="doc std std-doc">synonym_statement_count_by_predicate</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="doc std std-doc">FacetedCount</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="synonym_statement_count_by_predicate.html"><span class="std std-doc">synonym_statement_count_by_predicate</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="std std-doc">FacetedCount</span></a></p></td>
 <td><p>Number of synonym statements (assertions) grouped by predicate (scope) in the…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_count_by_subset.html"><span class="doc std std-doc">class_count_by_subset</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="doc std std-doc">FacetedCount</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_count_by_subset.html"><span class="std std-doc">class_count_by_subset</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="std std-doc">FacetedCount</span></a></p></td>
 <td><p>Number of classes grouped by subset (slim, value set) in the ontology or subs…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_count_by_category.html"><span class="doc std std-doc">class_count_by_category</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="doc std std-doc">FacetedCount</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_count_by_category.html"><span class="std std-doc">class_count_by_category</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="std std-doc">FacetedCount</span></a></p></td>
 <td><p>Number of classes grouped by category in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mapping_count.html"><span class="doc std std-doc">mapping_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mapping_count.html"><span class="std std-doc">mapping_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of mappings (including xrefs) in the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mapping_statement_count_by_predicate.html"><span class="doc std std-doc">mapping_statement_count_by_predicate</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="doc std std-doc">FacetedCount</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mapping_statement_count_by_predicate.html"><span class="std std-doc">mapping_statement_count_by_predicate</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="std std-doc">FacetedCount</span></a></p></td>
 <td><p>Number of mappings grouped by predicate (e</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="mapping_statement_count_by_object_source.html"><span class="doc std std-doc">mapping_statement_count_by_object_source</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="doc std std-doc">FacetedCount</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mapping_statement_count_by_object_source.html"><span class="std std-doc">mapping_statement_count_by_object_source</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="std std-doc">FacetedCount</span></a></p></td>
 <td><p>Number of mappings grouped by object_source (prefix of external vocabulary) i…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="mapping_statement_count_subject_by_object_source.html"><span class="doc std std-doc">mapping_statement_count_subject_by_object_source</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="doc std std-doc">FacetedCount</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="mapping_statement_count_subject_by_object_source.html"><span class="std std-doc">mapping_statement_count_subject_by_object_source</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="FacetedCount.html"><span class="std std-doc">FacetedCount</span></a></p></td>
 <td><p>Number of distinct subject entities grouped by object_source (prefix of exter…</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ontology_count.html"><span class="doc std std-doc">ontology_count</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ontology_count.html"><span class="std std-doc">ontology_count</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="Integer.html"><span class="std std-doc">Integer</span></a></p></td>
 <td><p>Number of ontologies (including imports) for the ontology or subset</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="contributor_summary.html"><span class="doc std std-doc">contributor_summary</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="ContributorStatistics.html"><span class="doc std std-doc">ContributorStatistics</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="contributor_summary.html"><span class="std std-doc">contributor_summary</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="ContributorStatistics.html"><span class="std std-doc">ContributorStatistics</span></a></p></td>
 <td><p></p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="change_summary.html"><span class="doc std std-doc">change_summary</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="ChangeTypeStatistic.html"><span class="doc std std-doc">ChangeTypeStatistic</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="change_summary.html"><span class="std std-doc">change_summary</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="ChangeTypeStatistic.html"><span class="std std-doc">ChangeTypeStatistic</span></a></p></td>
 <td><p>Summary of changes between two versions of an ontology</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="doc std std-doc">id</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference external" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
+<td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>Unique handle for this report</p></td>
-<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="doc std std-doc">SummaryStatisticsReport</span></a></p></td>
+<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="std std-doc">SummaryStatisticsReport</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ontologies.html"><span class="doc std std-doc">ontologies</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="Ontology.html"><span class="doc std std-doc">Ontology</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ontologies.html"><span class="std std-doc">ontologies</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="Ontology.html"><span class="std std-doc">Ontology</span></a></p></td>
 <td><p>Ontology for which the statistics are computed</p></td>
-<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="doc std std-doc">SummaryStatisticsReport</span></a></p></td>
+<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="std std-doc">SummaryStatisticsReport</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compared_with.html"><span class="doc std std-doc">compared_with</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="Ontology.html"><span class="doc std std-doc">Ontology</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compared_with.html"><span class="std std-doc">compared_with</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="Ontology.html"><span class="std std-doc">Ontology</span></a></p></td>
 <td><p>For diffs, the ontologies being compared against</p></td>
-<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="doc std std-doc">SummaryStatisticsReport</span></a></p></td>
+<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="std std-doc">SummaryStatisticsReport</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="was_generated_by.html"><span class="doc std std-doc">was_generated_by</span></a></p></td>
-<td><p>0..1 <br/> <a class="reference internal" href="SummaryStatisticsCalculationActivity.html"><span class="doc std std-doc">SummaryStatisticsCalculationActivity</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="was_generated_by.html"><span class="std std-doc">was_generated_by</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="SummaryStatisticsCalculationActivity.html"><span class="std std-doc">SummaryStatisticsCalculationActivity</span></a></p></td>
 <td><p>The process that generated the report</p></td>
-<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="doc std std-doc">SummaryStatisticsReport</span></a></p></td>
+<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="std std-doc">SummaryStatisticsReport</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="agents.html"><span class="doc std std-doc">agents</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="Agent.html"><span class="doc std std-doc">Agent</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="agents.html"><span class="std std-doc">agents</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="Agent.html"><span class="std std-doc">Agent</span></a></p></td>
 <td><p>Agents that contributed to the report</p></td>
-<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="doc std std-doc">SummaryStatisticsReport</span></a></p></td>
+<td><p><a class="reference internal" href="SummaryStatisticsReport.html"><span class="std std-doc">SummaryStatisticsReport</span></a></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="usages">
-<h2>Usages<a class="headerlink" href="#usages" title="Permalink to this headline"></a></h2>
-<table class="colwidths-auto docutils align-default">
+<h2>Usages<a class="headerlink" href="#usages" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>used by</p></th>
 <th class="head"><p>used in</p></th>
@@ -384,26 +457,26 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="GroupedStatistics.html"><span class="doc std std-doc">GroupedStatistics</span></a></p></td>
-<td><p><a class="reference internal" href="partitions.html"><span class="doc std std-doc">partitions</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="GroupedStatistics.html"><span class="std std-doc">GroupedStatistics</span></a></p></td>
+<td><p><a class="reference internal" href="partitions.html"><span class="std std-doc">partitions</span></a></p></td>
 <td><p>range</p></td>
-<td><p><a class="reference internal" href="#"><span class="doc std std-doc">UngroupedStatistics</span></a></p></td>
+<td><p><a class="reference internal" href="#"><span class="std std-doc">UngroupedStatistics</span></a></p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="identifier-and-mapping-information">
-<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permalink to this headline"></a></h2>
+<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Permalink to this heading"></a></h2>
 <section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Permalink to this headline"></a></h3>
+<h3>Schema Source<a class="headerlink" href="#schema-source" title="Permalink to this heading"></a></h3>
 <ul class="simple">
-<li><p>from schema: https://w3id.org/oaklib/summary_statistics</p></li>
+<li><p>from schema: https://w3id.org/oak/summary_statistics</p></li>
 </ul>
 </section>
 </section>
 <section id="mappings">
-<h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline"></a></h2>
-<table class="colwidths-auto docutils align-default">
+<h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Mapping Type</p></th>
 <th class="head"><p>Mapped Value</p></th>
@@ -420,16 +493,15 @@
 </table>
 </section>
 <section id="linkml-source">
-<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this headline"></a></h2>
+<h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Permalink to this heading"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <section id="direct">
-<h3>Direct<a class="headerlink" href="#direct" title="Permalink to this headline"></a></h3>
+<h3>Direct<a class="headerlink" href="#direct" title="Permalink to this heading"></a></h3>
 <details>
 ```yaml
 name: UngroupedStatistics
 description: A summary statistics report object
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 is_a: SummaryStatisticsReport
 attributes:
   class_count:
@@ -439,7 +511,7 @@ attributes:
         tag: filter
         value: Class
     description: Number of classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -447,7 +519,7 @@ attributes:
   anonymous_class_expression_count:
     name: anonymous_class_expression_count
     description: Number of anonymous class expressions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -459,7 +531,7 @@ attributes:
         tag: filter
         value: Class, Unsatisfiable
     description: Number of unsatisfiable classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -471,7 +543,7 @@ attributes:
         tag: filter
         value: Class, Deprecated
     description: Number of deprecated (obsoleted) classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -484,7 +556,7 @@ attributes:
         value: Class, NotDeprecated
     description: Number of non-deprecated (non-obsoleted) classes in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -497,7 +569,7 @@ attributes:
         value: Class, Deprecated, Merged
     description: Number of merged classes (obsoletions with merge reason) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -509,7 +581,7 @@ attributes:
         tag: filter
         value: Class, HasTextDefinition
     description: Number of classes with text definitions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -521,7 +593,7 @@ attributes:
         tag: filter
         value: Class, NotHasTextDefinition
     description: Number of classes without text definitions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -529,7 +601,7 @@ attributes:
   property_count:
     name: property_count
     description: Number of properties in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -541,7 +613,7 @@ attributes:
         tag: filter
         value: ObjectProperty
     description: Number of object properties (relations) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -554,7 +626,7 @@ attributes:
         value: ObjectProperty, Deprecated
     description: Number of deprecated (obsoleted) object properties in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -567,7 +639,7 @@ attributes:
         value: ObjectProperty, NotDeprecated
     description: Number of non-deprecated (non-obsoleted) object properties in the
       ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -579,7 +651,7 @@ attributes:
         tag: filter
         value: DatatypeProperty
     description: Number of datatype properties in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -592,7 +664,7 @@ attributes:
         value: AnnotationProperty
     description: Number of annotation properties (metadata properties) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -604,7 +676,7 @@ attributes:
         tag: filter
         value: Individual
     description: Number of individuals (named and anonymous) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: individual_statistic_group
@@ -616,7 +688,7 @@ attributes:
         tag: filter
         value: NamedIndividual
     description: Number of named individuals in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: individual_statistic_group
@@ -628,7 +700,7 @@ attributes:
         tag: filter
         value: AnonymousIndividual
     description: Number of anonymous individuals in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: individual_statistic_group
@@ -638,7 +710,7 @@ attributes:
     name: untyped_entity_count
     description: Number of entities whose type could not be determined in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     range: integer
@@ -646,7 +718,7 @@ attributes:
     name: subset_count
     description: Number of distinct subsets (slims, value sets) in the ontology or
       subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     range: integer
@@ -654,7 +726,7 @@ attributes:
     name: description_logic_profile
     description: Description logic profile (e.g. OWL-EL, OWL-DL) of the ontology or
       subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_group: owl_statistic_group
     range: string
@@ -665,7 +737,7 @@ attributes:
         tag: filter
         value: Axiom
     description: Number of OWL axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: owl_statistic_group
@@ -673,7 +745,7 @@ attributes:
   rdf_triple_count:
     name: rdf_triple_count
     description: Number of RDF triples in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: owl_statistic_group
@@ -681,7 +753,7 @@ attributes:
   subclass_of_axiom_count:
     name: subclass_of_axiom_count
     description: Number of subclass axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: owl_statistic_group
@@ -689,7 +761,7 @@ attributes:
   equivalent_classes_axiom_count:
     name: equivalent_classes_axiom_count
     description: Number of equivalent classes axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: owl_statistic_group
@@ -704,7 +776,7 @@ attributes:
         tag: facet
         value: Predicate
     description: Number of edges grouped by predicate in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -721,7 +793,7 @@ attributes:
         value: Predicate
     description: Number of entailed (includes indirect) edges grouped by predicate
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -737,7 +809,7 @@ attributes:
         tag: distinct
         value: Value
     description: Number of distinct synonym strings in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: metadata_statistic_group
@@ -749,7 +821,7 @@ attributes:
         tag: filter
         value: Synonym
     description: Number of synonym statements (assertions) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: metadata_statistic_group
@@ -765,7 +837,7 @@ attributes:
         value: Predicate
     description: Number of synonym statements (assertions) grouped by predicate (scope)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -782,7 +854,7 @@ attributes:
         value: Predicate
     description: Number of classes grouped by subset (slim, value set) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -798,7 +870,7 @@ attributes:
         tag: facet
         value: Category
     description: Number of classes grouped by category in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -811,7 +883,7 @@ attributes:
         tag: filter
         value: Mapping
     description: Number of mappings (including xrefs) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: metadata_statistic_group
@@ -827,7 +899,7 @@ attributes:
         value: Predicate
     description: Number of mappings grouped by predicate (e.g. xref, skos predicate)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -844,7 +916,7 @@ attributes:
         value: ObjectSource
     description: Number of mappings grouped by object_source (prefix of external vocabulary)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -866,7 +938,7 @@ attributes:
       of external vocabulary) in the ontology or subset
     comments:
     - for exact or one-to-one mappings this should generally be the same as mapping_statement_count_by_object_source
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -879,13 +951,13 @@ attributes:
         tag: filter
         value: Ontology
     description: Number of ontologies (including imports) for the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     range: integer
   contributor_summary:
     name: contributor_summary
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     range: ContributorStatistics
@@ -893,7 +965,7 @@ attributes:
   change_summary:
     name: change_summary
     description: Summary of changes between two versions of an ontology
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     range: ChangeTypeStatistic
@@ -906,8 +978,7 @@ attributes:
 ```yaml
 name: UngroupedStatistics
 description: A summary statistics report object
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 is_a: SummaryStatisticsReport
 attributes:
   class_count:
@@ -917,7 +988,7 @@ attributes:
         tag: filter
         value: Class
     description: Number of classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: class_count
@@ -929,7 +1000,7 @@ attributes:
   anonymous_class_expression_count:
     name: anonymous_class_expression_count
     description: Number of anonymous class expressions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: anonymous_class_expression_count
@@ -945,7 +1016,7 @@ attributes:
         tag: filter
         value: Class, Unsatisfiable
     description: Number of unsatisfiable classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: unsatisfiable_class_count
@@ -961,7 +1032,7 @@ attributes:
         tag: filter
         value: Class, Deprecated
     description: Number of deprecated (obsoleted) classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: deprecated_class_count
@@ -978,7 +1049,7 @@ attributes:
         value: Class, NotDeprecated
     description: Number of non-deprecated (non-obsoleted) classes in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: non_deprecated_class_count
@@ -995,7 +1066,7 @@ attributes:
         value: Class, Deprecated, Merged
     description: Number of merged classes (obsoletions with merge reason) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: merged_class_count
@@ -1011,7 +1082,7 @@ attributes:
         tag: filter
         value: Class, HasTextDefinition
     description: Number of classes with text definitions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: class_count_with_text_definitions
@@ -1027,7 +1098,7 @@ attributes:
         tag: filter
         value: Class, NotHasTextDefinition
     description: Number of classes without text definitions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: class_count_without_text_definitions
@@ -1039,7 +1110,7 @@ attributes:
   property_count:
     name: property_count
     description: Number of properties in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: property_count
@@ -1055,7 +1126,7 @@ attributes:
         tag: filter
         value: ObjectProperty
     description: Number of object properties (relations) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: object_property_count
@@ -1072,7 +1143,7 @@ attributes:
         value: ObjectProperty, Deprecated
     description: Number of deprecated (obsoleted) object properties in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: deprecated_object_property_count
@@ -1089,7 +1160,7 @@ attributes:
         value: ObjectProperty, NotDeprecated
     description: Number of non-deprecated (non-obsoleted) object properties in the
       ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: non_deprecated_object_property_count
@@ -1105,7 +1176,7 @@ attributes:
         tag: filter
         value: DatatypeProperty
     description: Number of datatype properties in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: datatype_property_count
@@ -1122,7 +1193,7 @@ attributes:
         value: AnnotationProperty
     description: Number of annotation properties (metadata properties) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: annotation_property_count
@@ -1138,7 +1209,7 @@ attributes:
         tag: filter
         value: Individual
     description: Number of individuals (named and anonymous) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: individual_count
@@ -1154,7 +1225,7 @@ attributes:
         tag: filter
         value: NamedIndividual
     description: Number of named individuals in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: named_individual_count
@@ -1170,7 +1241,7 @@ attributes:
         tag: filter
         value: AnonymousIndividual
     description: Number of anonymous individuals in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: anonymous_individual_count
@@ -1184,7 +1255,7 @@ attributes:
     name: untyped_entity_count
     description: Number of entities whose type could not be determined in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: untyped_entity_count
@@ -1196,7 +1267,7 @@ attributes:
     name: subset_count
     description: Number of distinct subsets (slims, value sets) in the ontology or
       subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: subset_count
@@ -1208,7 +1279,7 @@ attributes:
     name: description_logic_profile
     description: Description logic profile (e.g. OWL-EL, OWL-DL) of the ontology or
       subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     alias: description_logic_profile
     owner: UngroupedStatistics
@@ -1223,7 +1294,7 @@ attributes:
         tag: filter
         value: Axiom
     description: Number of OWL axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: owl_axiom_count
@@ -1235,7 +1306,7 @@ attributes:
   rdf_triple_count:
     name: rdf_triple_count
     description: Number of RDF triples in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: rdf_triple_count
@@ -1247,7 +1318,7 @@ attributes:
   subclass_of_axiom_count:
     name: subclass_of_axiom_count
     description: Number of subclass axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: subclass_of_axiom_count
@@ -1259,7 +1330,7 @@ attributes:
   equivalent_classes_axiom_count:
     name: equivalent_classes_axiom_count
     description: Number of equivalent classes axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: equivalent_classes_axiom_count
@@ -1278,7 +1349,7 @@ attributes:
         tag: facet
         value: Predicate
     description: Number of edges grouped by predicate in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: edge_count_by_predicate
@@ -1299,7 +1370,7 @@ attributes:
         value: Predicate
     description: Number of entailed (includes indirect) edges grouped by predicate
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: entailed_edge_count_by_predicate
@@ -1319,7 +1390,7 @@ attributes:
         tag: distinct
         value: Value
     description: Number of distinct synonym strings in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: distinct_synonym_count
@@ -1335,7 +1406,7 @@ attributes:
         tag: filter
         value: Synonym
     description: Number of synonym statements (assertions) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: synonym_statement_count
@@ -1355,7 +1426,7 @@ attributes:
         value: Predicate
     description: Number of synonym statements (assertions) grouped by predicate (scope)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: synonym_statement_count_by_predicate
@@ -1376,7 +1447,7 @@ attributes:
         value: Predicate
     description: Number of classes grouped by subset (slim, value set) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: class_count_by_subset
@@ -1396,7 +1467,7 @@ attributes:
         tag: facet
         value: Category
     description: Number of classes grouped by category in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: class_count_by_category
@@ -1413,7 +1484,7 @@ attributes:
         tag: filter
         value: Mapping
     description: Number of mappings (including xrefs) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: mapping_count
@@ -1433,7 +1504,7 @@ attributes:
         value: Predicate
     description: Number of mappings grouped by predicate (e.g. xref, skos predicate)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: mapping_statement_count_by_predicate
@@ -1454,7 +1525,7 @@ attributes:
         value: ObjectSource
     description: Number of mappings grouped by object_source (prefix of external vocabulary)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: mapping_statement_count_by_object_source
@@ -1480,7 +1551,7 @@ attributes:
       of external vocabulary) in the ontology or subset
     comments:
     - for exact or one-to-one mappings this should generally be the same as mapping_statement_count_by_object_source
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: mapping_statement_count_subject_by_object_source
@@ -1497,7 +1568,7 @@ attributes:
         tag: filter
         value: Ontology
     description: Number of ontologies (including imports) for the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: ontology_count
@@ -1507,7 +1578,7 @@ attributes:
     range: integer
   contributor_summary:
     name: contributor_summary
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: contributor_summary
@@ -1519,7 +1590,7 @@ attributes:
   change_summary:
     name: change_summary
     description: Summary of changes between two versions of an ontology
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: change_summary
@@ -1531,7 +1602,7 @@ attributes:
   id:
     name: id
     description: Unique handle for this report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     alias: id
     owner: UngroupedStatistics
@@ -1545,7 +1616,7 @@ attributes:
   ontologies:
     name: ontologies
     description: Ontology for which the statistics are computed
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: ontologies
@@ -1558,7 +1629,7 @@ attributes:
   compared_with:
     name: compared_with
     description: For diffs, the ontologies being compared against
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: compared_with
@@ -1571,7 +1642,7 @@ attributes:
   was_generated_by:
     name: was_generated_by
     description: The process that generated the report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     alias: was_generated_by
     owner: UngroupedStatistics
@@ -1581,7 +1652,7 @@ attributes:
   agents:
     name: agents
     description: Agents that contributed to the report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: agents

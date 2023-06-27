@@ -6,15 +6,19 @@
   <title>oaklib.interfaces.semsim_interface &mdash; oaklib  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
         <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -26,11 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> oaklib
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            oaklib
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -41,19 +49,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../intro/index.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">The OAK Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../interfaces/index.html">Interfaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../implementations/index.html">Implementations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../packages/index.html">OAK Library Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cli.html">Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../selectors.html">Ontology Implementation Selectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../datamodels/index.html">Datamodels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../converters/index.html">Converters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../utilities.html">Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../howtos/index.html">How-To Guides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../notebooks.html">Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../concepts.html">Ontology Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notebooks.html">Jupyter Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
 </ul>
 
         </div>
@@ -69,7 +71,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
       <li class="breadcrumb-item active">oaklib.interfaces.semsim_interface</li>
       <li class="wy-breadcrumbs-aside">
@@ -104,13 +106,13 @@
 <span class="kn">from</span> <span class="nn">oaklib.utilities.semsim.similarity_utils</span> <span class="kn">import</span> <span class="n">setwise_jaccard_similarity</span>
 
 
-<div class="viewcode-block" id="SemanticSimilarityInterface"><a class="viewcode-back" href="../../../interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface">[docs]</a><span class="k">class</span> <span class="nc">SemanticSimilarityInterface</span><span class="p">(</span><span class="n">BasicOntologyInterface</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+<div class="viewcode-block" id="SemanticSimilarityInterface"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface">[docs]</a><span class="k">class</span> <span class="nc">SemanticSimilarityInterface</span><span class="p">(</span><span class="n">BasicOntologyInterface</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An interface for calculating similarity measures between pairs of terms or</span>
 <span class="sd">    collections of terms</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="SemanticSimilarityInterface.most_recent_common_ancestors"><a class="viewcode-back" href="../../../interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.most_recent_common_ancestors">[docs]</a>    <span class="k">def</span> <span class="nf">most_recent_common_ancestors</span><span class="p">(</span>
+<div class="viewcode-block" id="SemanticSimilarityInterface.most_recent_common_ancestors"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.most_recent_common_ancestors">[docs]</a>    <span class="k">def</span> <span class="nf">most_recent_common_ancestors</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">subject</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span>
         <span class="nb">object</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span>
@@ -148,7 +150,43 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="SemanticSimilarityInterface.multiset_most_recent_common_ancestors"><a class="viewcode-back" href="../../../interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.multiset_most_recent_common_ancestors">[docs]</a>    <span class="k">def</span> <span class="nf">multiset_most_recent_common_ancestors</span><span class="p">(</span>
+<div class="viewcode-block" id="SemanticSimilarityInterface.setwise_most_recent_common_ancestors"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.setwise_most_recent_common_ancestors">[docs]</a>    <span class="k">def</span> <span class="nf">setwise_most_recent_common_ancestors</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">subjects</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CURIE</span><span class="p">],</span>
+        <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">include_owl_thing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">CURIE</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Most recent common ancestors (MRCAs) for a set of entities</span>
+
+<span class="sd">        The MRCAs are the set of Common Ancestors (CAs) that are not themselves proper</span>
+<span class="sd">        ancestors of another CA</span>
+
+<span class="sd">        :param subjects:</span>
+<span class="sd">        :param predicates:</span>
+<span class="sd">        :param include_owl_thing:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">OboGraphInterface</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="n">ancs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+            <span class="n">ancs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ancestors</span><span class="p">([</span><span class="n">s</span><span class="p">],</span> <span class="n">predicates</span><span class="p">)))</span>
+        <span class="n">common</span> <span class="o">=</span> <span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="o">*</span><span class="n">ancs</span><span class="p">)</span>
+        <span class="n">ancs_of_common</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ca</span> <span class="ow">in</span> <span class="n">common</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">caa</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ancestors</span><span class="p">(</span><span class="n">ca</span><span class="p">,</span> <span class="n">predicates</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">caa</span> <span class="o">!=</span> <span class="n">ca</span><span class="p">:</span>
+                    <span class="n">ancs_of_common</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">caa</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">common</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">a</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ancs_of_common</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">a</span>
+                <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">include_owl_thing</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">OWL_THING</span></div>
+
+<div class="viewcode-block" id="SemanticSimilarityInterface.multiset_most_recent_common_ancestors"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.multiset_most_recent_common_ancestors">[docs]</a>    <span class="k">def</span> <span class="nf">multiset_most_recent_common_ancestors</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">subjects</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CURIE</span><span class="p">],</span> <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">asymmetric</span><span class="o">=</span><span class="kc">True</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">CURIE</span><span class="p">,</span> <span class="n">CURIE</span><span class="p">,</span> <span class="n">CURIE</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -174,7 +212,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="SemanticSimilarityInterface.common_ancestors"><a class="viewcode-back" href="../../../interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.common_ancestors">[docs]</a>    <span class="k">def</span> <span class="nf">common_ancestors</span><span class="p">(</span>
+<div class="viewcode-block" id="SemanticSimilarityInterface.common_ancestors"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.common_ancestors">[docs]</a>    <span class="k">def</span> <span class="nf">common_ancestors</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">subject</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span>
         <span class="nb">object</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span>
@@ -217,7 +255,7 @@
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">CURIE</span><span class="p">]:</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 
-<div class="viewcode-block" id="SemanticSimilarityInterface.get_information_content"><a class="viewcode-back" href="../../../interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.get_information_content">[docs]</a>    <span class="k">def</span> <span class="nf">get_information_content</span><span class="p">(</span>
+<div class="viewcode-block" id="SemanticSimilarityInterface.get_information_content"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.get_information_content">[docs]</a>    <span class="k">def</span> <span class="nf">get_information_content</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">curie</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span> <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -235,7 +273,7 @@
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Multiple values for IC for </span><span class="si">{</span><span class="n">curie</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">pairs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">pairs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="SemanticSimilarityInterface.information_content_scores"><a class="viewcode-back" href="../../../interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.information_content_scores">[docs]</a>    <span class="k">def</span> <span class="nf">information_content_scores</span><span class="p">(</span>
+<div class="viewcode-block" id="SemanticSimilarityInterface.information_content_scores"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.information_content_scores">[docs]</a>    <span class="k">def</span> <span class="nf">information_content_scores</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">curies</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">CURIE</span><span class="p">],</span>
         <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -260,14 +298,16 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="SemanticSimilarityInterface.pairwise_similarity"><a class="viewcode-back" href="../../../interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.pairwise_similarity">[docs]</a>    <span class="k">def</span> <span class="nf">pairwise_similarity</span><span class="p">(</span>
+<div class="viewcode-block" id="SemanticSimilarityInterface.pairwise_similarity"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.pairwise_similarity">[docs]</a>    <span class="k">def</span> <span class="nf">pairwise_similarity</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">subject</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span>
         <span class="nb">object</span><span class="p">:</span> <span class="n">CURIE</span><span class="p">,</span>
         <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">subject_ancestors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">object_ancestors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TermPairwiseSimilarity</span><span class="p">:</span>
+        <span class="n">min_jaccard_similarity</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">min_ancestor_information_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TermPairwiseSimilarity</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Pairwise similarity between a pair of ontology terms</span>
 
@@ -276,9 +316,19 @@
 <span class="sd">        :param predicates:</span>
 <span class="sd">        :param subject_ancestors: optional pre-generated ancestor list</span>
 <span class="sd">        :param object_ancestors: optional pre-generated ancestor list</span>
+<span class="sd">        :param min_jaccard_similarity: minimum Jaccard similarity for a pair to be considered</span>
+<span class="sd">        :param min_ancestor_information_content: minimum IC for a common ancestor to be considered</span>
 <span class="sd">        :return:</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Calculating pairwise similarity for </span><span class="si">{</span><span class="n">subject</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="nb">object</span><span class="si">}</span><span class="s2"> over </span><span class="si">{</span><span class="n">predicates</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Calculating pairwise similarity for </span><span class="si">{</span><span class="n">subject</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="nb">object</span><span class="si">}</span><span class="s2"> over </span><span class="si">{</span><span class="n">predicates</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">subject_ancestors</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">OboGraphInterface</span><span class="p">):</span>
+            <span class="n">subject_ancestors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ancestors</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">predicates</span><span class="o">=</span><span class="n">predicates</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">object_ancestors</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">OboGraphInterface</span><span class="p">):</span>
+            <span class="n">object_ancestors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ancestors</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">predicates</span><span class="o">=</span><span class="n">predicates</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">subject_ancestors</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_ancestors</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">jaccard_similarity</span> <span class="o">=</span> <span class="n">setwise_jaccard_similarity</span><span class="p">(</span><span class="n">subject_ancestors</span><span class="p">,</span> <span class="n">object_ancestors</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">min_jaccard_similarity</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">jaccard_similarity</span> <span class="o">&lt;</span> <span class="n">min_jaccard_similarity</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
         <span class="n">cas</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">common_ancestors</span><span class="p">(</span>
                 <span class="n">subject</span><span class="p">,</span>
@@ -302,20 +352,19 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">max_ic</span> <span class="o">=</span> <span class="mf">0.0</span>
             <span class="n">anc</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">min_ancestor_information_content</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">max_ic</span> <span class="o">&lt;</span> <span class="n">min_ancestor_information_content</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MRCA = </span><span class="si">{</span><span class="n">anc</span><span class="si">}</span><span class="s2"> with </span><span class="si">{</span><span class="n">max_ic</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">sim</span> <span class="o">=</span> <span class="n">TermPairwiseSimilarity</span><span class="p">(</span>
             <span class="n">subject_id</span><span class="o">=</span><span class="n">subject</span><span class="p">,</span>
             <span class="n">object_id</span><span class="o">=</span><span class="nb">object</span><span class="p">,</span>
             <span class="n">ancestor_id</span><span class="o">=</span><span class="n">anc</span><span class="p">,</span>
             <span class="n">ancestor_information_content</span><span class="o">=</span><span class="n">max_ic</span><span class="p">,</span>
+            <span class="n">jaccard_similarity</span><span class="o">=</span><span class="n">jaccard_similarity</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">sim</span><span class="o">.</span><span class="n">ancestor_information_content</span> <span class="o">=</span> <span class="n">max_ic</span>
-        <span class="k">if</span> <span class="n">subject_ancestors</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">OboGraphInterface</span><span class="p">):</span>
-            <span class="n">subject_ancestors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ancestors</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">predicates</span><span class="o">=</span><span class="n">predicates</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">object_ancestors</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">OboGraphInterface</span><span class="p">):</span>
-            <span class="n">object_ancestors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ancestors</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">predicates</span><span class="o">=</span><span class="n">predicates</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">subject_ancestors</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_ancestors</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">sim</span><span class="o">.</span><span class="n">jaccard_similarity</span> <span class="o">=</span> <span class="n">setwise_jaccard_similarity</span><span class="p">(</span><span class="n">subject_ancestors</span><span class="p">,</span> <span class="n">object_ancestors</span><span class="p">)</span>
+
         <span class="k">if</span> <span class="n">sim</span><span class="o">.</span><span class="n">ancestor_information_content</span> <span class="ow">and</span> <span class="n">sim</span><span class="o">.</span><span class="n">jaccard_similarity</span><span class="p">:</span>
             <span class="n">sim</span><span class="o">.</span><span class="n">phenodigm_score</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span>
                 <span class="n">sim</span><span class="o">.</span><span class="n">jaccard_similarity</span> <span class="o">*</span> <span class="n">sim</span><span class="o">.</span><span class="n">ancestor_information_content</span>
@@ -387,11 +436,13 @@
 
         <span class="k">return</span> <span class="n">sim</span>
 
-<div class="viewcode-block" id="SemanticSimilarityInterface.all_by_all_pairwise_similarity"><a class="viewcode-back" href="../../../interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.all_by_all_pairwise_similarity">[docs]</a>    <span class="k">def</span> <span class="nf">all_by_all_pairwise_similarity</span><span class="p">(</span>
+<div class="viewcode-block" id="SemanticSimilarityInterface.all_by_all_pairwise_similarity"><a class="viewcode-back" href="../../../packages/interfaces/semantic-similarity.html#oaklib.interfaces.semsim_interface.SemanticSimilarityInterface.all_by_all_pairwise_similarity">[docs]</a>    <span class="k">def</span> <span class="nf">all_by_all_pairwise_similarity</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">subjects</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">CURIE</span><span class="p">],</span>
         <span class="n">objects</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">CURIE</span><span class="p">],</span>
         <span class="n">predicates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PRED_CURIE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">min_jaccard_similarity</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">min_ancestor_information_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">TermPairwiseSimilarity</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Compute similarity for all combinations of terms in subsets vs all terms in objects</span>
@@ -403,8 +454,17 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">objects</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">objects</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Computing pairwise similarity for </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">objects</span><span class="p">)</span><span class="si">}</span><span class="s2"> objects&quot;</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
-                <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">pairwise_similarity</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">predicates</span><span class="o">=</span><span class="n">predicates</span><span class="p">)</span></div></div>
+                <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pairwise_similarity</span><span class="p">(</span>
+                    <span class="n">s</span><span class="p">,</span>
+                    <span class="n">o</span><span class="p">,</span>
+                    <span class="n">predicates</span><span class="o">=</span><span class="n">predicates</span><span class="p">,</span>
+                    <span class="n">min_jaccard_similarity</span><span class="o">=</span><span class="n">min_jaccard_similarity</span><span class="p">,</span>
+                    <span class="n">min_ancestor_information_content</span><span class="o">=</span><span class="n">min_ancestor_information_content</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">val</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="n">val</span></div></div>
 </pre></div>
 
            </div>

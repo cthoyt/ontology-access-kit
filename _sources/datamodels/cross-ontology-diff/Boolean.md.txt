@@ -1,7 +1,10 @@
 # Type: Boolean
 
 
+
+
 _A binary (true or false) value_
+
 
 
 URI: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
@@ -30,7 +33,7 @@ URI: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/types
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 

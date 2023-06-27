@@ -11,9 +11,10 @@ URI: [summary_statistics:role_counts](https://w3id.org/oaklib/summary_statistics
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[ContributorStatistics](ContributorStatistics.md) | Statistics for a contributor
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[ContributorStatistics](ContributorStatistics.md) | Statistics for a contributor |  no  |
+
 
 
 
@@ -23,10 +24,8 @@ URI: [summary_statistics:role_counts](https://w3id.org/oaklib/summary_statistics
 ## Properties
 
 * Range: [FacetedCount](FacetedCount.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [summary_statistics:role_counts](https://w3id.org/oaklib/summary_statistics
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -53,7 +52,7 @@ URI: [summary_statistics:role_counts](https://w3id.org/oaklib/summary_statistics
 <details>
 ```yaml
 name: role_counts
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 multivalued: true
 alias: role_counts

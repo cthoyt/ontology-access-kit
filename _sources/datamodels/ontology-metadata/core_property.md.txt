@@ -1,5 +1,8 @@
 # Slot: core_property
+
+
 _abstract grouping of core properties_
+
 
 
 URI: [omoschema:core_property](http://purl.obolibrary.org/obo/omo/schema/core_property)
@@ -20,11 +23,10 @@ URI: [omoschema:core_property](http://purl.obolibrary.org/obo/omo/schema/core_pr
 
 
 
+
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 

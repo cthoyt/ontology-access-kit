@@ -1,8 +1,11 @@
 # Slot: groupings
+
+
 _all groupings_
 
 
-URI: [li:groupings](https://w3id.org/linkml/lexical_index/groupings)
+
+URI: [ontolexindex:groupings](https://w3id.org/oak/lexical-index/groupings)
 
 
 
@@ -13,9 +16,10 @@ URI: [li:groupings](https://w3id.org/linkml/lexical_index/groupings)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[LexicalIndex](LexicalIndex.md) | An index over an ontology keyed by lexical unit
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[LexicalIndex](LexicalIndex.md) | An index over an ontology keyed by lexical unit |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [li:groupings](https://w3id.org/linkml/lexical_index/groupings)
 ## Properties
 
 * Range: [LexicalGrouping](LexicalGrouping.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -45,7 +47,7 @@ URI: [li:groupings](https://w3id.org/linkml/lexical_index/groupings)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/lexical_index
+* from schema: https://w3id.org/oak/lexical-index
 
 
 
@@ -56,7 +58,7 @@ URI: [li:groupings](https://w3id.org/linkml/lexical_index/groupings)
 ```yaml
 name: groupings
 description: all groupings
-from_schema: https://w3id.org/linkml/lexical_index
+from_schema: https://w3id.org/oak/lexical-index
 rank: 1000
 multivalued: true
 alias: groupings

@@ -1,6 +1,6 @@
 # Slot: predicate_id
 
-URI: [mrules:predicate_id](https://w3id.org/linkml/mapping_rules_datamodel/predicate_id)
+URI: [mappingrules:predicate_id](https://w3id.org/oak/mapping-rules-datamodel/predicate_id)
 
 
 
@@ -11,9 +11,10 @@ URI: [mrules:predicate_id](https://w3id.org/linkml/mapping_rules_datamodel/predi
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Postcondition](Postcondition.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Postcondition](Postcondition.md) |  |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [mrules:predicate_id](https://w3id.org/linkml/mapping_rules_datamodel/predi
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -45,7 +44,7 @@ URI: [mrules:predicate_id](https://w3id.org/linkml/mapping_rules_datamodel/predi
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -58,7 +57,7 @@ name: predicate_id
 comments:
 - if the rule is invertible, then the predicate is inverted, e.g. skos broad becomes
   narrow
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: predicate_id
 owner: Postcondition

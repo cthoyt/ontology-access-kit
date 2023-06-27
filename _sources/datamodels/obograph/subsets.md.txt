@@ -1,5 +1,8 @@
 # Slot: subsets
+
+
 _A list of subsets to which this entity belongs_
+
 
 
 URI: [oio:inSubset](http://www.geneontology.org/formats/oboInOwl#inSubset)
@@ -13,9 +16,10 @@ URI: [oio:inSubset](http://www.geneontology.org/formats/oboInOwl#inSubset)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Meta](Meta.md) | A collection of annotations on an entity or ontology or axiom
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Meta](Meta.md) | A collection of annotations on an entity or ontology or edge or axiom |  no  |
+
 
 
 
@@ -24,11 +28,9 @@ URI: [oio:inSubset](http://www.geneontology.org/formats/oboInOwl#inSubset)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
+
 * Multivalued: True
-
-
-
 
 
 

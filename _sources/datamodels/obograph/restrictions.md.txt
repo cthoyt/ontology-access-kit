@@ -1,5 +1,8 @@
 # Slot: restrictions
-_The set of restrictions that are the differentia of the defined class_
+
+
+_The set of restrictions that are the differentiating features of the defined class_
+
 
 
 URI: [owl:someValuesFrom](http://www.w3.org/2002/07/owl#someValuesFrom)
@@ -13,9 +16,10 @@ URI: [owl:someValuesFrom](http://www.w3.org/2002/07/owl#someValuesFrom)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[LogicalDefinitionAxiom](LogicalDefinitionAxiom.md) | An axiom that defines a class in terms of a genus or set of genus classes and...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[LogicalDefinitionAxiom](LogicalDefinitionAxiom.md) | An axiom that defines a class in terms of a genus or set of genus classes and... |  no  |
+
 
 
 
@@ -25,12 +29,10 @@ URI: [owl:someValuesFrom](http://www.w3.org/2002/07/owl#someValuesFrom)
 ## Properties
 
 * Range: [ExistentialRestrictionExpression](ExistentialRestrictionExpression.md)
+
 * Multivalued: True
 
 * Recommended: True
-
-
-
 
 
 
@@ -70,7 +72,8 @@ URI: [owl:someValuesFrom](http://www.w3.org/2002/07/owl#someValuesFrom)
 <details>
 ```yaml
 name: restrictions
-description: The set of restrictions that are the differentia of the defined class
+description: The set of restrictions that are the differentiating features of the
+  defined class
 comments:
 - typically this will always be present.
 from_schema: https://github.com/geneontology/obographs

@@ -13,6 +13,7 @@ URI: [vm:NamedResource](https://w3id.org/linkml/validation-model/NamedResource)
       NamedResource <|-- Node
       
       NamedResource : id
+        
       
 ```
 
@@ -31,7 +32,7 @@ URI: [vm:NamedResource](https://w3id.org/linkml/validation-model/NamedResource)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
+| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) |  | direct |
 
 
 
@@ -79,7 +80,6 @@ URI: [vm:NamedResource](https://w3id.org/linkml/validation-model/NamedResource)
 ```yaml
 name: NamedResource
 from_schema: https://w3id.org/linkml/validation_results
-rank: 1000
 attributes:
   id:
     name: id
@@ -87,6 +87,7 @@ attributes:
     rank: 1000
     identifier: true
     range: uriorcurie
+    required: true
 
 ```
 </details>
@@ -97,7 +98,6 @@ attributes:
 ```yaml
 name: NamedResource
 from_schema: https://w3id.org/linkml/validation_results
-rank: 1000
 attributes:
   id:
     name: id

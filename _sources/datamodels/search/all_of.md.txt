@@ -1,6 +1,6 @@
 # Slot: all_of
 
-URI: [search:all_of](https://w3id.org/linkml/search_datamodel/all_of)
+URI: [ontosearch:all_of](https://w3id.org/oak/search-datamodel/all_of)
 
 
 
@@ -11,9 +11,10 @@ URI: [search:all_of](https://w3id.org/linkml/search_datamodel/all_of)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[ComplexQuery](ComplexQuery.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[ComplexQuery](ComplexQuery.md) |  |  no  |
+
 
 
 
@@ -23,10 +24,8 @@ URI: [search:all_of](https://w3id.org/linkml/search_datamodel/all_of)
 ## Properties
 
 * Range: [ComplexQuery](ComplexQuery.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [search:all_of](https://w3id.org/linkml/search_datamodel/all_of)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/search_datamodel
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 
@@ -53,7 +52,7 @@ URI: [search:all_of](https://w3id.org/linkml/search_datamodel/all_of)
 <details>
 ```yaml
 name: all_of
-from_schema: https://w3id.org/linkml/search_datamodel
+from_schema: https://w3id.org/oak/search-datamodel
 rank: 1000
 multivalued: true
 alias: all_of

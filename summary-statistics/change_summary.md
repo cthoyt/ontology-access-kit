@@ -1,5 +1,8 @@
 # Slot: change_summary
+
+
 _Summary of changes between two versions of an ontology_
+
 
 
 URI: [summary_statistics:change_summary](https://w3id.org/oaklib/summary_statistics.change_summary)
@@ -13,9 +16,10 @@ URI: [summary_statistics:change_summary](https://w3id.org/oaklib/summary_statist
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [summary_statistics:change_summary](https://w3id.org/oaklib/summary_statist
 ## Properties
 
 * Range: [ChangeTypeStatistic](ChangeTypeStatistic.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -45,7 +47,7 @@ URI: [summary_statistics:change_summary](https://w3id.org/oaklib/summary_statist
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -56,7 +58,7 @@ URI: [summary_statistics:change_summary](https://w3id.org/oaklib/summary_statist
 ```yaml
 name: change_summary
 description: Summary of changes between two versions of an ontology
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 multivalued: true
 alias: change_summary

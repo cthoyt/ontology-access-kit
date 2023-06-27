@@ -1,5 +1,8 @@
 # Class: Agent
+
+
 _An agent_
+
 
 
 
@@ -12,7 +15,9 @@ URI: [prov:Agent](http://www.w3.org/ns/prov#Agent)
  classDiagram
     class Agent
       Agent : id
+        
       Agent : label
+        
       
 ```
 
@@ -26,8 +31,8 @@ URI: [prov:Agent](http://www.w3.org/ns/prov#Agent)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [label](label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the label for the agent | direct |
+| [id](id.md) | 1..1 <br/> [String](String.md) | the unique identifier for the agent | direct |
+| [label](label.md) | 0..1 <br/> [String](String.md) | the label for the agent | direct |
 
 
 
@@ -59,7 +64,7 @@ URI: [prov:Agent](http://www.w3.org/ns/prov#Agent)
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -86,19 +91,19 @@ URI: [prov:Agent](http://www.w3.org/ns/prov#Agent)
 ```yaml
 name: Agent
 description: An agent
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   id:
     name: id
     description: the unique identifier for the agent
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     identifier: true
     range: string
+    required: true
   label:
     name: label
     description: the label for the agent
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: rdfs:label
     range: string
@@ -113,13 +118,12 @@ class_uri: prov:Agent
 ```yaml
 name: Agent
 description: An agent
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   id:
     name: id
     description: the unique identifier for the agent
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     identifier: true
     alias: id
     owner: Agent
@@ -129,10 +133,11 @@ attributes:
     - Agent
     - ContributorRole
     range: string
+    required: true
   label:
     name: label
     description: the label for the agent
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: rdfs:label
     alias: label

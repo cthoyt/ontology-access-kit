@@ -1,8 +1,11 @@
 # Slot: subject_mapping_predicate
+
+
 _The mapping predicate that holds between left_subject_id and right_subject_id_
 
 
-URI: [ann:subject_mapping_predicate](https://w3id.org/linkml/text_annotator/subject_mapping_predicate)
+
+URI: [xodiff:subject_mapping_predicate](https://w3id.org/oak/cross-ontology-diff/subject_mapping_predicate)
 
 
 
@@ -17,9 +20,10 @@ URI: [ann:subject_mapping_predicate](https://w3id.org/linkml/text_annotator/subj
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a... |  no  |
+
 
 
 
@@ -29,8 +33,6 @@ URI: [ann:subject_mapping_predicate](https://w3id.org/linkml/text_annotator/subj
 ## Properties
 
 * Range: [EntityReference](EntityReference.md)
-
-
 
 
 
@@ -47,7 +49,7 @@ URI: [ann:subject_mapping_predicate](https://w3id.org/linkml/text_annotator/subj
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 
@@ -58,7 +60,7 @@ URI: [ann:subject_mapping_predicate](https://w3id.org/linkml/text_annotator/subj
 ```yaml
 name: subject_mapping_predicate
 description: The mapping predicate that holds between left_subject_id and right_subject_id
-from_schema: https://w3id.org/linkml/cross_ontology_diff
+from_schema: https://w3id.org/oak/cross-ontology-diff
 rank: 1000
 mixins:
 - subject

@@ -1,7 +1,10 @@
 # Type: Double
 
 
+
+
 _A real number that conforms to the xsd:double specification_
+
 
 
 URI: [xsd:double](http://www.w3.org/2001/XMLSchema#double)
@@ -29,7 +32,7 @@ URI: [xsd:double](http://www.w3.org/2001/XMLSchema#double)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/types
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 

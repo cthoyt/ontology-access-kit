@@ -1,6 +1,6 @@
 # Slot: synonymized
 
-URI: [li:synonymized](https://w3id.org/linkml/lexical_index/synonymized)
+URI: [ontolexindex:synonymized](https://w3id.org/oak/lexical-index/synonymized)
 
 
 
@@ -11,9 +11,10 @@ URI: [li:synonymized](https://w3id.org/linkml/lexical_index/synonymized)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [li:synonymized](https://w3id.org/linkml/lexical_index/synonymized)
 
 ## Properties
 
-* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
-
-
+* Range: [Boolean](Boolean.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [li:synonymized](https://w3id.org/linkml/lexical_index/synonymized)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/lexical_index
+* from schema: https://w3id.org/oak/lexical-index
 
 
 
@@ -51,7 +50,7 @@ URI: [li:synonymized](https://w3id.org/linkml/lexical_index/synonymized)
 <details>
 ```yaml
 name: synonymized
-from_schema: https://w3id.org/linkml/lexical_index
+from_schema: https://w3id.org/oak/lexical-index
 rank: 1000
 alias: synonymized
 owner: RelationshipToTerm

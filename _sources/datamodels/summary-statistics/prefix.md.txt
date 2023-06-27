@@ -1,5 +1,8 @@
 # Slot: prefix
+
+
 _the prefix for the ontology_
+
 
 
 URI: [sh:prefix](https://w3id.org/shacl/prefix)
@@ -13,9 +16,10 @@ URI: [sh:prefix](https://w3id.org/shacl/prefix)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Ontology](Ontology.md) | An ontology
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Ontology](Ontology.md) | An ontology |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [sh:prefix](https://w3id.org/shacl/prefix)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [sh:prefix](https://w3id.org/shacl/prefix)
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -54,7 +56,7 @@ URI: [sh:prefix](https://w3id.org/shacl/prefix)
 ```yaml
 name: prefix
 description: the prefix for the ontology
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 slot_uri: sh:prefix
 alias: prefix

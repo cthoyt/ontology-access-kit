@@ -1,5 +1,8 @@
 # Slot: score
+
+
 _Abstract base slot for different kinds of scores_
+
 
 
 URI: [sim:score](https://w3id.org/linkml/similarity/score)
@@ -26,9 +29,10 @@ URI: [sim:score](https://w3id.org/linkml/similarity/score)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[BestMatch](BestMatch.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[BestMatch](BestMatch.md) |  |  no  |
+
 
 
 
@@ -37,9 +41,7 @@ URI: [sim:score](https://w3id.org/linkml/similarity/score)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -56,7 +58,7 @@ URI: [sim:score](https://w3id.org/linkml/similarity/score)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -67,7 +69,7 @@ URI: [sim:score](https://w3id.org/linkml/similarity/score)
 ```yaml
 name: score
 description: Abstract base slot for different kinds of scores
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 abstract: true
 alias: score

@@ -11,9 +11,10 @@ URI: [sim:id](https://w3id.org/linkml/similarity/id)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermInfo](TermInfo.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermInfo](TermInfo.md) |  |  no  |
+
 
 
 
@@ -22,9 +23,9 @@ URI: [sim:id](https://w3id.org/linkml/similarity/id)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
 
-
+* Required: True
 
 
 
@@ -41,7 +42,7 @@ URI: [sim:id](https://w3id.org/linkml/similarity/id)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -51,7 +52,7 @@ URI: [sim:id](https://w3id.org/linkml/similarity/id)
 <details>
 ```yaml
 name: id
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 identifier: true
 alias: id
@@ -59,6 +60,7 @@ owner: TermInfo
 domain_of:
 - TermInfo
 range: string
+required: true
 
 ```
 </details>

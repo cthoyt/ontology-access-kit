@@ -1,8 +1,11 @@
 # Slot: rank
+
+
 _For relevancy-ranked results, this indicates the relevancy, with low numbers being the most relevant_
 
 
-URI: [search:rank](https://w3id.org/linkml/search_datamodel/rank)
+
+URI: [ontosearch:rank](https://w3id.org/oak/search-datamodel/rank)
 
 
 
@@ -13,9 +16,10 @@ URI: [search:rank](https://w3id.org/linkml/search_datamodel/rank)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SearchResult](SearchResult.md) | An individual search result
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SearchResult](SearchResult.md) | An individual search result |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [search:rank](https://w3id.org/linkml/search_datamodel/rank)
 
 ## Properties
 
-* Range: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
-
-
+* Range: [Integer](Integer.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [search:rank](https://w3id.org/linkml/search_datamodel/rank)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/search_datamodel
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 
@@ -55,7 +57,7 @@ URI: [search:rank](https://w3id.org/linkml/search_datamodel/rank)
 name: rank
 description: For relevancy-ranked results, this indicates the relevancy, with low
   numbers being the most relevant
-from_schema: https://w3id.org/linkml/search_datamodel
+from_schema: https://w3id.org/oak/search-datamodel
 rank: 1000
 alias: rank
 owner: SearchResult

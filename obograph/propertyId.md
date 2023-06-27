@@ -1,8 +1,11 @@
 # Slot: propertyId
+
+
 _in an OWL restriction expression, this is the predicate_
 
 
-URI: [og:propertyId](https://github.com/geneontology/obographs/propertyId)
+
+URI: [obographs:propertyId](https://github.com/geneontology/obographs/propertyId)
 
 
 
@@ -13,9 +16,10 @@ URI: [og:propertyId](https://github.com/geneontology/obographs/propertyId)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[ExistentialRestrictionExpression](ExistentialRestrictionExpression.md) | An existential restriction (OWL some values from) expression
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[ExistentialRestrictionExpression](ExistentialRestrictionExpression.md) | An existential restriction (OWL some values from) expression |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [og:propertyId](https://github.com/geneontology/obographs/propertyId)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 

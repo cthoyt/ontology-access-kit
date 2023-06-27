@@ -10,6 +10,7 @@ URI: [omoschema:match_aspect](http://purl.obolibrary.org/obo/omo/schema/match_as
 
 
 
+
 ## Mixin Usage
 
 | mixed into | description | range | domain |
@@ -23,11 +24,9 @@ URI: [omoschema:match_aspect](http://purl.obolibrary.org/obo/omo/schema/match_as
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
+
 * Mixin: True
-
-
-
 
 
 

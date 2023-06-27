@@ -11,9 +11,10 @@ URI: [sim:match_source](https://w3id.org/linkml/similarity/match_source)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[BestMatch](BestMatch.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[BestMatch](BestMatch.md) |  |  no  |
+
 
 
 
@@ -22,9 +23,9 @@ URI: [sim:match_source](https://w3id.org/linkml/similarity/match_source)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
 
-
+* Required: True
 
 
 
@@ -45,7 +46,7 @@ URI: [sim:match_source](https://w3id.org/linkml/similarity/match_source)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -57,7 +58,7 @@ URI: [sim:match_source](https://w3id.org/linkml/similarity/match_source)
 name: match_source
 comments:
 - note that the match_source is either the subject or the object
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 identifier: true
 alias: match_source
@@ -65,6 +66,7 @@ owner: BestMatch
 domain_of:
 - BestMatch
 range: string
+required: true
 
 ```
 </details>

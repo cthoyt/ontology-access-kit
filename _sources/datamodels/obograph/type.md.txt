@@ -1,6 +1,6 @@
 # Slot: type
 
-URI: [og:type](https://github.com/geneontology/obographs/type)
+URI: [obographs:type](https://github.com/geneontology/obographs/type)
 
 
 
@@ -11,9 +11,10 @@ URI: [og:type](https://github.com/geneontology/obographs/type)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Node](Node.md) | A node is a class, property, or other entity in an ontology
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Node](Node.md) | A node is a class, property, or other entity in an ontology |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [og:type](https://github.com/geneontology/obographs/type)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 

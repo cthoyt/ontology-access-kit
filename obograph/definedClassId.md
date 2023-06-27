@@ -1,8 +1,11 @@
 # Slot: definedClassId
+
+
 _The class that is defined by this axiom_
 
 
-URI: [og:definedClassId](https://github.com/geneontology/obographs/definedClassId)
+
+URI: [obographs:definedClassId](https://github.com/geneontology/obographs/definedClassId)
 
 
 
@@ -13,9 +16,10 @@ URI: [og:definedClassId](https://github.com/geneontology/obographs/definedClassI
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[LogicalDefinitionAxiom](LogicalDefinitionAxiom.md) | An axiom that defines a class in terms of a genus or set of genus classes and...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[LogicalDefinitionAxiom](LogicalDefinitionAxiom.md) | An axiom that defines a class in terms of a genus or set of genus classes and... |  no  |
+
 
 
 
@@ -24,11 +28,9 @@ URI: [og:definedClassId](https://github.com/geneontology/obographs/definedClassI
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: NONE
+
 * Required: True
-
-
-
 
 
 
@@ -62,7 +64,6 @@ alias: definedClassId
 owner: LogicalDefinitionAxiom
 domain_of:
 - LogicalDefinitionAxiom
-range: string
 required: true
 
 ```

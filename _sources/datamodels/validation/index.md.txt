@@ -3,6 +3,7 @@
 A datamodel for data validation results.
 
 URI: https://w3id.org/linkml/validation_results
+
 Name: validaton-results
 
 
@@ -11,19 +12,20 @@ Name: validaton-results
 
 | Class | Description |
 | --- | --- |
-| [ConstraintComponent](ConstraintComponent.md) |  |
-| [ExternalReferenceValidationResult](ExternalReferenceValidationResult.md) | A validation result where the check is to determine if a link to an external ... |
-| [NamedResource](NamedResource.md) |  |
-| [Node](Node.md) |  |
+| [NamedResource](NamedResource.md) | None |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ConstraintComponent](ConstraintComponent.md) | None |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Node](Node.md) | None |
 | [RepairConfiguration](RepairConfiguration.md) | Configuration parameters for execution of validation repairs |
-| [RepairOperation](RepairOperation.md) | The result of performing an individual repair |
-| [RepairReport](RepairReport.md) | A report that consists of repair operation results |
 | [Report](Report.md) | A report object that is a holder to multiple report results |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RepairReport](RepairReport.md) | A report that consists of repair operation results |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ValidationReport](ValidationReport.md) | A report that consists of validation results |
 | [Result](Result.md) | Abstract base class for any individual report result |
-| [TypeSeverityKeyValue](TypeSeverityKeyValue.md) | key-value pair that maps a validation result type to a severity setting, for ... |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RepairOperation](RepairOperation.md) | The result of performing an individual repair |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ValidationResult](ValidationResult.md) | An individual result arising from validation of a data instance using a particular rule |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ExternalReferenceValidationResult](ExternalReferenceValidationResult.md) | A validation result where the check is to determine if a link to an external resource is still valid |
+| [TypeSeverityKeyValue](TypeSeverityKeyValue.md) | key-value pair that maps a validation result type to a severity setting, for overriding default severity |
 | [ValidationConfiguration](ValidationConfiguration.md) | Configuration parameters for execution of a validation report |
-| [ValidationReport](ValidationReport.md) | A report that consists of validation results |
-| [ValidationResult](ValidationResult.md) | An individual result arising from validation of a data instance using a parti... |
+
 
 
 ## Slots
@@ -67,22 +69,22 @@ Name: validaton-results
 
 | Type | Description |
 | --- | --- |
-| [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) | A binary (true or false) value |
-| [xsd:string](http://www.w3.org/2001/XMLSchema#string) | a compact URI |
-| [xsd:date](http://www.w3.org/2001/XMLSchema#date) | a date (year, month and day) in an idealized calendar |
-| [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime) | Either a date or a datetime |
-| [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | The combination of a date and time |
-| [xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
-| [xsd:double](http://www.w3.org/2001/XMLSchema#double) | A real number that conforms to the xsd:double specification |
-| [xsd:float](http://www.w3.org/2001/XMLSchema#float) | A real number that conforms to the xsd:float specification |
-| [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | An integer |
-| [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Prefix part of CURIE |
-| [shex:nonLiteral](shex:nonLiteral) | A URI, CURIE or BNODE that represents a node in a model |
-| [shex:iri](shex:iri) | A URI or CURIE that represents an object in the model |
-| [xsd:string](http://www.w3.org/2001/XMLSchema#string) | A character string |
-| [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | A time object represents a (local) time of day, independent of any particular... |
-| [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | a complete URI |
-| [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | a URI or a CURIE |
+| [Boolean](Boolean.md) | A binary (true or false) value |
+| [Curie](Curie.md) | a compact URI |
+| [Date](Date.md) | a date (year, month and day) in an idealized calendar |
+| [DateOrDatetime](DateOrDatetime.md) | Either a date or a datetime |
+| [Datetime](Datetime.md) | The combination of a date and time |
+| [Decimal](Decimal.md) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
+| [Double](Double.md) | A real number that conforms to the xsd:double specification |
+| [Float](Float.md) | A real number that conforms to the xsd:float specification |
+| [Integer](Integer.md) | An integer |
+| [Ncname](Ncname.md) | Prefix part of CURIE |
+| [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
+| [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
+| [String](String.md) | A character string |
+| [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
+| [Uri](Uri.md) | a complete URI |
+| [Uriorcurie](Uriorcurie.md) | a URI or a CURIE |
 
 
 ## Subsets

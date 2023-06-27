@@ -1,5 +1,8 @@
 # Slot: evolutionary
+
+
 _holds if the constraint is an evolutionary statement_
+
 
 
 URI: [tc:evolutionary](https://w3id.org/linkml/taxon_constraints/evolutionary)
@@ -13,9 +16,10 @@ URI: [tc:evolutionary](https://w3id.org/linkml/taxon_constraints/evolutionary)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TaxonConstraint](TaxonConstraint.md) | An individual taxon constraint
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TaxonConstraint](TaxonConstraint.md) | An individual taxon constraint |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [tc:evolutionary](https://w3id.org/linkml/taxon_constraints/evolutionary)
 
 ## Properties
 
-* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
-
-
+* Range: [Boolean](Boolean.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [tc:evolutionary](https://w3id.org/linkml/taxon_constraints/evolutionary)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/taxon_constraints
+* from schema: https://w3id.org/oak/taxon_constraints
 
 
 
@@ -54,7 +56,7 @@ URI: [tc:evolutionary](https://w3id.org/linkml/taxon_constraints/evolutionary)
 ```yaml
 name: evolutionary
 description: holds if the constraint is an evolutionary statement
-from_schema: https://w3id.org/linkml/taxon_constraints
+from_schema: https://w3id.org/oak/taxon_constraints
 rank: 1000
 alias: evolutionary
 owner: TaxonConstraint

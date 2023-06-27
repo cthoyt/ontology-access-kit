@@ -1,6 +1,6 @@
 # Slot: cursor
 
-URI: [search:cursor](https://w3id.org/linkml/search_datamodel/cursor)
+URI: [ontosearch:cursor](https://w3id.org/oak/search-datamodel/cursor)
 
 
 
@@ -11,10 +11,11 @@ URI: [search:cursor](https://w3id.org/linkml/search_datamodel/cursor)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SearchBaseConfiguration](SearchBaseConfiguration.md) | A user-specified configuration that determines how a particular search operat...
-[SearchResultSet](SearchResultSet.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SearchBaseConfiguration](SearchBaseConfiguration.md) | A user-specified configuration that determines how a particular search operat... |  no  |
+[SearchResultSet](SearchResultSet.md) |  |  no  |
+
 
 
 
@@ -23,9 +24,7 @@ URI: [search:cursor](https://w3id.org/linkml/search_datamodel/cursor)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 

@@ -1,5 +1,8 @@
 # Class: Taxon
+
+
 _A term that represents a taxonomic group, may be at species level of a higher level_
+
 
 
 
@@ -14,7 +17,9 @@ URI: [tc:Taxon](https://w3id.org/linkml/taxon_constraints/Taxon)
       Term <|-- Taxon
       
       Taxon : id
+        
       Taxon : label
+        
       
 ```
 
@@ -32,8 +37,8 @@ URI: [tc:Taxon](https://w3id.org/linkml/taxon_constraints/Taxon)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | [Term](Term.md) |
-| [label](label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | [Term](Term.md) |
+| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | the OBO CURIE for the term | [Term](Term.md) |
+| [label](label.md) | 0..1 <br/> [String](String.md) | the human readable name or label of the term | [Term](Term.md) |
 
 
 
@@ -71,7 +76,7 @@ Instances of this class *should* have identifiers with one of the following pref
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/taxon_constraints
+* from schema: https://w3id.org/oak/taxon_constraints
 
 
 
@@ -103,10 +108,9 @@ id_prefixes:
 - NCBITaxon_Union
 description: A term that represents a taxonomic group, may be at species level of
   a higher level
-from_schema: https://w3id.org/linkml/taxon_constraints
+from_schema: https://w3id.org/oak/taxon_constraints
 exact_mappings:
 - NCBITaxon:1
-rank: 1000
 is_a: Term
 
 ```
@@ -122,15 +126,15 @@ id_prefixes:
 - NCBITaxon_Union
 description: A term that represents a taxonomic group, may be at species level of
   a higher level
-from_schema: https://w3id.org/linkml/taxon_constraints
+from_schema: https://w3id.org/oak/taxon_constraints
 exact_mappings:
 - NCBITaxon:1
-rank: 1000
 is_a: Term
 attributes:
   id:
     name: id
-    from_schema: https://w3id.org/linkml/taxon_constraints
+    description: the OBO CURIE for the term
+    from_schema: https://w3id.org/oak/taxon_constraints
     rank: 1000
     identifier: true
     alias: id
@@ -138,9 +142,11 @@ attributes:
     domain_of:
     - Term
     range: uriorcurie
+    required: true
   label:
     name: label
-    from_schema: https://w3id.org/linkml/taxon_constraints
+    description: the human readable name or label of the term
+    from_schema: https://w3id.org/oak/taxon_constraints
     rank: 1000
     slot_uri: rdfs:label
     alias: label

@@ -1,8 +1,11 @@
 # Slot: left_predicate_label
+
+
 _The name of the predicate of the source/left edge_
 
 
-URI: [ann:left_predicate_label](https://w3id.org/linkml/text_annotator/left_predicate_label)
+
+URI: [xodiff:left_predicate_label](https://w3id.org/oak/cross-ontology-diff/left_predicate_label)
 
 
 
@@ -17,9 +20,10 @@ URI: [ann:left_predicate_label](https://w3id.org/linkml/text_annotator/left_pred
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a... |  no  |
+
 
 
 
@@ -29,8 +33,6 @@ URI: [ann:left_predicate_label](https://w3id.org/linkml/text_annotator/left_pred
 ## Properties
 
 * Range: [Label](Label.md)
-
-
 
 
 
@@ -47,7 +49,7 @@ URI: [ann:left_predicate_label](https://w3id.org/linkml/text_annotator/left_pred
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 
@@ -58,7 +60,7 @@ URI: [ann:left_predicate_label](https://w3id.org/linkml/text_annotator/left_pred
 ```yaml
 name: left_predicate_label
 description: The name of the predicate of the source/left edge
-from_schema: https://w3id.org/linkml/cross_ontology_diff
+from_schema: https://w3id.org/oak/cross-ontology-diff
 rank: 1000
 mixins:
 - left_side

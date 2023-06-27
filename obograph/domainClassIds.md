@@ -1,6 +1,6 @@
 # Slot: domainClassIds
 
-URI: [og:domainClassIds](https://github.com/geneontology/obographs/domainClassIds)
+URI: [obographs:domainClassIds](https://github.com/geneontology/obographs/domainClassIds)
 
 
 
@@ -11,9 +11,10 @@ URI: [og:domainClassIds](https://github.com/geneontology/obographs/domainClassId
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DomainRangeAxiom](DomainRangeAxiom.md) | An axiom that represents some combination of domain and range assertions
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[DomainRangeAxiom](DomainRangeAxiom.md) | This groups potentially multiple axioms that constrain the usage of a propert... |  no  |
+
 
 
 
@@ -22,11 +23,9 @@ URI: [og:domainClassIds](https://github.com/geneontology/obographs/domainClassId
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
+
 * Multivalued: True
-
-
-
 
 
 

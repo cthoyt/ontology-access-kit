@@ -1,6 +1,6 @@
 # Slot: results
 
-URI: [search:results](https://w3id.org/linkml/search_datamodel/results)
+URI: [ontosearch:results](https://w3id.org/oak/search-datamodel/results)
 
 
 
@@ -11,9 +11,10 @@ URI: [search:results](https://w3id.org/linkml/search_datamodel/results)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SearchResultSet](SearchResultSet.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SearchResultSet](SearchResultSet.md) |  |  no  |
+
 
 
 
@@ -23,10 +24,8 @@ URI: [search:results](https://w3id.org/linkml/search_datamodel/results)
 ## Properties
 
 * Range: [SearchResult](SearchResult.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [search:results](https://w3id.org/linkml/search_datamodel/results)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/search_datamodel
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 
@@ -53,7 +52,7 @@ URI: [search:results](https://w3id.org/linkml/search_datamodel/results)
 <details>
 ```yaml
 name: results
-from_schema: https://w3id.org/linkml/search_datamodel
+from_schema: https://w3id.org/oak/search-datamodel
 rank: 1000
 multivalued: true
 alias: results

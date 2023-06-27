@@ -10,13 +10,23 @@ URI: [sim:BestMatch](https://w3id.org/linkml/similarity/BestMatch)
  classDiagram
     class BestMatch
       BestMatch : match_source
+        
       BestMatch : match_source_label
+        
       BestMatch : match_subsumer
+        
       BestMatch : match_subsumer_label
+        
       BestMatch : match_target
+        
       BestMatch : match_target_label
+        
       BestMatch : score
+        
       BestMatch : similarity
+        
+          BestMatch --|> TermPairwiseSimilarity : similarity
+        
       
 ```
 
@@ -30,13 +40,13 @@ URI: [sim:BestMatch](https://w3id.org/linkml/similarity/BestMatch)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [match_source](match_source.md) | 1..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [match_source_label](match_source_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [match_target](match_target.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the entity matches | direct |
-| [match_target_label](match_target_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [score](score.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Abstract base slot for different kinds of scores | direct |
-| [match_subsumer](match_subsumer.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
-| [match_subsumer_label](match_subsumer_label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [match_source](match_source.md) | 1..1 <br/> [String](String.md) |  | direct |
+| [match_source_label](match_source_label.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [match_target](match_target.md) | 0..1 <br/> [String](String.md) | the entity matches | direct |
+| [match_target_label](match_target_label.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [score](score.md) | 1..1 <br/> [Float](Float.md) |  | direct |
+| [match_subsumer](match_subsumer.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) |  | direct |
+| [match_subsumer_label](match_subsumer_label.md) | 0..1 <br/> [String](String.md) |  | direct |
 | [similarity](similarity.md) | 1..1 <br/> [TermPairwiseSimilarity](TermPairwiseSimilarity.md) |  | direct |
 
 
@@ -66,7 +76,7 @@ URI: [sim:BestMatch](https://w3id.org/linkml/similarity/BestMatch)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -92,46 +102,46 @@ URI: [sim:BestMatch](https://w3id.org/linkml/similarity/BestMatch)
 <details>
 ```yaml
 name: BestMatch
-from_schema: https://w3id.org/linkml/similarity
-rank: 1000
+from_schema: https://w3id.org/oak/similarity
 attributes:
   match_source:
     name: match_source
     comments:
     - note that the match_source is either the subject or the object
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     identifier: true
+    required: true
   match_source_label:
     name: match_source_label
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
   match_target:
     name: match_target
     description: the entity matches
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
   match_target_label:
     name: match_target_label
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
   score:
     name: score
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     range: float
     required: true
   match_subsumer:
     name: match_subsumer
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     range: uriorcurie
   match_subsumer_label:
     name: match_subsumer_label
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
   similarity:
     name: similarity
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     range: TermPairwiseSimilarity
     required: true
@@ -144,14 +154,13 @@ attributes:
 <details>
 ```yaml
 name: BestMatch
-from_schema: https://w3id.org/linkml/similarity
-rank: 1000
+from_schema: https://w3id.org/oak/similarity
 attributes:
   match_source:
     name: match_source
     comments:
     - note that the match_source is either the subject or the object
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     identifier: true
     alias: match_source
@@ -159,9 +168,10 @@ attributes:
     domain_of:
     - BestMatch
     range: string
+    required: true
   match_source_label:
     name: match_source_label
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     alias: match_source_label
     owner: BestMatch
@@ -171,7 +181,7 @@ attributes:
   match_target:
     name: match_target
     description: the entity matches
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     alias: match_target
     owner: BestMatch
@@ -180,7 +190,7 @@ attributes:
     range: string
   match_target_label:
     name: match_target_label
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     alias: match_target_label
     owner: BestMatch
@@ -189,7 +199,7 @@ attributes:
     range: string
   score:
     name: score
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     alias: score
     owner: BestMatch
     domain_of:
@@ -198,7 +208,7 @@ attributes:
     required: true
   match_subsumer:
     name: match_subsumer
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     alias: match_subsumer
     owner: BestMatch
@@ -207,7 +217,7 @@ attributes:
     range: uriorcurie
   match_subsumer_label:
     name: match_subsumer_label
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     alias: match_subsumer_label
     owner: BestMatch
@@ -216,7 +226,7 @@ attributes:
     range: string
   similarity:
     name: similarity
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     alias: similarity
     owner: BestMatch

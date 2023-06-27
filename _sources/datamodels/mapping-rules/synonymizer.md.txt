@@ -1,8 +1,11 @@
 # Slot: synonymizer
+
+
 _Normalizing rules to labels._
 
 
-URI: [mrules:synonymizer](https://w3id.org/linkml/mapping_rules_datamodel/synonymizer)
+
+URI: [mappingrules:synonymizer](https://w3id.org/oak/mapping-rules-datamodel/synonymizer)
 
 
 
@@ -13,9 +16,10 @@ URI: [mrules:synonymizer](https://w3id.org/linkml/mapping_rules_datamodel/synony
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[MappingRule](MappingRule.md) | An individual mapping rule, if preconditions match the postconditions are app...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[MappingRule](MappingRule.md) | An individual mapping rule, if preconditions match the postconditions are app... |  no  |
+
 
 
 
@@ -25,8 +29,6 @@ URI: [mrules:synonymizer](https://w3id.org/linkml/mapping_rules_datamodel/synony
 ## Properties
 
 * Range: [Synonymizer](Synonymizer.md)
-
-
 
 
 
@@ -43,7 +45,7 @@ URI: [mrules:synonymizer](https://w3id.org/linkml/mapping_rules_datamodel/synony
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -54,7 +56,7 @@ URI: [mrules:synonymizer](https://w3id.org/linkml/mapping_rules_datamodel/synony
 ```yaml
 name: synonymizer
 description: Normalizing rules to labels.
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: synonymizer
 owner: MappingRule

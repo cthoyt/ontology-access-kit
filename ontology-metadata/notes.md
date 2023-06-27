@@ -11,9 +11,10 @@ URI: [oio:notes](http://www.geneontology.org/formats/oboInOwl#notes)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Axiom](Axiom.md) | A logical or non-logical statement
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Axiom](Axiom.md) | A logical or non-logical statement |  no  |
+
 
 
 
@@ -22,11 +23,9 @@ URI: [oio:notes](http://www.geneontology.org/formats/oboInOwl#notes)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
+
 * Multivalued: True
-
-
-
 
 
 

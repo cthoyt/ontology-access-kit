@@ -1,10 +1,13 @@
 # Class: StructureDiffResultSet
+
+
 _A collection of relational diff results_
 
 
 
 
-URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/StructureDiffResultSet)
+
+URI: [xodiff:StructureDiffResultSet](https://w3id.org/oak/cross-ontology-diff/StructureDiffResultSet)
 
 
 
@@ -12,8 +15,13 @@ URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/Structu
  classDiagram
     class StructureDiffResultSet
       StructureDiffResultSet : left_source
+        
       StructureDiffResultSet : results
+        
+          StructureDiffResultSet --|> RelationalDiff : results
+        
       StructureDiffResultSet : right_source
+        
       
 ```
 
@@ -50,7 +58,7 @@ URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/Structu
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 
@@ -60,8 +68,8 @@ URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/Structu
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ann:StructureDiffResultSet |
-| native | ann:StructureDiffResultSet |
+| self | xodiff:StructureDiffResultSet |
+| native | xodiff:StructureDiffResultSet |
 
 
 
@@ -77,13 +85,12 @@ URI: [ann:StructureDiffResultSet](https://w3id.org/linkml/text_annotator/Structu
 ```yaml
 name: StructureDiffResultSet
 description: A collection of relational diff results
-from_schema: https://w3id.org/linkml/cross_ontology_diff
-rank: 1000
+from_schema: https://w3id.org/oak/cross-ontology-diff
 attributes:
   results:
     name: results
     description: all differences between a pair of ontologies
-    from_schema: https://w3id.org/linkml/cross_ontology_diff
+    from_schema: https://w3id.org/oak/cross-ontology-diff
     rank: 1000
     multivalued: true
     range: RelationalDiff
@@ -91,13 +98,13 @@ attributes:
   left_source:
     name: left_source
     description: Ontology source for left entities
-    from_schema: https://w3id.org/linkml/cross_ontology_diff
+    from_schema: https://w3id.org/oak/cross-ontology-diff
     rank: 1000
     range: Source
   right_source:
     name: right_source
     description: Ontology source for right entities
-    from_schema: https://w3id.org/linkml/cross_ontology_diff
+    from_schema: https://w3id.org/oak/cross-ontology-diff
     rank: 1000
     range: Source
 
@@ -110,13 +117,12 @@ attributes:
 ```yaml
 name: StructureDiffResultSet
 description: A collection of relational diff results
-from_schema: https://w3id.org/linkml/cross_ontology_diff
-rank: 1000
+from_schema: https://w3id.org/oak/cross-ontology-diff
 attributes:
   results:
     name: results
     description: all differences between a pair of ontologies
-    from_schema: https://w3id.org/linkml/cross_ontology_diff
+    from_schema: https://w3id.org/oak/cross-ontology-diff
     rank: 1000
     multivalued: true
     alias: results
@@ -128,7 +134,7 @@ attributes:
   left_source:
     name: left_source
     description: Ontology source for left entities
-    from_schema: https://w3id.org/linkml/cross_ontology_diff
+    from_schema: https://w3id.org/oak/cross-ontology-diff
     rank: 1000
     alias: left_source
     owner: StructureDiffResultSet
@@ -138,7 +144,7 @@ attributes:
   right_source:
     name: right_source
     description: Ontology source for right entities
-    from_schema: https://w3id.org/linkml/cross_ontology_diff
+    from_schema: https://w3id.org/oak/cross-ontology-diff
     rank: 1000
     alias: right_source
     owner: StructureDiffResultSet

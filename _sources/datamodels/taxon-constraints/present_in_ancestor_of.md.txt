@@ -11,9 +11,10 @@ URI: [tc:present_in_ancestor_of](https://w3id.org/linkml/taxon_constraints/prese
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SubjectTerm](SubjectTerm.md) | A term that is the subject of a taxon constraint
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SubjectTerm](SubjectTerm.md) | A term that is the subject of a taxon constraint |  no  |
+
 
 
 
@@ -23,10 +24,8 @@ URI: [tc:present_in_ancestor_of](https://w3id.org/linkml/taxon_constraints/prese
 ## Properties
 
 * Range: [TaxonConstraint](TaxonConstraint.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [tc:present_in_ancestor_of](https://w3id.org/linkml/taxon_constraints/prese
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/taxon_constraints
+* from schema: https://w3id.org/oak/taxon_constraints
 
 
 
@@ -53,7 +52,7 @@ URI: [tc:present_in_ancestor_of](https://w3id.org/linkml/taxon_constraints/prese
 <details>
 ```yaml
 name: present_in_ancestor_of
-from_schema: https://w3id.org/linkml/taxon_constraints
+from_schema: https://w3id.org/oak/taxon_constraints
 rank: 1000
 multivalued: true
 alias: present_in_ancestor_of

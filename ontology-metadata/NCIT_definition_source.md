@@ -11,11 +11,10 @@ URI: [NCIT:P378](http://purl.obolibrary.org/obo/NCIT_P378)
 
 
 
+
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 

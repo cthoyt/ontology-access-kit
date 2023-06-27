@@ -1,8 +1,11 @@
 # Slot: rules
+
+
 _all rules_
 
 
-URI: [mrules:rules](https://w3id.org/linkml/mapping_rules_datamodel/rules)
+
+URI: [mappingrules:rules](https://w3id.org/oak/mapping-rules-datamodel/rules)
 
 
 
@@ -13,9 +16,10 @@ URI: [mrules:rules](https://w3id.org/linkml/mapping_rules_datamodel/rules)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[MappingRuleCollection](MappingRuleCollection.md) | A collection of mapping rules
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[MappingRuleCollection](MappingRuleCollection.md) | A collection of mapping rules |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [mrules:rules](https://w3id.org/linkml/mapping_rules_datamodel/rules)
 ## Properties
 
 * Range: [MappingRule](MappingRule.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -45,7 +47,7 @@ URI: [mrules:rules](https://w3id.org/linkml/mapping_rules_datamodel/rules)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -56,7 +58,7 @@ URI: [mrules:rules](https://w3id.org/linkml/mapping_rules_datamodel/rules)
 ```yaml
 name: rules
 description: all rules
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 multivalued: true
 alias: rules

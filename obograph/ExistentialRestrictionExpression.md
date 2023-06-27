@@ -1,5 +1,8 @@
 # Class: ExistentialRestrictionExpression
+
+
 _An existential restriction (OWL some values from) expression_
+
 
 
 
@@ -12,7 +15,9 @@ URI: [owl:Restriction](http://www.w3.org/2002/07/owl#Restriction)
  classDiagram
     class ExistentialRestrictionExpression
       ExistentialRestrictionExpression : fillerId
+        
       ExistentialRestrictionExpression : propertyId
+        
       
 ```
 
@@ -26,8 +31,8 @@ URI: [owl:Restriction](http://www.w3.org/2002/07/owl#Restriction)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [fillerId](fillerId.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | in an OWL restriction expression, the filler is the object of the restriction | direct |
-| [propertyId](propertyId.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | in an OWL restriction expression, this is the predicate | direct |
+| [fillerId](fillerId.md) | 0..1 <br/> [String](String.md) | in an OWL restriction expression, the filler is the object of the restriction | direct |
+| [propertyId](propertyId.md) | 0..1 <br/> [String](String.md) | in an OWL restriction expression, this is the predicate | direct |
 
 
 
@@ -81,7 +86,7 @@ URI: [owl:Restriction](http://www.w3.org/2002/07/owl#Restriction)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | owl:Restriction |
-| native | og:ExistentialRestrictionExpression |
+| native | obographs:ExistentialRestrictionExpression |
 
 
 
@@ -108,7 +113,6 @@ comments:
 from_schema: https://github.com/geneontology/obographs
 aliases:
 - some values from expression
-rank: 1000
 slots:
 - fillerId
 - propertyId
@@ -134,7 +138,6 @@ comments:
 from_schema: https://github.com/geneontology/obographs
 aliases:
 - some values from expression
-rank: 1000
 attributes:
   fillerId:
     name: fillerId

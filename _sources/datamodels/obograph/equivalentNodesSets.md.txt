@@ -1,8 +1,11 @@
 # Slot: equivalentNodesSets
+
+
 _A list of sets of nodes that form equivalence cliques_
 
 
-URI: [og:equivalentNodesSets](https://github.com/geneontology/obographs/equivalentNodesSets)
+
+URI: [obographs:equivalentNodesSets](https://github.com/geneontology/obographs/equivalentNodesSets)
 
 
 
@@ -13,9 +16,10 @@ URI: [og:equivalentNodesSets](https://github.com/geneontology/obographs/equivale
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Graph](Graph.md) | A graph is a collection of nodes and edges that represents a single ontology
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Graph](Graph.md) | A graph is a collection of nodes and edges and other axioms that represents a... |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [og:equivalentNodesSets](https://github.com/geneontology/obographs/equivale
 ## Properties
 
 * Range: [EquivalentNodesSet](EquivalentNodesSet.md)
+
 * Multivalued: True
-
-
-
 
 
 

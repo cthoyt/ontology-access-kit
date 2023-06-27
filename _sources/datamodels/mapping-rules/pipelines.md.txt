@@ -1,8 +1,11 @@
 # Slot: pipelines
+
+
 _all pipelines used to build the index_
 
 
-URI: [li:pipelines](https://w3id.org/linkml/lexical_index/pipelines)
+
+URI: [mappingrules:pipelines](https://w3id.org/oak/mapping-rules-datamodel/pipelines)
 
 
 
@@ -13,9 +16,10 @@ URI: [li:pipelines](https://w3id.org/linkml/lexical_index/pipelines)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[LexicalIndex](LexicalIndex.md) | An index over an ontology keyed by lexical unit
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[LexicalIndex](LexicalIndex.md) | An index over an ontology keyed by lexical unit |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [li:pipelines](https://w3id.org/linkml/lexical_index/pipelines)
 ## Properties
 
 * Range: [LexicalTransformationPipeline](LexicalTransformationPipeline.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -45,7 +47,7 @@ URI: [li:pipelines](https://w3id.org/linkml/lexical_index/pipelines)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/lexical_index
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -56,7 +58,7 @@ URI: [li:pipelines](https://w3id.org/linkml/lexical_index/pipelines)
 ```yaml
 name: pipelines
 description: all pipelines used to build the index
-from_schema: https://w3id.org/linkml/lexical_index
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 multivalued: true
 alias: pipelines

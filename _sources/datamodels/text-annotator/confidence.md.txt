@@ -11,9 +11,10 @@ URI: [sssom:confidence](http://w3id.org/sssom/confidence)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TextAnnotation](TextAnnotation.md) | An individual text annotation
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TextAnnotation](TextAnnotation.md) | An individual text annotation |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [sssom:confidence](http://w3id.org/sssom/confidence)
 
 ## Properties
 
-* Range: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
-
-
+* Range: [Float](Float.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [sssom:confidence](http://w3id.org/sssom/confidence)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -51,7 +50,7 @@ URI: [sssom:confidence](http://w3id.org/sssom/confidence)
 <details>
 ```yaml
 name: confidence
-from_schema: https://w3id.org/linkml/text_annotator
+from_schema: https://w3id.org/oak/text_annotator
 rank: 1000
 slot_uri: sssom:confidence
 alias: confidence

@@ -1,5 +1,8 @@
 # Slot: val
+
+
 _the value of a property_
+
 
 
 URI: [rdf:object](http://www.w3.org/1999/02/22-rdf-syntax-ns#object)
@@ -13,13 +16,14 @@ URI: [rdf:object](http://www.w3.org/1999/02/22-rdf-syntax-ns#object)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[PropertyValue](PropertyValue.md) | A generic grouping for the different kinds of key-value associations on objec...
-[DefinitionPropertyValue](DefinitionPropertyValue.md) | A property value that represents an assertion about the textual definition of...
-[BasicPropertyValue](BasicPropertyValue.md) | A property value that represents an assertion about an entity that is not a d...
-[XrefPropertyValue](XrefPropertyValue.md) | A property value that represents an assertion about an external reference to ...
-[SynonymPropertyValue](SynonymPropertyValue.md) | A property value that represents an assertion about a synonym of an entity
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[PropertyValue](PropertyValue.md) | A generic grouping for the different kinds of key-value associations on objec... |  no  |
+[DefinitionPropertyValue](DefinitionPropertyValue.md) | A property value that represents an assertion about the textual definition of... |  yes  |
+[BasicPropertyValue](BasicPropertyValue.md) | A property value that represents an assertion about an entity that is not a d... |  no  |
+[XrefPropertyValue](XrefPropertyValue.md) | A property value that represents an assertion about an external reference to ... |  yes  |
+[SynonymPropertyValue](SynonymPropertyValue.md) | A property value that represents an assertion about a synonym of an entity |  yes  |
+
 
 
 
@@ -28,11 +32,14 @@ URI: [rdf:object](http://www.w3.org/1999/02/22-rdf-syntax-ns#object)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
 
 
 
+## Aliases
 
+
+* value
 
 
 
@@ -59,6 +66,8 @@ URI: [rdf:object](http://www.w3.org/1999/02/22-rdf-syntax-ns#object)
 name: val
 description: the value of a property
 from_schema: https://github.com/geneontology/obographs
+aliases:
+- value
 rank: 1000
 slot_uri: rdf:object
 alias: val

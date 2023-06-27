@@ -11,13 +11,14 @@ URI: [oio:is_metadata_tag](http://www.geneontology.org/formats/oboInOwl#is_metad
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Property](Property.md) | 
-[AnnotationProperty](AnnotationProperty.md) | A property used in non-logical axioms
-[ObjectProperty](ObjectProperty.md) | A property that connects two objects in logical axioms
-[TransitiveProperty](TransitiveProperty.md) | An ObjectProperty with the property of transitivity
-[Subset](Subset.md) | A collection of terms grouped for some purpose
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Property](Property.md) |  |  no  |
+[AnnotationProperty](AnnotationProperty.md) | A property used in non-logical axioms |  no  |
+[ObjectProperty](ObjectProperty.md) | A property that connects two objects in logical axioms |  no  |
+[TransitiveProperty](TransitiveProperty.md) | An ObjectProperty with the property of transitivity |  no  |
+[Subset](Subset.md) | A collection of terms grouped for some purpose |  no  |
+
 
 
 
@@ -26,9 +27,7 @@ URI: [oio:is_metadata_tag](http://www.geneontology.org/formats/oboInOwl#is_metad
 
 ## Properties
 
-* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
-
-
+* Range: [Boolean](Boolean.md)
 
 
 

@@ -1,6 +1,6 @@
 # Slot: name
 
-URI: [li:name](https://w3id.org/linkml/lexical_index/name)
+URI: [mappingrules:name](https://w3id.org/oak/mapping-rules-datamodel/name)
 
 
 
@@ -11,9 +11,10 @@ URI: [li:name](https://w3id.org/linkml/lexical_index/name)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[LexicalTransformationPipeline](LexicalTransformationPipeline.md) | A collection of atomic lexical transformations that are applied in serial fas...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[LexicalTransformationPipeline](LexicalTransformationPipeline.md) | A collection of atomic lexical transformations that are applied in serial fas... |  no  |
+
 
 
 
@@ -22,9 +23,9 @@ URI: [li:name](https://w3id.org/linkml/lexical_index/name)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
 
-
+* Required: True
 
 
 
@@ -41,7 +42,7 @@ URI: [li:name](https://w3id.org/linkml/lexical_index/name)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/lexical_index
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -51,7 +52,7 @@ URI: [li:name](https://w3id.org/linkml/lexical_index/name)
 <details>
 ```yaml
 name: name
-from_schema: https://w3id.org/linkml/lexical_index
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 key: true
 alias: name
@@ -59,6 +60,7 @@ owner: LexicalTransformationPipeline
 domain_of:
 - LexicalTransformationPipeline
 range: string
+required: true
 
 ```
 </details>

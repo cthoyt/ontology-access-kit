@@ -1,22 +1,33 @@
 # Slot: predicate
+
+
 _The type of relationship between the subject and object._
+
 
 
 URI: [rdf:predicate](rdf:predicate)
 
 
 
-<!-- no inheritance hierarchy -->
+
+## Inheritance
+
+* **predicate**
+    * [old_predicate](old_predicate.md) [ [diff_slot](diff_slot.md)]
+    * [new_predicate](new_predicate.md) [ [diff_slot](diff_slot.md)]
+
 
 
 
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Association](Association.md) | A generic association between a thing (subject) and another thing (object)
-[PropertyValue](PropertyValue.md) | A generic tag-value that can be associated with an association
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Association](Association.md) | A generic association between a thing (subject) and another thing (object) |  no  |
+[NegatedAssociation](NegatedAssociation.md) | A negated association between a thing (subject) and another thing (object) |  no  |
+[PropertyValue](PropertyValue.md) | A generic tag-value that can be associated with an association |  no  |
+
 
 
 
@@ -25,9 +36,7 @@ URI: [rdf:predicate](rdf:predicate)
 
 ## Properties
 
-* Range: [xsd:anyURI](xsd:anyURI)
-
-
+* Range: [Uriorcurie](Uriorcurie.md)
 
 
 
@@ -61,7 +70,9 @@ slot_uri: rdf:predicate
 alias: predicate
 domain_of:
 - Association
+- NegatedAssociation
 - PropertyValue
+slot_group: core_triple
 range: uriorcurie
 
 ```

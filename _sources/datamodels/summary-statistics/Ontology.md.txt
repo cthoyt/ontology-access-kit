@@ -1,5 +1,8 @@
 # Class: Ontology
+
+
 _An ontology_
+
 
 
 
@@ -12,11 +15,17 @@ URI: [owl:Ontology](http://www.w3.org/2002/07/owl#Ontology)
  classDiagram
     class Ontology
       Ontology : description
+        
       Ontology : id
+        
       Ontology : prefix
+        
       Ontology : title
+        
       Ontology : version
+        
       Ontology : version_info
+        
       
 ```
 
@@ -30,12 +39,12 @@ URI: [owl:Ontology](http://www.w3.org/2002/07/owl#Ontology)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [description](description.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | a description of the resource | direct |
-| [title](title.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the title of the resource | direct |
-| [prefix](prefix.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the prefix for the ontology | direct |
-| [version](version.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the version of the resource | direct |
-| [version_info](version_info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the version info of the resource | direct |
+| [id](id.md) | 1..1 <br/> [String](String.md) | the unique identifier for the resource | direct |
+| [description](description.md) | 0..1 <br/> [String](String.md) | a description of the resource | direct |
+| [title](title.md) | 0..1 <br/> [String](String.md) | the title of the resource | direct |
+| [prefix](prefix.md) | 0..1 <br/> [String](String.md) | the prefix for the ontology | direct |
+| [version](version.md) | 0..1 <br/> [String](String.md) | the version of the resource | direct |
+| [version_info](version_info.md) | 0..1 <br/> [String](String.md) | the version info of the resource | direct |
 
 
 
@@ -68,7 +77,7 @@ URI: [owl:Ontology](http://www.w3.org/2002/07/owl#Ontology)
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -95,47 +104,47 @@ URI: [owl:Ontology](http://www.w3.org/2002/07/owl#Ontology)
 ```yaml
 name: Ontology
 description: An ontology
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   id:
     name: id
     description: the unique identifier for the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     identifier: true
     range: string
+    required: true
   description:
     name: description
     description: a description of the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: dcterms:description
     range: string
   title:
     name: title
     description: the title of the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: dcterms:title
     range: string
   prefix:
     name: prefix
     description: the prefix for the ontology
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: sh:prefix
     range: string
   version:
     name: version
     description: the version of the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: owl:versionIRI
     range: string
   version_info:
     name: version_info
     description: the version info of the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: owl:versionInfo
     range: string
@@ -150,13 +159,12 @@ class_uri: owl:Ontology
 ```yaml
 name: Ontology
 description: An ontology
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   id:
     name: id
     description: the unique identifier for the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     identifier: true
     alias: id
     owner: Ontology
@@ -166,10 +174,11 @@ attributes:
     - Agent
     - ContributorRole
     range: string
+    required: true
   description:
     name: description
     description: a description of the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: dcterms:description
     alias: description
@@ -180,7 +189,7 @@ attributes:
   title:
     name: title
     description: the title of the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: dcterms:title
     alias: title
@@ -191,7 +200,7 @@ attributes:
   prefix:
     name: prefix
     description: the prefix for the ontology
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: sh:prefix
     alias: prefix
@@ -202,7 +211,7 @@ attributes:
   version:
     name: version
     description: the version of the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: owl:versionIRI
     alias: version
@@ -213,7 +222,7 @@ attributes:
   version_info:
     name: version_info
     description: the version info of the resource
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: owl:versionInfo
     alias: version_info

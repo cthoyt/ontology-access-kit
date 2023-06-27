@@ -1,10 +1,13 @@
 # Class: LogicalDefinitionAxiom
+
+
 _An axiom that defines a class in terms of a genus or set of genus classes and a set of differentia_
 
 
 
 
-URI: [og:LogicalDefinitionAxiom](https://github.com/geneontology/obographs/LogicalDefinitionAxiom)
+
+URI: [obographs:LogicalDefinitionAxiom](https://github.com/geneontology/obographs/LogicalDefinitionAxiom)
 
 
 
@@ -14,9 +17,21 @@ URI: [og:LogicalDefinitionAxiom](https://github.com/geneontology/obographs/Logic
       Axiom <|-- LogicalDefinitionAxiom
       
       LogicalDefinitionAxiom : definedClassId
+        
+          LogicalDefinitionAxiom --|> None : definedClassId
+        
       LogicalDefinitionAxiom : genusIds
+        
+          LogicalDefinitionAxiom --|> None : genusIds
+        
       LogicalDefinitionAxiom : meta
+        
+          LogicalDefinitionAxiom --|> Meta : meta
+        
       LogicalDefinitionAxiom : restrictions
+        
+          LogicalDefinitionAxiom --|> ExistentialRestrictionExpression : restrictions
+        
       
 ```
 
@@ -34,9 +49,9 @@ URI: [og:LogicalDefinitionAxiom](https://github.com/geneontology/obographs/Logic
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [definedClassId](definedClassId.md) | 1..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | The class that is defined by this axiom | direct |
-| [genusIds](genusIds.md) | 0..* _recommended_ <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | The set of classes that are the genus of the defined class | direct |
-| [restrictions](restrictions.md) | 0..* _recommended_ <br/> [ExistentialRestrictionExpression](ExistentialRestrictionExpression.md) | The set of restrictions that are the differentia of the defined class | direct |
+| [definedClassId](definedClassId.md) | 1..1 <br/> [String](String.md) | The class that is defined by this axiom | direct |
+| [genusIds](genusIds.md) | 0..* _recommended_ <br/> [String](String.md) | The set of classes that are the genus of the defined class | direct |
+| [restrictions](restrictions.md) | 0..* _recommended_ <br/> [ExistentialRestrictionExpression](ExistentialRestrictionExpression.md) | The set of restrictions that are the differentiating features of the defined ... | direct |
 | [meta](meta.md) | 0..1 <br/> [Meta](Meta.md) | A collection of metadata about either an ontology (graph), an entity, or an a... | [Axiom](Axiom.md) |
 
 
@@ -86,8 +101,8 @@ URI: [og:LogicalDefinitionAxiom](https://github.com/geneontology/obographs/Logic
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | og:LogicalDefinitionAxiom |
-| native | og:LogicalDefinitionAxiom |
+| self | obographs:LogicalDefinitionAxiom |
+| native | obographs:LogicalDefinitionAxiom |
 
 
 
@@ -111,7 +126,6 @@ description: An axiom that defines a class in terms of a genus or set of genus c
 from_schema: https://github.com/geneontology/obographs
 aliases:
 - genus differentia definition
-rank: 1000
 is_a: Axiom
 attributes:
   definedClassId:
@@ -133,7 +147,8 @@ attributes:
     recommended: true
   restrictions:
     name: restrictions
-    description: The set of restrictions that are the differentia of the defined class
+    description: The set of restrictions that are the differentiating features of
+      the defined class
     comments:
     - typically this will always be present.
     from_schema: https://github.com/geneontology/obographs
@@ -164,7 +179,6 @@ description: An axiom that defines a class in terms of a genus or set of genus c
 from_schema: https://github.com/geneontology/obographs
 aliases:
 - genus differentia definition
-rank: 1000
 is_a: Axiom
 attributes:
   definedClassId:
@@ -194,7 +208,8 @@ attributes:
     recommended: true
   restrictions:
     name: restrictions
-    description: The set of restrictions that are the differentia of the defined class
+    description: The set of restrictions that are the differentiating features of
+      the defined class
     comments:
     - typically this will always be present.
     from_schema: https://github.com/geneontology/obographs

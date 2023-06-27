@@ -1,8 +1,11 @@
 # Slot: properties
+
+
 _determines which properties are searched over_
 
 
-URI: [search:properties](https://w3id.org/linkml/search_datamodel/properties)
+
+URI: [ontosearch:properties](https://w3id.org/oak/search-datamodel/properties)
 
 
 
@@ -13,9 +16,10 @@ URI: [search:properties](https://w3id.org/linkml/search_datamodel/properties)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SearchBaseConfiguration](SearchBaseConfiguration.md) | A user-specified configuration that determines how a particular search operat...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SearchBaseConfiguration](SearchBaseConfiguration.md) | A user-specified configuration that determines how a particular search operat... |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [search:properties](https://w3id.org/linkml/search_datamodel/properties)
 ## Properties
 
 * Range: [SearchProperty](SearchProperty.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -45,7 +47,7 @@ URI: [search:properties](https://w3id.org/linkml/search_datamodel/properties)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/search_datamodel
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 
@@ -56,7 +58,7 @@ URI: [search:properties](https://w3id.org/linkml/search_datamodel/properties)
 ```yaml
 name: properties
 description: determines which properties are searched over
-from_schema: https://w3id.org/linkml/search_datamodel
+from_schema: https://w3id.org/oak/search-datamodel
 rank: 1000
 multivalued: true
 alias: properties

@@ -1,7 +1,10 @@
 # Type: Label
 
 
+
+
 _A string that is used as a human-readable label_
+
 
 
 URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
@@ -30,7 +33,7 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 

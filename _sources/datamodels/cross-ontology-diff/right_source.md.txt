@@ -1,8 +1,11 @@
 # Slot: right_source
+
+
 _Ontology source for right entities_
 
 
-URI: [ann:right_source](https://w3id.org/linkml/text_annotator/right_source)
+
+URI: [xodiff:right_source](https://w3id.org/oak/cross-ontology-diff/right_source)
 
 
 
@@ -13,9 +16,10 @@ URI: [ann:right_source](https://w3id.org/linkml/text_annotator/right_source)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[StructureDiffResultSet](StructureDiffResultSet.md) | A collection of relational diff results
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[StructureDiffResultSet](StructureDiffResultSet.md) | A collection of relational diff results |  no  |
+
 
 
 
@@ -25,8 +29,6 @@ URI: [ann:right_source](https://w3id.org/linkml/text_annotator/right_source)
 ## Properties
 
 * Range: [Source](Source.md)
-
-
 
 
 
@@ -43,7 +45,7 @@ URI: [ann:right_source](https://w3id.org/linkml/text_annotator/right_source)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 
@@ -54,7 +56,7 @@ URI: [ann:right_source](https://w3id.org/linkml/text_annotator/right_source)
 ```yaml
 name: right_source
 description: Ontology source for right entities
-from_schema: https://w3id.org/linkml/cross_ontology_diff
+from_schema: https://w3id.org/oak/cross-ontology-diff
 rank: 1000
 alias: right_source
 owner: StructureDiffResultSet

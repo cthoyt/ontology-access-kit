@@ -11,9 +11,10 @@ URI: [sim:average_score](https://w3id.org/linkml/similarity/average_score)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermSetPairwiseSimilarity](TermSetPairwiseSimilarity.md) | A simple pairwise similarity between two sets of concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermSetPairwiseSimilarity](TermSetPairwiseSimilarity.md) | A simple pairwise similarity between two sets of concepts/terms |  no  |
+
 
 
 
@@ -22,11 +23,7 @@ URI: [sim:average_score](https://w3id.org/linkml/similarity/average_score)
 
 ## Properties
 
-* Range: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
-* Required: True
-
-
-
+* Range: [Float](Float.md)
 
 
 
@@ -43,7 +40,7 @@ URI: [sim:average_score](https://w3id.org/linkml/similarity/average_score)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -53,13 +50,13 @@ URI: [sim:average_score](https://w3id.org/linkml/similarity/average_score)
 <details>
 ```yaml
 name: average_score
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 alias: average_score
 domain_of:
 - TermSetPairwiseSimilarity
 range: float
-required: true
+required: false
 
 ```
 </details>

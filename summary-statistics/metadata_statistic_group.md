@@ -11,11 +11,10 @@ URI: [summary_statistics:metadata_statistic_group](https://w3id.org/oaklib/summa
 
 
 
+
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -32,7 +31,7 @@ URI: [summary_statistics:metadata_statistic_group](https://w3id.org/oaklib/summa
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -42,7 +41,7 @@ URI: [summary_statistics:metadata_statistic_group](https://w3id.org/oaklib/summa
 <details>
 ```yaml
 name: metadata_statistic_group
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 alias: metadata_statistic_group
 is_grouping_slot: true

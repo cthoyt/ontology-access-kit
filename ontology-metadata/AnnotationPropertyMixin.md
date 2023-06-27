@@ -1,5 +1,8 @@
 # Class: AnnotationPropertyMixin
+
+
 _Groups all annotation property bundles_
+
 
 
 
@@ -96,7 +99,6 @@ URI: [omoschema:AnnotationPropertyMixin](http://purl.obolibrary.org/obo/omo/sche
 name: AnnotationPropertyMixin
 description: Groups all annotation property bundles
 from_schema: http://purl.obolibrary.org/obo/omo/schema
-rank: 1000
 mixin: true
 
 ```
@@ -109,7 +111,6 @@ mixin: true
 name: AnnotationPropertyMixin
 description: Groups all annotation property bundles
 from_schema: http://purl.obolibrary.org/obo/omo/schema
-rank: 1000
 mixin: true
 
 ```

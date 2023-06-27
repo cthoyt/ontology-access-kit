@@ -1,5 +1,8 @@
 # Class: UngroupedStatistics
+
+
 _A summary statistics report object_
+
 
 
 
@@ -14,48 +17,119 @@ URI: [summary_statistics:UngroupedStatistics](https://w3id.org/oaklib/summary_st
       SummaryStatisticsReport <|-- UngroupedStatistics
       
       UngroupedStatistics : agents
+        
+          UngroupedStatistics --|> Agent : agents
+        
       UngroupedStatistics : annotation_property_count
+        
       UngroupedStatistics : anonymous_class_expression_count
+        
       UngroupedStatistics : anonymous_individual_count
+        
       UngroupedStatistics : change_summary
+        
+          UngroupedStatistics --|> ChangeTypeStatistic : change_summary
+        
       UngroupedStatistics : class_count
+        
       UngroupedStatistics : class_count_by_category
+        
+          UngroupedStatistics --|> FacetedCount : class_count_by_category
+        
       UngroupedStatistics : class_count_by_subset
+        
+          UngroupedStatistics --|> FacetedCount : class_count_by_subset
+        
       UngroupedStatistics : class_count_with_text_definitions
+        
       UngroupedStatistics : class_count_without_text_definitions
+        
       UngroupedStatistics : compared_with
+        
+          UngroupedStatistics --|> Ontology : compared_with
+        
       UngroupedStatistics : contributor_summary
+        
+          UngroupedStatistics --|> ContributorStatistics : contributor_summary
+        
       UngroupedStatistics : datatype_property_count
+        
       UngroupedStatistics : deprecated_class_count
+        
       UngroupedStatistics : deprecated_object_property_count
+        
       UngroupedStatistics : description_logic_profile
+        
       UngroupedStatistics : distinct_synonym_count
+        
       UngroupedStatistics : edge_count_by_predicate
+        
+          UngroupedStatistics --|> FacetedCount : edge_count_by_predicate
+        
       UngroupedStatistics : entailed_edge_count_by_predicate
+        
+          UngroupedStatistics --|> FacetedCount : entailed_edge_count_by_predicate
+        
       UngroupedStatistics : equivalent_classes_axiom_count
+        
       UngroupedStatistics : id
+        
       UngroupedStatistics : individual_count
+        
       UngroupedStatistics : mapping_count
+        
       UngroupedStatistics : mapping_statement_count_by_object_source
+        
+          UngroupedStatistics --|> FacetedCount : mapping_statement_count_by_object_source
+        
       UngroupedStatistics : mapping_statement_count_by_predicate
+        
+          UngroupedStatistics --|> FacetedCount : mapping_statement_count_by_predicate
+        
       UngroupedStatistics : mapping_statement_count_subject_by_object_source
+        
+          UngroupedStatistics --|> FacetedCount : mapping_statement_count_subject_by_object_source
+        
       UngroupedStatistics : merged_class_count
+        
       UngroupedStatistics : named_individual_count
+        
       UngroupedStatistics : non_deprecated_class_count
+        
       UngroupedStatistics : non_deprecated_object_property_count
+        
       UngroupedStatistics : object_property_count
+        
       UngroupedStatistics : ontologies
+        
+          UngroupedStatistics --|> Ontology : ontologies
+        
       UngroupedStatistics : ontology_count
+        
       UngroupedStatistics : owl_axiom_count
+        
       UngroupedStatistics : property_count
+        
       UngroupedStatistics : rdf_triple_count
+        
       UngroupedStatistics : subclass_of_axiom_count
+        
       UngroupedStatistics : subset_count
+        
       UngroupedStatistics : synonym_statement_count
+        
       UngroupedStatistics : synonym_statement_count_by_predicate
+        
+          UngroupedStatistics --|> FacetedCount : synonym_statement_count_by_predicate
+        
       UngroupedStatistics : unsatisfiable_class_count
+        
       UngroupedStatistics : untyped_entity_count
+        
       UngroupedStatistics : was_generated_by
+        
+          UngroupedStatistics --|> SummaryStatisticsCalculationActivity : was_generated_by
+        
       
 ```
 
@@ -73,45 +147,45 @@ URI: [summary_statistics:UngroupedStatistics](https://w3id.org/oaklib/summary_st
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [class_count](class_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of classes in the ontology or subset | direct |
-| [anonymous_class_expression_count](anonymous_class_expression_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of anonymous class expressions in the ontology or subset | direct |
-| [unsatisfiable_class_count](unsatisfiable_class_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of unsatisfiable classes in the ontology or subset | direct |
-| [deprecated_class_count](deprecated_class_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of deprecated (obsoleted) classes in the ontology or subset | direct |
-| [non_deprecated_class_count](non_deprecated_class_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of non-deprecated (non-obsoleted) classes in the ontology or subset | direct |
-| [merged_class_count](merged_class_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of merged classes (obsoletions with merge reason) in the ontology or s... | direct |
-| [class_count_with_text_definitions](class_count_with_text_definitions.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of classes with text definitions in the ontology or subset | direct |
-| [class_count_without_text_definitions](class_count_without_text_definitions.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of classes without text definitions in the ontology or subset | direct |
-| [property_count](property_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of properties in the ontology or subset | direct |
-| [object_property_count](object_property_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of object properties (relations) in the ontology or subset | direct |
-| [deprecated_object_property_count](deprecated_object_property_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of deprecated (obsoleted) object properties in the ontology or subset | direct |
-| [non_deprecated_object_property_count](non_deprecated_object_property_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of non-deprecated (non-obsoleted) object properties in the ontology or... | direct |
-| [datatype_property_count](datatype_property_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of datatype properties in the ontology or subset | direct |
-| [annotation_property_count](annotation_property_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of annotation properties (metadata properties) in the ontology or subs... | direct |
-| [individual_count](individual_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of individuals (named and anonymous) in the ontology or subset | direct |
-| [named_individual_count](named_individual_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of named individuals in the ontology or subset | direct |
-| [anonymous_individual_count](anonymous_individual_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of anonymous individuals in the ontology or subset | direct |
-| [untyped_entity_count](untyped_entity_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of entities whose type could not be determined in the ontology or subs... | direct |
-| [subset_count](subset_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of distinct subsets (slims, value sets) in the ontology or subset | direct |
-| [description_logic_profile](description_logic_profile.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Description logic profile (e | direct |
-| [owl_axiom_count](owl_axiom_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of OWL axioms in the ontology or subset | direct |
-| [rdf_triple_count](rdf_triple_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of RDF triples in the ontology or subset | direct |
-| [subclass_of_axiom_count](subclass_of_axiom_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of subclass axioms in the ontology or subset | direct |
-| [equivalent_classes_axiom_count](equivalent_classes_axiom_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of equivalent classes axioms in the ontology or subset | direct |
+| [class_count](class_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of classes in the ontology or subset | direct |
+| [anonymous_class_expression_count](anonymous_class_expression_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of anonymous class expressions in the ontology or subset | direct |
+| [unsatisfiable_class_count](unsatisfiable_class_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of unsatisfiable classes in the ontology or subset | direct |
+| [deprecated_class_count](deprecated_class_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of deprecated (obsoleted) classes in the ontology or subset | direct |
+| [non_deprecated_class_count](non_deprecated_class_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of non-deprecated (non-obsoleted) classes in the ontology or subset | direct |
+| [merged_class_count](merged_class_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of merged classes (obsoletions with merge reason) in the ontology or s... | direct |
+| [class_count_with_text_definitions](class_count_with_text_definitions.md) | 0..1 <br/> [Integer](Integer.md) | Number of classes with text definitions in the ontology or subset | direct |
+| [class_count_without_text_definitions](class_count_without_text_definitions.md) | 0..1 <br/> [Integer](Integer.md) | Number of classes without text definitions in the ontology or subset | direct |
+| [property_count](property_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of properties in the ontology or subset | direct |
+| [object_property_count](object_property_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of object properties (relations) in the ontology or subset | direct |
+| [deprecated_object_property_count](deprecated_object_property_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of deprecated (obsoleted) object properties in the ontology or subset | direct |
+| [non_deprecated_object_property_count](non_deprecated_object_property_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of non-deprecated (non-obsoleted) object properties in the ontology or... | direct |
+| [datatype_property_count](datatype_property_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of datatype properties in the ontology or subset | direct |
+| [annotation_property_count](annotation_property_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of annotation properties (metadata properties) in the ontology or subs... | direct |
+| [individual_count](individual_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of individuals (named and anonymous) in the ontology or subset | direct |
+| [named_individual_count](named_individual_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of named individuals in the ontology or subset | direct |
+| [anonymous_individual_count](anonymous_individual_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of anonymous individuals in the ontology or subset | direct |
+| [untyped_entity_count](untyped_entity_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of entities whose type could not be determined in the ontology or subs... | direct |
+| [subset_count](subset_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of distinct subsets (slims, value sets) in the ontology or subset | direct |
+| [description_logic_profile](description_logic_profile.md) | 0..1 <br/> [String](String.md) | Description logic profile (e | direct |
+| [owl_axiom_count](owl_axiom_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of OWL axioms in the ontology or subset | direct |
+| [rdf_triple_count](rdf_triple_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of RDF triples in the ontology or subset | direct |
+| [subclass_of_axiom_count](subclass_of_axiom_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of subclass axioms in the ontology or subset | direct |
+| [equivalent_classes_axiom_count](equivalent_classes_axiom_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of equivalent classes axioms in the ontology or subset | direct |
 | [edge_count_by_predicate](edge_count_by_predicate.md) | 0..* <br/> [FacetedCount](FacetedCount.md) | Number of edges grouped by predicate in the ontology or subset | direct |
 | [entailed_edge_count_by_predicate](entailed_edge_count_by_predicate.md) | 0..* <br/> [FacetedCount](FacetedCount.md) | Number of entailed (includes indirect) edges grouped by predicate in the onto... | direct |
-| [distinct_synonym_count](distinct_synonym_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of distinct synonym strings in the ontology or subset | direct |
-| [synonym_statement_count](synonym_statement_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of synonym statements (assertions) in the ontology or subset | direct |
+| [distinct_synonym_count](distinct_synonym_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of distinct synonym strings in the ontology or subset | direct |
+| [synonym_statement_count](synonym_statement_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of synonym statements (assertions) in the ontology or subset | direct |
 | [synonym_statement_count_by_predicate](synonym_statement_count_by_predicate.md) | 0..* <br/> [FacetedCount](FacetedCount.md) | Number of synonym statements (assertions) grouped by predicate (scope) in the... | direct |
 | [class_count_by_subset](class_count_by_subset.md) | 0..* <br/> [FacetedCount](FacetedCount.md) | Number of classes grouped by subset (slim, value set) in the ontology or subs... | direct |
 | [class_count_by_category](class_count_by_category.md) | 0..* <br/> [FacetedCount](FacetedCount.md) | Number of classes grouped by category in the ontology or subset | direct |
-| [mapping_count](mapping_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of mappings (including xrefs) in the ontology or subset | direct |
+| [mapping_count](mapping_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of mappings (including xrefs) in the ontology or subset | direct |
 | [mapping_statement_count_by_predicate](mapping_statement_count_by_predicate.md) | 0..* <br/> [FacetedCount](FacetedCount.md) | Number of mappings grouped by predicate (e | direct |
 | [mapping_statement_count_by_object_source](mapping_statement_count_by_object_source.md) | 0..* <br/> [FacetedCount](FacetedCount.md) | Number of mappings grouped by object_source (prefix of external vocabulary) i... | direct |
 | [mapping_statement_count_subject_by_object_source](mapping_statement_count_subject_by_object_source.md) | 0..* <br/> [FacetedCount](FacetedCount.md) | Number of distinct subject entities grouped by object_source (prefix of exter... | direct |
-| [ontology_count](ontology_count.md) | 0..1 <br/> [xsd:integer](http://www.w3.org/2001/XMLSchema#integer) | Number of ontologies (including imports) for the ontology or subset | direct |
+| [ontology_count](ontology_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of ontologies (including imports) for the ontology or subset | direct |
 | [contributor_summary](contributor_summary.md) | 0..* <br/> [ContributorStatistics](ContributorStatistics.md) |  | direct |
 | [change_summary](change_summary.md) | 0..* <br/> [ChangeTypeStatistic](ChangeTypeStatistic.md) | Summary of changes between two versions of an ontology | direct |
-| [id](id.md) | 1..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Unique handle for this report | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
+| [id](id.md) | 1..1 <br/> [String](String.md) | Unique handle for this report | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
 | [ontologies](ontologies.md) | 0..* <br/> [Ontology](Ontology.md) | Ontology for which the statistics are computed | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
 | [compared_with](compared_with.md) | 0..* <br/> [Ontology](Ontology.md) | For diffs, the ontologies being compared against | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
 | [was_generated_by](was_generated_by.md) | 0..1 <br/> [SummaryStatisticsCalculationActivity](SummaryStatisticsCalculationActivity.md) | The process that generated the report | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
@@ -143,7 +217,7 @@ URI: [summary_statistics:UngroupedStatistics](https://w3id.org/oaklib/summary_st
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -170,8 +244,7 @@ URI: [summary_statistics:UngroupedStatistics](https://w3id.org/oaklib/summary_st
 ```yaml
 name: UngroupedStatistics
 description: A summary statistics report object
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 is_a: SummaryStatisticsReport
 attributes:
   class_count:
@@ -181,7 +254,7 @@ attributes:
         tag: filter
         value: Class
     description: Number of classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -189,7 +262,7 @@ attributes:
   anonymous_class_expression_count:
     name: anonymous_class_expression_count
     description: Number of anonymous class expressions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -201,7 +274,7 @@ attributes:
         tag: filter
         value: Class, Unsatisfiable
     description: Number of unsatisfiable classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -213,7 +286,7 @@ attributes:
         tag: filter
         value: Class, Deprecated
     description: Number of deprecated (obsoleted) classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -226,7 +299,7 @@ attributes:
         value: Class, NotDeprecated
     description: Number of non-deprecated (non-obsoleted) classes in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -239,7 +312,7 @@ attributes:
         value: Class, Deprecated, Merged
     description: Number of merged classes (obsoletions with merge reason) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -251,7 +324,7 @@ attributes:
         tag: filter
         value: Class, HasTextDefinition
     description: Number of classes with text definitions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -263,7 +336,7 @@ attributes:
         tag: filter
         value: Class, NotHasTextDefinition
     description: Number of classes without text definitions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: class_statistic_group
@@ -271,7 +344,7 @@ attributes:
   property_count:
     name: property_count
     description: Number of properties in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -283,7 +356,7 @@ attributes:
         tag: filter
         value: ObjectProperty
     description: Number of object properties (relations) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -296,7 +369,7 @@ attributes:
         value: ObjectProperty, Deprecated
     description: Number of deprecated (obsoleted) object properties in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -309,7 +382,7 @@ attributes:
         value: ObjectProperty, NotDeprecated
     description: Number of non-deprecated (non-obsoleted) object properties in the
       ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -321,7 +394,7 @@ attributes:
         tag: filter
         value: DatatypeProperty
     description: Number of datatype properties in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -334,7 +407,7 @@ attributes:
         value: AnnotationProperty
     description: Number of annotation properties (metadata properties) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: property_statistic_group
@@ -346,7 +419,7 @@ attributes:
         tag: filter
         value: Individual
     description: Number of individuals (named and anonymous) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: individual_statistic_group
@@ -358,7 +431,7 @@ attributes:
         tag: filter
         value: NamedIndividual
     description: Number of named individuals in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: individual_statistic_group
@@ -370,7 +443,7 @@ attributes:
         tag: filter
         value: AnonymousIndividual
     description: Number of anonymous individuals in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: individual_statistic_group
@@ -380,7 +453,7 @@ attributes:
     name: untyped_entity_count
     description: Number of entities whose type could not be determined in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     range: integer
@@ -388,7 +461,7 @@ attributes:
     name: subset_count
     description: Number of distinct subsets (slims, value sets) in the ontology or
       subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     range: integer
@@ -396,7 +469,7 @@ attributes:
     name: description_logic_profile
     description: Description logic profile (e.g. OWL-EL, OWL-DL) of the ontology or
       subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_group: owl_statistic_group
     range: string
@@ -407,7 +480,7 @@ attributes:
         tag: filter
         value: Axiom
     description: Number of OWL axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: owl_statistic_group
@@ -415,7 +488,7 @@ attributes:
   rdf_triple_count:
     name: rdf_triple_count
     description: Number of RDF triples in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: owl_statistic_group
@@ -423,7 +496,7 @@ attributes:
   subclass_of_axiom_count:
     name: subclass_of_axiom_count
     description: Number of subclass axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: owl_statistic_group
@@ -431,7 +504,7 @@ attributes:
   equivalent_classes_axiom_count:
     name: equivalent_classes_axiom_count
     description: Number of equivalent classes axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: owl_statistic_group
@@ -446,7 +519,7 @@ attributes:
         tag: facet
         value: Predicate
     description: Number of edges grouped by predicate in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -463,7 +536,7 @@ attributes:
         value: Predicate
     description: Number of entailed (includes indirect) edges grouped by predicate
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -479,7 +552,7 @@ attributes:
         tag: distinct
         value: Value
     description: Number of distinct synonym strings in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: metadata_statistic_group
@@ -491,7 +564,7 @@ attributes:
         tag: filter
         value: Synonym
     description: Number of synonym statements (assertions) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: metadata_statistic_group
@@ -507,7 +580,7 @@ attributes:
         value: Predicate
     description: Number of synonym statements (assertions) grouped by predicate (scope)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -524,7 +597,7 @@ attributes:
         value: Predicate
     description: Number of classes grouped by subset (slim, value set) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -540,7 +613,7 @@ attributes:
         tag: facet
         value: Category
     description: Number of classes grouped by category in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -553,7 +626,7 @@ attributes:
         tag: filter
         value: Mapping
     description: Number of mappings (including xrefs) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     slot_group: metadata_statistic_group
@@ -569,7 +642,7 @@ attributes:
         value: Predicate
     description: Number of mappings grouped by predicate (e.g. xref, skos predicate)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -586,7 +659,7 @@ attributes:
         value: ObjectSource
     description: Number of mappings grouped by object_source (prefix of external vocabulary)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -608,7 +681,7 @@ attributes:
       of external vocabulary) in the ontology or subset
     comments:
     - for exact or one-to-one mappings this should generally be the same as mapping_statement_count_by_object_source
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     slot_group: metadata_statistic_group
@@ -621,13 +694,13 @@ attributes:
         tag: filter
         value: Ontology
     description: Number of ontologies (including imports) for the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     range: integer
   contributor_summary:
     name: contributor_summary
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     range: ContributorStatistics
@@ -635,7 +708,7 @@ attributes:
   change_summary:
     name: change_summary
     description: Summary of changes between two versions of an ontology
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     range: ChangeTypeStatistic
@@ -650,8 +723,7 @@ attributes:
 ```yaml
 name: UngroupedStatistics
 description: A summary statistics report object
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 is_a: SummaryStatisticsReport
 attributes:
   class_count:
@@ -661,7 +733,7 @@ attributes:
         tag: filter
         value: Class
     description: Number of classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: class_count
@@ -673,7 +745,7 @@ attributes:
   anonymous_class_expression_count:
     name: anonymous_class_expression_count
     description: Number of anonymous class expressions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: anonymous_class_expression_count
@@ -689,7 +761,7 @@ attributes:
         tag: filter
         value: Class, Unsatisfiable
     description: Number of unsatisfiable classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: unsatisfiable_class_count
@@ -705,7 +777,7 @@ attributes:
         tag: filter
         value: Class, Deprecated
     description: Number of deprecated (obsoleted) classes in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: deprecated_class_count
@@ -722,7 +794,7 @@ attributes:
         value: Class, NotDeprecated
     description: Number of non-deprecated (non-obsoleted) classes in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: non_deprecated_class_count
@@ -739,7 +811,7 @@ attributes:
         value: Class, Deprecated, Merged
     description: Number of merged classes (obsoletions with merge reason) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: merged_class_count
@@ -755,7 +827,7 @@ attributes:
         tag: filter
         value: Class, HasTextDefinition
     description: Number of classes with text definitions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: class_count_with_text_definitions
@@ -771,7 +843,7 @@ attributes:
         tag: filter
         value: Class, NotHasTextDefinition
     description: Number of classes without text definitions in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: class_count_without_text_definitions
@@ -783,7 +855,7 @@ attributes:
   property_count:
     name: property_count
     description: Number of properties in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: property_count
@@ -799,7 +871,7 @@ attributes:
         tag: filter
         value: ObjectProperty
     description: Number of object properties (relations) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: object_property_count
@@ -816,7 +888,7 @@ attributes:
         value: ObjectProperty, Deprecated
     description: Number of deprecated (obsoleted) object properties in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: deprecated_object_property_count
@@ -833,7 +905,7 @@ attributes:
         value: ObjectProperty, NotDeprecated
     description: Number of non-deprecated (non-obsoleted) object properties in the
       ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: non_deprecated_object_property_count
@@ -849,7 +921,7 @@ attributes:
         tag: filter
         value: DatatypeProperty
     description: Number of datatype properties in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: datatype_property_count
@@ -866,7 +938,7 @@ attributes:
         value: AnnotationProperty
     description: Number of annotation properties (metadata properties) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: annotation_property_count
@@ -882,7 +954,7 @@ attributes:
         tag: filter
         value: Individual
     description: Number of individuals (named and anonymous) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: individual_count
@@ -898,7 +970,7 @@ attributes:
         tag: filter
         value: NamedIndividual
     description: Number of named individuals in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: named_individual_count
@@ -914,7 +986,7 @@ attributes:
         tag: filter
         value: AnonymousIndividual
     description: Number of anonymous individuals in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: anonymous_individual_count
@@ -928,7 +1000,7 @@ attributes:
     name: untyped_entity_count
     description: Number of entities whose type could not be determined in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: untyped_entity_count
@@ -940,7 +1012,7 @@ attributes:
     name: subset_count
     description: Number of distinct subsets (slims, value sets) in the ontology or
       subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: subset_count
@@ -952,7 +1024,7 @@ attributes:
     name: description_logic_profile
     description: Description logic profile (e.g. OWL-EL, OWL-DL) of the ontology or
       subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     alias: description_logic_profile
     owner: UngroupedStatistics
@@ -967,7 +1039,7 @@ attributes:
         tag: filter
         value: Axiom
     description: Number of OWL axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: owl_axiom_count
@@ -979,7 +1051,7 @@ attributes:
   rdf_triple_count:
     name: rdf_triple_count
     description: Number of RDF triples in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: rdf_triple_count
@@ -991,7 +1063,7 @@ attributes:
   subclass_of_axiom_count:
     name: subclass_of_axiom_count
     description: Number of subclass axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: subclass_of_axiom_count
@@ -1003,7 +1075,7 @@ attributes:
   equivalent_classes_axiom_count:
     name: equivalent_classes_axiom_count
     description: Number of equivalent classes axioms in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: equivalent_classes_axiom_count
@@ -1022,7 +1094,7 @@ attributes:
         tag: facet
         value: Predicate
     description: Number of edges grouped by predicate in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: edge_count_by_predicate
@@ -1043,7 +1115,7 @@ attributes:
         value: Predicate
     description: Number of entailed (includes indirect) edges grouped by predicate
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: entailed_edge_count_by_predicate
@@ -1063,7 +1135,7 @@ attributes:
         tag: distinct
         value: Value
     description: Number of distinct synonym strings in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: distinct_synonym_count
@@ -1079,7 +1151,7 @@ attributes:
         tag: filter
         value: Synonym
     description: Number of synonym statements (assertions) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: synonym_statement_count
@@ -1099,7 +1171,7 @@ attributes:
         value: Predicate
     description: Number of synonym statements (assertions) grouped by predicate (scope)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: synonym_statement_count_by_predicate
@@ -1120,7 +1192,7 @@ attributes:
         value: Predicate
     description: Number of classes grouped by subset (slim, value set) in the ontology
       or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: class_count_by_subset
@@ -1140,7 +1212,7 @@ attributes:
         tag: facet
         value: Category
     description: Number of classes grouped by category in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: class_count_by_category
@@ -1157,7 +1229,7 @@ attributes:
         tag: filter
         value: Mapping
     description: Number of mappings (including xrefs) in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: mapping_count
@@ -1177,7 +1249,7 @@ attributes:
         value: Predicate
     description: Number of mappings grouped by predicate (e.g. xref, skos predicate)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: mapping_statement_count_by_predicate
@@ -1198,7 +1270,7 @@ attributes:
         value: ObjectSource
     description: Number of mappings grouped by object_source (prefix of external vocabulary)
       in the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: mapping_statement_count_by_object_source
@@ -1224,7 +1296,7 @@ attributes:
       of external vocabulary) in the ontology or subset
     comments:
     - for exact or one-to-one mappings this should generally be the same as mapping_statement_count_by_object_source
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: mapping_statement_count_subject_by_object_source
@@ -1241,7 +1313,7 @@ attributes:
         tag: filter
         value: Ontology
     description: Number of ontologies (including imports) for the ontology or subset
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     is_a: count_statistic
     alias: ontology_count
@@ -1251,7 +1323,7 @@ attributes:
     range: integer
   contributor_summary:
     name: contributor_summary
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: contributor_summary
@@ -1263,7 +1335,7 @@ attributes:
   change_summary:
     name: change_summary
     description: Summary of changes between two versions of an ontology
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: change_summary
@@ -1275,7 +1347,7 @@ attributes:
   id:
     name: id
     description: Unique handle for this report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     alias: id
     owner: UngroupedStatistics
@@ -1289,7 +1361,7 @@ attributes:
   ontologies:
     name: ontologies
     description: Ontology for which the statistics are computed
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: ontologies
@@ -1302,7 +1374,7 @@ attributes:
   compared_with:
     name: compared_with
     description: For diffs, the ontologies being compared against
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: compared_with
@@ -1315,7 +1387,7 @@ attributes:
   was_generated_by:
     name: was_generated_by
     description: The process that generated the report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     alias: was_generated_by
     owner: UngroupedStatistics
@@ -1325,7 +1397,7 @@ attributes:
   agents:
     name: agents
     description: Agents that contributed to the report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: agents

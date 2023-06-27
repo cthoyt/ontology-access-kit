@@ -1,13 +1,23 @@
-# Boolean
+# Type: Boolean
 
-A binary (true or false) value
 
-URI: http://www.w3.org/2001/XMLSchema#boolean
+
+
+_A binary (true or false) value_
+
+
+
+URI: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 
 * [base](https://w3id.org/linkml/base): Bool
 
+* [uri](https://w3id.org/linkml/uri): xsd:boolean
 
 * [repr](https://w3id.org/linkml/repr): bool
+
+
+
+
 
 
 
@@ -15,6 +25,15 @@ URI: http://www.w3.org/2001/XMLSchema#boolean
 ## Identifier and Mapping Information
 
 
+
+
+
+
+
+### Schema Source
+
+
+* from schema: http://purl.obolibrary.org/obo/omo/schema
 
 
 

@@ -1,5 +1,8 @@
 # Slot: class_count_by_subset
+
+
 _Number of classes grouped by subset (slim, value set) in the ontology or subset_
+
 
 
 URI: [summary_statistics:class_count_by_subset](https://w3id.org/oaklib/summary_statistics.class_count_by_subset)
@@ -13,9 +16,10 @@ URI: [summary_statistics:class_count_by_subset](https://w3id.org/oaklib/summary_
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [summary_statistics:class_count_by_subset](https://w3id.org/oaklib/summary_
 ## Properties
 
 * Range: [FacetedCount](FacetedCount.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -51,7 +53,7 @@ URI: [summary_statistics:class_count_by_subset](https://w3id.org/oaklib/summary_
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -70,7 +72,7 @@ annotations:
     value: Predicate
 description: Number of classes grouped by subset (slim, value set) in the ontology
   or subset
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 multivalued: true
 alias: class_count_by_subset

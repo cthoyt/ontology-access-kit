@@ -16,9 +16,10 @@ URI: [sim:dice_similarity](https://w3id.org/linkml/similarity/dice_similarity)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms |  no  |
+
 
 
 
@@ -28,8 +29,6 @@ URI: [sim:dice_similarity](https://w3id.org/linkml/similarity/dice_similarity)
 ## Properties
 
 * Range: [ZeroToOne](ZeroToOne.md)
-
-
 
 
 
@@ -46,7 +45,7 @@ URI: [sim:dice_similarity](https://w3id.org/linkml/similarity/dice_similarity)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -56,7 +55,7 @@ URI: [sim:dice_similarity](https://w3id.org/linkml/similarity/dice_similarity)
 <details>
 ```yaml
 name: dice_similarity
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 is_a: score
 alias: dice_similarity

@@ -1,5 +1,8 @@
 # Class: Term
+
+
 _An ontology term. In this model this is either the SubjectTerm of a taxon constraint, or an actual taxon_
+
 
 
 
@@ -18,7 +21,9 @@ URI: [owl:Class](http://www.w3.org/2002/07/owl#Class)
       Term <|-- PredicateTerm
       
       Term : id
+        
       Term : label
+        
       
 ```
 
@@ -38,8 +43,8 @@ URI: [owl:Class](http://www.w3.org/2002/07/owl#Class)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
-| [label](label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | the OBO CURIE for the term | direct |
+| [label](label.md) | 0..1 <br/> [String](String.md) | the human readable name or label of the term | direct |
 
 
 
@@ -60,7 +65,7 @@ URI: [owl:Class](http://www.w3.org/2002/07/owl#Class)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/taxon_constraints
+* from schema: https://w3id.org/oak/taxon_constraints
 
 
 
@@ -88,19 +93,21 @@ URI: [owl:Class](http://www.w3.org/2002/07/owl#Class)
 name: Term
 description: An ontology term. In this model this is either the SubjectTerm of a taxon
   constraint, or an actual taxon
-from_schema: https://w3id.org/linkml/taxon_constraints
-rank: 1000
+from_schema: https://w3id.org/oak/taxon_constraints
 abstract: true
 attributes:
   id:
     name: id
-    from_schema: https://w3id.org/linkml/taxon_constraints
+    description: the OBO CURIE for the term
+    from_schema: https://w3id.org/oak/taxon_constraints
     rank: 1000
     identifier: true
     range: uriorcurie
+    required: true
   label:
     name: label
-    from_schema: https://w3id.org/linkml/taxon_constraints
+    description: the human readable name or label of the term
+    from_schema: https://w3id.org/oak/taxon_constraints
     rank: 1000
     slot_uri: rdfs:label
     range: string
@@ -116,13 +123,13 @@ class_uri: owl:Class
 name: Term
 description: An ontology term. In this model this is either the SubjectTerm of a taxon
   constraint, or an actual taxon
-from_schema: https://w3id.org/linkml/taxon_constraints
-rank: 1000
+from_schema: https://w3id.org/oak/taxon_constraints
 abstract: true
 attributes:
   id:
     name: id
-    from_schema: https://w3id.org/linkml/taxon_constraints
+    description: the OBO CURIE for the term
+    from_schema: https://w3id.org/oak/taxon_constraints
     rank: 1000
     identifier: true
     alias: id
@@ -132,7 +139,8 @@ attributes:
     range: uriorcurie
   label:
     name: label
-    from_schema: https://w3id.org/linkml/taxon_constraints
+    description: the human readable name or label of the term
+    from_schema: https://w3id.org/oak/taxon_constraints
     rank: 1000
     slot_uri: rdfs:label
     alias: label

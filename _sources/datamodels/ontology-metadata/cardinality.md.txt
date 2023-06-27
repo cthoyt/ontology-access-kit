@@ -16,11 +16,12 @@ URI: [owl:cardinality](http://www.w3.org/2002/07/owl#cardinality)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[ClassExpression](ClassExpression.md) | 
-[Class](Class.md) | 
-[Restriction](Restriction.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[ClassExpression](ClassExpression.md) |  |  no  |
+[Class](Class.md) |  |  no  |
+[Restriction](Restriction.md) |  |  no  |
+
 
 
 
@@ -29,9 +30,7 @@ URI: [owl:cardinality](http://www.w3.org/2002/07/owl#cardinality)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 

@@ -11,9 +11,10 @@ URI: [sim:ancestor_source](https://w3id.org/linkml/similarity/ancestor_source)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [sim:ancestor_source](https://w3id.org/linkml/similarity/ancestor_source)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [sim:ancestor_source](https://w3id.org/linkml/similarity/ancestor_source)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -51,7 +50,7 @@ URI: [sim:ancestor_source](https://w3id.org/linkml/similarity/ancestor_source)
 <details>
 ```yaml
 name: ancestor_source
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 alias: ancestor_source
 domain_of:

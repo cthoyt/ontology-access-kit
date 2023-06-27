@@ -1,5 +1,8 @@
 # Slot: title
+
+
 _the title of the resource_
+
 
 
 URI: [dcterms:title](http://purl.org/dc/terms/title)
@@ -13,9 +16,10 @@ URI: [dcterms:title](http://purl.org/dc/terms/title)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Ontology](Ontology.md) | An ontology
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Ontology](Ontology.md) | An ontology |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [dcterms:title](http://purl.org/dc/terms/title)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [dcterms:title](http://purl.org/dc/terms/title)
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -54,7 +56,7 @@ URI: [dcterms:title](http://purl.org/dc/terms/title)
 ```yaml
 name: title
 description: the title of the resource
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 slot_uri: dcterms:title
 alias: title

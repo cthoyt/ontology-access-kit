@@ -1,8 +1,11 @@
 # Slot: right_subject_id
+
+
 _The subject (child) of the matched/right edge, if matchable_
 
 
-URI: [ann:right_subject_id](https://w3id.org/linkml/text_annotator/right_subject_id)
+
+URI: [xodiff:right_subject_id](https://w3id.org/oak/cross-ontology-diff/right_subject_id)
 
 
 
@@ -17,9 +20,10 @@ URI: [ann:right_subject_id](https://w3id.org/linkml/text_annotator/right_subject
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a... |  no  |
+
 
 
 
@@ -29,8 +33,6 @@ URI: [ann:right_subject_id](https://w3id.org/linkml/text_annotator/right_subject
 ## Properties
 
 * Range: [EntityReference](EntityReference.md)
-
-
 
 
 
@@ -47,7 +49,7 @@ URI: [ann:right_subject_id](https://w3id.org/linkml/text_annotator/right_subject
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 
@@ -58,7 +60,7 @@ URI: [ann:right_subject_id](https://w3id.org/linkml/text_annotator/right_subject
 ```yaml
 name: right_subject_id
 description: The subject (child) of the matched/right edge, if matchable
-from_schema: https://w3id.org/linkml/cross_ontology_diff
+from_schema: https://w3id.org/oak/cross-ontology-diff
 rank: 1000
 mixins:
 - right_side

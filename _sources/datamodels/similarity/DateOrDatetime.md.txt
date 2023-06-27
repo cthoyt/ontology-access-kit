@@ -1,7 +1,10 @@
 # Type: DateOrDatetime
 
 
+
+
 _Either a date or a datetime_
+
 
 
 URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
@@ -30,7 +33,7 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/types
+* from schema: https://w3id.org/oak/similarity
 
 
 

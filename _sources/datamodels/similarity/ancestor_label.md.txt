@@ -1,5 +1,8 @@
 # Slot: ancestor_label
+
+
 _the name or label of the ancestor concept_
+
 
 
 URI: [sim:ancestor_label](https://w3id.org/linkml/similarity/ancestor_label)
@@ -13,9 +16,10 @@ URI: [sim:ancestor_label](https://w3id.org/linkml/similarity/ancestor_label)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [sim:ancestor_label](https://w3id.org/linkml/similarity/ancestor_label)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [sim:ancestor_label](https://w3id.org/linkml/similarity/ancestor_label)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -54,7 +56,7 @@ URI: [sim:ancestor_label](https://w3id.org/linkml/similarity/ancestor_label)
 ```yaml
 name: ancestor_label
 description: the name or label of the ancestor concept
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 alias: ancestor_label
 domain_of:

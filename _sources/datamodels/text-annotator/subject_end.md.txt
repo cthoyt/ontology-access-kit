@@ -11,10 +11,11 @@ URI: [ann:subject_end](https://w3id.org/linkml/text_annotator/subject_end)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[HasSpan](HasSpan.md) | 
-[TextAnnotation](TextAnnotation.md) | An individual text annotation
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[HasSpan](HasSpan.md) |  |  no  |
+[TextAnnotation](TextAnnotation.md) | An individual text annotation |  no  |
+
 
 
 
@@ -24,8 +25,6 @@ URI: [ann:subject_end](https://w3id.org/linkml/text_annotator/subject_end)
 ## Properties
 
 * Range: [Position](Position.md)
-
-
 
 
 
@@ -42,7 +41,7 @@ URI: [ann:subject_end](https://w3id.org/linkml/text_annotator/subject_end)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -52,7 +51,7 @@ URI: [ann:subject_end](https://w3id.org/linkml/text_annotator/subject_end)
 <details>
 ```yaml
 name: subject_end
-from_schema: https://w3id.org/linkml/text_annotator
+from_schema: https://w3id.org/oak/text_annotator
 exact_mappings:
 - bpa:to
 rank: 1000

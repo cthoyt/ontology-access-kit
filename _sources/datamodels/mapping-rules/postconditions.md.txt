@@ -1,8 +1,11 @@
 # Slot: postconditions
+
+
 _conditions that apply if preconditions match_
 
 
-URI: [mrules:postconditions](https://w3id.org/linkml/mapping_rules_datamodel/postconditions)
+
+URI: [mappingrules:postconditions](https://w3id.org/oak/mapping-rules-datamodel/postconditions)
 
 
 
@@ -13,9 +16,10 @@ URI: [mrules:postconditions](https://w3id.org/linkml/mapping_rules_datamodel/pos
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[MappingRule](MappingRule.md) | An individual mapping rule, if preconditions match the postconditions are app...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[MappingRule](MappingRule.md) | An individual mapping rule, if preconditions match the postconditions are app... |  no  |
+
 
 
 
@@ -25,8 +29,6 @@ URI: [mrules:postconditions](https://w3id.org/linkml/mapping_rules_datamodel/pos
 ## Properties
 
 * Range: [Postcondition](Postcondition.md)
-
-
 
 
 
@@ -43,7 +45,7 @@ URI: [mrules:postconditions](https://w3id.org/linkml/mapping_rules_datamodel/pos
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -54,7 +56,7 @@ URI: [mrules:postconditions](https://w3id.org/linkml/mapping_rules_datamodel/pos
 ```yaml
 name: postconditions
 description: conditions that apply if preconditions match
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: postconditions
 owner: MappingRule

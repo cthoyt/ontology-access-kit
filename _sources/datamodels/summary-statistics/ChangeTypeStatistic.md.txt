@@ -1,5 +1,8 @@
 # Class: ChangeTypeStatistic
+
+
 _statistics for a particular kind of diff_
+
 
 
 
@@ -12,7 +15,9 @@ URI: [summary_statistics:ChangeTypeStatistic](https://w3id.org/oaklib/summary_st
  classDiagram
     class ChangeTypeStatistic
       ChangeTypeStatistic : facet
+        
       ChangeTypeStatistic : filtered_count
+        
       
 ```
 
@@ -26,8 +31,8 @@ URI: [summary_statistics:ChangeTypeStatistic](https://w3id.org/oaklib/summary_st
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [facet](facet.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [filtered_count](filtered_count.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [facet](facet.md) | 0..1 <br/> [String](String.md) | the facet used to group the counts | direct |
+| [filtered_count](filtered_count.md) | 1..1 <br/> [Integer](Integer.md) | the number of items in the facet | direct |
 
 
 
@@ -55,7 +60,7 @@ URI: [summary_statistics:ChangeTypeStatistic](https://w3id.org/oaklib/summary_st
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -82,18 +87,18 @@ URI: [summary_statistics:ChangeTypeStatistic](https://w3id.org/oaklib/summary_st
 ```yaml
 name: ChangeTypeStatistic
 description: statistics for a particular kind of diff
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   facet:
     name: facet
     description: the facet used to group the counts
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     key: true
+    required: true
   filtered_count:
     name: filtered_count
     description: the number of items in the facet
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     range: integer
     required: true
 
@@ -106,13 +111,12 @@ attributes:
 ```yaml
 name: ChangeTypeStatistic
 description: statistics for a particular kind of diff
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   facet:
     name: facet
     description: the facet used to group the counts
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     key: true
     alias: facet
     owner: ChangeTypeStatistic
@@ -120,10 +124,11 @@ attributes:
     - FacetedCount
     - ChangeTypeStatistic
     range: string
+    required: true
   filtered_count:
     name: filtered_count
     description: the number of items in the facet
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     alias: filtered_count
     owner: ChangeTypeStatistic
     domain_of:

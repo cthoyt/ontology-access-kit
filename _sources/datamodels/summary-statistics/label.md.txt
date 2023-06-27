@@ -1,5 +1,8 @@
 # Slot: label
+
+
 _the label for the agent_
+
 
 
 URI: [rdfs:label](http://www.w3.org/2000/01/rdf-schema#label)
@@ -13,9 +16,10 @@ URI: [rdfs:label](http://www.w3.org/2000/01/rdf-schema#label)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Agent](Agent.md) | An agent
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Agent](Agent.md) | An agent |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [rdfs:label](http://www.w3.org/2000/01/rdf-schema#label)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [rdfs:label](http://www.w3.org/2000/01/rdf-schema#label)
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -54,7 +56,7 @@ URI: [rdfs:label](http://www.w3.org/2000/01/rdf-schema#label)
 ```yaml
 name: label
 description: the label for the agent
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 slot_uri: rdfs:label
 alias: label

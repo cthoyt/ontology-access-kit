@@ -1,5 +1,8 @@
 # Class: SummaryStatisticsCalculationActivity
+
+
 _An activity that calculates summary statistics for an ontology_
+
 
 
 
@@ -12,9 +15,17 @@ URI: [summary_statistics:SummaryStatisticsCalculationActivity](https://w3id.org/
  classDiagram
     class SummaryStatisticsCalculationActivity
       SummaryStatisticsCalculationActivity : acted_on_behalf_of
+        
+          SummaryStatisticsCalculationActivity --|> Agent : acted_on_behalf_of
+        
       SummaryStatisticsCalculationActivity : ended_at_time
+        
       SummaryStatisticsCalculationActivity : started_at_time
+        
       SummaryStatisticsCalculationActivity : was_associated_with
+        
+          SummaryStatisticsCalculationActivity --|> Agent : was_associated_with
+        
       
 ```
 
@@ -28,8 +39,8 @@ URI: [summary_statistics:SummaryStatisticsCalculationActivity](https://w3id.org/
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [started_at_time](started_at_time.md) | 0..1 <br/> [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | the time at which the activity started | direct |
-| [ended_at_time](ended_at_time.md) | 0..1 <br/> [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) | the time at which the activity ended | direct |
+| [started_at_time](started_at_time.md) | 0..1 <br/> [Datetime](Datetime.md) | the time at which the activity started | direct |
+| [ended_at_time](ended_at_time.md) | 0..1 <br/> [Datetime](Datetime.md) | the time at which the activity ended | direct |
 | [was_associated_with](was_associated_with.md) | 0..1 <br/> [Agent](Agent.md) | the agent that was associated with the activity | direct |
 | [acted_on_behalf_of](acted_on_behalf_of.md) | 0..1 <br/> [Agent](Agent.md) | the agent that the activity acted on behalf of | direct |
 
@@ -61,7 +72,7 @@ URI: [summary_statistics:SummaryStatisticsCalculationActivity](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -88,34 +99,33 @@ URI: [summary_statistics:SummaryStatisticsCalculationActivity](https://w3id.org/
 ```yaml
 name: SummaryStatisticsCalculationActivity
 description: An activity that calculates summary statistics for an ontology
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   started_at_time:
     name: started_at_time
     description: the time at which the activity started
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: prov:startedAtTime
     range: datetime
   ended_at_time:
     name: ended_at_time
     description: the time at which the activity ended
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: prov:endedAtTime
     range: datetime
   was_associated_with:
     name: was_associated_with
     description: the agent that was associated with the activity
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: prov:wasAssociatedWith
     range: Agent
   acted_on_behalf_of:
     name: acted_on_behalf_of
     description: the agent that the activity acted on behalf of
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: prov:actedOnBehalfOf
     range: Agent
@@ -129,13 +139,12 @@ attributes:
 ```yaml
 name: SummaryStatisticsCalculationActivity
 description: An activity that calculates summary statistics for an ontology
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 attributes:
   started_at_time:
     name: started_at_time
     description: the time at which the activity started
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: prov:startedAtTime
     alias: started_at_time
@@ -146,7 +155,7 @@ attributes:
   ended_at_time:
     name: ended_at_time
     description: the time at which the activity ended
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: prov:endedAtTime
     alias: ended_at_time
@@ -157,7 +166,7 @@ attributes:
   was_associated_with:
     name: was_associated_with
     description: the agent that was associated with the activity
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: prov:wasAssociatedWith
     alias: was_associated_with
@@ -168,7 +177,7 @@ attributes:
   acted_on_behalf_of:
     name: acted_on_behalf_of
     description: the agent that the activity acted on behalf of
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     slot_uri: prov:actedOnBehalfOf
     alias: acted_on_behalf_of

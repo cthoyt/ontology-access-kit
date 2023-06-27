@@ -1,6 +1,6 @@
 # Slot: predicateId
 
-URI: [og:predicateId](https://github.com/geneontology/obographs/predicateId)
+URI: [obographs:predicateId](https://github.com/geneontology/obographs/predicateId)
 
 
 
@@ -11,10 +11,11 @@ URI: [og:predicateId](https://github.com/geneontology/obographs/predicateId)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[DomainRangeAxiom](DomainRangeAxiom.md) | An axiom that represents some combination of domain and range assertions
-[PropertyChainAxiom](PropertyChainAxiom.md) | An axiom that represents an OWL property chain, e
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[DomainRangeAxiom](DomainRangeAxiom.md) | This groups potentially multiple axioms that constrain the usage of a propert... |  no  |
+[PropertyChainAxiom](PropertyChainAxiom.md) | An axiom that represents an OWL property chain, e |  no  |
+
 
 
 
@@ -23,9 +24,7 @@ URI: [og:predicateId](https://github.com/geneontology/obographs/predicateId)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 

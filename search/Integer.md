@@ -1,7 +1,10 @@
 # Type: Integer
 
 
+
+
 _An integer_
+
 
 
 URI: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
@@ -29,7 +32,7 @@ URI: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/types
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 

@@ -11,9 +11,10 @@ URI: [tc:sources](https://w3id.org/linkml/taxon_constraints/sources)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TaxonConstraint](TaxonConstraint.md) | An individual taxon constraint
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TaxonConstraint](TaxonConstraint.md) | An individual taxon constraint |  no  |
+
 
 
 
@@ -22,11 +23,9 @@ URI: [tc:sources](https://w3id.org/linkml/taxon_constraints/sources)
 
 ## Properties
 
-* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
+* Range: [Uriorcurie](Uriorcurie.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [tc:sources](https://w3id.org/linkml/taxon_constraints/sources)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/taxon_constraints
+* from schema: https://w3id.org/oak/taxon_constraints
 
 
 
@@ -53,7 +52,7 @@ URI: [tc:sources](https://w3id.org/linkml/taxon_constraints/sources)
 <details>
 ```yaml
 name: sources
-from_schema: https://w3id.org/linkml/taxon_constraints
+from_schema: https://w3id.org/oak/taxon_constraints
 rank: 1000
 multivalued: true
 alias: sources

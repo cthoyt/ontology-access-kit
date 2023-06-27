@@ -11,9 +11,10 @@ URI: [sim:match_subsumer](https://w3id.org/linkml/similarity/match_subsumer)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[BestMatch](BestMatch.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[BestMatch](BestMatch.md) |  |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [sim:match_subsumer](https://w3id.org/linkml/similarity/match_subsumer)
 
 ## Properties
 
-* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
-
-
+* Range: [Uriorcurie](Uriorcurie.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [sim:match_subsumer](https://w3id.org/linkml/similarity/match_subsumer)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -51,7 +50,7 @@ URI: [sim:match_subsumer](https://w3id.org/linkml/similarity/match_subsumer)
 <details>
 ```yaml
 name: match_subsumer
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 alias: match_subsumer
 owner: BestMatch

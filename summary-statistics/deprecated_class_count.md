@@ -1,5 +1,8 @@
 # Slot: deprecated_class_count
+
+
 _Number of deprecated (obsoleted) classes in the ontology or subset_
+
 
 
 URI: [summary_statistics:deprecated_class_count](https://w3id.org/oaklib/summary_statistics.deprecated_class_count)
@@ -18,9 +21,10 @@ URI: [summary_statistics:deprecated_class_count](https://w3id.org/oaklib/summary
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object |  no  |
+
 
 
 
@@ -29,9 +33,7 @@ URI: [summary_statistics:deprecated_class_count](https://w3id.org/oaklib/summary
 
 ## Properties
 
-* Range: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
-
-
+* Range: [Integer](Integer.md)
 
 
 
@@ -54,7 +56,7 @@ URI: [summary_statistics:deprecated_class_count](https://w3id.org/oaklib/summary
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -69,7 +71,7 @@ annotations:
     tag: filter
     value: Class, Deprecated
 description: Number of deprecated (obsoleted) classes in the ontology or subset
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 is_a: count_statistic
 alias: deprecated_class_count

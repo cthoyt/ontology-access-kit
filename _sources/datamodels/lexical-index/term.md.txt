@@ -1,8 +1,11 @@
 # Slot: term
+
+
 _A normalized term that groups ontology elements_
 
 
-URI: [li:term](https://w3id.org/linkml/lexical_index/term)
+
+URI: [ontolexindex:term](https://w3id.org/oak/lexical-index/term)
 
 
 
@@ -13,9 +16,10 @@ URI: [li:term](https://w3id.org/linkml/lexical_index/term)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[LexicalGrouping](LexicalGrouping.md) | A grouping of ontology elements by a shared lexical term
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[LexicalGrouping](LexicalGrouping.md) | A grouping of ontology elements by a shared lexical term |  no  |
+
 
 
 
@@ -24,9 +28,9 @@ URI: [li:term](https://w3id.org/linkml/lexical_index/term)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
 
-
+* Required: True
 
 
 
@@ -43,7 +47,7 @@ URI: [li:term](https://w3id.org/linkml/lexical_index/term)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/lexical_index
+* from schema: https://w3id.org/oak/lexical-index
 
 
 
@@ -54,7 +58,7 @@ URI: [li:term](https://w3id.org/linkml/lexical_index/term)
 ```yaml
 name: term
 description: A normalized term that groups ontology elements
-from_schema: https://w3id.org/linkml/lexical_index
+from_schema: https://w3id.org/oak/lexical-index
 rank: 1000
 key: true
 alias: term
@@ -62,6 +66,7 @@ owner: LexicalGrouping
 domain_of:
 - LexicalGrouping
 range: string
+required: true
 
 ```
 </details>

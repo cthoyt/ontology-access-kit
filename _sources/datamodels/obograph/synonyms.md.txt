@@ -1,8 +1,11 @@
 # Slot: synonyms
+
+
 _A list of synonym property value assertions for an entity_
 
 
-URI: [og:synonyms](https://github.com/geneontology/obographs/synonyms)
+
+URI: [obographs:synonyms](https://github.com/geneontology/obographs/synonyms)
 
 
 
@@ -13,9 +16,10 @@ URI: [og:synonyms](https://github.com/geneontology/obographs/synonyms)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Meta](Meta.md) | A collection of annotations on an entity or ontology or axiom
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Meta](Meta.md) | A collection of annotations on an entity or ontology or edge or axiom |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [og:synonyms](https://github.com/geneontology/obographs/synonyms)
 ## Properties
 
 * Range: [SynonymPropertyValue](SynonymPropertyValue.md)
+
 * Multivalued: True
-
-
-
 
 
 

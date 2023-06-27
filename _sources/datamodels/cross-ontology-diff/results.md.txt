@@ -1,8 +1,11 @@
 # Slot: results
+
+
 _all differences between a pair of ontologies_
 
 
-URI: [ann:results](https://w3id.org/linkml/text_annotator/results)
+
+URI: [xodiff:results](https://w3id.org/oak/cross-ontology-diff/results)
 
 
 
@@ -13,9 +16,10 @@ URI: [ann:results](https://w3id.org/linkml/text_annotator/results)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[StructureDiffResultSet](StructureDiffResultSet.md) | A collection of relational diff results
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[StructureDiffResultSet](StructureDiffResultSet.md) | A collection of relational diff results |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [ann:results](https://w3id.org/linkml/text_annotator/results)
 ## Properties
 
 * Range: [RelationalDiff](RelationalDiff.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -45,7 +47,7 @@ URI: [ann:results](https://w3id.org/linkml/text_annotator/results)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 
@@ -56,7 +58,7 @@ URI: [ann:results](https://w3id.org/linkml/text_annotator/results)
 ```yaml
 name: results
 description: all differences between a pair of ontologies
-from_schema: https://w3id.org/linkml/cross_ontology_diff
+from_schema: https://w3id.org/oak/cross-ontology-diff
 rank: 1000
 multivalued: true
 alias: results

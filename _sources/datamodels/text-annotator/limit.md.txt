@@ -11,9 +11,10 @@ URI: [ann:limit](https://w3id.org/linkml/text_annotator/limit)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TextAnnotationConfiguration](TextAnnotationConfiguration.md) | configuration for search
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TextAnnotationConfiguration](TextAnnotationConfiguration.md) | configuration for search |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [ann:limit](https://w3id.org/linkml/text_annotator/limit)
 
 ## Properties
 
-* Range: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
-
-
+* Range: [Integer](Integer.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [ann:limit](https://w3id.org/linkml/text_annotator/limit)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -51,7 +50,7 @@ URI: [ann:limit](https://w3id.org/linkml/text_annotator/limit)
 <details>
 ```yaml
 name: limit
-from_schema: https://w3id.org/linkml/text_annotator
+from_schema: https://w3id.org/oak/text_annotator
 rank: 1000
 alias: limit
 owner: TextAnnotationConfiguration

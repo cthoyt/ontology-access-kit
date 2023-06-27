@@ -11,9 +11,10 @@ URI: [sim:metric](https://w3id.org/linkml/similarity/metric)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermSetPairwiseSimilarity](TermSetPairwiseSimilarity.md) | A simple pairwise similarity between two sets of concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermSetPairwiseSimilarity](TermSetPairwiseSimilarity.md) | A simple pairwise similarity between two sets of concepts/terms |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [sim:metric](https://w3id.org/linkml/similarity/metric)
 
 ## Properties
 
-* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
-
-
+* Range: [Uriorcurie](Uriorcurie.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [sim:metric](https://w3id.org/linkml/similarity/metric)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -51,7 +50,7 @@ URI: [sim:metric](https://w3id.org/linkml/similarity/metric)
 <details>
 ```yaml
 name: metric
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 alias: metric
 domain_of:

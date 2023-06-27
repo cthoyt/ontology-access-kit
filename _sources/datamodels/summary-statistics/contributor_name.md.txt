@@ -1,5 +1,8 @@
 # Slot: contributor_name
+
+
 _the name of the contributor_
+
 
 
 URI: [summary_statistics:contributor_name](https://w3id.org/oaklib/summary_statistics.contributor_name)
@@ -13,9 +16,10 @@ URI: [summary_statistics:contributor_name](https://w3id.org/oaklib/summary_stati
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[ContributorStatistics](ContributorStatistics.md) | Statistics for a contributor
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[ContributorStatistics](ContributorStatistics.md) | Statistics for a contributor |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [summary_statistics:contributor_name](https://w3id.org/oaklib/summary_stati
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [summary_statistics:contributor_name](https://w3id.org/oaklib/summary_stati
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -54,7 +56,7 @@ URI: [summary_statistics:contributor_name](https://w3id.org/oaklib/summary_stati
 ```yaml
 name: contributor_name
 description: the name of the contributor
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 alias: contributor_name
 owner: ContributorStatistics

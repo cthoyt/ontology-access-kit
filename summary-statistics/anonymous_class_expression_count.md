@@ -1,5 +1,8 @@
 # Slot: anonymous_class_expression_count
+
+
 _Number of anonymous class expressions in the ontology or subset_
+
 
 
 URI: [summary_statistics:anonymous_class_expression_count](https://w3id.org/oaklib/summary_statistics.anonymous_class_expression_count)
@@ -18,9 +21,10 @@ URI: [summary_statistics:anonymous_class_expression_count](https://w3id.org/oakl
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object |  no  |
+
 
 
 
@@ -29,9 +33,7 @@ URI: [summary_statistics:anonymous_class_expression_count](https://w3id.org/oakl
 
 ## Properties
 
-* Range: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
-
-
+* Range: [Integer](Integer.md)
 
 
 
@@ -48,7 +50,7 @@ URI: [summary_statistics:anonymous_class_expression_count](https://w3id.org/oakl
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -59,7 +61,7 @@ URI: [summary_statistics:anonymous_class_expression_count](https://w3id.org/oakl
 ```yaml
 name: anonymous_class_expression_count
 description: Number of anonymous class expressions in the ontology or subset
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 is_a: count_statistic
 alias: anonymous_class_expression_count

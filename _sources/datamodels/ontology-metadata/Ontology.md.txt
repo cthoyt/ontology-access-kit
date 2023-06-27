@@ -1,5 +1,8 @@
 # Class: Ontology
+
+
 _An OWL ontology_
+
 
 
 
@@ -14,17 +17,35 @@ URI: [owl:Ontology](http://www.w3.org/2002/07/owl#Ontology)
       NamedObject <|-- Ontology
       
       Ontology : comment
+        
       Ontology : created
+        
       Ontology : creator
+        
+          Ontology --|> Agent : creator
+        
       Ontology : has_ontology_root_term
+        
+          Ontology --|> Class : has_ontology_root_term
+        
       Ontology : id
+        
       Ontology : imports
+        
       Ontology : license
+        
+          Ontology --|> Thing : license
+        
       Ontology : source
+        
       Ontology : title
+        
       Ontology : type
+        
       Ontology : versionInfo
+        
       Ontology : versionIRI
+        
       
 ```
 
@@ -43,18 +64,18 @@ URI: [owl:Ontology](http://www.w3.org/2002/07/owl#Ontology)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [title](title.md) | 0..1 <br/> [NarrativeText](NarrativeText.md) |  | direct |
+| [title](title.md) | 1..1 <br/> [NarrativeText](NarrativeText.md) |  | direct |
 | [has_ontology_root_term](has_ontology_root_term.md) | 0..* <br/> [Class](Class.md) |  | direct |
-| [license](license.md) | 0..1 <br/> [Thing](Thing.md) |  | direct |
-| [source](source.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [versionIRI](versionIRI.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
-| [versionInfo](versionInfo.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [comment](comment.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [license](license.md) | 1..1 <br/> [Thing](Thing.md) |  | direct |
+| [source](source.md) | 0..* <br/> [String](String.md) |  | direct |
+| [versionIRI](versionIRI.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) |  | direct |
+| [versionInfo](versionInfo.md) | 1..1 <br/> [String](String.md) |  | direct |
+| [comment](comment.md) | 0..* <br/> [String](String.md) |  | direct |
 | [creator](creator.md) | 0..* <br/> [Agent](Agent.md) |  | direct |
-| [created](created.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | when the term came into being | direct |
-| [imports](imports.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) | this maps to the URI in RDF | [NamedObject](NamedObject.md) |
-| [type](type.md) | 0..* <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | [Thing](Thing.md) |
+| [created](created.md) | 0..1 <br/> [String](String.md) | when the term came into being | direct |
+| [imports](imports.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | this maps to the URI in RDF | [NamedObject](NamedObject.md) |
+| [type](type.md) | 0..* <br/> [Uriorcurie](Uriorcurie.md) |  | [Thing](Thing.md) |
 
 
 
@@ -121,7 +142,6 @@ URI: [owl:Ontology](http://www.w3.org/2002/07/owl#Ontology)
 name: Ontology
 description: An OWL ontology
 from_schema: http://purl.obolibrary.org/obo/omo/schema
-rank: 1000
 is_a: NamedObject
 slots:
 - title
@@ -139,24 +159,20 @@ slot_usage:
     name: title
     domain_of:
     - Ontology
-    - Ontology
     required: true
   license:
     name: license
     domain_of:
-    - Ontology
     - Ontology
     required: true
   versionIRI:
     name: versionIRI
     domain_of:
     - Ontology
-    - Ontology
     required: true
   versionInfo:
     name: versionInfo
     domain_of:
-    - Ontology
     - Ontology
     required: true
 class_uri: owl:Ontology
@@ -171,31 +187,26 @@ class_uri: owl:Ontology
 name: Ontology
 description: An OWL ontology
 from_schema: http://purl.obolibrary.org/obo/omo/schema
-rank: 1000
 is_a: NamedObject
 slot_usage:
   title:
     name: title
     domain_of:
     - Ontology
-    - Ontology
     required: true
   license:
     name: license
     domain_of:
-    - Ontology
     - Ontology
     required: true
   versionIRI:
     name: versionIRI
     domain_of:
     - Ontology
-    - Ontology
     required: true
   versionInfo:
     name: versionInfo
     domain_of:
-    - Ontology
     - Ontology
     required: true
 attributes:
@@ -207,7 +218,6 @@ attributes:
     alias: title
     owner: Ontology
     domain_of:
-    - Ontology
     - Ontology
     range: narrative text
     required: true
@@ -232,7 +242,6 @@ attributes:
     alias: license
     owner: Ontology
     domain_of:
-    - Ontology
     - Ontology
     range: Thing
     required: true
@@ -262,7 +271,6 @@ attributes:
     owner: Ontology
     domain_of:
     - Ontology
-    - Ontology
     range: uriorcurie
     required: true
   versionInfo:
@@ -274,7 +282,6 @@ attributes:
     alias: versionInfo
     owner: Ontology
     domain_of:
-    - Ontology
     - Ontology
     range: string
     required: true

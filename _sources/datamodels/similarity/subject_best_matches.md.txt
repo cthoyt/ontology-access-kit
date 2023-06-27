@@ -11,9 +11,10 @@ URI: [sim:subject_best_matches](https://w3id.org/linkml/similarity/subject_best_
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermSetPairwiseSimilarity](TermSetPairwiseSimilarity.md) | A simple pairwise similarity between two sets of concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermSetPairwiseSimilarity](TermSetPairwiseSimilarity.md) | A simple pairwise similarity between two sets of concepts/terms |  no  |
+
 
 
 
@@ -23,10 +24,8 @@ URI: [sim:subject_best_matches](https://w3id.org/linkml/similarity/subject_best_
 ## Properties
 
 * Range: [BestMatch](BestMatch.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [sim:subject_best_matches](https://w3id.org/linkml/similarity/subject_best_
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -53,7 +52,7 @@ URI: [sim:subject_best_matches](https://w3id.org/linkml/similarity/subject_best_
 <details>
 ```yaml
 name: subject_best_matches
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 multivalued: true
 alias: subject_best_matches

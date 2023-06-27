@@ -1,6 +1,6 @@
 # Slot: source
 
-URI: [li:source](https://w3id.org/linkml/lexical_index/source)
+URI: [mappingrules:source](https://w3id.org/oak/mapping-rules-datamodel/source)
 
 
 
@@ -11,9 +11,10 @@ URI: [li:source](https://w3id.org/linkml/lexical_index/source)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [li:source](https://w3id.org/linkml/lexical_index/source)
 
 ## Properties
 
-* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
-
-
+* Range: [Uriorcurie](Uriorcurie.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [li:source](https://w3id.org/linkml/lexical_index/source)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/lexical_index
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -51,7 +50,7 @@ URI: [li:source](https://w3id.org/linkml/lexical_index/source)
 <details>
 ```yaml
 name: source
-from_schema: https://w3id.org/linkml/lexical_index
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: source
 owner: RelationshipToTerm

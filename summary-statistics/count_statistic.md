@@ -42,11 +42,10 @@ URI: [summary_statistics:count_statistic](https://w3id.org/oaklib/summary_statis
 
 
 
+
 ## Properties
 
-* Range: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
-
-
+* Range: [Integer](Integer.md)
 
 
 
@@ -63,7 +62,7 @@ URI: [summary_statistics:count_statistic](https://w3id.org/oaklib/summary_statis
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -73,7 +72,7 @@ URI: [summary_statistics:count_statistic](https://w3id.org/oaklib/summary_statis
 <details>
 ```yaml
 name: count_statistic
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 alias: count_statistic
 range: integer

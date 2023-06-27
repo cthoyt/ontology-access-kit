@@ -1,5 +1,8 @@
 # Class: RepairOperation
+
+
 _The result of performing an individual repair_
+
 
 
 
@@ -14,9 +17,15 @@ URI: [vm:RepairOperation](https://w3id.org/linkml/validation-model/RepairOperati
       Result <|-- RepairOperation
       
       RepairOperation : info
+        
       RepairOperation : modified
+        
       RepairOperation : repairs
+        
+          RepairOperation --|> ValidationResult : repairs
+        
       RepairOperation : successful
+        
       
 ```
 
@@ -35,9 +44,9 @@ URI: [vm:RepairOperation](https://w3id.org/linkml/validation-model/RepairOperati
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [repairs](repairs.md) | 0..1 <br/> [ValidationResult](ValidationResult.md) |  | direct |
-| [modified](modified.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
-| [successful](successful.md) | 0..1 <br/> [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean) |  | direct |
-| [info](info.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | additional information about the issue | direct |
+| [modified](modified.md) | 0..1 <br/> [Boolean](Boolean.md) |  | direct |
+| [successful](successful.md) | 0..1 <br/> [Boolean](Boolean.md) |  | direct |
+| [info](info.md) | 0..1 <br/> [String](String.md) |  | direct |
 
 
 
@@ -99,7 +108,6 @@ description: The result of performing an individual repair
 todos:
 - integrate with kgcl data model, to be able to describe changes
 from_schema: https://w3id.org/linkml/validation_results
-rank: 1000
 is_a: Result
 attributes:
   repairs:
@@ -134,7 +142,6 @@ description: The result of performing an individual repair
 todos:
 - integrate with kgcl data model, to be able to describe changes
 from_schema: https://w3id.org/linkml/validation_results
-rank: 1000
 is_a: Result
 attributes:
   repairs:

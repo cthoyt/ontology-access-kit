@@ -1,8 +1,11 @@
 # Slot: nodes
+
+
 _All nodes present in a graph. This includes class nodes as well as supporting nodes, including nodes representing relationship types, subsets, annotation proeprties, etc_
 
 
-URI: [og:nodes](https://github.com/geneontology/obographs/nodes)
+
+URI: [obographs:nodes](https://github.com/geneontology/obographs/nodes)
 
 
 
@@ -13,9 +16,10 @@ URI: [og:nodes](https://github.com/geneontology/obographs/nodes)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Graph](Graph.md) | A graph is a collection of nodes and edges that represents a single ontology
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Graph](Graph.md) | A graph is a collection of nodes and edges and other axioms that represents a... |  no  |
+
 
 
 
@@ -25,10 +29,8 @@ URI: [og:nodes](https://github.com/geneontology/obographs/nodes)
 ## Properties
 
 * Range: [Node](Node.md)
+
 * Multivalued: True
-
-
-
 
 
 

@@ -1,6 +1,6 @@
 # Slot: nodeIds
 
-URI: [og:nodeIds](https://github.com/geneontology/obographs/nodeIds)
+URI: [obographs:nodeIds](https://github.com/geneontology/obographs/nodeIds)
 
 
 
@@ -11,9 +11,10 @@ URI: [og:nodeIds](https://github.com/geneontology/obographs/nodeIds)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[EquivalentNodesSet](EquivalentNodesSet.md) | A clique of nodes that are all mutually equivalent
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[EquivalentNodesSet](EquivalentNodesSet.md) | A clique of nodes that are all mutually equivalent |  no  |
+
 
 
 
@@ -22,11 +23,9 @@ URI: [og:nodeIds](https://github.com/geneontology/obographs/nodeIds)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
+
 * Multivalued: True
-
-
-
 
 
 

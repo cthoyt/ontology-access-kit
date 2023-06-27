@@ -1,8 +1,11 @@
 # Slot: syntax
+
+
 _Determines how the search term is interpreted_
 
 
-URI: [search:syntax](https://w3id.org/linkml/search_datamodel/syntax)
+
+URI: [ontosearch:syntax](https://w3id.org/oak/search-datamodel/syntax)
 
 
 
@@ -13,9 +16,10 @@ URI: [search:syntax](https://w3id.org/linkml/search_datamodel/syntax)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SearchBaseConfiguration](SearchBaseConfiguration.md) | A user-specified configuration that determines how a particular search operat...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SearchBaseConfiguration](SearchBaseConfiguration.md) | A user-specified configuration that determines how a particular search operat... |  no  |
+
 
 
 
@@ -25,8 +29,6 @@ URI: [search:syntax](https://w3id.org/linkml/search_datamodel/syntax)
 ## Properties
 
 * Range: [SearchTermSyntax](SearchTermSyntax.md)
-
-
 
 
 
@@ -43,7 +45,7 @@ URI: [search:syntax](https://w3id.org/linkml/search_datamodel/syntax)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/search_datamodel
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 
@@ -54,7 +56,7 @@ URI: [search:syntax](https://w3id.org/linkml/search_datamodel/syntax)
 ```yaml
 name: syntax
 description: Determines how the search term is interpreted
-from_schema: https://w3id.org/linkml/search_datamodel
+from_schema: https://w3id.org/oak/search-datamodel
 rank: 1000
 alias: syntax
 owner: SearchBaseConfiguration

@@ -11,9 +11,10 @@ URI: [vm:modified](https://w3id.org/linkml/validation-model/modified)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RepairOperation](RepairOperation.md) | The result of performing an individual repair
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RepairOperation](RepairOperation.md) | The result of performing an individual repair |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [vm:modified](https://w3id.org/linkml/validation-model/modified)
 
 ## Properties
 
-* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
-
-
+* Range: [Boolean](Boolean.md)
 
 
 

@@ -11,9 +11,10 @@ URI: [ann:model](https://w3id.org/linkml/text_annotator/model)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TextAnnotationConfiguration](TextAnnotationConfiguration.md) | configuration for search
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TextAnnotationConfiguration](TextAnnotationConfiguration.md) | configuration for search |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [ann:model](https://w3id.org/linkml/text_annotator/model)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [ann:model](https://w3id.org/linkml/text_annotator/model)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -51,7 +50,7 @@ URI: [ann:model](https://w3id.org/linkml/text_annotator/model)
 <details>
 ```yaml
 name: model
-from_schema: https://w3id.org/linkml/text_annotator
+from_schema: https://w3id.org/oak/text_annotator
 rank: 1000
 alias: model
 owner: TextAnnotationConfiguration

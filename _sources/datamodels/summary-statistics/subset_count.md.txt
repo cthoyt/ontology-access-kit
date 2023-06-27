@@ -1,5 +1,8 @@
 # Slot: subset_count
+
+
 _Number of distinct subsets (slims, value sets) in the ontology or subset_
+
 
 
 URI: [summary_statistics:subset_count](https://w3id.org/oaklib/summary_statistics.subset_count)
@@ -18,9 +21,10 @@ URI: [summary_statistics:subset_count](https://w3id.org/oaklib/summary_statistic
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object |  no  |
+
 
 
 
@@ -29,9 +33,7 @@ URI: [summary_statistics:subset_count](https://w3id.org/oaklib/summary_statistic
 
 ## Properties
 
-* Range: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
-
-
+* Range: [Integer](Integer.md)
 
 
 
@@ -48,7 +50,7 @@ URI: [summary_statistics:subset_count](https://w3id.org/oaklib/summary_statistic
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -59,7 +61,7 @@ URI: [summary_statistics:subset_count](https://w3id.org/oaklib/summary_statistic
 ```yaml
 name: subset_count
 description: Number of distinct subsets (slims, value sets) in the ontology or subset
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 is_a: count_statistic
 alias: subset_count

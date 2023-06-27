@@ -1,5 +1,8 @@
 # Class: Annotation
+
+
 _A reified property-object pair_
+
 
 
 
@@ -12,7 +15,9 @@ URI: [omoschema:Annotation](http://purl.obolibrary.org/obo/omo/schema/Annotation
  classDiagram
     class Annotation
       Annotation : object
+        
       Annotation : predicate
+        
       
 ```
 
@@ -26,8 +31,8 @@ URI: [omoschema:Annotation](http://purl.obolibrary.org/obo/omo/schema/Annotation
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [predicate](predicate.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [object](object.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [predicate](predicate.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [object](object.md) | 0..1 <br/> [String](String.md) |  | direct |
 
 
 
@@ -83,7 +88,6 @@ URI: [omoschema:Annotation](http://purl.obolibrary.org/obo/omo/schema/Annotation
 name: Annotation
 description: A reified property-object pair
 from_schema: http://purl.obolibrary.org/obo/omo/schema
-rank: 1000
 attributes:
   predicate:
     name: predicate
@@ -105,7 +109,6 @@ represents_relationship: true
 name: Annotation
 description: A reified property-object pair
 from_schema: http://purl.obolibrary.org/obo/omo/schema
-rank: 1000
 attributes:
   predicate:
     name: predicate

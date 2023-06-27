@@ -1,5 +1,8 @@
 # Class: PairwiseSimilarity
+
+
 _Abstract grouping for representing individual pairwise similarities_
+
 
 
 
@@ -54,7 +57,7 @@ URI: [sim:PairwiseSimilarity](https://w3id.org/linkml/similarity/PairwiseSimilar
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -81,8 +84,7 @@ URI: [sim:PairwiseSimilarity](https://w3id.org/linkml/similarity/PairwiseSimilar
 ```yaml
 name: PairwiseSimilarity
 description: Abstract grouping for representing individual pairwise similarities
-from_schema: https://w3id.org/linkml/similarity
-rank: 1000
+from_schema: https://w3id.org/oak/similarity
 abstract: true
 
 ```
@@ -94,8 +96,7 @@ abstract: true
 ```yaml
 name: PairwiseSimilarity
 description: Abstract grouping for representing individual pairwise similarities
-from_schema: https://w3id.org/linkml/similarity
-rank: 1000
+from_schema: https://w3id.org/oak/similarity
 abstract: true
 
 ```

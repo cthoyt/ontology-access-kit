@@ -11,11 +11,12 @@ URI: [vm:id](https://w3id.org/linkml/validation-model/id)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[NamedResource](NamedResource.md) | 
-[ConstraintComponent](ConstraintComponent.md) | 
-[Node](Node.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[NamedResource](NamedResource.md) |  |  no  |
+[ConstraintComponent](ConstraintComponent.md) |  |  no  |
+[Node](Node.md) |  |  no  |
+
 
 
 
@@ -24,9 +25,9 @@ URI: [vm:id](https://w3id.org/linkml/validation-model/id)
 
 ## Properties
 
-* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
+* Range: [Uriorcurie](Uriorcurie.md)
 
-
+* Required: True
 
 
 
@@ -61,6 +62,7 @@ owner: NamedResource
 domain_of:
 - NamedResource
 range: uriorcurie
+required: true
 
 ```
 </details>

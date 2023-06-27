@@ -1,5 +1,8 @@
 # Slot: subject_source
+
+
 _the source for the first entity_
+
 
 
 URI: [sssom:subject_source](http://w3id.org/sssom/subject_source)
@@ -13,9 +16,10 @@ URI: [sssom:subject_source](http://w3id.org/sssom/subject_source)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [sssom:subject_source](http://w3id.org/sssom/subject_source)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [sssom:subject_source](http://w3id.org/sssom/subject_source)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -54,7 +56,7 @@ URI: [sssom:subject_source](http://w3id.org/sssom/subject_source)
 ```yaml
 name: subject_source
 description: the source for the first entity
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 slot_uri: sssom:subject_source
 alias: subject_source

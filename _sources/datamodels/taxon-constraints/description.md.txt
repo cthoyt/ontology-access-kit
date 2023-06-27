@@ -1,5 +1,8 @@
 # Slot: description
+
+
 _A description of the term_
+
 
 
 URI: [tc:description](https://w3id.org/linkml/taxon_constraints/description)
@@ -13,9 +16,10 @@ URI: [tc:description](https://w3id.org/linkml/taxon_constraints/description)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SubjectTerm](SubjectTerm.md) | A term that is the subject of a taxon constraint
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SubjectTerm](SubjectTerm.md) | A term that is the subject of a taxon constraint |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [tc:description](https://w3id.org/linkml/taxon_constraints/description)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [tc:description](https://w3id.org/linkml/taxon_constraints/description)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/taxon_constraints
+* from schema: https://w3id.org/oak/taxon_constraints
 
 
 
@@ -54,7 +56,7 @@ URI: [tc:description](https://w3id.org/linkml/taxon_constraints/description)
 ```yaml
 name: description
 description: A description of the term
-from_schema: https://w3id.org/linkml/taxon_constraints
+from_schema: https://w3id.org/oak/taxon_constraints
 rank: 1000
 alias: description
 owner: SubjectTerm

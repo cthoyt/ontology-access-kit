@@ -11,9 +11,10 @@ URI: [ann:source_text](https://w3id.org/linkml/text_annotator/source_text)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TextualElement](TextualElement.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TextualElement](TextualElement.md) |  |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [ann:source_text](https://w3id.org/linkml/text_annotator/source_text)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [ann:source_text](https://w3id.org/linkml/text_annotator/source_text)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -51,7 +50,7 @@ URI: [ann:source_text](https://w3id.org/linkml/text_annotator/source_text)
 <details>
 ```yaml
 name: source_text
-from_schema: https://w3id.org/linkml/text_annotator
+from_schema: https://w3id.org/oak/text_annotator
 rank: 1000
 alias: source_text
 owner: TextualElement

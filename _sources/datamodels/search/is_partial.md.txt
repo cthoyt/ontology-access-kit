@@ -1,8 +1,11 @@
 # Slot: is_partial
+
+
 _allows matches where the search term is a subset of the full span_
 
 
-URI: [search:is_partial](https://w3id.org/linkml/search_datamodel/is_partial)
+
+URI: [ontosearch:is_partial](https://w3id.org/oak/search-datamodel/is_partial)
 
 
 
@@ -13,9 +16,10 @@ URI: [search:is_partial](https://w3id.org/linkml/search_datamodel/is_partial)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SearchBaseConfiguration](SearchBaseConfiguration.md) | A user-specified configuration that determines how a particular search operat...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SearchBaseConfiguration](SearchBaseConfiguration.md) | A user-specified configuration that determines how a particular search operat... |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [search:is_partial](https://w3id.org/linkml/search_datamodel/is_partial)
 
 ## Properties
 
-* Range: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
-
-
+* Range: [Boolean](Boolean.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [search:is_partial](https://w3id.org/linkml/search_datamodel/is_partial)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/search_datamodel
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 
@@ -54,7 +56,7 @@ URI: [search:is_partial](https://w3id.org/linkml/search_datamodel/is_partial)
 ```yaml
 name: is_partial
 description: allows matches where the search term is a subset of the full span
-from_schema: https://w3id.org/linkml/search_datamodel
+from_schema: https://w3id.org/oak/search-datamodel
 rank: 1000
 alias: is_partial
 owner: SearchBaseConfiguration

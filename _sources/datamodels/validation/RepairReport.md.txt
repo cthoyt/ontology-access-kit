@@ -1,5 +1,8 @@
 # Class: RepairReport
+
+
 _A report that consists of repair operation results_
+
 
 
 
@@ -14,6 +17,9 @@ URI: [vm:RepairReport](https://w3id.org/linkml/validation-model/RepairReport)
       Report <|-- RepairReport
       
       RepairReport : results
+        
+          RepairReport --|> RepairOperation : results
+        
       
 ```
 
@@ -80,13 +86,11 @@ URI: [vm:RepairReport](https://w3id.org/linkml/validation-model/RepairReport)
 name: RepairReport
 description: A report that consists of repair operation results
 from_schema: https://w3id.org/linkml/validation_results
-rank: 1000
 is_a: Report
 slot_usage:
   results:
     name: results
     domain_of:
-    - Report
     - Report
     range: RepairOperation
 
@@ -100,13 +104,11 @@ slot_usage:
 name: RepairReport
 description: A report that consists of repair operation results
 from_schema: https://w3id.org/linkml/validation_results
-rank: 1000
 is_a: Report
 slot_usage:
   results:
     name: results
     domain_of:
-    - Report
     - Report
     range: RepairOperation
 attributes:
@@ -120,7 +122,6 @@ attributes:
     alias: results
     owner: RepairReport
     domain_of:
-    - Report
     - Report
     range: RepairOperation
     inlined: true

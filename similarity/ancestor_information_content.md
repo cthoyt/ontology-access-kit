@@ -1,5 +1,8 @@
 # Slot: ancestor_information_content
+
+
 _The IC of the object_
+
 
 
 URI: [sim:ancestor_information_content](https://w3id.org/linkml/similarity/ancestor_information_content)
@@ -19,9 +22,10 @@ URI: [sim:ancestor_information_content](https://w3id.org/linkml/similarity/ances
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms |  no  |
+
 
 
 
@@ -31,8 +35,6 @@ URI: [sim:ancestor_information_content](https://w3id.org/linkml/similarity/ances
 ## Properties
 
 * Range: [NegativeLogValue](NegativeLogValue.md)
-
-
 
 
 
@@ -49,7 +51,7 @@ URI: [sim:ancestor_information_content](https://w3id.org/linkml/similarity/ances
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -60,7 +62,7 @@ URI: [sim:ancestor_information_content](https://w3id.org/linkml/similarity/ances
 ```yaml
 name: ancestor_information_content
 description: The IC of the object
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 is_a: information_content
 alias: ancestor_information_content

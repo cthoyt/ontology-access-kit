@@ -1,5 +1,8 @@
 # Class: Node
+
+
 _A node is a class, property, or other entity in an ontology_
+
 
 
 
@@ -12,9 +15,19 @@ URI: [rdf:Resource](http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource)
  classDiagram
     class Node
       Node : id
+        
       Node : lbl
+        
       Node : meta
+        
+          Node --|> Meta : meta
+        
+      Node : propertyType
+        
+          Node --|> PropertyTypeEnum : propertyType
+        
       Node : type
+        
       
 ```
 
@@ -28,9 +41,10 @@ URI: [rdf:Resource](http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [OboIdentifierString](OboIdentifierString.md) | The identifier of the entity | direct |
-| [lbl](lbl.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | the human-readable label of a node | direct |
-| [type](type.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [id](id.md) | 1..1 <br/> [OboIdentifierString](OboIdentifierString.md) | The unique identifier of the entity | direct |
+| [lbl](lbl.md) | 0..1 <br/> [String](String.md) | the human-readable label of a node | direct |
+| [type](type.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [propertyType](propertyType.md) | 0..1 <br/> [PropertyTypeEnum](PropertyTypeEnum.md) |  | direct |
 | [meta](meta.md) | 0..1 <br/> [Meta](Meta.md) | A collection of metadata about either an ontology (graph), an entity, or an a... | direct |
 
 
@@ -70,7 +84,7 @@ URI: [rdf:Resource](http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | rdf:Resource |
-| native | og:Node |
+| native | obographs:Node |
 
 
 
@@ -87,11 +101,11 @@ URI: [rdf:Resource](http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource)
 name: Node
 description: A node is a class, property, or other entity in an ontology
 from_schema: https://github.com/geneontology/obographs
-rank: 1000
 slots:
 - id
 - lbl
 - type
+- propertyType
 - meta
 class_uri: rdf:Resource
 
@@ -105,11 +119,10 @@ class_uri: rdf:Resource
 name: Node
 description: A node is a class, property, or other entity in an ontology
 from_schema: https://github.com/geneontology/obographs
-rank: 1000
 attributes:
   id:
     name: id
-    description: The identifier of the entity
+    description: The unique identifier of the entity
     from_schema: https://github.com/geneontology/obographs
     see_also:
     - https://owlcollab.github.io/oboformat/doc/obo-syntax.html#2.5
@@ -120,7 +133,10 @@ attributes:
     domain_of:
     - Graph
     - Node
+    - SubsetDefinition
+    - SynonymTypeDefinition
     range: OboIdentifierString
+    required: true
   lbl:
     name: lbl
     description: the human-readable label of a node
@@ -138,6 +154,8 @@ attributes:
     domain_of:
     - Graph
     - Node
+    - SubsetDefinition
+    - SynonymTypeDefinition
     range: string
   type:
     name: type
@@ -148,6 +166,15 @@ attributes:
     domain_of:
     - Node
     range: string
+  propertyType:
+    name: propertyType
+    from_schema: https://github.com/geneontology/obographs
+    rank: 1000
+    alias: propertyType
+    owner: Node
+    domain_of:
+    - Node
+    range: PropertyTypeEnum
   meta:
     name: meta
     description: A collection of metadata about either an ontology (graph), an entity,

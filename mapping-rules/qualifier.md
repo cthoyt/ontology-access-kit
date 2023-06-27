@@ -1,8 +1,11 @@
 # Slot: qualifier
+
+
 _Type of match for the new synonym generated._
 
 
-URI: [mrules:qualifier](https://w3id.org/linkml/mapping_rules_datamodel/qualifier)
+
+URI: [mappingrules:qualifier](https://w3id.org/oak/mapping-rules-datamodel/qualifier)
 
 
 
@@ -13,9 +16,10 @@ URI: [mrules:qualifier](https://w3id.org/linkml/mapping_rules_datamodel/qualifie
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Synonymizer](Synonymizer.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Synonymizer](Synonymizer.md) |  |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [mrules:qualifier](https://w3id.org/linkml/mapping_rules_datamodel/qualifie
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [mrules:qualifier](https://w3id.org/linkml/mapping_rules_datamodel/qualifie
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -54,7 +56,7 @@ URI: [mrules:qualifier](https://w3id.org/linkml/mapping_rules_datamodel/qualifie
 ```yaml
 name: qualifier
 description: Type of match for the new synonym generated.
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: qualifier
 owner: Synonymizer

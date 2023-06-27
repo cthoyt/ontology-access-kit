@@ -1,5 +1,8 @@
 # Class: GroupedStatistics
+
+
 _summary statistics for the entire resource_
+
 
 
 
@@ -14,11 +17,27 @@ URI: [summary_statistics:GroupedStatistics](https://w3id.org/oaklib/summary_stat
       SummaryStatisticsReport <|-- GroupedStatistics
       
       GroupedStatistics : agents
+        
+          GroupedStatistics --|> Agent : agents
+        
       GroupedStatistics : compared_with
+        
+          GroupedStatistics --|> Ontology : compared_with
+        
       GroupedStatistics : id
+        
       GroupedStatistics : ontologies
+        
+          GroupedStatistics --|> Ontology : ontologies
+        
       GroupedStatistics : partitions
+        
+          GroupedStatistics --|> UngroupedStatistics : partitions
+        
       GroupedStatistics : was_generated_by
+        
+          GroupedStatistics --|> SummaryStatisticsCalculationActivity : was_generated_by
+        
       
 ```
 
@@ -37,7 +56,7 @@ URI: [summary_statistics:GroupedStatistics](https://w3id.org/oaklib/summary_stat
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [partitions](partitions.md) | 0..* <br/> [UngroupedStatistics](UngroupedStatistics.md) | statistics grouped by a particular property | direct |
-| [id](id.md) | 1..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) | Unique handle for this report | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
+| [id](id.md) | 1..1 <br/> [String](String.md) | Unique handle for this report | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
 | [ontologies](ontologies.md) | 0..* <br/> [Ontology](Ontology.md) | Ontology for which the statistics are computed | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
 | [compared_with](compared_with.md) | 0..* <br/> [Ontology](Ontology.md) | For diffs, the ontologies being compared against | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
 | [was_generated_by](was_generated_by.md) | 0..1 <br/> [SummaryStatisticsCalculationActivity](SummaryStatisticsCalculationActivity.md) | The process that generated the report | [SummaryStatisticsReport](SummaryStatisticsReport.md) |
@@ -62,7 +81,7 @@ URI: [summary_statistics:GroupedStatistics](https://w3id.org/oaklib/summary_stat
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -89,8 +108,7 @@ URI: [summary_statistics:GroupedStatistics](https://w3id.org/oaklib/summary_stat
 ```yaml
 name: GroupedStatistics
 description: summary statistics for the entire resource
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 is_a: SummaryStatisticsReport
 attributes:
   partitions:
@@ -98,7 +116,7 @@ attributes:
     description: statistics grouped by a particular property
     comments:
     - For example, GO stats may be broken out by MF/BP/CC
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     range: UngroupedStatistics
@@ -113,8 +131,7 @@ attributes:
 ```yaml
 name: GroupedStatistics
 description: summary statistics for the entire resource
-from_schema: https://w3id.org/oaklib/summary_statistics
-rank: 1000
+from_schema: https://w3id.org/oak/summary_statistics
 is_a: SummaryStatisticsReport
 attributes:
   partitions:
@@ -122,7 +139,7 @@ attributes:
     description: statistics grouped by a particular property
     comments:
     - For example, GO stats may be broken out by MF/BP/CC
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: partitions
@@ -134,7 +151,7 @@ attributes:
   id:
     name: id
     description: Unique handle for this report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     alias: id
     owner: GroupedStatistics
@@ -148,7 +165,7 @@ attributes:
   ontologies:
     name: ontologies
     description: Ontology for which the statistics are computed
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: ontologies
@@ -161,7 +178,7 @@ attributes:
   compared_with:
     name: compared_with
     description: For diffs, the ontologies being compared against
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: compared_with
@@ -174,7 +191,7 @@ attributes:
   was_generated_by:
     name: was_generated_by
     description: The process that generated the report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     alias: was_generated_by
     owner: GroupedStatistics
@@ -184,7 +201,7 @@ attributes:
   agents:
     name: agents
     description: Agents that contributed to the report
-    from_schema: https://w3id.org/oaklib/summary_statistics
+    from_schema: https://w3id.org/oak/summary_statistics
     rank: 1000
     multivalued: true
     alias: agents

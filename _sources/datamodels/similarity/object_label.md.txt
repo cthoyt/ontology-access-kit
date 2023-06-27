@@ -1,5 +1,8 @@
 # Slot: object_label
+
+
 _the label or name for the second entity_
+
 
 
 URI: [sssom:object_label](http://w3id.org/sssom/object_label)
@@ -13,9 +16,10 @@ URI: [sssom:object_label](http://w3id.org/sssom/object_label)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [sssom:object_label](http://w3id.org/sssom/object_label)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [sssom:object_label](http://w3id.org/sssom/object_label)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -54,7 +56,7 @@ URI: [sssom:object_label](http://w3id.org/sssom/object_label)
 ```yaml
 name: object_label
 description: the label or name for the second entity
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 slot_uri: sssom:object_label
 alias: object_label

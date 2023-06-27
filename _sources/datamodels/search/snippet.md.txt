@@ -1,8 +1,11 @@
 # Slot: snippet
+
+
 _shows how the field was matched_
 
 
-URI: [search:snippet](https://w3id.org/linkml/search_datamodel/snippet)
+
+URI: [ontosearch:snippet](https://w3id.org/oak/search-datamodel/snippet)
 
 
 
@@ -13,9 +16,10 @@ URI: [search:snippet](https://w3id.org/linkml/search_datamodel/snippet)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SearchResult](SearchResult.md) | An individual search result
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SearchResult](SearchResult.md) | An individual search result |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [search:snippet](https://w3id.org/linkml/search_datamodel/snippet)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [search:snippet](https://w3id.org/linkml/search_datamodel/snippet)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/search_datamodel
+* from schema: https://w3id.org/oak/search-datamodel
 
 
 
@@ -54,7 +56,7 @@ URI: [search:snippet](https://w3id.org/linkml/search_datamodel/snippet)
 ```yaml
 name: snippet
 description: shows how the field was matched
-from_schema: https://w3id.org/linkml/search_datamodel
+from_schema: https://w3id.org/oak/search-datamodel
 rank: 1000
 alias: snippet
 owner: SearchResult

@@ -1,8 +1,11 @@
 # Slot: weight
+
+
 _Weighting of the rule, positive increases the confidence, negative decreases_
 
 
-URI: [mrules:weight](https://w3id.org/linkml/mapping_rules_datamodel/weight)
+
+URI: [mappingrules:weight](https://w3id.org/oak/mapping-rules-datamodel/weight)
 
 
 
@@ -13,9 +16,10 @@ URI: [mrules:weight](https://w3id.org/linkml/mapping_rules_datamodel/weight)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Postcondition](Postcondition.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Postcondition](Postcondition.md) |  |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [mrules:weight](https://w3id.org/linkml/mapping_rules_datamodel/weight)
 
 ## Properties
 
-* Range: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
-
-
+* Range: [Float](Float.md)
 
 
 
@@ -48,7 +50,7 @@ URI: [mrules:weight](https://w3id.org/linkml/mapping_rules_datamodel/weight)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -59,7 +61,7 @@ URI: [mrules:weight](https://w3id.org/linkml/mapping_rules_datamodel/weight)
 ```yaml
 name: weight
 description: Weighting of the rule, positive increases the confidence, negative decreases
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 see_also:
 - https://en.wikipedia.org/wiki/Logit
 - https://upload.wikimedia.org/wikipedia/commons/5/57/Logit.png

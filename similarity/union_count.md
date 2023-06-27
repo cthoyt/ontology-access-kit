@@ -16,11 +16,10 @@ URI: [sim:union_count](https://w3id.org/linkml/similarity/union_count)
 
 
 
+
 ## Properties
 
 * Range: [ItemCount](ItemCount.md)
-
-
 
 
 
@@ -37,7 +36,7 @@ URI: [sim:union_count](https://w3id.org/linkml/similarity/union_count)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -47,7 +46,7 @@ URI: [sim:union_count](https://w3id.org/linkml/similarity/union_count)
 <details>
 ```yaml
 name: union_count
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 is_a: score
 alias: union_count

@@ -1,10 +1,13 @@
 # Class: PropertyValue
+
+
 _A generic tag-value that can be associated with an association._
 
 
 
 
-URI: [assoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
+
+URI: [ontoassoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
 
 
 
@@ -12,7 +15,9 @@ URI: [assoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
  classDiagram
     class PropertyValue
       PropertyValue : object
+        
       PropertyValue : predicate
+        
       
 ```
 
@@ -26,8 +31,8 @@ URI: [assoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [predicate](predicate.md) | 0..1 <br/> [xsd:anyURI](xsd:anyURI) | The type of relationship between the subject and object | direct |
-| [object](object.md) | 0..1 <br/> [xsd:anyURI](xsd:anyURI) | An ontology entity that is associated with the subject | direct |
+| [predicate](predicate.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The type of relationship between the subject and object | direct |
+| [object](object.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | An ontology entity that is associated with the subject | direct |
 
 
 
@@ -38,6 +43,7 @@ URI: [assoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Association](Association.md) | [property_values](property_values.md) | range | [PropertyValue](PropertyValue.md) |
+| [NegatedAssociation](NegatedAssociation.md) | [property_values](property_values.md) | range | [PropertyValue](PropertyValue.md) |
 
 
 
@@ -65,8 +71,8 @@ URI: [assoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | assoc:PropertyValue |
-| native | assoc:PropertyValue |
+| self | ontoassoc:PropertyValue |
+| native | ontoassoc:PropertyValue |
 
 
 
@@ -83,7 +89,6 @@ URI: [assoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
 name: PropertyValue
 description: A generic tag-value that can be associated with an association.
 from_schema: https://w3id.org/oak/association
-rank: 1000
 slots:
 - predicate
 - object
@@ -98,7 +103,6 @@ slots:
 name: PropertyValue
 description: A generic tag-value that can be associated with an association.
 from_schema: https://w3id.org/oak/association
-rank: 1000
 attributes:
   predicate:
     name: predicate
@@ -110,11 +114,16 @@ attributes:
     owner: PropertyValue
     domain_of:
     - Association
+    - NegatedAssociation
     - PropertyValue
+    slot_group: core_triple
     range: uriorcurie
   object:
     name: object
     description: An ontology entity that is associated with the subject.
+    comments:
+    - it is conventional for the subject to be the "entity" and the object to be the
+      ontological descriptor
     from_schema: https://w3id.org/oak/association
     exact_mappings:
     - oa:hasTarget
@@ -124,7 +133,9 @@ attributes:
     owner: PropertyValue
     domain_of:
     - Association
+    - NegatedAssociation
     - PropertyValue
+    slot_group: core_triple
     range: uriorcurie
 
 ```

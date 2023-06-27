@@ -10,9 +10,13 @@ URI: [ann:TextualElement](https://w3id.org/linkml/text_annotator/TextualElement)
  classDiagram
     class TextualElement
       TextualElement : id
+        
       TextualElement : parent_document
+        
       TextualElement : source_text
+        
       TextualElement : text
+        
       
 ```
 
@@ -26,10 +30,10 @@ URI: [ann:TextualElement](https://w3id.org/linkml/text_annotator/TextualElement)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
-| [text](text.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [source_text](source_text.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [parent_document](parent_document.md) | 0..1 <br/> [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) |  | direct |
+| [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) |  | direct |
+| [text](text.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [source_text](source_text.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [parent_document](parent_document.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) |  | direct |
 
 
 
@@ -58,7 +62,7 @@ URI: [ann:TextualElement](https://w3id.org/linkml/text_annotator/TextualElement)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -84,28 +88,28 @@ URI: [ann:TextualElement](https://w3id.org/linkml/text_annotator/TextualElement)
 <details>
 ```yaml
 name: TextualElement
-from_schema: https://w3id.org/linkml/text_annotator
-rank: 1000
+from_schema: https://w3id.org/oak/text_annotator
 attributes:
   id:
     name: id
-    from_schema: https://w3id.org/linkml/text_annotator
+    from_schema: https://w3id.org/oak/text_annotator
     rank: 1000
     identifier: true
     range: uriorcurie
+    required: true
   text:
     name: text
-    from_schema: https://w3id.org/linkml/text_annotator
+    from_schema: https://w3id.org/oak/text_annotator
     rank: 1000
     range: string
   source_text:
     name: source_text
-    from_schema: https://w3id.org/linkml/text_annotator
+    from_schema: https://w3id.org/oak/text_annotator
     rank: 1000
     range: string
   parent_document:
     name: parent_document
-    from_schema: https://w3id.org/linkml/text_annotator
+    from_schema: https://w3id.org/oak/text_annotator
     rank: 1000
     range: uriorcurie
 
@@ -117,12 +121,11 @@ attributes:
 <details>
 ```yaml
 name: TextualElement
-from_schema: https://w3id.org/linkml/text_annotator
-rank: 1000
+from_schema: https://w3id.org/oak/text_annotator
 attributes:
   id:
     name: id
-    from_schema: https://w3id.org/linkml/text_annotator
+    from_schema: https://w3id.org/oak/text_annotator
     rank: 1000
     identifier: true
     alias: id
@@ -130,9 +133,10 @@ attributes:
     domain_of:
     - TextualElement
     range: uriorcurie
+    required: true
   text:
     name: text
-    from_schema: https://w3id.org/linkml/text_annotator
+    from_schema: https://w3id.org/oak/text_annotator
     rank: 1000
     alias: text
     owner: TextualElement
@@ -141,7 +145,7 @@ attributes:
     range: string
   source_text:
     name: source_text
-    from_schema: https://w3id.org/linkml/text_annotator
+    from_schema: https://w3id.org/oak/text_annotator
     rank: 1000
     alias: source_text
     owner: TextualElement
@@ -150,7 +154,7 @@ attributes:
     range: string
   parent_document:
     name: parent_document
-    from_schema: https://w3id.org/linkml/text_annotator
+    from_schema: https://w3id.org/oak/text_annotator
     rank: 1000
     alias: parent_document
     owner: TextualElement

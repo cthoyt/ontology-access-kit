@@ -1,5 +1,8 @@
 # Slot: jaccard_similarity
+
+
 _The number of concepts in the intersection divided by the number in the union_
+
 
 
 URI: [sim:jaccard_similarity](https://w3id.org/linkml/similarity/jaccard_similarity)
@@ -18,9 +21,10 @@ URI: [sim:jaccard_similarity](https://w3id.org/linkml/similarity/jaccard_similar
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms |  no  |
+
 
 
 
@@ -30,8 +34,6 @@ URI: [sim:jaccard_similarity](https://w3id.org/linkml/similarity/jaccard_similar
 ## Properties
 
 * Range: [ZeroToOne](ZeroToOne.md)
-
-
 
 
 
@@ -48,7 +50,7 @@ URI: [sim:jaccard_similarity](https://w3id.org/linkml/similarity/jaccard_similar
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -60,7 +62,7 @@ URI: [sim:jaccard_similarity](https://w3id.org/linkml/similarity/jaccard_similar
 name: jaccard_similarity
 description: The number of concepts in the intersection divided by the number in the
   union
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 is_a: score
 alias: jaccard_similarity

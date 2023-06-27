@@ -1,6 +1,6 @@
 # Slot: pipeline
 
-URI: [li:pipeline](https://w3id.org/linkml/lexical_index/pipeline)
+URI: [mappingrules:pipeline](https://w3id.org/oak/mapping-rules-datamodel/pipeline)
 
 
 
@@ -11,9 +11,10 @@ URI: [li:pipeline](https://w3id.org/linkml/lexical_index/pipeline)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term |  no  |
+
 
 
 
@@ -23,10 +24,8 @@ URI: [li:pipeline](https://w3id.org/linkml/lexical_index/pipeline)
 ## Properties
 
 * Range: [LexicalTransformationPipeline](LexicalTransformationPipeline.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [li:pipeline](https://w3id.org/linkml/lexical_index/pipeline)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/lexical_index
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -53,7 +52,7 @@ URI: [li:pipeline](https://w3id.org/linkml/lexical_index/pipeline)
 <details>
 ```yaml
 name: pipeline
-from_schema: https://w3id.org/linkml/lexical_index
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 multivalued: true
 alias: pipeline

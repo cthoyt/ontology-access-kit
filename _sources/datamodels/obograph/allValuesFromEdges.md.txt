@@ -1,8 +1,11 @@
 # Slot: allValuesFromEdges
+
+
 _A list of edges that represent subclasses of universal restrictions_
 
 
-URI: [og:allValuesFromEdges](https://github.com/geneontology/obographs/allValuesFromEdges)
+
+URI: [obographs:allValuesFromEdges](https://github.com/geneontology/obographs/allValuesFromEdges)
 
 
 
@@ -13,10 +16,11 @@ URI: [og:allValuesFromEdges](https://github.com/geneontology/obographs/allValues
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Graph](Graph.md) | A graph is a collection of nodes and edges that represents a single ontology
-[DomainRangeAxiom](DomainRangeAxiom.md) | An axiom that represents some combination of domain and range assertions
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Graph](Graph.md) | A graph is a collection of nodes and edges and other axioms that represents a... |  no  |
+[DomainRangeAxiom](DomainRangeAxiom.md) | This groups potentially multiple axioms that constrain the usage of a propert... |  no  |
+
 
 
 
@@ -26,10 +30,8 @@ URI: [og:allValuesFromEdges](https://github.com/geneontology/obographs/allValues
 ## Properties
 
 * Range: [Edge](Edge.md)
+
 * Multivalued: True
-
-
-
 
 
 

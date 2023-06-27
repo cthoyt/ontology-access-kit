@@ -1,8 +1,11 @@
 # Slot: replacement
+
+
 _Reg-ex rule to replace substrings in labels_
 
 
-URI: [mrules:replacement](https://w3id.org/linkml/mapping_rules_datamodel/replacement)
+
+URI: [mappingrules:replacement](https://w3id.org/oak/mapping-rules-datamodel/replacement)
 
 
 
@@ -13,9 +16,10 @@ URI: [mrules:replacement](https://w3id.org/linkml/mapping_rules_datamodel/replac
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Synonymizer](Synonymizer.md) | 
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Synonymizer](Synonymizer.md) |  |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [mrules:replacement](https://w3id.org/linkml/mapping_rules_datamodel/replac
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [mrules:replacement](https://w3id.org/linkml/mapping_rules_datamodel/replac
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -54,7 +56,7 @@ URI: [mrules:replacement](https://w3id.org/linkml/mapping_rules_datamodel/replac
 ```yaml
 name: replacement
 description: Reg-ex rule to replace substrings in labels
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: replacement
 owner: Synonymizer

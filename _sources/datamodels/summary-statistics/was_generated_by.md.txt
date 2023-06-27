@@ -1,5 +1,8 @@
 # Slot: was_generated_by
+
+
 _The process that generated the report_
+
 
 
 URI: [summary_statistics:was_generated_by](https://w3id.org/oaklib/summary_statistics.was_generated_by)
@@ -13,11 +16,12 @@ URI: [summary_statistics:was_generated_by](https://w3id.org/oaklib/summary_stati
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SummaryStatisticsReport](SummaryStatisticsReport.md) | abstract base class for all summary statistics reports
-[GroupedStatistics](GroupedStatistics.md) | summary statistics for the entire resource
-[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SummaryStatisticsReport](SummaryStatisticsReport.md) | abstract base class for all summary statistics reports |  no  |
+[GroupedStatistics](GroupedStatistics.md) | summary statistics for the entire resource |  no  |
+[UngroupedStatistics](UngroupedStatistics.md) | A summary statistics report object |  no  |
+
 
 
 
@@ -27,8 +31,6 @@ URI: [summary_statistics:was_generated_by](https://w3id.org/oaklib/summary_stati
 ## Properties
 
 * Range: [SummaryStatisticsCalculationActivity](SummaryStatisticsCalculationActivity.md)
-
-
 
 
 
@@ -45,7 +47,7 @@ URI: [summary_statistics:was_generated_by](https://w3id.org/oaklib/summary_stati
 ### Schema Source
 
 
-* from schema: https://w3id.org/oaklib/summary_statistics
+* from schema: https://w3id.org/oak/summary_statistics
 
 
 
@@ -56,7 +58,7 @@ URI: [summary_statistics:was_generated_by](https://w3id.org/oaklib/summary_stati
 ```yaml
 name: was_generated_by
 description: The process that generated the report
-from_schema: https://w3id.org/oaklib/summary_statistics
+from_schema: https://w3id.org/oak/summary_statistics
 rank: 1000
 alias: was_generated_by
 owner: SummaryStatisticsReport

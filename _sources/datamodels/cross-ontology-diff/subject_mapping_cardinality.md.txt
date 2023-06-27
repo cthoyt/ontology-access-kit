@@ -1,8 +1,11 @@
 # Slot: subject_mapping_cardinality
+
+
 _The mapping cardinality of the subject pair_
 
 
-URI: [ann:subject_mapping_cardinality](https://w3id.org/linkml/text_annotator/subject_mapping_cardinality)
+
+URI: [xodiff:subject_mapping_cardinality](https://w3id.org/oak/cross-ontology-diff/subject_mapping_cardinality)
 
 
 
@@ -13,9 +16,10 @@ URI: [ann:subject_mapping_cardinality](https://w3id.org/linkml/text_annotator/su
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a...
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationalDiff](RelationalDiff.md) | A relational diff expresses the difference between an edge in one ontology, a... |  no  |
+
 
 
 
@@ -25,8 +29,6 @@ URI: [ann:subject_mapping_cardinality](https://w3id.org/linkml/text_annotator/su
 ## Properties
 
 * Range: [MappingCardinalityEnum](MappingCardinalityEnum.md)
-
-
 
 
 
@@ -43,7 +45,7 @@ URI: [ann:subject_mapping_cardinality](https://w3id.org/linkml/text_annotator/su
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/cross_ontology_diff
+* from schema: https://w3id.org/oak/cross-ontology-diff
 
 
 
@@ -54,7 +56,7 @@ URI: [ann:subject_mapping_cardinality](https://w3id.org/linkml/text_annotator/su
 ```yaml
 name: subject_mapping_cardinality
 description: The mapping cardinality of the subject pair
-from_schema: https://w3id.org/linkml/cross_ontology_diff
+from_schema: https://w3id.org/oak/cross-ontology-diff
 rank: 1000
 alias: subject_mapping_cardinality
 owner: RelationalDiff

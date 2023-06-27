@@ -1,5 +1,8 @@
 # Slot: ancestor_id
+
+
 _the most recent common ancestor of the two compared entities. If there are multiple MRCAs then the most informative one is selected_
+
 
 
 URI: [sim:ancestor_id](https://w3id.org/linkml/similarity/ancestor_id)
@@ -13,9 +16,10 @@ URI: [sim:ancestor_id](https://w3id.org/linkml/similarity/ancestor_id)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TermPairwiseSimilarity](TermPairwiseSimilarity.md) | A simple pairwise similarity between two atomic concepts/terms |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [sim:ancestor_id](https://w3id.org/linkml/similarity/ancestor_id)
 
 ## Properties
 
-* Range: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
-
-
+* Range: [Uriorcurie](Uriorcurie.md)
 
 
 
@@ -47,7 +49,7 @@ URI: [sim:ancestor_id](https://w3id.org/linkml/similarity/ancestor_id)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -61,7 +63,7 @@ description: the most recent common ancestor of the two compared entities. If th
   are multiple MRCAs then the most informative one is selected
 todos:
 - decide on what to do when there are multiple possible ancestos
-from_schema: https://w3id.org/linkml/similarity
+from_schema: https://w3id.org/oak/similarity
 rank: 1000
 alias: ancestor_id
 domain_of:

@@ -1,6 +1,10 @@
 # Slot: present_in
-_The term MAY be in the specified taxon, or a descendant of that taxon
-_
+
+
+_The term MAY be in the specified taxon, or a descendant of that taxon_
+
+__
+
 
 
 URI: [RO:0002175](http://purl.obolibrary.org/obo/RO_0002175)
@@ -14,9 +18,10 @@ URI: [RO:0002175](http://purl.obolibrary.org/obo/RO_0002175)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[SubjectTerm](SubjectTerm.md) | A term that is the subject of a taxon constraint
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SubjectTerm](SubjectTerm.md) | A term that is the subject of a taxon constraint |  no  |
+
 
 
 
@@ -26,10 +31,8 @@ URI: [RO:0002175](http://purl.obolibrary.org/obo/RO_0002175)
 ## Properties
 
 * Range: [TaxonConstraint](TaxonConstraint.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -46,7 +49,7 @@ URI: [RO:0002175](http://purl.obolibrary.org/obo/RO_0002175)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/taxon_constraints
+* from schema: https://w3id.org/oak/taxon_constraints
 
 
 
@@ -59,7 +62,7 @@ name: present_in
 description: 'The term MAY be in the specified taxon, or a descendant of that taxon
 
   '
-from_schema: https://w3id.org/linkml/taxon_constraints
+from_schema: https://w3id.org/oak/taxon_constraints
 rank: 1000
 slot_uri: RO:0002175
 multivalued: true

@@ -1,6 +1,6 @@
 # Slot: object_source_one_of
 
-URI: [mrules:object_source_one_of](https://w3id.org/linkml/mapping_rules_datamodel/object_source_one_of)
+URI: [mappingrules:object_source_one_of](https://w3id.org/oak/mapping-rules-datamodel/object_source_one_of)
 
 
 
@@ -11,9 +11,10 @@ URI: [mrules:object_source_one_of](https://w3id.org/linkml/mapping_rules_datamod
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Precondition](Precondition.md) | A pattern to be matched against an individual SSSOM mapping
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Precondition](Precondition.md) | A pattern to be matched against an individual SSSOM mapping |  no  |
+
 
 
 
@@ -22,11 +23,9 @@ URI: [mrules:object_source_one_of](https://w3id.org/linkml/mapping_rules_datamod
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [mrules:object_source_one_of](https://w3id.org/linkml/mapping_rules_datamod
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/mapping_rules_datamodel
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -53,7 +52,7 @@ URI: [mrules:object_source_one_of](https://w3id.org/linkml/mapping_rules_datamod
 <details>
 ```yaml
 name: object_source_one_of
-from_schema: https://w3id.org/linkml/mapping_rules_datamodel
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 multivalued: true
 alias: object_source_one_of

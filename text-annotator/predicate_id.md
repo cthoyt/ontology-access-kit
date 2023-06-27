@@ -11,9 +11,10 @@ URI: [sssom:predicate_id](http://w3id.org/sssom/predicate_id)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TextAnnotation](TextAnnotation.md) | An individual text annotation
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TextAnnotation](TextAnnotation.md) | An individual text annotation |  no  |
+
 
 
 
@@ -22,9 +23,7 @@ URI: [sssom:predicate_id](http://w3id.org/sssom/predicate_id)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -41,7 +40,7 @@ URI: [sssom:predicate_id](http://w3id.org/sssom/predicate_id)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -51,7 +50,7 @@ URI: [sssom:predicate_id](http://w3id.org/sssom/predicate_id)
 <details>
 ```yaml
 name: predicate_id
-from_schema: https://w3id.org/linkml/text_annotator
+from_schema: https://w3id.org/oak/text_annotator
 rank: 1000
 slot_uri: sssom:predicate_id
 alias: predicate_id

@@ -1,8 +1,11 @@
 # Slot: id
-_The identifier of the entity_
 
 
-URI: [og:id](https://github.com/geneontology/obographs/id)
+_The unique identifier of the entity_
+
+
+
+URI: [obographs:id](https://github.com/geneontology/obographs/id)
 
 
 
@@ -13,10 +16,13 @@ URI: [og:id](https://github.com/geneontology/obographs/id)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[Graph](Graph.md) | A graph is a collection of nodes and edges that represents a single ontology
-[Node](Node.md) | A node is a class, property, or other entity in an ontology
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Graph](Graph.md) | A graph is a collection of nodes and edges and other axioms that represents a... |  no  |
+[Node](Node.md) | A node is a class, property, or other entity in an ontology |  no  |
+[SubsetDefinition](SubsetDefinition.md) |  |  no  |
+[SynonymTypeDefinition](SynonymTypeDefinition.md) |  |  no  |
+
 
 
 
@@ -27,7 +33,7 @@ URI: [og:id](https://github.com/geneontology/obographs/id)
 
 * Range: [OboIdentifierString](OboIdentifierString.md)
 
-
+* Required: True
 
 
 
@@ -58,7 +64,7 @@ URI: [og:id](https://github.com/geneontology/obographs/id)
 <details>
 ```yaml
 name: id
-description: The identifier of the entity
+description: The unique identifier of the entity
 from_schema: https://github.com/geneontology/obographs
 see_also:
 - https://owlcollab.github.io/oboformat/doc/obo-syntax.html#2.5
@@ -68,7 +74,10 @@ alias: id
 domain_of:
 - Graph
 - Node
+- SubsetDefinition
+- SynonymTypeDefinition
 range: OboIdentifierString
+required: true
 
 ```
 </details>

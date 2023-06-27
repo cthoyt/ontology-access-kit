@@ -1,5 +1,8 @@
 # Slot: subject
+
+
 _The term to which the constraint applies_
+
 
 
 URI: [rdf:subject](http://www.w3.org/1999/02/22-rdf-syntax-ns#subject)
@@ -13,9 +16,10 @@ URI: [rdf:subject](http://www.w3.org/1999/02/22-rdf-syntax-ns#subject)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TaxonConstraint](TaxonConstraint.md) | An individual taxon constraint
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TaxonConstraint](TaxonConstraint.md) | An individual taxon constraint |  no  |
+
 
 
 
@@ -30,7 +34,9 @@ URI: [rdf:subject](http://www.w3.org/1999/02/22-rdf-syntax-ns#subject)
 
 
 
+## Comments
 
+* this is a reciprocal slot and will be the same as the containing SubjectTerm
 
 ## Identifier and Mapping Information
 
@@ -43,7 +49,7 @@ URI: [rdf:subject](http://www.w3.org/1999/02/22-rdf-syntax-ns#subject)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/taxon_constraints
+* from schema: https://w3id.org/oak/taxon_constraints
 
 
 
@@ -54,7 +60,9 @@ URI: [rdf:subject](http://www.w3.org/1999/02/22-rdf-syntax-ns#subject)
 ```yaml
 name: subject
 description: The term to which the constraint applies
-from_schema: https://w3id.org/linkml/taxon_constraints
+comments:
+- this is a reciprocal slot and will be the same as the containing SubjectTerm
+from_schema: https://w3id.org/oak/taxon_constraints
 rank: 1000
 slot_uri: rdf:subject
 alias: subject

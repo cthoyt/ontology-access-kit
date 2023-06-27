@@ -1,5 +1,8 @@
 # Class: HasSynonyms
+
+
 _a mixin for a class whose members can have synonyms_
+
 
 
 
@@ -13,28 +16,28 @@ URI: [omoschema:HasSynonyms](http://purl.obolibrary.org/obo/omo/schema/HasSynony
     class HasSynonyms
       AnnotationPropertyMixin <|-- HasSynonyms
       
-      HasSynonyms : alternative_term
-      HasSynonyms : editor_preferred_term
-      HasSynonyms : has_broad_synonym
-      HasSynonyms : has_exact_synonym
-      HasSynonyms : has_narrow_synonym
-      HasSynonyms : has_related_synonym
-      HasSynonyms : IEDB_alternative_term
-      HasSynonyms : ISA_alternative_term
-      HasSynonyms : OBO_foundry_unique_label
-      
 
       HasSynonyms <|-- Term
       
+      
       HasSynonyms : alternative_term
+        
       HasSynonyms : editor_preferred_term
+        
       HasSynonyms : has_broad_synonym
+        
       HasSynonyms : has_exact_synonym
+        
       HasSynonyms : has_narrow_synonym
+        
       HasSynonyms : has_related_synonym
+        
       HasSynonyms : IEDB_alternative_term
+        
       HasSynonyms : ISA_alternative_term
+        
       HasSynonyms : OBO_foundry_unique_label
+        
       
 ```
 
@@ -56,11 +59,11 @@ URI: [omoschema:HasSynonyms](http://purl.obolibrary.org/obo/omo/schema/HasSynony
 | [has_narrow_synonym](has_narrow_synonym.md) | 0..* <br/> [LabelType](LabelType.md) |  | direct |
 | [has_broad_synonym](has_broad_synonym.md) | 0..* <br/> [LabelType](LabelType.md) |  | direct |
 | [has_related_synonym](has_related_synonym.md) | 0..* <br/> [LabelType](LabelType.md) |  | direct |
-| [alternative_term](alternative_term.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [ISA_alternative_term](ISA_alternative_term.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [IEDB_alternative_term](IEDB_alternative_term.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [editor_preferred_term](editor_preferred_term.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [OBO_foundry_unique_label](OBO_foundry_unique_label.md) | 0..* <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [alternative_term](alternative_term.md) | 0..* <br/> [String](String.md) |  | direct |
+| [ISA_alternative_term](ISA_alternative_term.md) | 0..* <br/> [String](String.md) |  | direct |
+| [IEDB_alternative_term](IEDB_alternative_term.md) | 0..* <br/> [String](String.md) |  | direct |
+| [editor_preferred_term](editor_preferred_term.md) | 0..* <br/> [String](String.md) |  | direct |
+| [OBO_foundry_unique_label](OBO_foundry_unique_label.md) | 0..* <br/> [String](String.md) |  | direct |
 
 
 
@@ -125,7 +128,6 @@ comments:
   axioms
 - the OBI synonym model is to use alternative_term, or potentially a subproperty
 from_schema: http://purl.obolibrary.org/obo/omo/schema
-rank: 1000
 is_a: AnnotationPropertyMixin
 mixin: true
 slots:
@@ -153,7 +155,6 @@ comments:
   axioms
 - the OBI synonym model is to use alternative_term, or potentially a subproperty
 from_schema: http://purl.obolibrary.org/obo/omo/schema
-rank: 1000
 is_a: AnnotationPropertyMixin
 mixin: true
 attributes:

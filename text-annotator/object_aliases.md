@@ -11,9 +11,10 @@ URI: [ann:object_aliases](https://w3id.org/linkml/text_annotator/object_aliases)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[TextAnnotation](TextAnnotation.md) | An individual text annotation
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[TextAnnotation](TextAnnotation.md) | An individual text annotation |  no  |
+
 
 
 
@@ -22,11 +23,9 @@ URI: [ann:object_aliases](https://w3id.org/linkml/text_annotator/object_aliases)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
+* Range: [String](String.md)
+
 * Multivalued: True
-
-
-
 
 
 
@@ -43,7 +42,7 @@ URI: [ann:object_aliases](https://w3id.org/linkml/text_annotator/object_aliases)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/text_annotator
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
@@ -53,7 +52,7 @@ URI: [ann:object_aliases](https://w3id.org/linkml/text_annotator/object_aliases)
 <details>
 ```yaml
 name: object_aliases
-from_schema: https://w3id.org/linkml/text_annotator
+from_schema: https://w3id.org/oak/text_annotator
 rank: 1000
 multivalued: true
 alias: object_aliases

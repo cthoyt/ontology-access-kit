@@ -10,7 +10,9 @@ URI: [sim:TermInfo](https://w3id.org/linkml/similarity/TermInfo)
  classDiagram
     class TermInfo
       TermInfo : id
+        
       TermInfo : label
+        
       
 ```
 
@@ -24,8 +26,8 @@ URI: [sim:TermInfo](https://w3id.org/linkml/similarity/TermInfo)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
-| [label](label.md) | 0..1 <br/> [xsd:string](http://www.w3.org/2001/XMLSchema#string) |  | direct |
+| [id](id.md) | 1..1 <br/> [String](String.md) |  | direct |
+| [label](label.md) | 0..1 <br/> [String](String.md) |  | direct |
 
 
 
@@ -54,7 +56,7 @@ URI: [sim:TermInfo](https://w3id.org/linkml/similarity/TermInfo)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/similarity
+* from schema: https://w3id.org/oak/similarity
 
 
 
@@ -80,17 +82,17 @@ URI: [sim:TermInfo](https://w3id.org/linkml/similarity/TermInfo)
 <details>
 ```yaml
 name: TermInfo
-from_schema: https://w3id.org/linkml/similarity
-rank: 1000
+from_schema: https://w3id.org/oak/similarity
 attributes:
   id:
     name: id
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     identifier: true
+    required: true
   label:
     name: label
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     slot_uri: rdfs:label
 
@@ -102,12 +104,11 @@ attributes:
 <details>
 ```yaml
 name: TermInfo
-from_schema: https://w3id.org/linkml/similarity
-rank: 1000
+from_schema: https://w3id.org/oak/similarity
 attributes:
   id:
     name: id
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     identifier: true
     alias: id
@@ -115,9 +116,10 @@ attributes:
     domain_of:
     - TermInfo
     range: string
+    required: true
   label:
     name: label
-    from_schema: https://w3id.org/linkml/similarity
+    from_schema: https://w3id.org/oak/similarity
     rank: 1000
     slot_uri: rdfs:label
     alias: label

@@ -1,8 +1,11 @@
 # Slot: element_term
+
+
 _the original term used in the element_
 
 
-URI: [li:element_term](https://w3id.org/linkml/lexical_index/element_term)
+
+URI: [mappingrules:element_term](https://w3id.org/oak/mapping-rules-datamodel/element_term)
 
 
 
@@ -13,9 +16,10 @@ URI: [li:element_term](https://w3id.org/linkml/lexical_index/element_term)
 
 ## Applicable Classes
 
-| Name | Description |
-| --- | --- |
-[RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[RelationshipToTerm](RelationshipToTerm.md) | A relationship of an ontology element to a lexical term |  no  |
+
 
 
 
@@ -24,9 +28,7 @@ URI: [li:element_term](https://w3id.org/linkml/lexical_index/element_term)
 
 ## Properties
 
-* Range: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
-
-
+* Range: [String](String.md)
 
 
 
@@ -43,7 +45,7 @@ URI: [li:element_term](https://w3id.org/linkml/lexical_index/element_term)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/lexical_index
+* from schema: https://w3id.org/oak/mapping-rules-datamodel
 
 
 
@@ -54,7 +56,7 @@ URI: [li:element_term](https://w3id.org/linkml/lexical_index/element_term)
 ```yaml
 name: element_term
 description: the original term used in the element
-from_schema: https://w3id.org/linkml/lexical_index
+from_schema: https://w3id.org/oak/mapping-rules-datamodel
 rank: 1000
 alias: element_term
 owner: RelationshipToTerm

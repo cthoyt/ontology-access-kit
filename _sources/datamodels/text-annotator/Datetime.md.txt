@@ -1,7 +1,10 @@
 # Type: Datetime
 
 
+
+
 _The combination of a date and time_
+
 
 
 URI: [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime)
@@ -30,7 +33,7 @@ URI: [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime)
 ### Schema Source
 
 
-* from schema: https://w3id.org/linkml/types
+* from schema: https://w3id.org/oak/text_annotator
 
 
 
