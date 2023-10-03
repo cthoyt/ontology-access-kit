@@ -11,6 +11,7 @@ URI: [ontoassoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
 
 
 
+
 ```{mermaid}
  classDiagram
     class PropertyValue
@@ -42,6 +43,7 @@ URI: [ontoassoc:PropertyValue](https://w3id.org/oak/association/PropertyValue)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
+| [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) | [property_values](property_values.md) | range | [PropertyValue](PropertyValue.md) |
 | [Association](Association.md) | [property_values](property_values.md) | range | [PropertyValue](PropertyValue.md) |
 | [NegatedAssociation](NegatedAssociation.md) | [property_values](property_values.md) | range | [PropertyValue](PropertyValue.md) |
 
@@ -113,8 +115,7 @@ attributes:
     alias: predicate
     owner: PropertyValue
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - PropertyValue
     slot_group: core_triple
     range: uriorcurie
@@ -132,8 +133,7 @@ attributes:
     alias: object
     owner: PropertyValue
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - PropertyValue
     slot_group: core_triple
     range: uriorcurie

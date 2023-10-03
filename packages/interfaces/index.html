@@ -12,13 +12,13 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=046fa432"></script>
         <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
         <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="../../_static/js/theme.js"></script>
@@ -113,7 +113,7 @@
            <div itemprop="articleBody">
              
   <section id="interfaces">
-<span id="id1"></span><h1>Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1>Interfaces<a class="headerlink" href="#interfaces" title="Link to this heading"></a></h1>
 <p>oaklib provides a variety of <em>interfaces</em> that abstract away from
 implementation details and provide a coherent set of operations to
 perform on an ontology. Developers can code to the interface largely without
@@ -189,6 +189,7 @@ has the method <a class="reference internal" href="search.html#oaklib.interfaces
 <li class="toctree-l3"><a class="reference internal" href="basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.get_curies_by_label"><code class="docutils literal notranslate"><span class="pre">BasicOntologyInterface.get_curies_by_label()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.comments"><code class="docutils literal notranslate"><span class="pre">BasicOntologyInterface.comments()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.relationships"><code class="docutils literal notranslate"><span class="pre">BasicOntologyInterface.relationships()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.relationships_metadata"><code class="docutils literal notranslate"><span class="pre">BasicOntologyInterface.relationships_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.hierarchical_parents"><code class="docutils literal notranslate"><span class="pre">BasicOntologyInterface.hierarchical_parents()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.outgoing_relationship_map"><code class="docutils literal notranslate"><span class="pre">BasicOntologyInterface.outgoing_relationship_map()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="basic.html#oaklib.interfaces.basic_ontology_interface.BasicOntologyInterface.outgoing_relationships"><code class="docutils literal notranslate"><span class="pre">BasicOntologyInterface.outgoing_relationships()</span></code></a></li>
@@ -297,6 +298,7 @@ has the method <a class="reference internal" href="search.html#oaklib.interfaces
 <li class="toctree-l3"><a class="reference internal" href="obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.walk_up_relationship_graph"><code class="docutils literal notranslate"><span class="pre">OboGraphInterface.walk_up_relationship_graph()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.paths"><code class="docutils literal notranslate"><span class="pre">OboGraphInterface.paths()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.logical_definitions"><code class="docutils literal notranslate"><span class="pre">OboGraphInterface.logical_definitions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.disjoint_class_expressions_axioms"><code class="docutils literal notranslate"><span class="pre">OboGraphInterface.disjoint_class_expressions_axioms()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.add_metadata"><code class="docutils literal notranslate"><span class="pre">OboGraphInterface.add_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.as_obograph"><code class="docutils literal notranslate"><span class="pre">OboGraphInterface.as_obograph()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="obograph.html#oaklib.interfaces.obograph_interface.OboGraphInterface.load_graph"><code class="docutils literal notranslate"><span class="pre">OboGraphInterface.load_graph()</span></code></a></li>
@@ -341,6 +343,7 @@ has the method <a class="reference internal" href="search.html#oaklib.interfaces
 <li class="toctree-l1"><a class="reference internal" href="patcher.html">Patcher Interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface"><code class="docutils literal notranslate"><span class="pre">PatcherInterface</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.auto_add_contributor_using"><code class="docutils literal notranslate"><span class="pre">PatcherInterface.auto_add_contributor_using</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.ignore_invalid_changes"><code class="docutils literal notranslate"><span class="pre">PatcherInterface.ignore_invalid_changes</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.apply_patch"><code class="docutils literal notranslate"><span class="pre">PatcherInterface.apply_patch()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.migrate_curies"><code class="docutils literal notranslate"><span class="pre">PatcherInterface.migrate_curies()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="patcher.html#oaklib.interfaces.patcher_interface.PatcherInterface.save"><code class="docutils literal notranslate"><span class="pre">PatcherInterface.save()</span></code></a></li>
@@ -372,6 +375,7 @@ has the method <a class="reference internal" href="search.html#oaklib.interfaces
 <li class="toctree-l2"><a class="reference internal" href="association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface"><code class="docutils literal notranslate"><span class="pre">AssociationProviderInterface</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.associations"><code class="docutils literal notranslate"><span class="pre">AssociationProviderInterface.associations()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.associations_subjects"><code class="docutils literal notranslate"><span class="pre">AssociationProviderInterface.associations_subjects()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.associations_subject_search"><code class="docutils literal notranslate"><span class="pre">AssociationProviderInterface.associations_subject_search()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.association_pairwise_coassociations"><code class="docutils literal notranslate"><span class="pre">AssociationProviderInterface.association_pairwise_coassociations()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.add_associations"><code class="docutils literal notranslate"><span class="pre">AssociationProviderInterface.add_associations()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="association-provider.html#oaklib.interfaces.association_provider_interface.AssociationProviderInterface.association_subject_counts"><code class="docutils literal notranslate"><span class="pre">AssociationProviderInterface.association_subject_counts()</span></code></a></li>

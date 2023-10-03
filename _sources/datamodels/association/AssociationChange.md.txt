@@ -11,6 +11,7 @@ URI: [ontoassoc:AssociationChange](https://w3id.org/oak/association/AssociationC
 
 
 
+
 ```{mermaid}
  classDiagram
     class AssociationChange
@@ -227,8 +228,7 @@ attributes:
     alias: primary_knowledge_source
     owner: AssociationChange
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - ParserConfiguration
     - AssociationChange
     range: uriorcurie
@@ -241,8 +241,7 @@ attributes:
     alias: aggregator_knowledge_source
     owner: AssociationChange
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - ParserConfiguration
     - AssociationChange
     range: uriorcurie
@@ -256,8 +255,7 @@ attributes:
     alias: publications
     owner: AssociationChange
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - AssociationChange
     range: uriorcurie
   publication_is_added:
@@ -300,8 +298,7 @@ attributes:
     alias: subject
     owner: AssociationChange
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - AssociationChange
     slot_group: core_triple
     range: uriorcurie

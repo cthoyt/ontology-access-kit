@@ -11,14 +11,21 @@ URI: [ontoassoc:NegatedAssociation](https://w3id.org/oak/association/NegatedAsso
 
 
 
+
 ```{mermaid}
  classDiagram
     class NegatedAssociation
+      PositiveOrNegativeAssociation <|-- NegatedAssociation
+      
       NegatedAssociation : aggregator_knowledge_source
         
       NegatedAssociation : negated
         
       NegatedAssociation : object
+        
+      NegatedAssociation : object_closure
+        
+      NegatedAssociation : object_closure_label
         
       NegatedAssociation : object_label
         
@@ -36,6 +43,10 @@ URI: [ontoassoc:NegatedAssociation](https://w3id.org/oak/association/NegatedAsso
         
       NegatedAssociation : subject
         
+      NegatedAssociation : subject_closure
+        
+      NegatedAssociation : subject_closure_label
+        
       NegatedAssociation : subject_label
         
       
@@ -44,24 +55,32 @@ URI: [ontoassoc:NegatedAssociation](https://w3id.org/oak/association/NegatedAsso
 
 
 
-<!-- no inheritance hierarchy -->
+
+## Inheritance
+* [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md)
+    * **NegatedAssociation**
+
 
 
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [subject](subject.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The thing which the association is about | direct |
-| [predicate](predicate.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The type of relationship between the subject and object | direct |
-| [object](object.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | An ontology entity that is associated with the subject | direct |
-| [property_values](property_values.md) | 0..* <br/> [PropertyValue](PropertyValue.md) | Arbitrary key-value pairs with additional information about the association | direct |
-| [subject_label](subject_label.md) | 0..1 <br/> [String](String.md) | The label of the thing which the association is about | direct |
-| [predicate_label](predicate_label.md) | 0..1 <br/> [String](String.md) | The label of the type of relationship between the subject and object | direct |
-| [object_label](object_label.md) | 0..1 <br/> [String](String.md) | The label of the ontology entity that is associated with the subject | direct |
-| [negated](negated.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the association is negated - i | direct |
-| [publications](publications.md) | 0..* <br/> [Uriorcurie](Uriorcurie.md) | The publications that support the association | direct |
-| [primary_knowledge_source](primary_knowledge_source.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The primary knowledge source for the association | direct |
-| [aggregator_knowledge_source](aggregator_knowledge_source.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The knowledge source that aggregated the association | direct |
+| [subject](subject.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The thing which the association is about | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [predicate](predicate.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The type of relationship between the subject and object | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [object](object.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | An ontology entity that is associated with the subject | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [property_values](property_values.md) | 0..* <br/> [PropertyValue](PropertyValue.md) | Arbitrary key-value pairs with additional information about the association | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [subject_label](subject_label.md) | 0..1 <br/> [String](String.md) | The label of the thing which the association is about | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [predicate_label](predicate_label.md) | 0..1 <br/> [String](String.md) | The label of the type of relationship between the subject and object | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [object_label](object_label.md) | 0..1 <br/> [String](String.md) | The label of the ontology entity that is associated with the subject | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [negated](negated.md) | 0..1 <br/> [Boolean](Boolean.md) | True if the association is negated - i | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [publications](publications.md) | 0..* <br/> [Uriorcurie](Uriorcurie.md) | The publications that support the association | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [primary_knowledge_source](primary_knowledge_source.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The primary knowledge source for the association | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [aggregator_knowledge_source](aggregator_knowledge_source.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | The knowledge source that aggregated the association | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [subject_closure](subject_closure.md) | 0..* <br/> [Uriorcurie](Uriorcurie.md) | The set of subjects that are related to the subject of the association via th... | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [subject_closure_label](subject_closure_label.md) | 0..* <br/> [String](String.md) | The set of subjects that are related to the subject of the association via th... | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [object_closure](object_closure.md) | 0..* <br/> [Uriorcurie](Uriorcurie.md) | The set of objects that are related to the object of the association via the ... | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
+| [object_closure_label](object_closure_label.md) | 0..* <br/> [String](String.md) | The set of objects that are related to the object of the association via the ... | [PositiveOrNegativeAssociation](PositiveOrNegativeAssociation.md) |
 
 
 
@@ -110,24 +129,12 @@ URI: [ontoassoc:NegatedAssociation](https://w3id.org/oak/association/NegatedAsso
 name: NegatedAssociation
 description: A negated association between a thing (subject) and another thing (object).
 from_schema: https://w3id.org/oak/association
-slots:
-- subject
-- predicate
-- object
-- property_values
-- subject_label
-- predicate_label
-- object_label
-- negated
-- publications
-- primary_knowledge_source
-- aggregator_knowledge_source
+is_a: PositiveOrNegativeAssociation
 slot_usage:
   negated:
     name: negated
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     equals_expression: 'True'
 
 ```
@@ -140,12 +147,12 @@ slot_usage:
 name: NegatedAssociation
 description: A negated association between a thing (subject) and another thing (object).
 from_schema: https://w3id.org/oak/association
+is_a: PositiveOrNegativeAssociation
 slot_usage:
   negated:
     name: negated
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     equals_expression: 'True'
 attributes:
   subject:
@@ -162,8 +169,7 @@ attributes:
     alias: subject
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - AssociationChange
     slot_group: core_triple
     range: uriorcurie
@@ -176,8 +182,7 @@ attributes:
     alias: predicate
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - PropertyValue
     slot_group: core_triple
     range: uriorcurie
@@ -195,8 +200,7 @@ attributes:
     alias: object
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - PropertyValue
     slot_group: core_triple
     range: uriorcurie
@@ -209,8 +213,7 @@ attributes:
     alias: property_values
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     range: PropertyValue
     inlined: true
   subject_label:
@@ -224,8 +227,7 @@ attributes:
     alias: subject_label
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     range: string
   predicate_label:
     name: predicate_label
@@ -238,8 +240,7 @@ attributes:
     alias: predicate_label
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     range: string
   object_label:
     name: object_label
@@ -252,8 +253,7 @@ attributes:
     alias: object_label
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     range: string
   negated:
     name: negated
@@ -263,8 +263,7 @@ attributes:
     alias: negated
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     range: boolean
     equals_expression: 'True'
   publications:
@@ -277,8 +276,7 @@ attributes:
     alias: publications
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - AssociationChange
     range: uriorcurie
   primary_knowledge_source:
@@ -290,8 +288,7 @@ attributes:
     alias: primary_knowledge_source
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - ParserConfiguration
     - AssociationChange
     range: uriorcurie
@@ -304,11 +301,58 @@ attributes:
     alias: aggregator_knowledge_source
     owner: NegatedAssociation
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - ParserConfiguration
     - AssociationChange
     range: uriorcurie
+  subject_closure:
+    name: subject_closure
+    description: The set of subjects that are related to the subject of the association
+      via the closure predicates
+    from_schema: https://w3id.org/oak/association
+    rank: 1000
+    multivalued: true
+    alias: subject_closure
+    owner: NegatedAssociation
+    domain_of:
+    - PositiveOrNegativeAssociation
+    range: uriorcurie
+  subject_closure_label:
+    name: subject_closure_label
+    description: The set of subjects that are related to the subject of the association
+      via the closure predicates
+    from_schema: https://w3id.org/oak/association
+    rank: 1000
+    multivalued: true
+    alias: subject_closure_label
+    owner: NegatedAssociation
+    domain_of:
+    - PositiveOrNegativeAssociation
+    range: string
+  object_closure:
+    name: object_closure
+    description: The set of objects that are related to the object of the association
+      via the closure predicates
+    from_schema: https://w3id.org/oak/association
+    rank: 1000
+    multivalued: true
+    alias: object_closure
+    owner: NegatedAssociation
+    domain_of:
+    - PositiveOrNegativeAssociation
+    range: uriorcurie
+  object_closure_label:
+    name: object_closure_label
+    description: The set of objects that are related to the object of the association
+      via the closure predicates
+    from_schema: https://w3id.org/oak/association
+    rank: 1000
+    multivalued: true
+    alias: object_closure_label
+    owner: NegatedAssociation
+    domain_of:
+    - PositiveOrNegativeAssociation
+    range: string
 
 ```
 </details>

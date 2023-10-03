@@ -11,6 +11,7 @@ URI: [ontoassoc:ParserConfiguration](https://w3id.org/oak/association/ParserConf
 
 
 
+
 ```{mermaid}
  classDiagram
     class ParserConfiguration
@@ -169,8 +170,7 @@ attributes:
     alias: primary_knowledge_source
     owner: ParserConfiguration
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - ParserConfiguration
     - AssociationChange
     range: uriorcurie
@@ -183,8 +183,7 @@ attributes:
     alias: aggregator_knowledge_source
     owner: ParserConfiguration
     domain_of:
-    - Association
-    - NegatedAssociation
+    - PositiveOrNegativeAssociation
     - ParserConfiguration
     - AssociationChange
     range: uriorcurie

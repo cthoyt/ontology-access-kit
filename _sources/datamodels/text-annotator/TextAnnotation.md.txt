@@ -11,6 +11,7 @@ URI: [oa:Annotation](http://www.w3.org/ns/oa#Annotation)
 
 
 
+
 ```{mermaid}
  classDiagram
     class TextAnnotation
@@ -29,6 +30,8 @@ URI: [oa:Annotation](http://www.w3.org/ns/oa#Annotation)
       TextAnnotation : matches_whole_text
         
       TextAnnotation : object_aliases
+        
+      TextAnnotation : object_categories
         
       TextAnnotation : object_id
         
@@ -69,6 +72,7 @@ URI: [oa:Annotation](http://www.w3.org/ns/oa#Annotation)
 | [predicate_id](predicate_id.md) | 0..1 <br/> [String](String.md) |  | direct |
 | [object_id](object_id.md) | 0..1 <br/> [String](String.md) |  | direct |
 | [object_label](object_label.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [object_categories](object_categories.md) | 0..* <br/> [String](String.md) |  | direct |
 | [object_source](object_source.md) | 0..1 <br/> [String](String.md) |  | direct |
 | [confidence](confidence.md) | 0..1 <br/> [Float](Float.md) |  | direct |
 | [match_string](match_string.md) | 0..1 <br/> [String](String.md) |  | direct |
@@ -159,6 +163,11 @@ attributes:
     - bpa:annotatedClass.prefLabel
     rank: 1000
     slot_uri: sssom:object_label
+  object_categories:
+    name: object_categories
+    from_schema: https://w3id.org/oak/text_annotator
+    rank: 1000
+    multivalued: true
   object_source:
     name: object_source
     from_schema: https://w3id.org/oak/text_annotator
@@ -242,6 +251,16 @@ attributes:
     rank: 1000
     slot_uri: sssom:object_label
     alias: object_label
+    owner: TextAnnotation
+    domain_of:
+    - TextAnnotation
+    range: string
+  object_categories:
+    name: object_categories
+    from_schema: https://w3id.org/oak/text_annotator
+    rank: 1000
+    multivalued: true
+    alias: object_categories
     owner: TextAnnotation
     domain_of:
     - TextAnnotation
