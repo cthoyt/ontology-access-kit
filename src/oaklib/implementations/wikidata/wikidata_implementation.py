@@ -92,10 +92,10 @@ class WikidataImplementation(
         """
         return True
 
-    def curie_to_uri(self, curie: CURIE, strict: bool = False) -> URI:
+    def curie_to_uri(self, curie: CURIE, strict: bool = False, passthrough: bool = False) -> URI:
         if curie in self.wikidata_curie_map:
             return self.wikidata_curie_map[curie]
-        return super().curie_to_uri(curie, strict=strict)
+        return super().curie_to_uri(curie, strict=strict, passthrough=passthrough)
 
     # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     # Implements: SearchInterface

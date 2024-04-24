@@ -219,7 +219,7 @@ class BasicOntologyInterface(OntologyInterface, ABC):
             mappings, curie_converter=self.converter
         )
 
-    def curie_to_uri(self, curie: CURIE, strict: bool = False) -> Optional[URI]:
+    def curie_to_uri(self, curie: CURIE, strict: bool = False, passthrough: bool = False) -> Optional[URI]:
         """
         Expands a CURIE to a URI.
 
@@ -236,17 +236,7 @@ class BasicOntologyInterface(OntologyInterface, ABC):
             if strict:
                 raise ValueError(f"Invalid CURIE: {curie}")
             return None
-        rv = self.converter.expand(curie)
-        if rv is None and strict:
-            prefix_map_text = "\n".join(
-                f"  {prefix} -> {uri_prefix}"
-                for prefix, uri_prefix in sorted(self.converter.prefix_map.items())
-            )
-            raise ValueError(
-                f"{self.__class__.__name__}.prefix_map() does not support expanding {curie}.\n"
-                f"This ontology interface contains {len(self.prefix_map()):,} prefixes:\n{prefix_map_text}"
-            )
-        return rv
+        return self.converter.expand(curie, strict=strict, passthrough=passthrough)
 
     def uri_to_curie(
         self, uri: URI, strict: bool = True, use_uri_fallback=False
@@ -267,17 +257,7 @@ class BasicOntologyInterface(OntologyInterface, ABC):
         :param use_uri_fallback: if cannot be contracted, use the URI as a CURIE proxy [default: True]
         :return: contracted URI, or original URI if no contraction possible
         """
-        rv = self.converter.compress(uri, passthrough=use_uri_fallback)
-        if rv is None and strict:
-            prefix_map_text = "\n".join(
-                f"  {prefix} -> {uri_prefix}"
-                for prefix, uri_prefix in sorted(self.converter.prefix_map.items())
-            )
-            raise ValueError(
-                f"{self.__class__.__name__}.prefix_map() does not support compressing {uri}.\n"
-                f"This ontology interface contains {len(self.prefix_map()):,} prefixes:\n{prefix_map_text}"
-            )
-        return rv
+        return self.converter.compress(uri, strict=strict, passthrough=use_uri_fallback)
 
     @property
     def edge_index(self) -> EdgeIndex:
